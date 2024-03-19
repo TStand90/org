@@ -126,9 +126,47 @@ You must visit every node in the tree, so the time complexity is O(n).
 
 * Breadth First Search
 :PROPERTIES:
-:ID:       3b26bb23-ab02-46c7-be40-3ac23fa6a887
-:END:  :Algorithms:Data:Structures:
-Traverse the tree by going layer by layer, typically left to right. Must be done iteratively rather than recursively.
+:ID:       3bd27895-fcc3-496c-8fa7-a149295140a6
+:ROAM_REFS: https://neetcode.io/courses/dsa-for-beginners/20
+:END:
+Traverses the tree level by level.
+
+#+NAME: BFS in Python
+#+BEGIN_SRC python
+from collections import deque
+
+def breadth_first_search(root):
+    queue = deque()
+
+    if root:
+        queue.append(root)
+
+    level = 0  # Not needed but could be nice to have.
+    while len(queue) > 0:
+        print(f"Level: {level}")
+
+        for i in range(len(queue)):
+            current = queue.popleft()
+            print(current.val)  # Process the node here.
+
+            if current.left:
+                queue.append(current.left)
+
+            if current.right:
+                queue.append(current.right)
+
+        level += 1
+#+END_SRC
+
+ Because this is traversing by level, an external data structure (a queue) is needed. The queue keeps track of which nodes need to be processed next. Only non-null nodes are added to the queue, so that when the queue is exhausted, we know we have processed all the nodes.
+
+ Note that the order is typically left to right on a level, but it could be right to left by reversing the ~if~ statements.
+
+** Time complexity
+O(n), since each node is processed once.
+
+** Leetcode exercises
+*** [[https://leetcode.com/problems/binary-tree-level-order-traversal/description/][102. Binary Tree Level Order Traversal]]
 
 * Morris Traversal
 TODO
