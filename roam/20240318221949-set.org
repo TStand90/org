@@ -1,0 +1,9 @@
+:PROPERTIES:
+:ID:       a2a61cbe-8302-400d-8957-32306adede26
+:END:
+#+title: Set
+#+filetags: :Data_Structures:
+
+Similar to an [[id:721cecef-36a5-4fe7-9cf0-b885d92dc690][Array]], but each item must be unique.
+
+Could be implemented using a [[id:5c17f99f-22ff-4f57-9260-c3b3b2943105][Binary Search Tree]].

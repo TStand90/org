@@ -1,0 +1,9 @@
+:PROPERTIES:
+:ID:       eabeaaad-b8f1-4be2-a1d0-498420ccf4fc
+:END:
+#+title: Map
+#+filetags: :Data_Structures:
+
+A key value store, where the keys are unique.
+
+Called a "Map" because each key is "mapped" to a value.
