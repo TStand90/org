@@ -1,0 +1,37 @@
+:PROPERTIES:
+:ID:       08f2d5da-98ab-49b0-93fe-bc39d96f06d9
+:ROAM_REFS: https://learn.microsoft.com/en-us/dotnet/api/microsoft.aspnetcore.routing.linkgenerator?view=aspnetcore-8.0
+:END:
+#+title: Minimal API
+#+filetags: :ASP.NET_Core:
+
+Minimal API is a way to create APIs in [[id:2b730c77-767a-4547-b1bf-53428b3d33a5][ASP.NET Core]].
+
+* LinkGenerator
+:PROPERTIES:
+:ID:       769d0281-8138-47b5-9736-5892047b573b
+:ROAM_REFS: https://learn.microsoft.com/en-us/dotnet/api/microsoft.aspnetcore.routing.linkgenerator?view=aspnetcore-8.0 https://livebook.manning.com/book/asp-net-core-in-action-third-edition/chapter-6/174
+:END:
+
+The ~LinkGenerator~ class is used to generate URLs in the application for a [[id:08f2d5da-98ab-49b0-93fe-bc39d96f06d9][Minimal API]].
+
+#+NAME: LinkGenerator example
+#+BEGIN_SRC csharp
+app.MapGet("/product/{name}", (string name) => $"The product is {name}")
+    .WithName("product");
+
+app.MapGet("/links", (LinkGenerator links) =>
+{
+    string link = links.GetPathByName("product",
+        new { name = "big-widget"});
+    return $"View the product at {link}";
+});
+#+END_SRC
+
+The name given by ~.WithName~ is case sensitive, and must be unique.
+
+~LinkService~ is available anywhere in [[id:2b730c77-767a-4547-b1bf-53428b3d33a5][ASP.NET Core]]. It is automatically available to the [[id:08f2d5da-98ab-49b0-93fe-bc39d96f06d9][Minimal API]] handlers because it is automatically registered with the [[id:fdfd76f1-ea62-40fc-9cbc-ba323ca0b5cc][Dependency Injection]] container.
+
+** Methods
+*** GetPathByName
+*** GetUriByName

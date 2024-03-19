@@ -1,0 +1,6 @@
+:PROPERTIES:
+:ID:       fdfd76f1-ea62-40fc-9cbc-ba323ca0b5cc
+:END:
+#+title: Dependency Injection
+
+TODO

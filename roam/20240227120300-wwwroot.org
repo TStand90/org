@@ -1,0 +1,6 @@
+:PROPERTIES:
+:ID:       d44f4b9f-7651-48ff-a345-f63728a04add
+:END:
+#+title: wwwroot
+
+TODO: Info about the wwwroot folder.

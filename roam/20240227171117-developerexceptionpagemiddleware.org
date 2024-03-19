@@ -1,0 +1,6 @@
+:PROPERTIES:
+:ID:       f793ab94-21b5-452f-979f-cb7906d3c0b9
+:END:
+#+title: DeveloperExceptionPageMiddleware
+
+Automatically added to the Development environment. Gives details on an exception for debugging. For production handling, use [[id:fb621db6-9121-48bf-9288-c447820ace80][ExceptionHandlerMiddleware]].

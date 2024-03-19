@@ -1,0 +1,12 @@
+:PROPERTIES:
+:ID:       fb621db6-9121-48bf-9288-c447820ace80
+:END:
+#+title: ExceptionHandlerMiddleware
+
+A production ready version of [[id:f793ab94-21b5-452f-979f-cb7906d3c0b9][DeveloperExceptionPageMiddleware]]. Can be used to display user friendly error messages.
+
+You can add a path to the custom error page.
+
+#+BEGIN_SRC csharp
+app.UseExceptionHandler("/error");
+#+END_SRC

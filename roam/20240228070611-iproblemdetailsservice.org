@@ -1,0 +1,8 @@
+:PROPERTIES:
+:ID:       8003bf0b-5f25-4fcb-b7cc-d8d3c332af5a
+:END:
+#+title: IProblemDetailsService
+
+Converts any errors in the [[id:2b730c77-767a-4547-b1bf-53428b3d33a5][ASP.NET Core]] application to [[id:245f3a8d-2389-43de-a5ea-a4a7a7b1d080][Problem Details]].
+
+To use, call `AddProblemDetails` on `[[id:13863417-0f1c-430c-ba5d-2e250ee33acf][WebApplicationBuilder]].Services`. Can also use [[id:fb621db6-9121-48bf-9288-c447820ace80][ExceptionHandlerMiddleware]] without any configuration.

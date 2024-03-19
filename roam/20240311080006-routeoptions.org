@@ -1,0 +1,30 @@
+:PROPERTIES:
+:ID:       9447bf97-719e-4f4b-b411-843b2721f44b
+:ROAM_REFS: https://livebook.manning.com/book/asp-net-core-in-action-third-edition/chapter-6/208 https://learn.microsoft.com/en-us/dotnet/api/microsoft.aspnetcore.routing.routeoptions?view=aspnetcore-8.0
+:END:
+#+title: RouteOptions
+#+filetags: :ASP.NET_Core:
+
+TODO
+
+#+BEGIN_SRC csharp
+WebApplicationBuilder builder = WebApplication.CreateBuilder(args);
+builder.Services.Configure<RouteOptions>(o =>
+{
+    o.LowercaseUrls = true;
+    o.AppendTrailingSlash = true;
+    o.LowercaseQueryStrings = false;
+});
+#+END_SRC
+
+It's possible to override options for specific endpoints.
+
+#+NAME: RouteOptions per-endpoint override
+#+BEGIN_SRC csharp
+links.GetPathByName("healthcheck",
+   options: new LinkOptions
+   {
+       LowercaseUrls = false,
+       AppendTrailingSlash = false,
+   });
+#+END_SRC

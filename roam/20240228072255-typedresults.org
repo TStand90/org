@@ -1,0 +1,6 @@
+:PROPERTIES:
+:ID:       8cfc8c9d-8fac-4060-8bd8-c915ca3af44e
+:END:
+#+title: TypedResults
+
+Functions similarly to [[id:53c35714-f4fa-4b14-ac08-8baab165f689][Results]], but returns a concrete generic such as ~Ok<T>~ instead of [[id:7ceee837-6fd9-4c08-b799-3c8905d85ea8][IResult]]

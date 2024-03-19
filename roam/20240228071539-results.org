@@ -1,0 +1,19 @@
+:PROPERTIES:
+:ID:       53c35714-f4fa-4b14-ac08-8baab165f689
+:END:
+#+title: Results
+
+Static helper type in [[id:2b730c77-767a-4547-b1bf-53428b3d33a5][ASP.NET Core]] for returning responses.
+
+Implementation of [[id:7ceee837-6fd9-4c08-b799-3c8905d85ea8][IResult]], like [[id:8cfc8c9d-8fac-4060-8bd8-c915ca3af44e][TypedResults]]
+
+Microsoft Docs (v8):  https://learn.microsoft.com/en-us/dotnet/api/microsoft.aspnetcore.http.results?view=aspnetcore-8.0
+
+Helper methods for returning common response types:
+- Results.File() - Streams a file to the client.
+- Results.Byte() - Binary data, ~byte[]~
+- Results.Stream() - Send async data using ~Stream~
+
+Methods for problems:
+- Results.Problem()
+- Results.ValidationProblem()

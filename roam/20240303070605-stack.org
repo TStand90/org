@@ -1,0 +1,22 @@
+:PROPERTIES:
+:ID:       d2cf4928-a615-4c09-9fce-be63dfd16dd0
+:END:
+#+title: Stack
+
+Stacks are a Last In, First Out (LIFO) data structure. The first item to be put on a stack will be the last one removed.
+
+#+NAME: Stack Operations
+| Name | Complexity | Descritpion                                     |
+|------+------------+-------------------------------------------------|
+| Push | O(1)       | Adds an item to the top of the stack            |
+| Pop  | O(1)       | Removes an item from the top of the stack       |
+| Peek | O(1)       | Returns the topmost element without popping it. |
+
+
+* Push
+Adds an item to the top of the stack in O(1) time.
+* Pop
+Removes an item from the top of the stack in O(1) time.
+It's a good idea to check if the stack is empty before attempting to pop.
+* Peek
+Returns the topmost element without popping it in O(1) time.

@@ -1,0 +1,16 @@
+:PROPERTIES:
+:ID:       69e623d6-1ca7-4cd1-8fd7-e6927d0886ab
+:END:
+#+title: Area2D
+#+filetags: :Godot:
+
+A [[id:bacd55cd-cbb5-4663-829a-07f40b8ec03b][Godot Node]] that detects when other physics nodes enter, exit, or stay inside it.
+
+In order to define its shape for collisions, it needs either a [[id:738bdca8-ba2a-45a4-9747-1f6c876e31b0][CollisionShape2D]] or a [[id:ced60e22-bb0c-4328-a40e-2c2a5f421639][CollisionPolygon2D]]
+
+* Signals
+** area_entered
+#+BEGIN_SRC gdscript
+area_entered(area: Area2D)
+#+END_SRC
+When this signal is emitted, it sends the Node that entered the area as a parameter.

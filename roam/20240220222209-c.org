@@ -1,0 +1,13 @@
+:PROPERTIES:
+:ID:       684e6719-609f-4a8a-a8fa-f11d0585ec10
+:END:
+#+title: C#
+
+C# is Microsoft Java.
+
+* Web
+** [[id:2b730c77-767a-4547-b1bf-53428b3d33a5][ASP.NET Core]]
+
+* Game Engines
+** [[id:01aa72a1-5e35-4ce9-b30a-56bef6b296d4][Monogame]]
+** [[id:36100b50-2583-454a-85a0-7a8a86cd08a7][Godot]]

@@ -1,0 +1,12 @@
+:PROPERTIES:
+:ID:       93973fca-d78f-444e-b380-03798f2c3504
+:END:
+#+title: Vector2
+
+A class in [[id:36100b50-2583-454a-85a0-7a8a86cd08a7][Godot]] that describes a position in a 2D plane, using ~x~ and ~y~ coordinates.
+
+* Methods
+** angle()
+Describes the angle in radians of the current Vector2.
+** normalized()
+Returns the Vector2 divided by its length, which limits the length to 1. Useful for ensuring that moving diagonally does not "speed up" the moving character.

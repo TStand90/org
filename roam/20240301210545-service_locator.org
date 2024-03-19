@@ -1,0 +1,6 @@
+:PROPERTIES:
+:ID:       2807e592-fd35-4551-bb15-fec7cd854666
+:END:
+#+title: Service Locator
+
+TODO: Info on this pattern.

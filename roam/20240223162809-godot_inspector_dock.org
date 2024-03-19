@@ -1,0 +1,8 @@
+:PROPERTIES:
+:ID:       51e0e923-2811-4b3c-a820-3f818cb5b899
+:END:
+#+title: Godot Inspector Dock
+
+The inspector dock is on the right hand side of the editor.
+
+It's used to view and edit properties of the selected nodes.

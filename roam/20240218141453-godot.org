@@ -1,0 +1,26 @@
+:PROPERTIES:
+:ID:       36100b50-2583-454a-85a0-7a8a86cd08a7
+:END:
+#+title: Godot
+
+Godot is an open source game engine.
+
+* Concepts:
+** [[id:d4b966e9-0135-4b4a-8c75-a9ad0b58e6c5][Scenes]]
+** [[id:bacd55cd-cbb5-4663-829a-07f40b8ec03b][Nodes]]
+** [[id:b2b6d59d-eeed-4efe-9c03-cf2da01e4f87][Scripts]]
+** [[id:28534a83-cd97-4b3b-b8c1-4e5d3380f118][Signals]]
+
+* UI:
+** [[id:51e0e923-2811-4b3c-a820-3f818cb5b899][Inspector Dock]]
+** [[id:d208d635-d0fc-4282-ba9e-e28fa06cc508][Viewport]]
+** [[id:a87ad41c-aa51-484f-b60f-118610f15113][Scene Dock]]
+** [[id:36782f27-53bf-45b9-8272-c6fd4d7c5765][Snap to Grid]]
+
+* Programming Languages
+** [[id:546c5219-a381-451d-9b4c-fee71be7eb84][GDScript]]
+** [[id:684e6719-609f-4a8a-a8fa-f11d0585ec10][C#]]
+
+* Classes
+** [[id:528727c7-7afb-4a31-966d-ee46bccad5ad][Input]]
+** [[id:93973fca-d78f-444e-b380-03798f2c3504][Vector2]]

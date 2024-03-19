@@ -1,0 +1,6 @@
+:PROPERTIES:
+:ID:       3b5d2cc3-c0d5-4a8b-ba4e-4c666660613a
+:END:
+#+title: WelcomeMiddleware
+
+Middleware to display a basic "welcome" page in [[id:2b730c77-767a-4547-b1bf-53428b3d33a5][ASP.NET Core]]. Will show the page for every URL. Just used to test that the application is receiving requests properly.

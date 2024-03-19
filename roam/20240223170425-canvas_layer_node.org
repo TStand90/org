@@ -1,0 +1,7 @@
+:PROPERTIES:
+:ID:       28d63994-280a-4063-b56b-b1a0c79352a4
+:END:
+#+title: Canvas Layer Node
+#+filetags: :Godot:
+
+Canvas Layer keeps its child nodes on screen at all times. This can be useful for UI elements, like a health bar.

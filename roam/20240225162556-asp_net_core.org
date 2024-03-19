@@ -1,0 +1,184 @@
+:PROPERTIES:
+:ID:       2b730c77-767a-4547-b1bf-53428b3d33a5
+:END:
+#+title: ASP.NET Core
+
+A web backend for [[id:684e6719-609f-4a8a-a8fa-f11d0585ec10][C#]].
+
+Utilizes the [[id:800d6eac-df47-4e23-88d8-bf19cea3ca11][Kestrel]] web server by default.
+
+* CLI
+Run the CLI with `dotnet` command.
+
+To get the dependencies:
+
+#+BEGIN_SRC bash
+dotnet restore
+#+END_SRC
+
+To compile an application from the CLI:
+
+#+BEGIN_SRC bash
+dotnet build
+#+END_SRC
+
+`dotnet build` runs `dotnet restore` implicitly. `--no-restore` can be used to skip that step.
+
+To run the application:
+
+#+BEGIN_SRC bash
+dotnet run
+#+END_SRC
+
+`dotnet run` runs `dotnet restore` implicitly. `--no-restore` can be used to skip that step.
+`dotnet run` runs `dotnet build` implicitly. `--no-build` can be used to skip that step.
+
+* Minimal API
+To create a minimal API application with the CLI, run the commands:
+
+#+BEGIN_SRC bash
+dotnet new sln -n WebApplication1
+dotnet new web -o WebApplication1
+dotnet sln add WebApplication1
+#+END_SRC
+
+* File structure
+** appsettings.json
+TODO
+** appsettings.Development.json
+TODO
+** .csproj
+Project file. Contains info on how to build the project, along with [[id:1b80e77a-7d4e-4f61-8a72-ab227d2363e7][NuGet]] dependencies.
+
+It defines the type of project (web/console/library), and the platform (.NET Core, .NET 7, etc.).
+** Properties
+Subfolder. TODO
+*** launchSettings.json
+Controls how the application is run.
+** .sln
+"Solution" file, outside the project directory.
+
+* Inversion of Control
+[[id:2b730c77-767a-4547-b1bf-53428b3d33a5][ASP.NET Core]] uses Inversion of Conrol to register services.
+TODO: More about this!
+
+* Middleware
+Middleware can be added to the [[id:496ff34c-5052-41b5-85be-de05b1ae56cc][WebApplication]] instance once it is created.
+
+Middleware consists of small components that execute in sequence when the application receives an [[id:fdec7db4-2c96-40f2-8f66-916ef0839bd0][HTTP]] request.
+
+Middleware is usually added to [[id:496ff34c-5052-41b5-85be-de05b1ae56cc][WebApplication]] by calling `Use*` extension methods. For example, for logging:
+
+#+NAME: Use* Example
+#+BEGIN_SRC csharp
+if (app.Environment.IsDevelopment())
+{
+   app.UseHttpLogging();
+}
+#+END_SRC
+
+The order that middleware is added to the pipeline is important. Middleware can only access previously added middleware.
+
+[[id:496ff34c-5052-41b5-85be-de05b1ae56cc][WebApplication]] automatically adds several pieces of middleware including the two most important ones: [[id:72c55ed6-f8cf-4da7-9465-e768787a908f][RoutingMiddleware]], and [[id:fe0e544d-60a0-4d1b-b6f7-761deeba4d07][EndpointMiddleware]]  . Routing is added to the beginning of the pipeline. Endpoint middleware is added to the end. Other middleware automatically added includes exception handling
+
+In [[id:2b730c77-767a-4547-b1bf-53428b3d33a5][ASP.NET Core]], middleware is a [[id:684e6719-609f-4a8a-a8fa-f11d0585ec10][C#]] class that can handle an [[id:fdec7db4-2c96-40f2-8f66-916ef0839bd0][HTTP]] request or response. It can:
+- Take an [[id:fdec7db4-2c96-40f2-8f66-916ef0839bd0][HTTP]] request and turn it into an [[id:fdec7db4-2c96-40f2-8f66-916ef0839bd0][HTTP]] response.
+- Modify an [[id:fdec7db4-2c96-40f2-8f66-916ef0839bd0][HTTP]] request and pass it to another piece of middleware.
+- Modify an [[id:fdec7db4-2c96-40f2-8f66-916ef0839bd0][HTTP]] response and pass it to either another middleware or to the web server.
+
+  When middleware short-circuits the pipeline and returns a response, it's called a "terminal middleware".
+
+  The pipeline is bidirectional. The request passes through each middleware, being manipulated until it turns into a response. Then, the response passes through each middleware _again_, in reverse order, until it gets back to the first piece of middleware.
+
+  The middleware pipeline could also be thought of as a series of nested components, with the first component being the outermost one, and the last being the innermost component.
+
+  If no middleware returns a response object, a [[id:47016693-9eec-4754-963d-a42bdc4626ce][404]] is returned automatically.
+
+** [[id:f793ab94-21b5-452f-979f-cb7906d3c0b9][DeveloperExceptionPageMiddleware]]
+** [[id:fb621db6-9121-48bf-9288-c447820ace80][ExceptionHandlerMiddleware]]
+** [[id:f61b0c4f-d2fd-4a66-a6d8-5f6249fbcdba][StaticFileMiddleware]]
+** [[id:b91253da-c86d-4882-a061-79f4e822e5b6][StatusCodePagesMiddleware]]
+** [[id:3b5d2cc3-c0d5-4a8b-ba4e-4c666660613a][WelcomeMiddleware]]
+
+* Parametrized routes
+Parameters can be created in URLs for the minimal API by using the angled brackets in the string, like `/person/{someValue}`
+
+#+NAME: ASP.NET Core - Minimal API parametrized routes example
+#+BEGIN_SRC csharp
+WebApplicationBuilder builder = WebApplication.CreateBuilder(args);
+WebApplication app = builder.Build();
+
+var people = new List<Person>
+{
+    new("Tom", "Hanks"),
+    new("Denzel", "Washington"),
+    new("Leondardo", "DiCaprio"),
+    new("Al", "Pacino"),
+    new("Morgan", "Freeman"),
+};
+
+app.MapGet("/person/{name}", (string name) =>
+    people.Where(p => p.FirstName.StartsWith(name)));
+
+app.Run();
+#+END_SRC
+
+* Results
+See [[id:53c35714-f4fa-4b14-ac08-8baab165f689][Results]] and [[id:8cfc8c9d-8fac-4060-8bd8-c915ca3af44e][TypedResults]]
+
+* Endpoint Filters
+Call ~.AddEndpointFilter~ on ~MapGet~ to add a common validation filter to an endpoint.
+[[https://learn.microsoft.com/en-us/aspnet/core/fundamentals/minimal-apis/min-api-filters?view=aspnetcore-8.0][Microsoft Docs]] (v8)
+Like the middleware pipeline, you can build an endpoint filter pipeline that can short-circuit itself and return early.
+Filters have additional info that middleware does not, like the endpoint details.
+Filters run only on endpoints they are registered to, whereas middleware runs for every request.
+
+You can supply an implementation of [[id:5ee86319-9af0-45e6-ae54-730eac54015a][IEndpointFilter]] to ~.AddEndpointFilter~.
+
+* Middleware vs Filters
+Middleware is more general, whereas filters are run on specific endpoints.
+
+* Route Groups
+~MapGroup~ can be used to group APIs together under common prefixes.
+~MapGroup~ can be chained:
+#+BEGIN_SRC csharp
+app.MapGroup("/fruit").MapGroup("/citrus")
+#+END_SRC
+This results in "/fruit/citrus"
+
+* Route Constraints
+:PROPERTIES:
+:ID:       4200012c-3779-49b8-aab1-da24b57bd065
+:END:
+Used to decided if a request can be routed to a particular endpoint. *Not* for input validation, as a mismatch will result in a [[id:fdec7db4-2c96-40f2-8f66-916ef0839bd0][HTTP]] [[id:47016693-9eec-4754-963d-a42bdc4626ce][404]] error, not a [[id:b5c700c1-861a-4c56-a177-249d2a2af05f][400]].
+
+[[https://learn.microsoft.com/en-us/aspnet/core/fundamentals/routing?view=aspnetcore-8.0#route-constraints][Microsoft Docs (v8)]]
+
+| constraint        | Example                                   | Example Matches                      | Notes                                                                                   |
+|-------------------+-------------------------------------------+--------------------------------------+-----------------------------------------------------------------------------------------|
+| int               | {id:int}                                  | 123456789, -123456789                | Matches any integer                                                                     |
+| bool              | {active:bool}                             | true, FALSE                          | Matches true or false. Case-insensitive                                                 |
+| datetime          | {dob:datetime}                            | 2016-12-31, 2016-12-31 7:32pm        | Matches a valid DateTime value in the invariant culture. See preceding warning.         |
+| decimal           | {price:decimal}                           | 49.99, -1,000.01                     | Matches a valid decimal value in the invariant culture. See preceding warning.          |
+| double            | {weight:double}                           | 1.234, -1,001.01e8                   | Matches a valid double value in the invariant culture. See preceding warning.           |
+| float             | {weight:float}                            | 1.234, -1,001.01e8                   | Matches a valid float value in the invariant culture. See preceding warning.            |
+| guid              | {id:guid}                                 | CD2C1638-1638-72D5-1638-DEADBEEF1638 | Matches a valid Guid value                                                              |
+| long              | {ticks:long}                              | 123456789, -123456789                | Matches a valid long value                                                              |
+| minlength(value)  | {username:minlength(4)}                   | Rick                                 | String must be at least 4 characters                                                    |
+| maxlength(value)  | {filename:maxlength(8)}                   | MyFile                               | String must be no more than 8 characters                                                |
+| length(length)    | {filename:length(12)}                     | somefile.txt                         | String must be exactly 12 characters long                                               |
+| length(min,max)   | {filename:length(8,16)}                   | somefile.txt                         | String must be at least 8 and no more than 16 characters long                           |
+| min(value)        | {age:min(18)}                             | 19                                   | Integer value must be at least 18                                                       |
+| max(value)        | {age:max(120)}                            | 91                                   | Integer value must be no more than 120                                                  |
+| range(min,max)    | {age:range(18,120)}                       | 91                                   | Integer value must be at least 18 but no more than 120                                  |
+| alpha             | {name:alpha}                              | Rick                                 | String must consist of one or more alphabetical characters, a-z and case-insensitive.   |
+| regex(expression) | {ssn:regex(^\\d{{3}}-\\d{{2}}-\\d{{4}}$)} | 123-45-6789                          | String must match the regular expression. See tips about defining a regular expression. |
+| required          | {name:required}                           | Rick                                 | Used to enforce that a non-parameter value is present during URL generation             |
+
+Constraints can be combined with the colon. Example: ~{qty:int:max(10)?}~ matches ~3, -123, 0, null~ (optional integer of 10 or less).
+
+Best used sparingly. With good URL design, route constraints won't be needed most of the time. They are most useful when URLs overlap.
+
+* [[id:81a41be1-2983-4a8a-b68b-22b41a39c54c][Catch-all Parameters]]
+
+* [[id:08f2d5da-98ab-49b0-93fe-bc39d96f06d9][Minimal API]]

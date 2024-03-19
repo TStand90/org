@@ -1,0 +1,6 @@
+:PROPERTIES:
+:ID:       35d93c5e-290e-4d7d-9b4e-3535bd211a7d
+:END:
+#+title: scripts
+
+It has scripts

@@ -1,0 +1,6 @@
+:PROPERTIES:
+:ID:       9aa0d454-b715-4f53-9990-194a9efe7424
+:END:
+#+title: HttpContext
+
+Used by the [[id:2b730c77-767a-4547-b1bf-53428b3d33a5][ASP.NET Core]] application as a storage box for a single request. The web server fills it with info about the original HTTP request. From there, more info can be stored in it, including info for the response.

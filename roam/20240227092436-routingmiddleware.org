@@ -1,0 +1,10 @@
+:PROPERTIES:
+:ID:       72c55ed6-f8cf-4da7-9465-e768787a908f
+:END:
+#+title: RoutingMiddleware
+
+RoutingMiddleware is automatically added to the start of the middleware pipeline by [[id:496ff34c-5052-41b5-85be-de05b1ae56cc][WebApplication]]. It determines where a request should go based on the URL.
+
+Can be explicitly added to the pipeline by calling `UseRouting()` on an instance of [[id:496ff34c-5052-41b5-85be-de05b1ae56cc][WebApplication]]. This allows middleware to be added before [[id:72c55ed6-f8cf-4da7-9465-e768787a908f][RoutingMiddleware]]. For example, it's good practice to put [[id:f61b0c4f-d2fd-4a66-a6d8-5f6249fbcdba][StaticFileMiddleware]] before this, since it doesn't use routing.
+
+TODO: More info about this.

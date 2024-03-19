@@ -1,0 +1,13 @@
+:PROPERTIES:
+:ID:       528727c7-7afb-4a31-966d-ee46bccad5ad
+:END:
+#+title: Input
+#+filetags: :Godot:
+
+A class in [[id:36100b50-2583-454a-85a0-7a8a86cd08a7][Godot]] that handles user input.
+
+* Methods
+** get_axis
+Takes two [[id:17774057-79f3-47c0-8533-f5c4532ad811][Input Action]] names, and returns a value between ~-1.0~ and ~1.0~ depending on the action whose button is being pressed.
+** is_action_just_pressed
+Returns ~true~ if the user pressed the [[id:17774057-79f3-47c0-8533-f5c4532ad811][Input Action]] on this frame.

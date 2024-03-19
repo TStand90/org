@@ -1,0 +1,19 @@
+:PROPERTIES:
+:ID:       28534a83-cd97-4b3b-b8c1-4e5d3380f118
+:END:
+#+title: Godot Signals
+#+filetags: :Godot:
+
+Signals are [[id:36100b50-2583-454a-85a0-7a8a86cd08a7][Godot]]'s way of implementing the [[id:8140e038-8424-480c-b6a8-608220c9f337][Observer Pattern]]. They emit events about the state of the game.
+
+* Connecting signals to nodes
+If a [[id:bacd55cd-cbb5-4663-829a-07f40b8ec03b][node]] has the "Signal Emission" icon next to it, then the node has a signal connection. Clicking the Signal Emission icon will open up a list of the signals in the Node Dock.
+
+There are two ways to connect signals: In the UI, and through code. Prefer adding through code, as it is more powerful and more easily searched.
+
+To connect through code:
+#+BEGIN_SRC gdscript
+signal_name.connect(function_to_call)
+#+END_SRC
+
+Connecting the signal is often done in the [[id:848452de-5262-46b7-a144-78266ff82f6b][_ready()]] function, since it is usually done once per Node.

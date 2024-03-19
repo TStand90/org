@@ -1,0 +1,11 @@
+:PROPERTIES:
+:ID:       81a41be1-2983-4a8a-b68b-22b41a39c54c
+:ROAM_REFS: https://learn.microsoft.com/en-us/aspnet/core/fundamentals/routing?view=aspnetcore-8.0#rtr https://livebook.manning.com/book/asp-net-core-in-action-third-edition/chapter-6/152
+:END:
+#+title: Catch-all Parameters
+
+Matches the remaining portion of the unmatched URL with a single or double asterisk.
+
+Example: ~/blog/{**slug}~ matches everything after "blog" to "slug".
+
+Single asterisk will escape the forward slash in the url, so =my/path= becomes =my%2path=

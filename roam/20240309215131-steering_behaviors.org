@@ -1,0 +1,29 @@
+:PROPERTIES:
+:ID:       38d5f4fb-5692-49ee-b549-4280aaf1f809
+:END:
+#+title: Steering Behaviors
+
+Steering Behaviors are algorithms that make game object move more smoothly. They gradually speed an object up (instead of sudden starts/stops), and allow for nicer looking turns
+
+#+NAME: Godot Steering Behavior example
+#+BEGIN_SRC gdscript
+var normal_speed := 600.0
+
+var max_speed := normal_speed
+var velocity := Vector2(0, 0)
+var steering_factor := 10.0
+
+
+func _process(delta: float) -> void:
+	var direction := Vector2(0, 0)
+	direction.x = Input.get_axis("move_left", "move_right")
+	direction.y = Input.get_axis("move_up", "move_down")
+
+	if direction.length() > 1.0:
+		direction = direction.normalized()
+
+	var desired_velocity := max_speed * direction
+	var steering := desired_velocity - velocity
+	velocity += steering * steering_factor * delta
+	position += velocity * delta
+#+END_SRC

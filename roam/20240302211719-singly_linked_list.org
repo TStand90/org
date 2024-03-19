@@ -1,0 +1,31 @@
+:PROPERTIES:
+:ID:       8c48ca9b-98b5-4388-9e61-453b91cf5bbd
+:END:
+#+title: Singly Linked List
+#+filetags: :Data_Structures:
+
+A singly [[id:d0b02bbc-6d2e-4905-aba3-a3cbe3e97b20][Linked List]] is similar to an [[id:721cecef-36a5-4fe7-9cf0-b885d92dc690][Array]] in that it stores contiguous data. Instead of storing the data in an allocated memory block, it stores things as several nodes, each with a value and a pointer to the next node.
+
+Linked lists are not stored in a contiguous memory block. You cannot control where in memory each node is allocated.
+
+Linked Lists that store a pointer to the previous node also are known as [[id:4a9cdda1-5551-43e4-8c1d-51dece219cdc][Doubly Linked List]]s.
+
+#+NAME: Python Singly Linked List Node class
+#+BEGIN_SRC python
+class ListNode:
+    def __init__(self, val):
+        self.val = val
+        self.next = None
+#+END_SRC
+
+Traversing the linked list might look something like this:
+
+#+NAME: Traversing a singly linked list in Python
+#+BEGIN_SRC python
+cur = ListNode1
+while cur:
+    cur = cur.next
+#+END_SRC
+
+* Deleting
+TODO

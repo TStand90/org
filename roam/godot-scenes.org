@@ -1,0 +1,9 @@
+:PROPERTIES:
+:ID:       d4b966e9-0135-4b4a-8c75-a9ad0b58e6c5
+:END:
+#+title: Godot Scenes
+#+filetags: :Godot:
+
+Scenes are reusable templates. They can represent characters, a chest, a level, or even an entire game.
+
+A scene is made up of one or more [[id:bacd55cd-cbb5-4663-829a-07f40b8ec03b][nodes]].

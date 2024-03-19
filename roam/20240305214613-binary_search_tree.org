@@ -1,0 +1,134 @@
+:PROPERTIES:
+:ID:       5c17f99f-22ff-4f57-9260-c3b3b2943105
+:ROAM_REFS: https://neetcode.io/courses/dsa-for-beginners/17
+:END:
+#+title: Binary Search Tree
+#+filetags: :Data_Structures:Algorithms:Data Structures:
+
+A subtype of [[id:df0100b8-8894-4071-864a-f5a56e357ea5][Binary Tree]]s that are sorted. The left nodes are smaller than the current node, and the right nodes are larger. Duplicates are not allowed.
+
+#+NAME: Binary Search Tree Operations
+| Name      | Complexity (balanced) | Complexity (worst case) | Description |
+|-----------+-----------------------+-------------------------+-------------|
+| Building  | O(n log n)            |                         | See below   |
+| Search    | O(log n)              | O(n)                    |             |
+| Insert    | O(log n)              |                         |             |
+| Delete    | O(log n)              |                         |             |
+| Traversal | O(n)                  |                         |             |
+
+* Searching
+** Code
+#+NAME: Binary Search Tree searching pseudocode
+#+BEGIN_SRC python
+def search(root, target):
+    if not root:
+        return False
+
+    if target > root.val:
+        return search(root.right, target)
+    elif target < root.val:
+        return search(root.left, target)
+    else:
+        return True
+#+END_SRC
+
+** Complexity
+Searches are done in O(log n) time if the tree is balanced. Otherwise, the worst case time could be O(n).
+
+* Insertion
+** Code
+#+NAME: Binary Search Tree insertion pseudocode
+#+BEGIN_SRC python
+# Insert a new node and return the root of the BST.
+def insert(root, val):
+    if not root:
+        return TreeNode(val)
+
+    if val > root.val:
+        root.right = insert(root.right, val)
+    elif val < root.val:
+        root.left = insert(root.left, val)
+    return root
+#+END_SRC
+
+** Complexity
+If the tree is balanced, insertion takes O(log n) time.
+
+* Deletion
+** Complexity
+If the tree is balanced, deletion takes O(log n) time.
+
+* Creation
+** Complexity
+Insertion takes O(log n), and you must do this for n elements, so O(n) * O(log n) = O(n log n)
+
+* Depth First Search :Data_Structures:Algorithms:Data:Structures:
+:PROPERTIES:
+:ID:       ee841753-8ab3-49ae-8274-d7bf89c9e04f
+:ROAM_REFS: https://neetcode.io/courses/dsa-for-beginners/19
+:END:
+Traverse the tree by going all the way down either the left or the right subtree, then doing the same with the other side. Can be done iteratively or recursively.
+
+TODO: Iterative examples below.
+
+There are three different ways to do this: In-Order, Pre-Order, and Post-Order
+
+** In-Order Traversal
+Visits the entire left side of the tree, then the parent node, then the right side.
+
+#+NAME: In-Order Traversal in Python
+#+BEGIN_SRC python
+def in_order_traversal(root):
+    if not root:  # Node is null, end of the branch.
+        return
+
+    in_order_traversal(root.left)
+    print(root)  # Whatever processing of the node goes here.
+    in_order_traversal(root.right)
+#+END_SRC
+
+** Pre-Order Traversal
+Visits the parent node first, then either the left or right branch, then the other branch.
+
+#+NAME: Pre-Order Traversal in Python
+#+BEGIN_SRC python
+def pre_order_traversal(root):
+    if not root:  # Node is null, end of the branch.
+        return
+
+    print(root)  # Whatever processing of the node goes here.
+    pre_order_traversal(root.left)
+    pre_order_traversal(root.right)
+#+END_SRC
+
+** Post-Order Traversal
+Visits the entire left branch, then the right branch, then the parent node.
+
+#+NAME: Post-Order Traversal in Python
+#+BEGIN_SRC python
+def pre_order_traversal(root):
+    if not root:  # Node is null, end of the branch.
+        return
+
+    post_order_traversal(root.left)
+    post_order_traversal(root.right)
+    print(root)  # Whatever processing of the node goes here.
+#+END_SRC
+
+** Reversing order
+Any of the above examples can reverse the order of the left and right branches to do a "backwards" search.
+
+** Time/Space Complexity
+You must visit every node in the tree, so the time complexity is O(n).
+
+** Leetcode exercises
+*** [[https://leetcode.com/problems/binary-tree-inorder-traversal/description/][94. Binary Tree Inorder Traversal]]
+
+* Breadth First Search
+:PROPERTIES:
+:ID:       3b26bb23-ab02-46c7-be40-3ac23fa6a887
+:END:  :Algorithms:Data:Structures:
+Traverse the tree by going layer by layer, typically left to right. Must be done iteratively rather than recursively.
+
+* Morris Traversal
+TODO

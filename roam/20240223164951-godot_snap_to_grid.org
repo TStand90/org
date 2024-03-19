@@ -1,0 +1,6 @@
+:PROPERTIES:
+:ID:       36782f27-53bf-45b9-8272-c6fd4d7c5765
+:END:
+#+title: Godot Snap to Grid
+
+The "Snap to Grid" button can help place things more accurately. It is right above the [[id:d208d635-d0fc-4282-ba9e-e28fa06cc508][Viewport]].

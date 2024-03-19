@@ -1,0 +1,15 @@
+:PROPERTIES:
+:ID:       ae280b07-6776-42ea-8253-e3058f9ab009
+:END:
+#+title: Timer
+#+filetags: :Godot:
+
+A [[id:bacd55cd-cbb5-4663-829a-07f40b8ec03b][Godot Node]]
+
+Timers do not start automatically. You need to call their ~start()~ method.
+
+* Wait time
+=Wait time= describes the timer's duration. It can be adjusted in the inspector.
+
+* Run once
+Timers run in an infinite cycle by defalut. To make a timer run only once, check the =One Shot= option in the inspector.

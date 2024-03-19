@@ -1,0 +1,6 @@
+:PROPERTIES:
+:ID:       546c5219-a381-451d-9b4c-fee71be7eb84
+:END:
+#+title: GDScript
+
+GDScript is the default language of the [[id:36100b50-2583-454a-85a0-7a8a86cd08a7][Godot]] game engine

@@ -1,0 +1,6 @@
+:PROPERTIES:
+:ID:       4a9cdda1-5551-43e4-8c1d-51dece219cdc
+:END:
+#+title: Doubly Linked List
+
+Similar to a [[id:8c48ca9b-98b5-4388-9e61-453b91cf5bbd][Singly Linked List]], except it includes a ~previous~ pointer on each node, pointing back to the previous node.

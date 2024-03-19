@@ -1,0 +1,6 @@
+:PROPERTIES:
+:ID:       9d749360-fe0e-4a03-ae7e-c2df305cb41d
+:END:
+#+title: scenes
+
+Scenes are lots of things.

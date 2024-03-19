@@ -1,0 +1,55 @@
+:PROPERTIES:
+:ID:       13eba48f-190c-4fbe-8657-e40ab851ea0d
+:END:
+#+title: Queue
+#+filetags: :Data_Structures:
+
+Queues are a First In, First Out (FIFO) data structure. They are similar to [[id:d2cf4928-a615-4c09-9fce-be63dfd16dd0][Stack]]s, which are LIFO.
+
+#+NAME: Queue Operations
+| Name    | Complexity | Descritpion                                                |
+|---------+------------+------------------------------------------------------------|
+| Enqueue | O(1)       | Adds an item to the end of the queue                       |
+| Dequeue | O(1)       | Removes an item from the front of the queue and returns it |
+
+* Implementation
+The most common way to implement a Queue is by using a [[id:d0b02bbc-6d2e-4905-aba3-a3cbe3e97b20][Linked List]]. A Queue is an abstract interface, and could be implemented with other data structues as well, such as a [[id:8d4503d3-2b53-42c5-961d-5b05097f27e8][Circular Buffer]].
+
+* Enqueue
+Adds an element to the ~tail~ of the queue.
+
+#+NAME: Queue's "Enqueue" in Python
+#+BEGIN_SRC python
+def enqueue(self, val):
+    newNode = ListNode(val)
+
+    # Queue is non-empty
+    if self.right:
+        self.right.next = newNode
+        self.right = self.right.next
+    # Queue is empty
+    else:
+        self.left = self.right = newNode
+#+END_SRC
+
+* Dequeue
+Removes an item from the front of the queue and returns it.
+
+#+Name: Queue's "Dequeue" in Python
+#+BEGIN_SRC python
+def dequeue(self):
+    # Queue is empty
+    if not self.left:
+        return None
+
+    # Remove left node and return value
+    val = self.left.val
+    self.left = self.left.next
+    if not self.left:
+        self.right = None
+    return val
+#+END_SRC
+
+* Leetcode exercises
+[[https://leetcode.com/problems/number-of-students-unable-to-eat-lunch/description/][1700. Number of Students Unable to Eat Lunch]]
+[[https://leetcode.com/problems/implement-stack-using-queues/description/][225. Implement Stack using Queues]]

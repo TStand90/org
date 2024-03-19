@@ -1,0 +1,17 @@
+:PROPERTIES:
+:ID:       d5fb0cae-4a62-4e99-9a4d-70ebabd68da6
+:END:
+#+title: Pomodoro
+
+The Pomodoro technique is a way of splitting up work into around 25 minute segments of working, with a 5-10 minute break in between. A "Pomodoro" refers to the work time interval.
+
+[[https://en.wikipedia.org/wiki/Pomodoro_Technique][Wikipedia Article]]
+
+
+According to Wikipedia, the original technique consists of these steps:
+1. Decide on the task to be done.
+2. Set the Pomodoro timer (typically for 25 minutes).[1]
+3. Work on the task.
+4. End work when the timer rings and take a short break (typically 5–10 minutes).[4]
+5. Go back to Step 2 and repeat until you complete four pomodoros.
+6. After four pomodoros are done, take a long break (typically 20 to 30 minutes) instead of a short break. Once the long break is finished, return to step 2.

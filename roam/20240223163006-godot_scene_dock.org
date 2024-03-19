@@ -1,0 +1,6 @@
+:PROPERTIES:
+:ID:       a87ad41c-aa51-484f-b60f-118610f15113
+:END:
+#+title: Godot Scene Dock
+
+The Scene Dock is on the top left of the editor. It contains the current [[id:d4b966e9-0135-4b4a-8c75-a9ad0b58e6c5][scene]] and its child [[id:bacd55cd-cbb5-4663-829a-07f40b8ec03b][node]].

@@ -1,0 +1,32 @@
+:PROPERTIES:
+:ID:       df0100b8-8894-4071-864a-f5a56e357ea5
+:END:
+#+title: Binary Tree
+#+filetags: :Data_Structures:
+
+Trees consist of nodes, which have ~left~ and ~right~ branches, along with a ~value~ that they store.
+
+#+NAME: Binary Tree Node in Python
+#+BEGIN_SRC python
+class TreeNode:
+    def __init__(self, val):
+        self.val = val
+        self.left = None
+        self.right = None
+#+END_SRC
+
+The node at the base of the tree is called the ~root~ node. It has no parent, and it can reach any node in the tree via traversal.
+
+A node that has neither a ~left~ nor ~right~ node is considered a ~leaf~ node.
+
+A node's pointers can only point in one direction. Circular trees are not allowed.
+
+~Children~ nodes are the left or right descendants of a node. A ~Parent~ node is the node above the current node.
+
+The ~Height~ of a tree is measured by how many nodes there are top to bottom. A tree with no nodes had height 0, and a tree with 1 node has height 1.
+
+~Edges~ are the connections in the tree. The number of edges is ~n - 1~, where ~n~ is the number of nodes.
+
+~Depth~ of a node refers to how far a node is from the ~root~ node. The count of ~depth~ is how many nodes are above the current one, _including_ the current one.
+
+~Ancestor~ nodes are nodes that are connected to child nodes somewhere down the tree. ~Descendant~ nodes are the opposite.

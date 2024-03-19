@@ -1,0 +1,21 @@
+:PROPERTIES:
+:ID:       2b47d1c1-9c8b-44df-8409-4f43fbce7ead
+:END:
+#+title: _process()
+
+In a [[id:36100b50-2583-454a-85a0-7a8a86cd08a7][Godot]] [[id:bacd55cd-cbb5-4663-829a-07f40b8ec03b][Node]], you can add a ~_process()~ method, which updates a node every frame. This is called "Idle Processing".
+
+#+BEGIN_SRC gdscript
+func _process(delta):
+	# Do something...
+	pass
+#+END_SRC
+
+#+BEGIN_SRC csharp
+public override void _Process(double delta)
+{
+    // Do something...
+}
+#+END_SRC
+
+The ~delta~ parameter is the amount of time (in seconds) since the last call to ~_process()~. It is used to make calculations independent of the current framerate.

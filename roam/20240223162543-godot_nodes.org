@@ -1,0 +1,15 @@
+:PROPERTIES:
+:ID:       bacd55cd-cbb5-4663-829a-07f40b8ec03b
+:END:
+#+title: Godot Nodes
+#+filetags: :Godot:
+
+* Types of Nodes
+** [[id:69e623d6-1ca7-4cd1-8fd7-e6927d0886ab][Area2D]]
+** [[id:28d63994-280a-4063-b56b-b1a0c79352a4][CanvasLayer]]
+** [[id:18590ffc-8a86-46e4-8f92-1790d42220c3][Sprite2D]]
+** [[id:ae280b07-6776-42ea-8253-e3058f9ab009][Timer]]
+
+* Node class methods
+** [[id:2b47d1c1-9c8b-44df-8409-4f43fbce7ead][_process()]]
+** [[id:cf811ee4-1eef-4d80-8818-e64e1206cfb4][queue_free()]]

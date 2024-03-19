@@ -1,0 +1,6 @@
+:PROPERTIES:
+:ID:       f61b0c4f-d2fd-4a66-a6d8-5f6249fbcdba
+:END:
+#+title: StaticFileMiddleware
+
+Used to serve static files from the [[id:d44f4b9f-7651-48ff-a345-f63728a04add][wwwroot]] folder. Returns a [[id:47016693-9eec-4754-963d-a42bdc4626ce][404]] if the static file does not exist.

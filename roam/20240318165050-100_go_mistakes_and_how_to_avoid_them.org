@@ -1,0 +1,27 @@
+:PROPERTIES:
+:ID:       3cb386ec-d975-45e9-adcf-bb6254919586
+:ROAM_REFS: https://www.manning.com/books/100-go-mistakes-and-how-to-avoid-them
+:END:
+#+title: 100 Go Mistakes and How to Avoid Them
+#+filetags: :Manning_Books:Golang:
+
+* 1: Unintended Variable Shadowing
+#+BEGIN_SRC go
+var client *http.Client
+if tracing {
+    client, err := createClientWithTracing()
+    if err != nil {
+        return err
+    }
+    log.Println(client)
+} else {
+    client, err := createDefaultClient()
+    if err != nil {
+        return err
+    }
+    log.Println(client)
+}
+// Use client
+#+END_SRC
+
+The outer ~client~ variable is always nil, since the inner ~client~ used ~:=~ for the assignment instead of ~=~.

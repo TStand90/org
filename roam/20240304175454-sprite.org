@@ -1,0 +1,6 @@
+:PROPERTIES:
+:ID:       d580e850-1fb8-483f-bdab-53c496cd9143
+:END:
+#+title: sprite
+
+In game development, a "sprite" refers to a 2D image that can be moved, resized, or rotated.

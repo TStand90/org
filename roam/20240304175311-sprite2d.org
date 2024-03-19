@@ -1,0 +1,12 @@
+:PROPERTIES:
+:ID:       18590ffc-8a86-46e4-8f92-1790d42220c3
+:END:
+#+title: Sprite2D
+#+filetags: :Godot:
+
+A [[id:bacd55cd-cbb5-4663-829a-07f40b8ec03b][Godot Node]] used to create a [[id:d580e850-1fb8-483f-bdab-53c496cd9143][sprite]].
+
+* Properties
+** Rotation
+Controls the angle of the sprite, in radians.
+You can use [[id:93973fca-d78f-444e-b380-03798f2c3504][Vector2]].angle() to make the rotation face the movement direction.

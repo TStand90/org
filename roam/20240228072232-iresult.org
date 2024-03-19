@@ -1,0 +1,7 @@
+:PROPERTIES:
+:ID:       7ceee837-6fd9-4c08-b799-3c8905d85ea8
+:END:
+#+title: IResult
+#+filetags: :ASP.NET_Core:
+
+TODO

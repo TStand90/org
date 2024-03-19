@@ -1,0 +1,11 @@
+:PROPERTIES:
+:ID:       28fb53f5-2c36-446e-b585-aa98ee39a0db
+:END:
+#+title: get_node
+#+filetags: :Godot:
+
+A function in [[id:36100b50-2583-454a-85a0-7a8a86cd08a7][Godot]] to get a node from within another node.
+
+A node can be retrieved by providing the full path to ~get_node~.
+
+If a node is a direct child of the node you are currently working in, you can just use the node's name. Example: If there is a child =Timer= class, just use ~get_node("Timer")~.

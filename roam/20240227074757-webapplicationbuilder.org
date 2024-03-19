@@ -1,0 +1,8 @@
+:PROPERTIES:
+:ID:       13863417-0f1c-430c-ba5d-2e250ee33acf
+:END:
+#+title: WebApplicationBuilder
+
+TODO: Info about this.
+
+Call the `build` method to create an instance of [[id:496ff34c-5052-41b5-85be-de05b1ae56cc][WebApplication]].

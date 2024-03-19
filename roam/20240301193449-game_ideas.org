@@ -1,0 +1,10 @@
+:PROPERTIES:
+:ID:       162ab43d-1d17-48be-844b-8500308fc607
+:END:
+#+title: Game Ideas
+
+* Game Ideas for Learning
+** [[id:9303f554-090f-4c7d-af2e-c86d7f981a76][Monogame Roguelike Ideas]]
+
+* Game Ideas
+** [[id:25ec84df-9b81-4e3d-8649-40cf2c64d1bf][Biscuit Caravan]]

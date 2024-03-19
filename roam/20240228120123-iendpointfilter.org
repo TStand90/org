@@ -1,0 +1,6 @@
+:PROPERTIES:
+:ID:       5ee86319-9af0-45e6-ae54-730eac54015a
+:END:
+#+title: IEndpointFilter
+
+Implementations must implement ~InvokeAsync~.

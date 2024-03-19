@@ -1,0 +1,6 @@
+:PROPERTIES:
+:ID:       d208d635-d0fc-4282-ba9e-e28fa06cc508
+:END:
+#+title: Godot Viewport
+
+The viewport is in the center of the Godot IDE. It shows the current scene.

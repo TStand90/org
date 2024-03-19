@@ -1,0 +1,9 @@
+:PROPERTIES:
+:ID:       800d6eac-df47-4e23-88d8-bf19cea3ca11
+:END:
+#+title: Kestrel
+#+filetags: :ASP.NET_Core:
+
+The default web server for [[id:2b730c77-767a-4547-b1bf-53428b3d33a5][ASP.NET Core]].
+
+Kestrel receives requests from the [[id:a1c0773a-1d04-4e44-a42d-e9784b5ee085][reverse proxy]], bundles it in a [[id:9aa0d454-b715-4f53-9990-194a9efe7424][HttpContext]], and sends that to the [[id:2b730c77-767a-4547-b1bf-53428b3d33a5][ASP.NET Core]] backend.

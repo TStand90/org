@@ -1,0 +1,11 @@
+:PROPERTIES:
+:ID:       a1c0773a-1d04-4e44-a42d-e9784b5ee085
+:END:
+#+title: reverse proxy
+
+Sends web requests from HTTP to a web backend.
+
+* Reverse proxies
+** Apache
+** Nginx
+** Microsoft's IIS

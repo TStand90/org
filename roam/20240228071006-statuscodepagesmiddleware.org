@@ -1,0 +1,26 @@
+:PROPERTIES:
+:ID:       b91253da-c86d-4882-a061-79f4e822e5b6
+:END:
+#+title: StatusCodePagesMiddleware
+
+Adds [[id:245f3a8d-2389-43de-a5ea-a4a7a7b1d080][Problem Details]] to error responses automatically.
+
+Call `UseStatusCodePages` on an instance of [[id:496ff34c-5052-41b5-85be-de05b1ae56cc][WebApplication]] to use.
+
+#+BEGIN_SRC csharp
+WebApplicationBuilder builder = WebApplication.CreateBuilder(args);
+builder.Services.AddProblemDetails();
+
+WebApplication app = builder.Build();
+
+if (!app.Environment.IsDevelopment())
+{
+    app.UseExceptionHandler();
+}
+
+app.UseStatusCodePages();
+
+app.MapGet("/", () => Results.NotFound());
+
+app.Run();
+#+END_SRC

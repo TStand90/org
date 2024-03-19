@@ -1,0 +1,6 @@
+:PROPERTIES:
+:ID:       8140e038-8424-480c-b6a8-608220c9f337
+:END:
+#+title: Observer Pattern
+
+TODO: Write about the Observer Pattern

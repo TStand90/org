@@ -1,0 +1,6 @@
+:PROPERTIES:
+:ID:       245f3a8d-2389-43de-a5ea-a4a7a7b1d080
+:END:
+#+title: Problem Details
+
+TODO: Info about the Problem Details RFC here.

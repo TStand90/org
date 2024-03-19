@@ -1,0 +1,7 @@
+:PROPERTIES:
+:ID:       cf811ee4-1eef-4d80-8818-e64e1206cfb4
+:END:
+#+title: queue_free()
+#+filetags: :Godot:
+
+A function in [[id:36100b50-2583-454a-85a0-7a8a86cd08a7][Godot]] that deletes the current [[id:bacd55cd-cbb5-4663-829a-07f40b8ec03b][Godot Node]] at the end of the frame.

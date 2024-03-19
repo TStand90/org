@@ -1,0 +1,33 @@
+:PROPERTIES:
+:ID:       d0b02bbc-6d2e-4905-aba3-a3cbe3e97b20
+:END:
+#+title: Linked List
+#+filetags: :Data_Structures:
+
+A Linked List is one of the most basic [[id:3b99c6d9-1e37-4003-b6ea-6d7c3b34892d][Data Structures]] in computer science. You can have a [[id:8c48ca9b-98b5-4388-9e61-453b91cf5bbd][Singly Linked List]] or a [[id:4a9cdda1-5551-43e4-8c1d-51dece219cdc][Doubly Linked List]].
+
+Instead of storing the data in an allocated memory block, it stores things as several nodes, each with a value and a pointer to the next node. [[id:4a9cdda1-5551-43e4-8c1d-51dece219cdc][Doubly Linked List]]s will also have a pointer to the previous node.
+
+Linked lists are not stored in a contiguous memory block. You cannot control where in memory each node is allocated.
+
+Linked lists will also have a ~head~ and ~tail~ pointer, to the first and last nodes, respectively. This allows for fast appending and prepending in O(1) time. However, adding anywhere else besides the beginning or end will require traversing the linked list in O(n).
+
+* Access
+Finding a node takes O(n) time, since it requires traversing the linked list.
+
+* Search
+Same as Access: O(n)
+
+* Insertion
+To append to the linked list, simply update the node at ~tail~ to point to the new node.
+To preppend to the linked list, simply update the node at ~head~ to be the new node, and have the new node point to the previous ~head~.
+Inserting elsewhere in the linked list will require traversing (O(n)), unless you happen to have a reference to the node you're inserting after (in which case the time is O(1)).
+
+* Deletion
+Deleting a node is as simple as taking the ~next~ pointer that would point to it, and setting it to point to the deleted nodes ~next~ pointer. This "skips" the node in the list, which, in a memory managed language, will remove all references to the node. This will mark the node as ready for deletion, and as far as the linked list is concerned, it no longer exists. Memory unmanaged languages will need to deallocate the node manually.
+Time complexity is the same as Insertion: O(1) if you have the node, O(n) if you do not.
+
+* When to use
+Linked Lists are less efficient than [[id:721cecef-36a5-4fe7-9cf0-b885d92dc690][Array]]s for random access, since the Linked List must be traversed.
+
+TODO: More info about when (not to) use.

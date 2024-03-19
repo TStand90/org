@@ -1,0 +1,7 @@
+:PROPERTIES:
+:ID:       738bdca8-ba2a-45a4-9747-1f6c876e31b0
+:END:
+#+title: CollisionShape2D
+#+filetags: :Godot:
+
+Defines a collision shape for a [[id:bacd55cd-cbb5-4663-829a-07f40b8ec03b][Godot Node]]. Shapes include rectangles, circles, and others.

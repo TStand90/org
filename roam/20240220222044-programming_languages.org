@@ -1,0 +1,11 @@
+:PROPERTIES:
+:ID:       358cf4cc-b5c5-4d13-a451-c001cb0fb607
+:END:
+#+title: Programming Languages
+
+C++
+[[id:684e6719-609f-4a8a-a8fa-f11d0585ec10][C#]]
+Elixir
+Javascript
+Python
+Typescript

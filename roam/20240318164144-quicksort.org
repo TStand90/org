@@ -1,0 +1,6 @@
+:PROPERTIES:
+:ID:       92767955-14fb-443d-bc5e-35da7ca59b1c
+:END:
+#+title: Quick Sort
+
+TODO

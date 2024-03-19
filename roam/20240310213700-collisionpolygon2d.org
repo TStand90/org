@@ -1,0 +1,7 @@
+:PROPERTIES:
+:ID:       ced60e22-bb0c-4328-a40e-2c2a5f421639
+:END:
+#+title: CollisionPolygon2D
+#+filetags: :Godot:
+
+Detects collisions for irregular shapes.

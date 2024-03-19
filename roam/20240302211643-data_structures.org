@@ -1,0 +1,17 @@
+:PROPERTIES:
+:ID:       3b99c6d9-1e37-4003-b6ea-6d7c3b34892d
+:END:
+#+title: Data Structures and Algorithms
+
+* Data Structures
+** [[id:df0100b8-8894-4071-864a-f5a56e357ea5][Binary Tree]]
+** [[id:5c17f99f-22ff-4f57-9260-c3b3b2943105][Binary Search Tree]]
+** [[id:d0b02bbc-6d2e-4905-aba3-a3cbe3e97b20][Linked List]]
+** [[id:d2cf4928-a615-4c09-9fce-be63dfd16dd0][Stack]]
+** [[id:13eba48f-190c-4fbe-8657-e40ab851ea0d][Queue]]
+
+* Algorithms
+** [[id:dbcc40a1-3fac-4404-9546-5d2ee0511406][Bucket Sort]]
+** [[id:dc976705-dd99-4347-8fd9-e708f4d8dda1][Insertion Sort]]
+** [[id:c4afc7cd-66e2-46de-8499-fbffd3db543a][Merge Sort]]
+** [[id:92767955-14fb-443d-bc5e-35da7ca59b1c][Quick Sort]]

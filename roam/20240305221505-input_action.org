@@ -1,0 +1,7 @@
+:PROPERTIES:
+:ID:       17774057-79f3-47c0-8533-f5c4532ad811
+:END:
+#+title: Input Action
+#+filetags: :Godot:
+
+TODO: Info about [[id:36100b50-2583-454a-85a0-7a8a86cd08a7][Godot]]'s input actions.

@@ -1,0 +1,10 @@
+:PROPERTIES:
+:ID:       b2b6d59d-eeed-4efe-9c03-cf2da01e4f87
+:END:
+#+title: Godot Scripts
+
+[[id:bacd55cd-cbb5-4663-829a-07f40b8ec03b][Nodes]] and [[id:d4b966e9-0135-4b4a-8c75-a9ad0b58e6c5][Scenes]] do not interact by default. That requires code written in Scripts.
+
+Scripts are attached to [[id:bacd55cd-cbb5-4663-829a-07f40b8ec03b][nodes]].
+
+Scripts can be written in GDScript, or [[id:684e6719-609f-4a8a-a8fa-f11d0585ec10][C#]].

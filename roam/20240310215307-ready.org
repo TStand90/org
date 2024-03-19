@@ -1,0 +1,8 @@
+:PROPERTIES:
+:ID:       848452de-5262-46b7-a144-78266ff82f6b
+:ROAM_REFS: https://school.gdquest.com/courses/learn_2d_gamedev_godot_4/loot_it_all/node_creation_and_ready
+:END:
+#+title: _ready()
+#+filetags: :Godot:
+
+Function in [[id:36100b50-2583-454a-85a0-7a8a86cd08a7][Godot]] that gets called once on a [[id:bacd55cd-cbb5-4663-829a-07f40b8ec03b][Godot Node]] when it is initialized.
