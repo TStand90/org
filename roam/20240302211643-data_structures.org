@@ -13,6 +13,7 @@
 ** [[id:13eba48f-190c-4fbe-8657-e40ab851ea0d][Queue]]
 
 * Algorithms
+** [[id:b2fc0230-e59b-458e-8f40-c63d4b75f5af][Backtracking]]
 ** [[id:dbcc40a1-3fac-4404-9546-5d2ee0511406][Bucket Sort]]
 ** [[id:dc976705-dd99-4347-8fd9-e708f4d8dda1][Insertion Sort]]
 ** [[id:c4afc7cd-66e2-46de-8499-fbffd3db543a][Merge Sort]]

@@ -1,0 +1,67 @@
+:PROPERTIES:
+:ID:       b2fc0230-e59b-458e-8f40-c63d4b75f5af
+:ROAM_REFS: https://neetcode.io/courses/dsa-for-beginners/22
+:END:
+#+title: Backtracking
+#+filetags: :Algorithms:
+
+An algorithm to search a [[id:df0100b8-8894-4071-864a-f5a56e357ea5][Binary Tree]] (possibly a [[id:5c17f99f-22ff-4f57-9260-c3b3b2943105][Binary Search Tree]]), similar to [[id:ee841753-8ab3-49ae-8274-d7bf89c9e04f][Depth First Search]]. A brute force algorithm.
+
+* Example
+Find a path in a [[id:df0100b8-8894-4071-864a-f5a56e357ea5][Binary Tree]] from the root node to any leaf node, which does not contain some value ~x~.
+
+In this example, ~x = 0~.
+
+#+BEGIN_SRC python
+class TreeNode:
+    def __init__(self, val):
+        self.val = value
+        self.left = None
+        self.right = None
+
+
+def can_reach_leaf(root: Optional[TreeNode]) -> bool:
+    """Returns True if a path to a leaf node exists which
+    does not encounter the number 0."""
+    if not root or root.val == 0:
+        return False
+
+    if not root.left and not root.right:
+        return True
+    if can_reach_leaf(root.left):
+        return True
+    if can_reach_leaf(root.right):
+        return True
+
+    return False
+
+
+def path_to_leaf(root, path):
+    """Returns True if a path to a leaf node exists which
+    does not encounter the number 0, keeping track of the current
+    path."""
+    if not root or root.val == 0:
+        return False
+
+    path.append(root.val)
+
+    if not root.left and not root.right:
+        return True
+    if path_to_leaf(root.left, path):
+        return True
+    if path_to_leaf(root.right, path):
+        return True
+
+    path.pop()
+    return False
+#+END_SRC
+
+* Time complexity
+O(n), since each node must be visited once (until a solution is found).
+
+* Leetcode problems
+** Easy
+*** [[https://leetcode.com/problems/path-sum/description/][112. Path Sum]]
+** Medium
+*** [[https://leetcode.com/problems/combination-sum/description/][39.Combination Sum]]
+*** [[https://leetcode.com/problems/subsets/description/][78. Subsets]]
