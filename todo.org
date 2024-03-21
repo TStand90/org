@@ -1,0 +1,10 @@
+* Inbox
+** [ ] Investigate Emacs Meow mode for Doom Emacs
+** [ ] Investigate separating my journal into its own git submodule
+- Note taken on [2024-03-20 Wed 22:34] \\
+  There are things I may write in my org-journal that I *really* don't want on my work laptop. Putting it in its own Git submodule that is separated would solve this problem.
+** [ ] Investigate having a separate TODO list for work related tasks.
+- Note taken on [2024-03-20 Wed 22:36] \\
+  Not a high priority right now, as removing work stuff later probably isn't too hard.
+- Note taken on [2024-03-20 Wed 22:35] \\
+  I don't necessarily want to pollute my personal TODOs with work stuff.

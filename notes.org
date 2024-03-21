@@ -1,0 +1,2 @@
+* Inbox
+Is this file made redundant with org-roam? I'm not sure yet, I should investigate.
