@@ -1,0 +1,6 @@
+:PROPERTIES:
+:ID:       63b38574-e23e-4862-8fe5-95cca2f8c400
+:END:
+#+title: Vim
+
+An inferior editor to [[id:a4150a7f-be1d-45ae-a530-9e9d1d517819][Emacs]].

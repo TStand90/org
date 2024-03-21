@@ -1,0 +1,6 @@
+:PROPERTIES:
+:ID:       a4150a7f-be1d-45ae-a530-9e9d1d517819
+:END:
+#+title: Emacs
+
+Emacs is a great operating system that is only missing a good text editor.
