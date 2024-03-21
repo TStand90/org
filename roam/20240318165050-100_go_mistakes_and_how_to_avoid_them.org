@@ -25,3 +25,78 @@ if tracing {
 #+END_SRC
 
 The outer ~client~ variable is always nil, since the inner ~client~ used ~:=~ for the assignment instead of ~=~.
+
+Can be solved by assigning within the block like this:
+
+#+BEGIN_SRC go
+var client *http.Client
+var err error
+if tracing {
+    client, err = createClientWithTracing()
+    if err != nil {
+        return err
+    }
+} else {
+    // Same logic
+}
+#+END_SRC
+
+* 2: Unnecessary nested code
+
+Avoid nesting ~if~ statements whenever possible, as they make the code harder to reason about.
+
+#+BEGIN_SRC go
+func join(s1, s2 string, max int) (string, error) {
+    if s1 == "" {
+        return "", errors.New("s1 is empty")
+    } else {
+        if s2 == "" {
+            return "", errors.New("s2 is empty")
+        } else {
+            concat, err := concatenate(s1, s2)
+            if err != nil {
+                return "", err
+            } else {
+                if len(concat) > max {
+                    return concat[:max], nil
+                } else {
+                    return concat, nil
+                }
+            }
+        }
+    }
+}
+
+func concatenate(s1 string, s2 string) (string, error) {
+    // ...
+}
+#+END_SRC
+
+Early ~return~ statements are helpful here:
+
+#+BEGIN_SRC go
+func join(s1, s2 string, max int) (string, error) {
+    if s1 == "" {
+        return "", errors.New("s1 is empty")
+    }
+    if s2 == "" {
+        return "", errors.New("s2 is empty")
+    }
+    concat, err := concatenate(s1, s2)
+    if err != nil {
+        return "", err
+    }
+    if len(concat) > max {
+        return concat[:max], nil
+    }
+    return concat, nil
+}
+
+func concatenate(s1 string, s2 string) (string, error) {
+    // ...
+}
+#+END_SRC
+
+* 3: Misusing init functions
+
+TODO
