@@ -1,0 +1,87 @@
+:PROPERTIES:
+:ID:       8a473eba-98fc-4f63-945b-5b260a8aceba
+:END:
+#+title: init()
+#+filetags: :Go:
+
+A function in a [[id:1acbf81c-8e58-447c-8b07-a61d9710031c][Go]] package that will run only once when initializing a package. Runs after the constants and variable declarations are evaluated.
+
+The ~init~ function takes no arguments, and returns nothing.
+
+#+BEGIN_SRC go
+func init() {
+	fmt.Println("init")
+}
+#+END_SRC
+
+If package "A" depends on package "B", then package B's ~init~ function will run first.
+
+A package can also have multiple ~init~ functions, spread across files. The functions will be executed in alphabetical order of the file names. It is bad practice to rely on the execution order of these ~init~ functions in the same package, as the file names could change.
+
+Multiple ~init~ functions can even be declared in the same file. They will be executed in the order they appear in the code.
+
+#+BEGIN_SRC go
+package main
+
+import "fmt"
+
+func init() {
+	fmt.Println("init 1")
+}
+
+func init() {
+	fmt.Println("init 1")
+}
+
+func main() {
+	// ...
+}
+#+END_SRC
+
+~init~ functions cannot be called directly. The following code is invalid.
+
+#+BEGIN_SRC go
+package main
+
+func init() {}
+
+func main() {
+	init()
+}
+#+END_SRC
+
+Running results in this compilation error:
+
+#+BEGIN_SRC shell
+go build .
+./main.go:6.2: undefined: init
+#+END_SRC
+
+~init~ has the following limitations:
+1. Error handling is limited, since the function cannot return anything (including error values).
+2. If it alters variables, those variables must be globals to the package.
+3. They can complicate test implementations, since they allow no flexibility in initializations.
+
+~init~ is not a good fit for all things initialization. For example, setting up a database connection in ~init~ is bad idea. The database connection would have to go in a global variable if done this way.
+
+Something that they are good at, for example, is setting up static [[id:fdec7db4-2c96-40f2-8f66-916ef0839bd0][HTTP]] configuration, like so:
+
+#+BEGIN_SRC go
+func init() {
+    redirect := func(w http.ResponseWriter, r *http.Request) {
+        http.Redirect(w, r, "/", http.StatusFound)
+    }
+    http.HandleFunc("/blog", redirect)
+    http.HandleFunc("/blog/", redirect)
+
+    static := http.FileServer(http.Dir("static"))
+    http.Handle("/favicon.ico", static)
+    http.Handle("/fonts.css", static)
+    http.Handle("/fonts/", static)
+
+    http.Handle("/lib/godoc/", http.StripPrefix("/lib/godoc/",
+        http.HandlerFunc(staticHandler)))
+}
+#+END_SRC
+
+This works well, sinc, there is no possibility for errors here, and there is no need to create global variables. It also won't impact any unit tests.

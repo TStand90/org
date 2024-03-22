@@ -3,4 +3,4 @@
 :END:
 #+title: Emacs
 
-Emacs is a great operating system that is only missing a good text editor.
+Emacs is a great operating system that is only missing a good text editor (such as [[id:63b38574-e23e-4862-8fe5-95cca2f8c400][Vim]]).

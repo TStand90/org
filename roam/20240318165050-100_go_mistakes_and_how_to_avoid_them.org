@@ -3,7 +3,7 @@
 :ROAM_REFS: https://www.manning.com/books/100-go-mistakes-and-how-to-avoid-them
 :END:
 #+title: 100 Go Mistakes and How to Avoid Them
-#+filetags: :Manning_Books:Golang:
+#+filetags: :Go:Manning_Books:
 
 * 1: Unintended Variable Shadowing
 #+BEGIN_SRC go
@@ -99,4 +99,18 @@ func concatenate(s1 string, s2 string) (string, error) {
 
 * 3: Misusing init functions
 
-TODO
+[[id:8a473eba-98fc-4f63-945b-5b260a8aceba][init()]] functions are used to initialize packages. See the notes in [[id:8a473eba-98fc-4f63-945b-5b260a8aceba][init()]] for information on when not to use them.
+
+* 4: Overusing getters and setters
+
+[[id:1acbf81c-8e58-447c-8b07-a61d9710031c][Go]] has no automatic support for getters and setters like some other languages. [[id:1acbf81c-8e58-447c-8b07-a61d9710031c][Go]] considers getters and setters to be non-idiomatic for accessing struct fields.
+
+[[id:1e56325a-f43c-4059-9605-d1349e62d641][Getters and Setters]] have several advantages, despite not being supported by the language. See the page on [[id:1e56325a-f43c-4059-9605-d1349e62d641][Getters and Setters]] for ideas on why they can be helpful.
+
+There are some naming conventions in [[id:1acbf81c-8e58-447c-8b07-a61d9710031c][Go]] if you want to use [[id:1e56325a-f43c-4059-9605-d1349e62d641][Getters and Setters]]. For a field called ~balance~:
+- The getter method should be named ~Balance~ (not ~GetBalance~).
+- The setter method should be named ~SetBalance~.
+
+[[id:1acbf81c-8e58-447c-8b07-a61d9710031c][Go]] emphasizes simplicity, which includes simplicity in how struct fields are accessed. This means that [[id:1e56325a-f43c-4059-9605-d1349e62d641][Getters and Setters]] should not be used for everything. They should only be used where necessary.
+
+* 5: Interface pollution

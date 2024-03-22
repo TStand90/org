@@ -10,7 +10,7 @@
 * Know some
 ** [[id:684e6719-609f-4a8a-a8fa-f11d0585ec10][C#]]
 ** [[id:546c5219-a381-451d-9b4c-fee71be7eb84][GDScript]]
-** Go
+** [[id:1acbf81c-8e58-447c-8b07-a61d9710031c][Go]]
 ** Typescript
 
 * Don't know much

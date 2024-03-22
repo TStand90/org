@@ -1,0 +1,10 @@
+:PROPERTIES:
+:ID:       1acbf81c-8e58-447c-8b07-a61d9710031c
+:END:
+#+title: Go
+#+filetags: :Go:
+
+A language created by Google.
+
+* Resources:
+[[id:3cb386ec-d975-45e9-adcf-bb6254919586][100 Go Mistakes and How to Avoid Them]]

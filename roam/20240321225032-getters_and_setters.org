@@ -1,0 +1,11 @@
+:PROPERTIES:
+:ID:       1e56325a-f43c-4059-9605-d1349e62d641
+:END:
+#+title: Getters and Setters
+
+Getters and Setters are a concept in [[id:0cabecd4-2482-413f-a76a-81ad31b6bd2b][Object Oriented Programming]] which allows encapsulation of fields.
+
+Here are some advantages of using this getters and setters:
+- They encapsulate behavior associated with getting or setting a field. Examples include validating the field, or returning a computed value.
+- They hide internal representation.
+- They allow easier debugging by setting a breakpoint or log inside the getter or setter function, so you can debug when a field is accessed or altered easily.
