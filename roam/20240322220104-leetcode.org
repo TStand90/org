@@ -2,5 +2,7 @@
 :ID:       82f10055-fd84-4321-b761-0ce6dc8452c4
 :END:
 #+title: Leetcode
+#+filetags: :Leetcode:
 
-* [[id:52e640bc-2842-4061-807d-2b484057e228][283. Move Zeroes]]
+* [X] [[id:52e640bc-2842-4061-807d-2b484057e228][283. Move Zeroes]]
+* [ ] [[id:b5f03f91-11e0-49d5-be9e-61085adaead6][703. Kth Largest Element in a Stream]]
