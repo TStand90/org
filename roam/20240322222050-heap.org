@@ -1,0 +1,32 @@
+:PROPERTIES:
+:ID:       65163304-d9ac-401a-afe4-c2bf19fb73c3
+:ROAM_REFS: https://neetcode.io/courses/dsa-for-beginners/23
+:END:
+#+title: Heap
+#+filetags: :Data_Structures:
+
+A [[id:df0100b8-8894-4071-864a-f5a56e357ea5][Binary Tree]] (but not a [[id:5c17f99f-22ff-4f57-9260-c3b3b2943105][Binary Search Tree]]). Implements a [[id:3be75ac9-fb2b-4118-a8b2-a8ee3cecf778][Priority Queue]].
+
+Two types of heaps:
+1. Min Heap
+2. Max Heap
+
+Heaps have two properties:
+1. Structure Property
+   A binary heap is a [[id:df0100b8-8894-4071-864a-f5a56e357ea5][Binary Tree]] that is a [[id:7beb40b4-ad3a-427b-ac76-9e7293871558][Complete Binary Tree]].
+2. Order Property
+   For a Min Heap, each node's value must be less than all of its children. So the root node of the tree must be the smallest element. This property is *recursive* as well, so any subtrees will have to enforce this rule for its children as well.
+
+   For a Max Heap, the opposite is true. The root of the tree must be larger than all of its children.
+
+Note that duplicate values are allowed in Heaps.
+
+Despite Heaps being drawn an represented as [[id:df0100b8-8894-4071-864a-f5a56e357ea5][Binary Tree]]s, they are actually created in memory as [[id:721cecef-36a5-4fe7-9cf0-b885d92dc690][Array]]s. The array starts at ~1~, not ~0~. The ~0~ index is left intentionally blank.
+
+The array starts at 1 so that the following math equations will work.
+
+leftChild = 2 * i
+rightChild = 2 * i + 1
+parent = i / 2
+
+These equations work to get these values for *any* node. They only work because Heaps are [[id:7beb40b4-ad3a-427b-ac76-9e7293871558][Complete Binary Tree]]s.

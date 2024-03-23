@@ -1,0 +1,7 @@
+:PROPERTIES:
+:ID:       3be75ac9-fb2b-4118-a8b2-a8ee3cecf778
+:END:
+#+title: Priority Queue
+#+filetags: :Data_Structures:
+
+Implemented using a [[id:65163304-d9ac-401a-afe4-c2bf19fb73c3][Heap]].
