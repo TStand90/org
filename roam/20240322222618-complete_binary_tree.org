@@ -2,6 +2,7 @@
 :ID:       7beb40b4-ad3a-427b-ac76-9e7293871558
 :END:
 #+title: Complete Binary Tree
+#+filetags: :Data_Structures:
 
 A [[id:df0100b8-8894-4071-864a-f5a56e357ea5][Binary Tree]] where every single row of the tree is completely "filled", except for the last row.
 
