@@ -1,0 +1,6 @@
+:PROPERTIES:
+:ID:       db090649-c83e-43a3-9209-8116e631cf8c
+:END:
+#+title: Zellij
+
+Zellij is a terminal multiplexer. It is an alternative to [[id:98fde87c-9997-4bc3-a02d-acb01618bc3d][Tmux]].

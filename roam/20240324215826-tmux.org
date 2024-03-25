@@ -1,0 +1,6 @@
+:PROPERTIES:
+:ID:       98fde87c-9997-4bc3-a02d-acb01618bc3d
+:END:
+#+title: Tmux
+
+Tmux is a terminal multiplexer.
