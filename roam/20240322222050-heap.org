@@ -31,11 +31,18 @@ parent = i / 2
 
 These equations work to get these values for *any* node. They only work because Heaps are [[id:7beb40b4-ad3a-427b-ac76-9e7293871558][Complete Binary Tree]]s.
 
+#+NAME: Heap Operations
+| Name        | Complexity |
+|-------------+------------|
+| Get Min/Max | O(1)       |
+| Push        | O(log n)   |
+| Pop         | O(log n)   |
+
+
 * Push
 To add an item to a heap, insert it into the last spot in the array. This satisfies the Structure Property.
 
 Then, check it against its parent node. If the heap is a Min Heap, and the node that was inserted is larger than its parent, swap them. For Max Heaps, it's the same check, just reversed.
-
 This swapping occurs over and over until the Order Property is satisfied. This is called "percolating", or "percolate up".
 
 #+BEGIN_SRC python
@@ -60,4 +67,55 @@ O(log n), The height of the tree. Because the tree is always balanced (because i
 
 * Pop
 
-TODO
+When popping off the Heap, we always pop the first element (the root of the tree). This is because the first element is always the smallest, and thus has the highest priority.
+
+After removing the root (the item in index ~1~ in the array), take the ~last~ element in the tree (the last element in the array) and put it at the root (index ~1~). This satisfies the
+Structure Property. Obviously the Order Property will be violated at this point, so it needs to be fixed by percolating the new root down.
+
+Swap the top node with the smaller child, recursively, until the Order Property is satisfied.
+
+#+BEGIN_SRC python
+def pop(self):
+    if len(self.heap) == 1:
+        # Heap is empty, nothing to pop (remember that index 0 is empty).
+        return None
+    if len(self.heap) == 2:
+        # Only one node in the Heap.
+        return self.heap.pop()
+
+    # Store the value to pop, so it's not lost.
+    res = self.heap[1]
+
+    # Move last value to the root
+    self.heap[1] = self.heap.pop()
+
+    # Percolate down
+    i = 1
+    while 2 * i < len(self.heap):
+        has_right_child = 2 * i + 1 < len(self.heap)  # Note that we don't need to check if a left child exists. That is guaranteed.
+        right_child_less_than_left_child = self.heap[2 * i + 1] < self.heap[2 * i]
+        current_node_greater_than_right_child = self.heap[i] > self.heal[2 * i + 1]
+
+        # Swap the right child only if it exists, it's smaller than the left, and it's smaller than the current root.
+        swap_right_child = has_right_child and right_child_less_than_left_child and current_node_greater_than_right_child
+
+        # We swap the left only if we aren't swapping the right, and if the left child is smaller than the current root.
+        swap_left_child = self.heap[i] > self.heap[2 * i]
+
+        if has_right_child and right_child_less_than_left_child and current_node_greater_than_right_child:
+            # Swap the right child
+            temp = self.heap[i]
+            self.heap[i] = self.heap[2 * i + 1]
+            self.heap[2 * i + 1] = temp
+            i = 2 * i + 1
+        elif self.heap[i] > self.heap[2 * i]:
+            # Swap the left child
+            temp = self.heap[i]
+            self.heap[i] = self.heap[2 * i]
+            self.heap[2 * i] = tmp
+            i = 2 * i
+        else:
+            break
+
+    return res
+#+END_SRC

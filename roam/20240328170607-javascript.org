@@ -1,0 +1,6 @@
+:PROPERTIES:
+:ID:       a39ecfb9-066d-4f6b-8cae-0f1c13345b0d
+:END:
+#+title: Javascript
+
+Javascript is a programming language that proves Stockholm Syndrome is real.
