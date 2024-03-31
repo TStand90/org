@@ -4,7 +4,7 @@
 #+title: Programming Languages
 
 * Know well
-** Javascript
+** [[id:a39ecfb9-066d-4f6b-8cae-0f1c13345b0d][Javascript]]
 ** Python
 
 * Know some
