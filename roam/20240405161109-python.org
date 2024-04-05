@@ -1,0 +1,38 @@
+:PROPERTIES:
+:ID:       3a948b50-dedc-4fdf-a86c-05c1c3a9f230
+:END:
+#+title: Python
+
+Python is the second best language for just about everything (except game development, it sucks at that).
+
+* Concepts
+** Testing
+*** ~unittest.mock~
+**** Mock a function with arguments
+By assigning ~side_effect~ of a ~MagicMock~ to a function, you can return different values from a mock based on the inputs. This is useful when mocking a function that is used multiple times in a test, but needs to return different values.
+
+#+BEGIN_SRC python
+@mock.patch.object(SomeObject, "some_method")
+def test_something(
+    mock_some_method: mock.MagicMock,
+):
+    """An example of mocking a method and returning different values depending on the inputs."""
+    mocked_api_client = mock.Mock(spec=DoseSpotApiClientV1)
+    erx_integration = DoseSpotIntegrationV1(api_client=mocked_api_client)
+
+    some_input_value_1 = 123
+    some_ouput_value_1 = 234
+    some_input_value_2 = 456
+    some_ouput_value_2 = 567
+
+    def mock_function_with_different_returns(some_input: int) -> int:
+        """Helper function to simulate different return values based on inputs."""
+        if some_input == some_input_value_1:
+            return some_ouput_value_1
+        else:
+            return some_ouput_value_2
+
+    mock_some_method.side_effect = mock_function_with_different_returns
+    #+END_SRC
+* Libraries
+** [[id:f534f219-0946-4dfe-809f-b36a984202a2][pytest]]

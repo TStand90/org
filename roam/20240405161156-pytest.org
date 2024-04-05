@@ -1,0 +1,9 @@
+:PROPERTIES:
+:ID:       f534f219-0946-4dfe-809f-b36a984202a2
+:END:
+#+title: pytest
+
+~pytest~ is the most popular testing libary for [[id:3a948b50-dedc-4fdf-a86c-05c1c3a9f230][Python]].
+
+* Tips and Tricks
+Nothing here... yet.
