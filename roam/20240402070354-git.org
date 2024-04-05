@@ -1,0 +1,11 @@
+:PROPERTIES:
+:ID:       a51a2216-9deb-4dda-b86a-0f93146bec8a
+:END:
+#+title: Git
+
+* Do an empty commit
+This can come in handy to trigger CI workflows, such as a redeployment.
+
+#+BEGIN_SRC
+git commit -m 'fix: empty commit' --allow-empty
+#+END_SRC

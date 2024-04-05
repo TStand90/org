@@ -1,0 +1,52 @@
+* AWS SSO
+To log in to AWS SSO:
+
+#+begin_src shell :results output
+aws sso login --profile wisp-tech-root
+#+end_src
+
+* Testing the Typeform Webhook endpoint locally
+To send a JSON file to the Typeform Webhook endpoint locally:
+
+#+begin_src shell :results output
+curl -X POST -H "Content-Type: application/json" -d @"typeform_oms_pyridium.json" http://localhost:5000/webhook/typeform
+#+end_src
+
+* To update local Strapi database:
+1. Log in to AWS SSO
+2. aws s3 cp --profile wisp-tech-dev s3://wisp-strapi-data-import-export/latest.sql .
+3. dropdb local_strapi
+4. createdb local_strapi
+5. psql -d local_strapi < latest.sql
+
+
+* Possible sources for order2.context -> 'source'
+admin
+checkout
+jotform
+reactivation
+refill_now
+renewal
+script
+typeform
+* Inbox
+
+* Run workers locally
+
+#+begin_src shell
+python -u manage.py run_worker
+#+end_src
+
+* Update a user's permissions
+
+#+BEGIN_SRC shell
+python manage.py update_user_permissions --user_ids <user_ids> --permissions <permissions>
+#+END_SRC
+
+* Update .envrc.development.encrypted
+
+#+BEGIN_SRC shell
+ssh-vault -k ~/.ssh/devs_hellowisp edit .envrc.development.encrypted
+#+END_SRC
+
+Hint: cat .envrc =)

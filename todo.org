@@ -1,4 +1,6 @@
 * Inbox
+** [ ] Write a Jira ticket that describes the issue with the DoseSpot Pharmacy Search form. It does not mark the required fields as needed
+SCHEDULED: <2024-04-02 Tue>
 ** [ ] Investigate Emacs Meow mode for Doom Emacs
 ** [ ] Investigate separating my journal into its own git submodule
 - Note taken on [2024-03-20 Wed 22:34] \\
