@@ -5,7 +5,7 @@
 
 * Know well
 ** [[id:a39ecfb9-066d-4f6b-8cae-0f1c13345b0d][Javascript]]
-** Python
+** [[id:3a948b50-dedc-4fdf-a86c-05c1c3a9f230][Python]]
 
 * Know some
 ** [[id:684e6719-609f-4a8a-a8fa-f11d0585ec10][C#]]
