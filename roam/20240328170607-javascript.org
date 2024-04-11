@@ -1,6 +1,60 @@
 :PROPERTIES:
 :ID:       a39ecfb9-066d-4f6b-8cae-0f1c13345b0d
+:ROAM_REFS: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise
 :END:
 #+title: Javascript
 
 Javascript is a programming language that proves Stockholm Syndrome is real.
+
+* Concepts
+** Promises
+A Promise in [[id:a39ecfb9-066d-4f6b-8cae-0f1c13345b0d][Javascript]] is a proxy for a value that isn't known when the Promise is created. It allows async methods to return values as if they were synchronous. The async method returns a *promise* to supply the value some time in the future.
+
+Promises have three states:
+- Pending: Initial state
+- Fulfilled: Success
+- Rejected: Operation failed
+
+A Promise is "settled" if it is either Fulfilled or Rejected. Also called "resolved".
+
+*** Chaining Promises
+The methods ~Promise.prototype.then()~, ~Promise.prototype.catch()~, and ~Promise.prototype.finally()~ are used to associate a Promise with some further action after it is settled. The first argument is a callback function for the successful case, and the second argument is a callback for the rejected case. ~.then()~ generates a new Promise, which allows Promise chaining.
+
+#+BEGIN_SRC javascript
+const myPromise = new Promise((resolve, reject) => {
+  setTimeout(() => {
+    resolve("foo");
+  }, 300);
+});
+
+myPromise
+  .then(handleFulfilledA, handleRejectedA)
+  .then(handleFulfilledB, handleRejectedB)
+  .then(handleFulfilledC, handleRejectedC);
+#+END_SRC
+
+Unless the error from a failed Promise needs to be handled immediately, prefer adding a ~.catch()~ to the end of the chain instead of defining an error callback for each ~.then()~:
+
+#+BEGIN_SRC javascript
+myPromise
+  .then(handleFulfilledA)
+  .then(handleFulfilledB)
+  .then(handleFulfilledC)
+  .catch(handleRejectedAny);
+#+END_SRC
+
+Using [[id:0ad57b5d-7a3a-420f-85e6-0fc4349d9a8a][Arrow Functions]] can simplify things further:
+
+#+BEGIN_SRC javascript
+myPromise
+  .then((value) => `${value} and bar`)
+  .then((value) => `${value} and bar again`)
+  .then((value) => `${value} and again`)
+  .then((value) => `${value} and again`)
+  .then((value) => {
+    console.log(value);
+  })
+  .catch((err) => {
+    console.error(err);
+  });
+  #+END_SRC

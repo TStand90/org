@@ -1,0 +1,7 @@
+:PROPERTIES:
+:ID:       0ad57b5d-7a3a-420f-85e6-0fc4349d9a8a
+:ROAM_REFS: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions
+:END:
+#+title: Arrow Functions
+
+TODO
