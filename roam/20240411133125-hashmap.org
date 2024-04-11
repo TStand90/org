@@ -1,0 +1,20 @@
+:PROPERTIES:
+:ID:       26fcbf3c-dee7-40a8-92e3-2fa7079c97e4
+:END:
+#+title: HashMap
+#+filetags: :Data_Structures:
+
+Maps a key to a value.
+
+
+
+| Operation | Time complexity |
+|-----------+-----------------|
+| Insert    | O(1)            |
+| Remove    | O(1)            |
+| Search    | O(1)            |
+
+* Properties
+** Cannot contain duplicates.
+
+* Leetcode Exercises

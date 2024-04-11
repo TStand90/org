@@ -4,7 +4,17 @@
 #+title: Leetcode
 #+filetags: :Leetcode:
 
+| Name                                 | Difficulty | Concepts | Status | Python |
+|--------------------------------------+------------+----------+--------+--------|
+| [[id:582f5b5a-9718-44ee-a53f-fbd5e6ad5f5b][1. Two Sum]]                           | Easy       | [[id:26fcbf3c-dee7-40a8-92e3-2fa7079c97e4][HashMap]]  | DONE   | DONE   |
+| [[id:e0184029-0c62-46b4-9e28-8666268df8fb][146. LRU Cache]]                       | Medium     | [[id:26fcbf3c-dee7-40a8-92e3-2fa7079c97e4][HashMap]]  |        |        |
+| [[id:bc466c07-bec0-4000-8097-9b42535779e1][217. Contains Duplicate]]              | Easy       | [[id:26fcbf3c-dee7-40a8-92e3-2fa7079c97e4][HashMap]]  |        |        |
+| [[id:52e640bc-2842-4061-807d-2b484057e228][283. Move Zeroes]]                     | Easy       |          | DONE   | DONE   |
+| [[id:b5f03f91-11e0-49d5-be9e-61085adaead6][703. Kth Largest Element in a Stream]] |            |          |        |        |
+
+* [ ] [[id:582f5b5a-9718-44ee-a53f-fbd5e6ad5f5b][1. Two Sum]]
 * [ ] [[id:d609edb6-4bcc-4751-959b-b61050715da9][215. Kth Largest Element in an Array]]
+* [ ] [[id:bc466c07-bec0-4000-8097-9b42535779e1][217. Contains Duplicate]]
 * [X] [[id:52e640bc-2842-4061-807d-2b484057e228][283. Move Zeroes]]
 * [ ] [[id:b5f03f91-11e0-49d5-be9e-61085adaead6][703. Kth Largest Element in a Stream]]
 * [ ] [[id:c6280f9a-77b1-45b5-a807-34d7432f391d][973. K Closest Points to Origin]]

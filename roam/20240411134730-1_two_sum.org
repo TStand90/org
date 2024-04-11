@@ -1,0 +1,60 @@
+:PROPERTIES:
+:ID:       582f5b5a-9718-44ee-a53f-fbd5e6ad5f5b
+:END:
+#+title: 1. Two Sum
+#+filetags: :Leetcode:
+
+* Problem
+Given an array of integers nums and an integer target, return indices of the two numbers such that they add up to target.
+
+You may assume that each input would have exactly one solution, and you may not use the same element twice.
+
+You can return the answer in any order.
+
+
+
+Example 1:
+
+Input: nums = [2,7,11,15], target = 9
+Output: [0,1]
+Explanation: Because nums[0] + nums[1] == 9, we return [0, 1].
+Example 2:
+
+Input: nums = [3,2,4], target = 6
+Output: [1,2]
+Example 3:
+
+Input: nums = [3,3], target = 6
+Output: [0,1]
+
+
+Constraints:
+
+2 <= nums.length <= 104
+-109 <= nums[i] <= 109
+-109 <= target <= 109
+Only one valid answer exists.
+
+
+Follow-up: Can you come up with an algorithm that is less than O(n2) time complexity?
+
+* Solution
+Iterate through the numbers and construct a [[id:26fcbf3c-dee7-40a8-92e3-2fa7079c97e4][HashMap]]. The [[id:26fcbf3c-dee7-40a8-92e3-2fa7079c97e4][HashMap]] should contain the values as the keys, and the index they occur at in the array as values.
+
+While iterating, check if the ~target~ minus the current number is in the constructed [[id:26fcbf3c-dee7-40a8-92e3-2fa7079c97e4][HashMap]]. If it is, then the current index along with the index of ~target~ minus current number is the answer.
+
+This satisfies the "Follow-up" as well, as the time complexity is ~O(n)~.
+
+** Python
+#+BEGIN_SRC python
+class Solution:
+    def twoSum(self, nums: list[int], target: int) -> list[int]:
+        number_indices = {}
+
+        for index, num in enumerate(nums):
+            if target - num in number_indices:
+                return [number_indices[target - num], index]
+
+            if num not in number_indices:
+                number_indices[num] = index
+#+END_SRC
