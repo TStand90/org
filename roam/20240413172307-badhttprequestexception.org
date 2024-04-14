@@ -1,0 +1,7 @@
+:PROPERTIES:
+:ID:       b00f14e9-67d8-40de-b0e1-dcea1625438e
+:ROAM_REFS: https://learn.microsoft.com/en-us/dotnet/api/microsoft.aspnetcore.http.badhttprequestexception?view=aspnetcore-8.0
+:END:
+#+title: BadHttpRequestException
+
+[[id:2b730c77-767a-4547-b1bf-53428b3d33a5][ASP.NET Core]] version of a [[id:fdec7db4-2c96-40f2-8f66-916ef0839bd0][HTTP]] [[id:b5c700c1-861a-4c56-a177-249d2a2af05f][400]] error.

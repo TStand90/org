@@ -32,6 +32,18 @@ The name given by ~.WithName~ is case sensitive, and must be unique.
 
 ~LinkService~ is available anywhere in [[id:2b730c77-767a-4547-b1bf-53428b3d33a5][ASP.NET Core]]. It is automatically available to the [[id:08f2d5da-98ab-49b0-93fe-bc39d96f06d9][Minimal API]] handlers because it is automatically registered with the [[id:fdfd76f1-ea62-40fc-9cbc-ba323ca0b5cc][Dependency Injection]] container.
 
+* JSON Serialization
+Minimal API assumes all request bodies are in [[id:abe6269b-da95-4137-a110-3f5b841cdf92][JSON]]. It also uses [[id:e3f7ab88-17ea-4b07-94d5-4498b0681491][.NET]]'s built in [[id:ff642738-5525-4ac6-a261-ce7b605faf1a][System.Text.Json]], and it cannot be changed (so no using [[id:3fc36921-7ca1-4d3b-aae6-4b0c8de38428][Newtonsoft.Json]]). The serialization can be customized with some options, though.
+
+#+BEGIN_SRC csharp
+WebApplicationBuilder builder = WebApplication.CreateBuilder(args);
+builder.Services.ConfigureRouteHandlerJsonOptions(o => {
+   o.SerializerOptions.AllowTrailingCommas = true;
+   o.SerializerOptions.PropertyNamingPolicy = JsonNamingPolicy.CamelCase;
+   o.SerializerOptions.PropertyNameCaseInsensitive = true;
+});
+#+END_SRC
+
 ** Methods
 *** GetPathByName
 *** GetUriByName

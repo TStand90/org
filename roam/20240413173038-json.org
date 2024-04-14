@@ -1,0 +1,6 @@
+:PROPERTIES:
+:ID:       abe6269b-da95-4137-a110-3f5b841cdf92
+:END:
+#+title: JSON
+
+JSON is what allowed us to put XML out to pasture.

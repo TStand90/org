@@ -1,0 +1,9 @@
+:PROPERTIES:
+:ID:       ff642738-5525-4ac6-a261-ce7b605faf1a
+:END:
+#+title: System.Text.Json
+#+filetags: :.NET:
+
+[[id:e3f7ab88-17ea-4b07-94d5-4498b0681491][.NET]]'s built in JSON serialization and deserialization library.
+
+An alternative to [[id:3fc36921-7ca1-4d3b-aae6-4b0c8de38428][Newtonsoft.Json]] which tends to be more performant, but is less flexible.

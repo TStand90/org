@@ -1,0 +1,58 @@
+:PROPERTIES:
+:ID:       ef6ff8d8-3d98-4d14-803e-aa62d2528f79
+:ROAM_REFS: https://learn.microsoft.com/en-us/aspnet/core/mvc/models/model-binding?view=aspnetcore-8.0 https://livebook.manning.com/book/asp-net-core-in-action-third-edition/chapter-7/13
+:END:
+#+title: Model Binding
+#+filetags: :ASP.NET_Core:
+
+Model Binding in [[id:2b730c77-767a-4547-b1bf-53428b3d33a5][ASP.NET Core]] extracts values from a request and creates a .NET object(s) from them. The objects are then passed as method parameters to the endpoint handler being executed.
+
+Model Binding happens in [[id:fe0e544d-60a0-4d1b-b6f7-761deeba4d07][EndpointMiddleware]]. [[id:72c55ed6-f8cf-4da7-9465-e768787a908f][RoutingMiddleware]] matches an incoming request to an endpoint for extracting the route parameter values, but at that point the values are just strings.
+
+The framework tries to bind values by some default logic, but explicit attributes can override the default logic
+
+- [FromQuery] - Binds to the query string
+- [FromRoute] - Binds to a route parameter. If it doesn't exist in the route template, an exception is thrown.
+- [FromHeader] - Binds to a header value in the request.
+  - Note that this is the only way to bind a header value.
+
+#+BEGIN_SRC csharp
+using Microsoft.AspNetCore.Mvc;
+
+WebApplicationBuilder builder = WebApplication.CreateBuilder(args);
+WebApplication app = builder.Build();
+
+app.MapGet("/products/{id}/paged",
+    ([FromRoute] int id,
+     [FromQuery] int page,
+     [FromHeader(Name = "PageSize")] int pageSize)
+     => $"Received id {id}, page {page}, pageSize {pageSize}");
+
+app.Run();
+#+END_SRC
+
+If an invalid value is given, a [[id:b00f14e9-67d8-40de-b0e1-dcea1625438e][BadHttpRequestException]] is thrown.
+
+* Arrays
+Arrays can be used in query strings, like this:
+
+~/products?id=123&id=456~
+
+An endpoint that can handle this might look like this:
+
+#+BEGIN_SRC csharp
+WebApplicationBuilder builder = WebApplication.CreateBuilder(args);
+WebApplication app = builder.Build();
+
+app.MapGet("/products/search",
+    (int[] id) => $"Received {id.Length} ids");
+
+app.Run();
+#+END_SRC
+
+Notice that the name of the array is ~id~. To make it ~ids~, you can use [FromQuery] like this:
+
+#+BEGIN_SRC csharp
+app.MapGet("/products/search",
+   ([FromQuery(Name = "id")] int[] ids) => $"Received {ids.Length} ids");
+#+END_SRC
