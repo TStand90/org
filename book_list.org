@@ -1,0 +1,10 @@
+#+title: Book List
+
+* [0/2] General Programming
+** HOLD The Programmer's Brain
+** [-] A Philosophy of Software Design
+- Note taken on [2024-04-15 Mon 07:00] \\
+  Rereading
+
+* [0/1] Go
+** HOLD [[id:3cb386ec-d975-45e9-adcf-bb6254919586][100 Go Mistakes and How to Avoid Them]]

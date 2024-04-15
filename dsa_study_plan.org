@@ -1,0 +1,6 @@
+#+title: Dsa Study Plan
+
+Goal: Be ready by August 31st.
+
+* [ ] HashMaps
+* [ ] Heaps

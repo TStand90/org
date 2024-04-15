@@ -1,0 +1,6 @@
+:PROPERTIES:
+:ID:       b427d8b9-b99e-4baa-aa90-27121682e8fb
+:END:
+#+title: load factor
+
+TODO

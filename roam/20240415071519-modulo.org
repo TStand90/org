@@ -1,0 +1,11 @@
+:PROPERTIES:
+:ID:       21c2c73c-d3fc-498e-b5e6-08310e3b399d
+:END:
+#+title: modulo
+
+The ~%~ operator in most languages, which gives remainders.
+
+Example:
+#+BEGIN_SRC cpp
+int x = 5 % 2;  // x = 1
+#+END_SRC
