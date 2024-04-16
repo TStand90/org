@@ -1,0 +1,8 @@
+#+title: Dosespot Todos
+
+A list of my Todo items for the DoseSpot project.
+
+* [X] Follow up with Mohammed about testing for [[https://github.com/hellowisp/secure.hellowisp.com/pull/3952][WE-576]]
+DEADLINE: <2024-04-16 Tue>
+* [ ] Deploy WE-560
+DEADLINE: <2024-04-17 Wed>

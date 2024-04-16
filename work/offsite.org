@@ -1,0 +1,43 @@
+#+title: Offsite
+
+* [X] Interview exercise
+** Me interviewing Chan
+What Value Am I Asking?:
+At Wisp, we are continually striving to increase our knowledge base as a team. When was the last time you were asked about something and you didn’t know the answer? How did you handle finding the answer?
+
+Feedback:
+Sat there for a long time, doing nothing. Didn't understand.
+Doesn't seem to want to reach out and ask for help. Comfortable with waiting and let someone else do the work.
+Thinks he did "good" by doing one Google search.
+
+## General Feedback
+
+What Feedback Do You Have in General?:
+Should ask for help when needed.
+
+Candidate is very transparent and honest about his shortcomings.
+
+Candidate Score:
+Strong No
+
+Why Did You Give The Candidate This Score?:
+We need someone who can try harder to find solutions and who owns it.
+
+** Alex interviewing Seva
+What Value Am I Asking?:
+Tell me about a time you had to quickly ramp up on something (new team, new project, new subject matter, etc). What was the situation, and what was your approach to becoming a subject matter expert quickly? What was the outcome?
+
+Feedback:
+Security issue, logged in but unauthorized user getting info. Did an investigation, applied a patch. Was not an expert in authentication, but had to quickly read docs and best practices.
+
+## General Feedback
+
+
+What Feedback Do You Have in General?:
+Candidate is knowledgeable and has good ideas on how to prevent the same issues from appearing again.
+
+Candidate Score:
+Strong Yes
+
+Why Did You Give The Candidate This Score?:
+Seems to take ownership and is willing to stay curious about something he is not familiar with in order to fix issues.

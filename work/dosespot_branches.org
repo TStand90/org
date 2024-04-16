@@ -13,7 +13,7 @@ This is a list of the current branches for the DoseSpot project, and how they re
 *** [-] WE-481: Replace "AddPrescriptionsByCode" functions with new service method
 - Note taken on [2024-02-13 Tue 14:04] \\
   This requires a lot more work than I thought, because I have to make some changes to what exists. I don't think the service as currently implemented actually works.
-** [1/1] AddPrescriptionsByFreeText
+** [1/2] AddPrescriptionsByFreeText
 *** [X] [[https://github.com/hellowisp/secure.hellowisp.com/pull/3727][WE-410]]: CreateFreeTextFillRequest
 
 - Note taken on [2024-02-04 Sun 11:24] \\
@@ -22,12 +22,24 @@ This is a list of the current branches for the DoseSpot project, and how they re
   I need to review this one.
 - Note taken on [2024-02-04 Sun 11:22] \\
   Branched off of WE-409
+*** [-] [[https://github.com/hellowisp/secure.hellowisp.com/pull/3954][WE-480]]: Replace "AddPrescriptionsByFreeText" functions with new service method
+- Note taken on [2024-04-15 Mon 16:46] \\
+  Waiting for WE-583 to be merged, then this one can be reviewed.
 ** [0/2] ChangePrescriptionPharmacy
 - Note taken on [2024-02-05 Mon 10:41] \\
   Low priority, not found in our APM.
-*** [ ] WE-374: "ChangePrescriptionPharmacy" service method.
-*** [ ] WE-477: Replace "ChangePrescriptionPharmacy" functions with new service method.
-
+*** [?] WE-374: "ChangePrescriptionPharmacy" service method.
+- Note taken on [2024-04-15 Mon 16:46] \\
+  Waiting for WE-583 to be merged, then this one can be reviewed.
+:LOGBOOK:
+CLOCK: [2024-04-15 Mon 11:17]--[2024-04-15 Mon 11:42] =>  0:25
+CLOCK: [2024-04-15 Mon 10:39]--[2024-04-15 Mon 11:04] =>  0:25
+:END:
+*** [?] WE-477: Replace "ChangePrescriptionPharmacy" functions with new service method.
+- Note taken on [2024-04-15 Mon 17:23] \\
+  This is blocked bo WE-380, since it relies on the Copy Prescription functionality.
+- Note taken on [2024-04-15 Mon 16:47] \\
+  Branched off of WE-374
 ** [0/2] Copy Prescription
 - Note taken on [2024-02-05 Mon 10:42] \\
   Low priority, not found in our APM.
@@ -77,8 +89,8 @@ This is a list of the current branches for the DoseSpot project, and how they re
 - Note taken on [2024-02-04 Sun 10:12] \\
   In draft form, needs its base PRs merged before review. Could use some tests.
 
-** [0/1] GetPharmacy
-*** [-] [[https://github.com/hellowisp/secure.hellowisp.com/pull/3722][WE-458]]: Using new service for all DoseSpotPharmacy.get operations
+** [1/1] GetPharmacy
+*** [X] [[https://github.com/hellowisp/secure.hellowisp.com/pull/3722][WE-458]]: Using new service for all DoseSpotPharmacy.get operations
 - Note taken on [2024-02-04 Sun 10:21] \\
   The base is merged. May need tests for this.
 
@@ -151,7 +163,7 @@ This is a list of the current branches for the DoseSpot project, and how they re
 *** [ ] WE-486: Create "SearchPharmacy" for DoseSpot V2
 *** [ ] WE-487: Create "SendPrescriptions" for DoseSpot V2
 
-* [6/8] Misc.
+* [6/9] Misc.
 Other branches that are cleanup or not tied to a ticket
 
 ** [X] [[https://github.com/hellowisp/secure.hellowisp.com/pull/3715][refactor/remove-product-strength-search]]
@@ -162,7 +174,7 @@ Other branches that are cleanup or not tied to a ticket
 ** [X] [[https://github.com/hellowisp/secure.hellowisp.com/pull/3777][fix/get-notifications-counts-v2]]
 ** [X] [[https://github.com/hellowisp/secure.hellowisp.com/pull/3778][refactor/remove-update-prescription-dosespot-rx]]
 ** [X] [[https://github.com/hellowisp/secure.hellowisp.com/pull/3789][feat/exception-for-unknown-dosespot-status-code]]
-** [17/18] WE-576: Refactor the ERxService method interfaces to accept Provider IDs instead of Provider DoseSpot IDs
+** [18/18] WE-576: Refactor the ERxService method interfaces to accept Provider IDs instead of Provider DoseSpot IDs
 :LOGBOOK:
 CLOCK: [2024-04-04 Thu 11:27]--[2024-04-04 Thu 11:52] =>  0:25
 CLOCK: [2024-04-04 Thu 10:55]--[2024-04-04 Thu 11:20] =>  0:25
@@ -185,10 +197,13 @@ CLOCK: [2024-04-04 Thu 10:16]--[2024-04-04 Thu 10:41] =>  0:25
 *** [X] IntegrationV2 - get_clinician (still passing dosespot ID straight down)
 *** [X] Add an environment variable - ERX_DEFAULT_PROVIDER_ID
 *** NO Maybe delete environment variable - DOSESPOT_DEFAULT_CLINICIAN_ID
-*** [-] Get all the tests passing again
-
 - Note taken on [2024-04-04 Thu 11:43] \\
   Can be done once we get rid of the ~get_default_session()~ function, but that will come once the old ~Session~ class is gone.
+*** [X] Get all the tests passing again
+** [?] [[https://github.com/hellowisp/secure.hellowisp.com/pull/3957][WE-583]]: Move ERx Service tests to the new test suite
+- Note taken on [2024-04-15 Mon 08:05] \\
+  In review
+
 * Other
 Clinic Key for Test Clinic 1 in staging
 
