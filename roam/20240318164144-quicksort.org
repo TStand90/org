@@ -1,6 +1,181 @@
 :PROPERTIES:
 :ID:       92767955-14fb-443d-bc5e-35da7ca59b1c
+:ROAM_REFS: https://neetcode.io/courses/dsa-for-beginners/12
 :END:
 #+title: Quick Sort
 
-TODO
+A sorting algorithm that divides an array into two halves, using a ~pivot~.
+
+If a good pivot value is chosen, then the algorithm will run in O(n log n) time. In the worst case, the largest or smallest element in the array is chosen, which causes the algorithm to run in O(n^{2}).
+
+* Choosing a pivot
+There are a few tried and tested options:
+
+- Pick the first index
+- Pick the last index (this is most commonly used)
+- Pick the median (pick the first, last, and middle, find their median, and split on that median)
+- Pick randomly
+
+* Implementation
+Partition the array into a left and right subarray by iterating through the entire array before the pivot, and compare the value to the pivot value. Every value that is _less than or equal to the pivot_ will go into the _left_ subarray. Everything _greater than_ goes into the _right_.
+
+* Code
+** [[id:3a948b50-dedc-4fdf-a86c-05c1c3a9f230][Python]]
+#+BEGIN_SRC python
+# Implementation of QuickSort
+def quickSort(arr, s, e):
+    if e - s + 1 <= 1:
+        return
+
+    pivot = arr[e]
+    left = s # pointer for left side
+
+    # Partition: elements smaller than pivot on left side
+    for i in range(s, e):
+        if arr[i] < pivot:
+            tmp = arr[left]
+            arr[left] = arr[i]
+            arr[i] = tmp
+            left += 1
+
+    # Move pivot in-between left & right sides
+    arr[e] = arr[left]
+    arr[left] = pivot
+
+    # Quick sort left side
+    quickSort(arr, s, left - 1)
+
+    # Quick sort right side
+    quickSort(arr, left + 1, e)
+
+    return arr
+#+END_SRC
+
+
+* Example
+The downward arrow is the ~left pointer~, and the upward arrow is the ~iterator~. For this example, we will always pick the last index for the pivot.
+
+3 is the pivot.
+
+_Step 1_
+
+ \Downarrow           \star
+[6, 2, 4, 1, 3]
+ \Uparrow
+
+ 6 is greater than 3, nothing happens.
+
+_Step 2_
+
+ \Downarrow           \star
+[6, 2, 4, 1, 3]
+    \Uparrow
+
+2 is smaller than 3. Swap it into the index that ~left pointer~ is currently pointing at, then increment ~left pointer~.
+
+    \Downarrow        \star
+[2, 6, 4, 1, 3]
+    \Uparrow
+
+_Step 3_
+
+    \Downarrow        \star
+[2, 6, 4, 1, 3]
+       \Uparrow
+
+4 is greater than 3, nothing happens.
+
+_Step 4_
+
+    \Downarrow        \star
+[2, 6, 4, 1, 3]
+          \Uparrow
+
+1 is less than 3, so do the swap.
+
+       \Downarrow     \star
+[2, 1, 4, 6, 3]
+          \Uparrow
+
+_Step 5_
+
+       \Downarrow     \star
+[2, 1, 4, 6, 3]
+             \Uparrow
+
+The iterator has reached the pivot. At this point, everything less than the pivot value is in the "left" side of the array, and everything greater than the pivot is in the "right" side.
+
+So, we can swap the pivot value with the ~left pointer~ value, because we know that everything to the left of ~left pointer~ is less than or equal to the ~pivot~, and everything to the right is greater than the ~pivot~.
+
+       \downarrow
+       \star
+[2, 1, 3, 6, 4]
+             \Uparrow
+
+Now we recursively run [[id:92767955-14fb-443d-bc5e-35da7ca59b1c][Quick Sort]] on the left and right sides of the array. We will not include the original pivot in the recursive sorts. This is because we know that everything to the left of it is less than or equal to it, and everything to the right of it is greater than it. Therefore, the original pivot (3) is in its correct place, and we can ignore it.
+
+The left side steps, with 1 serving as the new ~pivot~:
+
+_Step 1_
+
+ \downarrow  \star
+[2, 1, 3, 6, 4]
+ \Uparrow
+
+ 2 is greater than 1, do nothing.
+
+_Step 2_
+
+ \downarrow  \star
+[2, 1, 3, 6, 4]
+    \Uparrow
+
+The iterator has reached the ~pivot~, so swap the ~pivot~ with the ~left pointer~.
+
+ \downarrow
+ \star
+[1, 2, 3, 6, 4]
+    \Uparrow
+
+We then "split" the array once more, with [1] being the "left" and [2] being the "right". Both of these are the base case (array length == 1), so we just return.
+
+Now, we focus on the right side.
+
+_Step 1_
+
+4 is the new pivot.
+
+          \downarrow  \star
+[1, 2, 3, 6, 4]
+          \Uparrow
+
+6 is greater than 4, do nothing.
+
+_Step 2_
+
+          \downarrow  \star
+[1, 2, 3, 6, 4]
+             \Uparrow
+
+The iterator has reached the ~pivot~, so swap the ~pivot~ and the ~left pointer~.
+          \downarrow
+          \star
+[1, 2, 3, 4, 6]
+             \Uparrow
+
+We then split the subarray, but [4] and [6] are the base case, so we are now done.
+
+* Vs. [[id:c4afc7cd-66e2-46de-8499-fbffd3db543a][Merge Sort]]
+The time complexity is roughly the same as [[id:c4afc7cd-66e2-46de-8499-fbffd3db543a][Merge Sort]], except when a bad pivot value is chosen. [[id:92767955-14fb-443d-bc5e-35da7ca59b1c][Quick Sort]] tends to perform poorly on already sorted or almost sorted arrays.
+
+The biggest advantage over [[id:c4afc7cd-66e2-46de-8499-fbffd3db543a][Merge Sort]] is that [[id:92767955-14fb-443d-bc5e-35da7ca59b1c][Quick Sort]] is an in-place algorithm, so no extra memory allocation needs to happen. This can be a huge benefit when the array size is large.
+
+* Stable?
+No. There are stable variations, but this version is not.
+
+* Time Complexity
+O(nlog_{n}) in the average case. Worst case is O(n^{2}).
+
+* [[id:82f10055-fd84-4321-b761-0ce6dc8452c4][Leetcode]]
+** [[id:d609edb6-4bcc-4751-959b-b61050715da9][215. Kth Largest Element in an Array]]
+** [[id:15ea2f11-a652-4e3e-aa8b-bf14d7ca84b8][912. Sort an Array]]
