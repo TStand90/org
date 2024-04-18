@@ -4,6 +4,8 @@
 :END:
 #+title: 215. Kth Largest Element in an Array
 
+* Problem
+
 Given an integer array nums and an integer k, return the kth largest element in the array.
 
 Note that it is the kth largest element in the sorted order, not the kth distinct element.
@@ -26,3 +28,86 @@ Constraints:
 
 1 <= k <= nums.length <= 105
 -104 <= nums[i] <= 104
+
+* Solution
+Can be done with [[id:92767955-14fb-443d-bc5e-35da7ca59b1c][Quick Sort]] or [[id:c4afc7cd-66e2-46de-8499-fbffd3db543a][Merge Sort]]. Note that [[id:92767955-14fb-443d-bc5e-35da7ca59b1c][Quick Sort]] is too slow when taking the last element as the pivot. It fails on large, almost sorted cases.
+
+*NOTE*: I have not yet found the solution without sorting, as the problem mentions. The [[id:c4afc7cd-66e2-46de-8499-fbffd3db543a][Merge Sort]] solution does work, but it's a bit slow.
+
+** [[id:3a948b50-dedc-4fdf-a86c-05c1c3a9f230][Python]]
+#+BEGIN_SRC python
+class Solution:
+    def merge(self, array: list[int], start: int, middle: int, end: int) -> list[int]:
+        left_array = array[start:middle+1]
+        right_array = array[middle+1:end+1]
+
+        left_array_index = 0
+        right_array_index = 0
+        original_array_index = start
+
+        while left_array_index < len(left_array) and right_array_index < len(right_array):
+            if left_array[left_array_index] <= right_array[right_array_index]:
+                array[original_array_index] = left_array[left_array_index]
+                left_array_index += 1
+            else:
+                array[original_array_index] = right_array[right_array_index]
+                right_array_index += 1
+
+            original_array_index += 1
+
+        while left_array_index < len(left_array):
+            array[original_array_index] = left_array[left_array_index]
+            left_array_index += 1
+            original_array_index += 1
+        while right_array_index < len(right_array):
+            array[original_array_index] = right_array[right_array_index]
+            right_array_index += 1
+            original_array_index += 1
+
+        return array
+
+    def merge_sort(self, array: list[int], start: int, end: int) -> list[int]:
+        if end - start <= 0:
+            return array
+
+        middle = (start + end) // 2
+
+        self.merge_sort(array=array, start=start, end=middle)
+        self.merge_sort(array=array, start=middle+1, end=end)
+
+        self.merge(array=array, start=start, middle=middle, end=end)
+
+        return array
+
+    def quicksort(self, array: list[int], start: int, end: int) -> list[int]:
+        if end - start <= 0:
+            # Base case, array length of 0 or 1
+            return array
+
+        left_pointer = start
+        pivot = array[end]
+
+        for i in range(start, end):
+            if array[i] <= pivot:
+                temp = array[left_pointer]
+                array[left_pointer] = array[i]
+                array[i] = temp
+
+                left_pointer += 1
+
+        array[end] = array[left_pointer]
+        array[left_pointer] = pivot
+
+        self.quicksort(array=array, start=start, end=left_pointer-1)
+        self.quicksort(array=array, start=left_pointer+1, end=end)
+
+        return array
+
+    def findKthLargest(self, nums: list[int], k: int) -> int:
+        print(nums)
+        nums = self.merge_sort(nums, 0, len(nums) - 1)
+
+        print(nums)
+
+        return nums[-k]
+#+END_SRC

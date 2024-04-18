@@ -3,4 +3,68 @@
 :END:
 #+title: Merge Sort
 
-TODO
+Merge Sort works by splitting an array into (roughly) equal halves, splitting all the way down to arrays of just length 1, then "merging" the results back.
+
+To merge the results, we have three pointers, one for the "left" array, one for the "right", and one for the original array. While both arrays still have elements remaining (their pointers are pointing at an index in their arrays), compare the left value and the right. If the left value is smaller, insert that in the original array (using its pointer), and if the right is smaller, insert the right value. Increment the pointer of the array that was inserted, as well as the original array's pointer.
+
+Once one of the arrays is exhausted, add all the elements of the other array to the original array.
+
+TODO: Expand on the explanation here.
+
+* Time Complexity
+Because we split the array in half each time, this results in time complexity of O(nlog_{n}). The "steps" in splitting results in log_{n} steps, and each step takes ~n~ time.
+
+* Space Complexity
+Merge Sort does create extra memory during the "merge" step. The space complexity is O(n).
+
+* Stable?
+Yes.
+
+* Implementation
+** [[id:3a948b50-dedc-4fdf-a86c-05c1c3a9f230][Python]]
+
+#+BEGIN_SRC python
+def merge(array: list[int], start: int, middle: int, end: int):
+    left_array = array[start:middle+1]
+    right_array = array[middle+1:end+1]
+
+    left_index = 0
+    right_index = 0
+    original_array_index = start
+
+    # Merge the two sorted halves into the original array.
+    while left_index < len(left_array) and right_index < len(right_index):
+        if left_array[left_index] <= right_array[right_index]:
+            array[original_array_index] = left_array[left_index]
+            left_index += 1
+        else:
+            array[original_array_index] = right_array[right_index]
+            right_index += 1
+
+        original_array_index += 1
+
+    # One of the halves will still have elements remaining
+    while left_index < len(left_array):
+        array[original_array_index] = left_array[left_index]
+        left_index += 1
+        original_array_index += 1
+    while right_index < len(right_array):
+        array[original_array_index] = right_array[right_index]
+        right_index += 1
+        original_array_index += 1
+
+
+def merge_sort(array: list[int], start: int, end: int) -> list[int]:
+    if end - start + 1 <= 1:
+        # Base case, array size of 1.
+        return array
+
+    middle = (start + end) // 2
+
+    merge_sort(array, start, middle)
+    merge_sort(array, middle+1, end)
+
+    merge(array, start, middle, end)
+
+    return array
+#+END_SRC
