@@ -114,3 +114,11 @@ There are some naming conventions in [[id:1acbf81c-8e58-447c-8b07-a61d9710031c][
 [[id:1acbf81c-8e58-447c-8b07-a61d9710031c][Go]] emphasizes simplicity, which includes simplicity in how struct fields are accessed. This means that [[id:1e56325a-f43c-4059-9605-d1349e62d641][Getters and Setters]] should not be used for everything. They should only be used where necessary.
 
 * 5: Interface pollution
+
+Interfaces are powerful, but should not be overused.
+
+#+BEGIN_QUOTE
+The bigger the interface, the weaker the abstraction.
+
+- Rob Pike
+#+END_QUOTE

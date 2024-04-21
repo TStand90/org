@@ -10,3 +10,5 @@ SCHEDULED: <2024-04-02 Tue>
   Not a high priority right now, as removing work stuff later probably isn't too hard.
 - Note taken on [2024-03-20 Wed 22:35] \\
   I don't necessarily want to pollute my personal TODOs with work stuff.
+
+** [ ] Investigate the Key Promoter plugin for JetBrains IDEs
