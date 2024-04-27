@@ -6,4 +6,20 @@
 ~pytest~ is the most popular testing libary for [[id:3a948b50-dedc-4fdf-a86c-05c1c3a9f230][Python]].
 
 * Tips and Tricks
-Nothing here... yet.
+** Asserting that an exception was raised.
+You can assert that an exception is raised in code with ~pytest.raises~. For example:
+
+#+BEGIN_SRC python
+with pytest.raises(ValueError):
+    int("This won't work!")
+#+END_SRC
+
+This will succeed if the exception is raised, and fail if it doesn't.
+
+*** Asserting the exception message
+It's also possible to assert the exception message, using the ~match~ argument for ~pytest.raises~.
+
+#+BEGIN_SRC python
+with pytest.raises(ValueError, match='invalid literal for int() with base 10: "This won\'t work!"'):
+    int("This won't work!")
+#+END_SRC

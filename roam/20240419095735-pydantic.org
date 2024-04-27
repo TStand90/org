@@ -1,0 +1,6 @@
+:PROPERTIES:
+:ID:       7cb07eea-56a7-45a0-be73-48a02f5ea242
+:END:
+#+title: pydantic
+
+Pydantic is a library to turn [[id:3a948b50-dedc-4fdf-a86c-05c1c3a9f230][Python]] into a statically typed language.

@@ -4,5 +4,13 @@ A list of my Todo items for the DoseSpot project.
 
 * [X] Follow up with Mohammed about testing for [[https://github.com/hellowisp/secure.hellowisp.com/pull/3952][WE-576]]
 DEADLINE: <2024-04-16 Tue>
-* [ ] Deploy WE-560
+* [X] Deploy WE-560
 DEADLINE: <2024-04-17 Wed>
+* [ ] Make a ticket for adding the logger to all service methods
+* [ ] Look into DoseSpot Medispan (prescription) export
+*** DoseSpot Mentioned that they have a prescriptions export, similar to their Pharmacy export that we ingest daily.
+* [ ] Update WE-481 based on the changes I made for WE-480
+DEADLINE: <2024-04-29 Mon>
+*** I made changed to schemas in WE-480, so I need to make similar changes to WE-481 before it goes into testing.
+* [ ] Make a plan for the V2 migration of our DB's prescriptions
+DEADLINE: <2024-04-30 Tue>
