@@ -62,7 +62,7 @@ class Heap:
         i = len(self.heap) - 1
 
         # Percolate up
-        while self.heap[i] < self.heap[i // 2]:
+        while i > 1 and self.heap[i] < self.heap[i // 2]:
             tmp = self.heap[i]
             self.heap[i] = self.heap[i // 2]
             self.heap[i // 2] = tmp
@@ -101,7 +101,7 @@ def pop(self):
     while 2 * i < len(self.heap):
         has_right_child = 2 * i + 1 < len(self.heap)  # Note that we don't need to check if a left child exists. That is guaranteed.
         right_child_less_than_left_child = self.heap[2 * i + 1] < self.heap[2 * i]
-        current_node_greater_than_right_child = self.heap[i] > self.heal[2 * i + 1]
+        current_node_greater_than_right_child = self.heap[i] > self.heap[2 * i + 1]
 
         # Swap the right child only if it exists, it's smaller than the left, and it's smaller than the current root.
         swap_right_child = has_right_child and right_child_less_than_left_child and current_node_greater_than_right_child
@@ -119,7 +119,7 @@ def pop(self):
             # Swap the left child
             temp = self.heap[i]
             self.heap[i] = self.heap[2 * i]
-            self.heap[2 * i] = tmp
+            self.heap[2 * i] = temp
             i = 2 * i
         else:
             break
@@ -135,7 +135,11 @@ Start by moving the item in index ~0~ to the end of the array, so that the item 
 When doing Heapify, we can skip all the leaf nodes. Those are already recursively "sorted".
 
 #+BEGIN_SRC python
-def heapify(self, arr):
+def heapify(self, arr) -> None:
+    # Don't try accessing the 0th index of an empty array.
+    if len(arr) == 0:
+        return
+
     # Move the 0 index value to the end.
     arr.append(arr[0])
 
