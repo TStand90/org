@@ -1,0 +1,65 @@
+#+title: Dosespot Testing Plans
+
+* [[https://hellowisp.atlassian.net/browse/WE-488][WE-488]]: Replace "CreateOrUpdatePatient" functions with new service method
+** DetailsUpdateView.update_dosespot_profile
+*** Description
+Seems to be another page that can update the patient? How many of those do we have?
+*** File Path
+~app/controllers/patient/views/components.py~
+*** Template
+~patient/update_component_object.html~
+*** URL
+~patient/<int:patient_id>/detail/update~ (I believe POST but not sure)
+*** Uses default provider ID?
+Yes.
+** ERxController.create_or_update_patient
+*** Description
+*** File Path
+~app/controllers/erx_controller.py~
+*** Uses default provider ID?
+No.
+** PatientShims.update_patient
+*** Description
+Only used in the v3 PUT endpoint.
+*** File Path
+~app/controllers/api/v3/patients/shims.py~
+*** URL
+~api/v3/patients/<int:patient_id>~ (PUT)
+*** Uses default provider ID?
+Yes.
+** PatientUpdateView.form_valid (provider route)
+*** Description
+Seems to be used when a Provider updates a Patient in the dashboard.
+*** File Path
+~app/controllers/provider/views/patients.py~
+*** Template
+~old/layouts/update_component_object.html~
+*** URL
+~/patient/<int:patient_id>/detail/update~
+*** Uses default provider ID?
+No. (It's a provider view, so presumably uses the currently logged in Provider ID)
+** PatientUpdateView.update_dosespot_profile (admin route)
+*** Description
+This one is probably the same idea as the PatientUpdateView for providers.
+*** File Path
+~app/controllers/admin/views/patients.py~
+*** Template
+~old/layouts/update_component_object.html~
+*** Uses default provider ID?
+Yes.
+** Provider.view_patient_on_dosespot
+*** Description
+Used to view the patient's page in the DoseSpot iframe.
+*** File Path
+~app/models/provider.py~
+*** URL
+~/provider/ds/<int:patient_id>~
+*** Uses default provider ID?
+No.
+** Session.get_patient_dosespot_id
+This is a bit of a weird one. We injected the ~CreateOrUpdatePatient~ service method here so that the existing ~Session.cancel_prescription~ and ~Session.update_prescription_pharmacy~ methods would keep working.
+However, those methods will be refactored out of existence in upcoming DoseSpot tickets.
+*** File Path
+~app/models/dosespot.py~
+*** Uses default provider ID?
+Yes.
