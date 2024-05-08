@@ -17,7 +17,7 @@ This is a list of the current branches for the DoseSpot project, and how they re
   Need to make changes to this PR based on changes I made in WE-480
 - Note taken on [2024-02-13 Tue 14:04] \\
   This requires a lot more work than I thought, because I have to make some changes to what exists. I don't think the service as currently implemented actually works.
-** [1/2] AddPrescriptionsByFreeText
+** [2/2] AddPrescriptionsByFreeText
 *** [X] [[https://github.com/hellowisp/secure.hellowisp.com/pull/3727][WE-410]]: CreateFreeTextFillRequest
 
 - Note taken on [2024-02-04 Sun 11:24] \\
@@ -26,7 +26,7 @@ This is a list of the current branches for the DoseSpot project, and how they re
   I need to review this one.
 - Note taken on [2024-02-04 Sun 11:22] \\
   Branched off of WE-409
-*** [?] [[https://github.com/hellowisp/secure.hellowisp.com/pull/3954][WE-480]]: Replace "AddPrescriptionsByFreeText" functions with new service method
+*** [X] [[https://github.com/hellowisp/secure.hellowisp.com/pull/3954][WE-480]]: Replace "AddPrescriptionsByFreeText" functions with new service method
 - Note taken on [2024-05-03 Fri 11:07] \\
   Error fixed, I mixed up the refills quantity with the dispense quantity
 - Note taken on [2024-05-03 Fri 10:53] \\
@@ -75,8 +75,12 @@ CLOCK: [2024-04-15 Mon 10:39]--[2024-04-15 Mon 11:04] =>  0:25
 *** [X] [[https://github.com/hellowisp/secure.hellowisp.com/pull/3788][WE-479]]: Replace "DeletePendingRx" functions with new service method.
 - Note taken on [2024-02-13 Tue 21:17] \\
   In review.
-** [0/1] GetDispenseUnits
-*** [-] WE-628: GetDispenseUnits
+** [2/2] GetDispenseUnits
+*** NO WE-628: GetDispenseUnits
+- Note taken on [2024-05-06 Mon 09:20] \\
+  DoseSpot is removing this endpoint in V2 (it's not in their docs) so we are not writing a service method for this.
+*** [X] [[https://github.com/hellowisp/secure.hellowisp.com/pull/4063][WE-630]]: Removes manage command to update DoseSpot dispesne units
+
 ** [1/1] GetMedicationByNameAndStrength
 *** [X] WE-490: Replace "Get Medication by Name and Strength" functions with new service method.
 ** [1/1] GetMedicationByRxCUI
@@ -96,6 +100,8 @@ CLOCK: [2024-04-15 Mon 10:39]--[2024-04-15 Mon 11:04] =>  0:25
   This one is so old that it probably warrants a rewrite at this point. The merge on it will be awful, and I think it was written to replace the functionality as well. We should have a separate PR to implement the service, especially one this important.
 
 *** [-] WE-488: Replace "CreateOrUpdatePatient" functions with new service method.
+- Note taken on [2024-05-07 Tue 10:44] \\
+  In test
 - Note taken on [2024-04-30 Tue 17:34] \\
   Going to QA now. Passed code review.
 - Note taken on [2024-02-08 Thu 18:03] \\
@@ -144,7 +150,6 @@ CLOCK: [2024-04-15 Mon 10:39]--[2024-04-15 Mon 11:04] =>  0:25
   Verified myself that it works.
 - Note taken on [2024-02-04 Sun 10:24] \\
   In draft form. Needs the base merged before opening for review.
-
 * V2 Branches
 ** [1/1] Authentication
 *** [X] [[https://github.com/hellowisp/secure.hellowisp.com/pull/4011][WE-360]]
@@ -171,12 +176,14 @@ CLOCK: [2024-04-15 Mon 10:39]--[2024-04-15 Mon 11:04] =>  0:25
   Waiting for WE-426 to be reviewed and merged, but this one should be ready for review as soon as the merge happens.
 
 ** [4/16] Branches
-*** [-] WE-469: Create "AddPrescriptionsByCode" for DoseSpot V2
+*** WAIT WE-469: Create "AddPrescriptionsByCode" for DoseSpot V2
+- Note taken on [2024-05-06 Mon 15:01] \\
+  Cannot test the UI portion of this until WE-485 is complete
 :LOGBOOK:
 CLOCK: [2024-05-02 Thu 11:39]--[2024-05-02 Thu 12:04] =>  0:25
 CLOCK: [2024-05-02 Thu 10:52]--[2024-05-02 Thu 11:17] =>  0:25
 :END:
-*** [ ] WE-470: Create "AddPrescriptionsByFreeText" for DoseSpot V2
+*** [?] WE-470: Create "AddPrescriptionsByFreeText" for DoseSpot V2
 *** [ ] WE-471: Create "ChangePrescriptionPharmacy" for DoseSpot V2
 *** [-] WE-489: Create "CreateOrUpdatePatient" for DoseSpot V2
 *** [ ] WE-472: Create "CopyPrescription" for DoseSpot V2
@@ -195,14 +202,20 @@ CLOCK: [2024-05-02 Thu 10:52]--[2024-05-02 Thu 11:17] =>  0:25
 - Note taken on [2024-05-02 Thu 12:01] \\
   As is, this will overwrite V1 data in the Product table with V2 data. Need to find a solution for this.
 *** [X] [[https://hellowisp.atlassian.net/browse/WE-426][WE-426]]: Create "GetNofiticationsCounts" for DoseSpot V2
-*** [ ] WE-482: Create "GetPatientPrescription" for DoseSpot V2
-*** [ ] WE-483: Create "GetPatientPrescriptions" for DoseSpot V2
+*** [?] WE-482: Create "GetPatientPrescription" for DoseSpot V2
+- Note taken on [2024-05-08 Wed 09:25] \\
+  Branched off WE-470. Will go into review once that branch is merged.
+*** [-] WE-483: Create "GetPatientPrescriptions" for DoseSpot V2
+- Note taken on [2024-05-08 Wed 09:26] \\
+  Qushawn has this one.
 *** [X] WE-484: Create "GetPharmacy" for DoseSpot V2
 - Note taken on [2024-04-30 Tue 16:13] \\
   Can merge, will give everyone a bit longer to re-review.
 - Note taken on [2024-04-29 Mon 17:21] \\
   In review
-*** HOLD WE-485: Create "SearchMedicationByName" for DoseSpot V2
+*** [?] WE-485: Create "SearchMedicationByName" for DoseSpot V2
+- Note taken on [2024-05-08 Wed 09:26] \\
+  Qushawn is on this one.
 - Note taken on [2024-02-14 Wed 14:34] \\
   Probably going to leave this one as a draft, no way I'm going to finish this before Friday.
 *** [?] WE-486: Create "SearchPharmacy" for DoseSpot V2
@@ -216,7 +229,7 @@ CLOCK: [2024-05-03 Fri 10:03]--[2024-05-03 Fri 10:28] =>  0:25
 :END:
 *** [ ] WE-487: Create "SendPrescriptions" for DoseSpot V2
 
-* [11/15] Misc.
+* [13/16] Misc.
 Other branches that are cleanup or not tied to a ticket
 
 ** [X] [[https://github.com/hellowisp/secure.hellowisp.com/pull/3715][refactor/remove-product-strength-search]]
@@ -267,14 +280,32 @@ Removes an unused class in the ~models/dosespot.py~ file.
 Branched off of refactor/dosespot_result_name, merge as soon as possible.
 
 ** [X] [[https://github.com/hellowisp/secure.hellowisp.com/pull/4003][feat/WE-360-notifications-rename]]
-** [?] [[https://hellowisp.atlassian.net/browse/WE-624][feat/WE-624]]: Refactor Coded Prescriptions
+** [X] [[https://hellowisp.atlassian.net/browse/WE-624][feat/WE-624]]: Refactor Coded Prescriptions
 :LOGBOOK:
 CLOCK: [2024-05-02 Thu 09:05]--[2024-05-02 Thu 09:20] =>  0:15
 CLOCK: [2024-05-02 Thu 08:35]--[2024-05-02 Thu 09:00] =>  0:25
 :END:
-** [?] [[https://github.com/hellowisp/secure.hellowisp.com/pull/4057][fix/get-clinician-v2]]: Fixes to get GetClinician V2 working
+** [X] [[https://github.com/hellowisp/secure.hellowisp.com/pull/4057][fix/get-clinician-v2]]: Fixes to get GetClinician V2 working
 - Note taken on [2024-05-02 Thu 18:09] \\
   In review
+** [4/4] Discovery: What fields changed between V1 and V2?
+*** [X] Clinician
+No changes
+:LOGBOOK:
+CLOCK: [2024-05-08 Wed 11:54]--[2024-05-08 Wed 11:57] =>  0:03
+:END:
+*** [X] Medication
+Some changes.
+*** [X] Pharmacy
+Changes are fairly minimal. Only 1 field added and 2 removed.
+
+Only fields removed are:
+- IsDefault
+- IsPreferred
+
+I am fairly confident these are not used anywhere in the codebase.
+*** [X] Prescription
+Lots of changes. Things removed. It seems that a lot of the stuff available on Medications was removed. Maybe they expect us to query the Medications endpoint for the data we need.
 * Other
 Clinic Key for Test Clinic 1 in staging
 
@@ -303,6 +334,8 @@ Secondary:
 Arnold Bays DoseSpot ID V1: 226139
 Arnold Bays DoseSpot ID V2: 300787
 
+** [ ] Investigate if "Search Medication by Name and Strength" V2 even works. Pretty sure it doesn't.
+
 
 * Things to do before V2 switch
 ** [ ] Switch ~dosespot_id~ in all rows in Provider table to their new DoseSpot V2 IDs. Or add a V2 column if we want to keep the original IDs.
@@ -310,11 +343,15 @@ Arnold Bays DoseSpot ID V2: 300787
 ** [ ] Ask DoseSpot if the Provider DoseSpot IDs will change in production as part of V2 transition.
 
 * Questions for DoseSpot
-** [ ] Will Pharmacy IDs stay the same between V1 and V2?
+** [X] Will Pharmacy IDs stay the same between V1 and V2?
+- Note taken on [2024-05-06 Mon 13:12] \\
+  The answer is "Yes"
 Need to know because we store the Pharmacies locally. If they are not the same, we may need a new table.
 ** [X] Ask if the 'GetDispenseUnit' endpoint has been removed
-
-
+- Note taken on [2024-05-06 Mon 13:11] \\
+  Confirmed it is removed for V2
+- Note taken on [2024-05-06 Mon 08:53] \\
+  They once again failed to answer the question
 - Note taken on [2024-05-03 Fri 17:44] \\
   Asked on their support site
 * Models we save for DoseSpot
@@ -335,3 +372,7 @@ We need to ask DoseSpot if this will be the same between V1 and V2. No reason it
 ** Rx
 *** dosespot_rx
 Stores a JSON dump of DoseSpot's prescription data. This will be different for V2, since this stores LexiGen data.
+
+* Things to tell the group
+** [X] DoseSpot is going to give us an Excel sheet in the next week or two (as of May 6th) which will show which Lexi IDs correspond to which MediSpan IDs.
+This should give us some options when migrating our data from V1 to V2.

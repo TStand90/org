@@ -9,8 +9,13 @@ DEADLINE: <2024-04-17 Wed>
 * [X] Make a ticket for adding the logger to all service methods
 * [ ] Look into DoseSpot Medispan (prescription) export
 *** DoseSpot Mentioned that they have a prescriptions export, similar to their Pharmacy export that we ingest daily.
-* [ ] Update WE-481 based on the changes I made for WE-480
+* [X] Update WE-481 based on the changes I made for WE-480
 DEADLINE: <2024-04-29 Mon>
 *** I made changed to schemas in WE-480, so I need to make similar changes to WE-481 before it goes into testing.
 * [ ] Make a plan for the V2 migration of our DB's prescriptions
 DEADLINE: <2024-04-30 Tue>
+* [ ] Investigate Provider.add and make a ticket to do something about it.
+** It may or may not be used, but we may have to create a service method to encompass its functionality
+* [ ] Investigate all the missing fields in V2, see if they are used in the codebase
+** [ ] Monograph Path
+This one is used!!!
