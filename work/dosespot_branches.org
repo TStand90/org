@@ -175,8 +175,10 @@ CLOCK: [2024-04-15 Mon 10:39]--[2024-04-15 Mon 11:04] =>  0:25
 - Note taken on [2024-02-04 Sun 10:07] \\
   Waiting for WE-426 to be reviewed and merged, but this one should be ready for review as soon as the merge happens.
 
-** [4/16] Branches
+** [5/16] Branches
 *** WAIT WE-469: Create "AddPrescriptionsByCode" for DoseSpot V2
+- Note taken on [2024-05-10 Fri 12:15] \\
+  Need to test this one myself, might be ready for review.
 - Note taken on [2024-05-06 Mon 15:01] \\
   Cannot test the UI portion of this until WE-485 is complete
 :LOGBOOK:
@@ -213,7 +215,7 @@ CLOCK: [2024-05-02 Thu 10:52]--[2024-05-02 Thu 11:17] =>  0:25
   Can merge, will give everyone a bit longer to re-review.
 - Note taken on [2024-04-29 Mon 17:21] \\
   In review
-*** [?] WE-485: Create "SearchMedicationByName" for DoseSpot V2
+*** [X] WE-485: Create "SearchMedicationByName" for DoseSpot V2
 - Note taken on [2024-05-08 Wed 09:26] \\
   Qushawn is on this one.
 - Note taken on [2024-02-14 Wed 14:34] \\
@@ -296,6 +298,21 @@ CLOCK: [2024-05-08 Wed 11:54]--[2024-05-08 Wed 11:57] =>  0:03
 :END:
 *** [X] Medication
 Some changes.
+**** All
+- frontend/views/Provider/types/types.ts | TDosespotMedication
+**** [X] CompoundIngredients (structure changed)
+**** [X] LexiDrugSynId
+**** [X] LexiGenDrugId
+**** [X] LexiGenProductId
+**** [X] LexiSynonymTypeId
+**** [X] MonographPath
+- Function: get_approval_email_text | line 876
+- frontend/views/Provider/types/types.ts
+- frontend/views/Provider/views/DoseSpot/views/ConsultationRequest/types.ts
+**** [X] GenericProductName
+- frontend/views/Provider/types/types.ts
+- frontend/views/Provider/views/DoseSpot/views/ConsultationRequest/types.ts
+- app/utils.py | Function: get_approval_email_text | line 854
 *** [X] Pharmacy
 Changes are fairly minimal. Only 1 field added and 2 removed.
 
@@ -306,6 +323,87 @@ Only fields removed are:
 I am fairly confident these are not used anywhere in the codebase.
 *** [X] Prescription
 Lots of changes. Things removed. It seems that a lot of the stuff available on Medications was removed. Maybe they expect us to query the Medications endpoint for the data we need.
+
+We could take the DispensableDrugID and query for medications that way. Perhaps keep saving that data to the DB? Or query every time?
+
+**** [3/5] All
+***** [ ] frontend/views/Provider/views/DoseSpot/views/ConsultationRequest/types.ts | PendingDoseSpotRx
+***** [ ] frontend/views/Provider/types/types.ts |
+***** [X] app.controllers.erx_controller.ERxController._transform_ds_medication_to_erx_medication (not all, but the lexi ones)
+***** [X] app.integrations.erx.dosespot.DoseSpotIntegration._transform_coded_erx_data_to_ds_dict (the lexi ones)
+***** [X] app.models.catalog.product.Product.lexigen_ids (the lexi ones)
+
+**** [X] DispenseUnitDescription
+We can do John's idea for this one. Query the ~DispenseUnit~ table, and use the name for the ~DispenseUnitDescription~. No need to even hit the API again.
+- app/views/old/layouts/read_component_object.html | line 899
+- app/views/old/nurse/patient_prescriptions.html | line 23
+- frontend/views/Provider/types/types.ts | line 274
+- frontend/views/Provider/views/DoseSpot/views/ConsultationRequest/ConsultationRequest.PendingRxs.tsx | line 43
+- frontend/views/Provider/views/DoseSpot/views/ConsultationRequest/ConsultationRequest.SentRxs.tsx | line 20
+- frontend/views/Provider/views/DoseSpot/views/ConsultationRequest/types.ts | line 49
+- frontend/views/Provider/views/DoseSpot/views/OrderHistory/OrderHistory.Prescriptions.tsx | line 12
+***** [X] app/models/prescription.py | app.models.prescription.Prescription.build_dosespot_rx | line 166
+Pulls from ~Product.units_dispensed~ so not a problem
+**** [X] CompoundId
+**** [X] DoseForm
+***** HOLD app/utils.py | def render_rx_status | line 659,660
+Probably a Prescription type, so maybe fine as is
+**** [X] Route
+***** HOLD app/utils.py | def render_rx_status | line 656,657
+  Probably a Prescription type, so maybe fine as is
+**** [X] Strength
+***** HOLD app/utils.py | def render_rx_status | line 655
+  Probably a Prescription type, so maybe fine as is
+  It's under an ~if~ statement, so theoretically, things should still work. It's just that on that page, "Strength" will never show.
+***** [X] app.models.catalog.product.Product.strength | line 252
+This one is fine. It's on the Product (Medication) so no problem.
+**** [X] GenericProductName
+
+- app/utils.py | line 854
+**** [X] GenericDrugName
+**** [X] LexiGenProductId
+**** [X] LexiDrugSynId
+**** [X] LexiSynonymTypeId
+**** [X] LexiGenDrugId
+**** [X] RxCUI
+- NOTE: There is the "rxcui" column on the Product model. Worth investigating.
+  - If anything, I think this means we don't have to worry about this one much. Why would they use the DoseSpot Medatada RxCUI when the DB one is available?
+***** [ ] app/utils.py | line 883 (not sure if this is a prescription or medication)
+***** [ ] frontend/views/Provider/views/DoseSpot/hooks/useMedMetadata.ts | setFieldValue('product_rxcui', data.RxCUI) | line 24
+***** [ ] frontend/views/Provider/views/DoseSpot/views/MedSelection/MedSelection.tsx | setFieldValue('product_rxcui', data.RxCUI) | line 44
+
+**** [X] OTC
+**** [?] NDC
+- frontend/views/Provider/types/rxTypes.ts | line 22
+- NOTE: There is the "ndc" column on the Product model. Worth investigating.
+**** [X] Schedule
+- app/controllers/rx_preapproval_request_controller.py | app.controllers.rx_preapproval_request_controller.RxPreapprovalRequestController._process_prescription | line 83
+- app/models/catalog/product.py | app.models.catalog.product.Product.drug_schedule | line 264
+**** [X] MonographPath
+- See above under Medication. I don't know which instances belong to which.
+**** [X] DrugClassification
+**** [X] Brand
+
+**** Data points in Medication:
+***** NDC
+***** DoseForm
+***** Route
+***** Strength
+***** GenericDrugName
+***** Schedule
+***** RxCUI
+***** OTC
+***** DrugClassification (data may have changed from Lexi to MediSpan)
+***** Brand
+**** Data points not in Medication:
+***** LexiGenProductId
+***** LexiDrugSynId
+***** LexiSynonymTypeId
+***** LexiGenDrugId
+***** CompoundId
+***** DispenseUnitDescription (maybe can get this from DispenseUnitId with lookup)
+***** GenericProductName
+***** MonographPath (need to verify if we have access to this endpoint)
 * Other
 Clinic Key for Test Clinic 1 in staging
 
