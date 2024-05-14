@@ -99,7 +99,7 @@ CLOCK: [2024-04-15 Mon 10:39]--[2024-04-15 Mon 11:04] =>  0:25
 - Note taken on [2024-02-04 Sun 10:19] \\
   This one is so old that it probably warrants a rewrite at this point. The merge on it will be awful, and I think it was written to replace the functionality as well. We should have a separate PR to implement the service, especially one this important.
 
-*** [-] WE-488: Replace "CreateOrUpdatePatient" functions with new service method.
+*** [?] WE-488: Replace "CreateOrUpdatePatient" functions with new service method.
 - Note taken on [2024-05-07 Tue 10:44] \\
   In test
 - Note taken on [2024-04-30 Tue 17:34] \\
@@ -175,8 +175,10 @@ CLOCK: [2024-04-15 Mon 10:39]--[2024-04-15 Mon 11:04] =>  0:25
 - Note taken on [2024-02-04 Sun 10:07] \\
   Waiting for WE-426 to be reviewed and merged, but this one should be ready for review as soon as the merge happens.
 
-** [5/16] Branches
-*** WAIT WE-469: Create "AddPrescriptionsByCode" for DoseSpot V2
+** [7/16] Branches
+*** [?] WE-469: Create "AddPrescriptionsByCode" for DoseSpot V2
+- Note taken on [2024-05-14 Tue 08:14] \\
+  In review
 - Note taken on [2024-05-10 Fri 12:15] \\
   Need to test this one myself, might be ready for review.
 - Note taken on [2024-05-06 Mon 15:01] \\
@@ -185,7 +187,7 @@ CLOCK: [2024-04-15 Mon 10:39]--[2024-04-15 Mon 11:04] =>  0:25
 CLOCK: [2024-05-02 Thu 11:39]--[2024-05-02 Thu 12:04] =>  0:25
 CLOCK: [2024-05-02 Thu 10:52]--[2024-05-02 Thu 11:17] =>  0:25
 :END:
-*** [?] WE-470: Create "AddPrescriptionsByFreeText" for DoseSpot V2
+*** [X] WE-470: Create "AddPrescriptionsByFreeText" for DoseSpot V2
 *** [ ] WE-471: Create "ChangePrescriptionPharmacy" for DoseSpot V2
 *** [-] WE-489: Create "CreateOrUpdatePatient" for DoseSpot V2
 *** [ ] WE-472: Create "CopyPrescription" for DoseSpot V2
@@ -198,13 +200,17 @@ CLOCK: [2024-05-02 Thu 10:52]--[2024-05-02 Thu 11:17] =>  0:25
   Ready to merge
 - Note taken on [2024-02-13 Tue 13:54] \\
   In review
-*** [?] WE-476: Create "GetMedicationByRxCUI" for DoseSpot V2
+*** [X] WE-476: Create "GetMedicationByRxCUI" for DoseSpot V2
+- Note taken on [2024-05-13 Mon 09:31] \\
+  Waiting to deploy
 - Note taken on [2024-05-02 Thu 18:07] \\
   In review. We will figure out what to do about the data overwriting later. We need this to move forward with coded prescriptions.
 - Note taken on [2024-05-02 Thu 12:01] \\
   As is, this will overwrite V1 data in the Product table with V2 data. Need to find a solution for this.
 *** [X] [[https://hellowisp.atlassian.net/browse/WE-426][WE-426]]: Create "GetNofiticationsCounts" for DoseSpot V2
 *** [?] WE-482: Create "GetPatientPrescription" for DoseSpot V2
+- Note taken on [2024-05-14 Tue 08:12] \\
+  Needs the DispenseUnitDescription fix. Will wait for Qushawn to finish his PR then branch off that.
 - Note taken on [2024-05-08 Wed 09:25] \\
   Branched off WE-470. Will go into review once that branch is merged.
 *** [-] WE-483: Create "GetPatientPrescriptions" for DoseSpot V2
@@ -229,8 +235,10 @@ CLOCK: [2024-05-03 Fri 12:15]--[2024-05-03 Fri 12:40] =>  0:25
 CLOCK: [2024-05-03 Fri 11:27]--[2024-05-03 Fri 11:52] =>  0:25
 CLOCK: [2024-05-03 Fri 10:03]--[2024-05-03 Fri 10:28] =>  0:25
 :END:
-*** [ ] WE-487: Create "SendPrescriptions" for DoseSpot V2
+*** [-] WE-487: Create "SendPrescriptions" for DoseSpot V2
 
+- Note taken on [2024-05-13 Mon 09:32] \\
+  Qushawn's got this one
 * [13/16] Misc.
 Other branches that are cleanup or not tied to a ticket
 
@@ -436,9 +444,13 @@ Arnold Bays DoseSpot ID V2: 300787
 
 
 * Things to do before V2 switch
-** [ ] Switch ~dosespot_id~ in all rows in Provider table to their new DoseSpot V2 IDs. Or add a V2 column if we want to keep the original IDs.
-** [ ] Plan the transition from Prescription V1 IDs and data to V2
-** [ ] Ask DoseSpot if the Provider DoseSpot IDs will change in production as part of V2 transition.
+** NO Switch ~dosespot_id~ in all rows in Provider table to their new DoseSpot V2 IDs. Or add a V2 column if we want to keep the original IDs.
+We don't need to do this.
+** [?] Plan the transition from Prescription V1 IDs and data to V2
+- Note taken on [2024-05-14 Tue 08:17] \\
+  We cannot proceed until DoseSpot gives us the Excel sheet.
+** [X] Ask DoseSpot if the Provider DoseSpot IDs will change in production as part of V2 transition.
+They confirmed that they Provider DoseSpot IDs will not change.
 
 * Questions for DoseSpot
 ** [X] Will Pharmacy IDs stay the same between V1 and V2?
@@ -474,3 +486,8 @@ Stores a JSON dump of DoseSpot's prescription data. This will be different for V
 * Things to tell the group
 ** [X] DoseSpot is going to give us an Excel sheet in the next week or two (as of May 6th) which will show which Lexi IDs correspond to which MediSpan IDs.
 This should give us some options when migrating our data from V1 to V2.
+
+** [ ] MonographPath may be a bit tricky. They supplied us with a URL that we have been using to direct patients, but that has been replaced by an API endpoint.
+The URL looked like this:
+"https://{dosespot_domain}/secure/Monographs/{url_fragment}"
+~url_fragment~ looks like this: ~HTMLICONS/d00112a1.htm~
