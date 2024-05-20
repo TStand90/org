@@ -1,0 +1,63 @@
+:PROPERTIES:
+:ID:       ca5fcfc1-6803-4e3c-a87e-19591f0c9d5a
+:END:
+#+title: 49. Group Anagrams
+
+* Description
+Given an array of strings strs, group the anagrams together. You can return the answer in any order.
+
+An Anagram is a word or phrase formed by rearranging the letters of a different word or phrase, typically using all the original letters exactly once.
+
+
+
+Example 1:
+
+Input: strs = ["eat","tea","tan","ate","nat","bat"]
+Output: [["bat"],["nat","tan"],["ate","eat","tea"]]
+Example 2:
+
+Input: strs = [""]
+Output: [[""]]
+Example 3:
+
+Input: strs = ["a"]
+Output: [["a"]]
+
+
+Constraints:
+
+1 <= strs.length <= 104
+0 <= strs[i].length <= 100
+strs[i] consists of lowercase English letters.
+
+* Explanation
+** Sorting solution
+You could sort each string in the array, then compare the strings. However, sorting each string in a large array will be slower than the optimal solution, as sorting each string in the array costs n(log_{n}). This makes the time complexity m * n log_{n}
+
+** [[id:26fcbf3c-dee7-40a8-92e3-2fa7079c97e4][HashMap]] solution
+Iterate through the list of strings, and take a "count" of the letters in the string. Do this by setting up an empty array of zeroes of length 26, one for each letter (assumes that only lowercase letters are allowed).
+
+Set the count of each letter in the array. Then, in a dictionary, set the counts array as the key (will need to be a hashable data structure, ~tuple~ works for [[id:3a948b50-dedc-4fdf-a86c-05c1c3a9f230][Python]]), and the value is set to an array which appends the original string.
+
+Return the values of that dictionary.
+
+* Solution
+** Python
+#+BEGIN_SRC python
+from collections import defaultdict
+
+
+class Solution:
+    def groupAnagrams(self, strs: list[str]) -> list[list[str]]:
+        result = defaultdict(list)
+
+        for string in strs:
+            count = [0] * 26
+
+            for character in string:
+                count[ord(character) - ord("a")] += 1
+
+            result[tuple(count)].append(string)
+
+        return result.values()
+#+END_SRC
