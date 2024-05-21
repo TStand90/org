@@ -175,7 +175,8 @@ CLOCK: [2024-04-15 Mon 10:39]--[2024-04-15 Mon 11:04] =>  0:25
 - Note taken on [2024-02-04 Sun 10:07] \\
   Waiting for WE-426 to be reviewed and merged, but this one should be ready for review as soon as the merge happens.
 
-** [10/16] Branches
+** [13/16] Branches
+*** [X] [[https://hellowisp.atlassian.net/browse/WE-426][WE-426]]: Create "GetNofiticationsCounts" for DoseSpot V2
 *** [X] WE-469: Create "AddPrescriptionsByCode" for DoseSpot V2
 - Note taken on [2024-05-14 Tue 08:14] \\
   In review
@@ -189,7 +190,6 @@ CLOCK: [2024-05-02 Thu 10:52]--[2024-05-02 Thu 11:17] =>  0:25
 :END:
 *** [X] WE-470: Create "AddPrescriptionsByFreeText" for DoseSpot V2
 *** [-] WE-471: Create "ChangePrescriptionPharmacy" for DoseSpot V2
-*** [?] WE-489: Create "CreateOrUpdatePatient" for DoseSpot V2
 *** [-] WE-472: Create "CopyPrescription" for DoseSpot V2
 *** [X] WE-473: Create "DeletePendingRx" for DoseSpot V2
 - Note taken on [2024-04-29 Mon 17:22] \\
@@ -207,7 +207,6 @@ CLOCK: [2024-05-02 Thu 10:52]--[2024-05-02 Thu 11:17] =>  0:25
   In review. We will figure out what to do about the data overwriting later. We need this to move forward with coded prescriptions.
 - Note taken on [2024-05-02 Thu 12:01] \\
   As is, this will overwrite V1 data in the Product table with V2 data. Need to find a solution for this.
-*** [X] [[https://hellowisp.atlassian.net/browse/WE-426][WE-426]]: Create "GetNofiticationsCounts" for DoseSpot V2
 *** [X] WE-482: Create "GetPatientPrescription" for DoseSpot V2
 - Note taken on [2024-05-14 Tue 08:12] \\
   Needs the DispenseUnitDescription fix. Will wait for Qushawn to finish his PR then branch off that.
@@ -226,7 +225,7 @@ CLOCK: [2024-05-02 Thu 10:52]--[2024-05-02 Thu 11:17] =>  0:25
   Qushawn is on this one.
 - Note taken on [2024-02-14 Wed 14:34] \\
   Probably going to leave this one as a draft, no way I'm going to finish this before Friday.
-*** [?] WE-486: Create "SearchPharmacy" for DoseSpot V2
+*** [X] WE-486: Create "SearchPharmacy" for DoseSpot V2
 - Note taken on [2024-05-03 Fri 15:44] \\
   In review
 :LOGBOOK:
@@ -235,10 +234,11 @@ CLOCK: [2024-05-03 Fri 12:15]--[2024-05-03 Fri 12:40] =>  0:25
 CLOCK: [2024-05-03 Fri 11:27]--[2024-05-03 Fri 11:52] =>  0:25
 CLOCK: [2024-05-03 Fri 10:03]--[2024-05-03 Fri 10:28] =>  0:25
 :END:
-*** [-] WE-487: Create "SendPrescriptions" for DoseSpot V2
+*** [X] WE-487: Create "SendPrescriptions" for DoseSpot V2
 
 - Note taken on [2024-05-13 Mon 09:32] \\
   Qushawn's got this one
+*** [X] WE-489: Create "CreateOrUpdatePatient" for DoseSpot V2
 * [15/15] Misc.
 Other branches that are cleanup or not tied to a ticket
 
