@@ -175,7 +175,7 @@ CLOCK: [2024-04-15 Mon 10:39]--[2024-04-15 Mon 11:04] =>  0:25
 - Note taken on [2024-02-04 Sun 10:07] \\
   Waiting for WE-426 to be reviewed and merged, but this one should be ready for review as soon as the merge happens.
 
-** [13/16] Branches
+** [16/16] Branches
 *** [X] [[https://hellowisp.atlassian.net/browse/WE-426][WE-426]]: Create "GetNofiticationsCounts" for DoseSpot V2
 *** [X] WE-469: Create "AddPrescriptionsByCode" for DoseSpot V2
 - Note taken on [2024-05-14 Tue 08:14] \\
@@ -189,8 +189,8 @@ CLOCK: [2024-05-02 Thu 11:39]--[2024-05-02 Thu 12:04] =>  0:25
 CLOCK: [2024-05-02 Thu 10:52]--[2024-05-02 Thu 11:17] =>  0:25
 :END:
 *** [X] WE-470: Create "AddPrescriptionsByFreeText" for DoseSpot V2
-*** [-] WE-471: Create "ChangePrescriptionPharmacy" for DoseSpot V2
-*** [-] WE-472: Create "CopyPrescription" for DoseSpot V2
+*** [X] WE-471: Create "ChangePrescriptionPharmacy" for DoseSpot V2
+*** [X] WE-472: Create "CopyPrescription" for DoseSpot V2
 *** [X] WE-473: Create "DeletePendingRx" for DoseSpot V2
 - Note taken on [2024-04-29 Mon 17:22] \\
   Can't really proceed with this until we can add prescriptions to V2 (WE-469 or WE-470)
@@ -212,7 +212,7 @@ CLOCK: [2024-05-02 Thu 10:52]--[2024-05-02 Thu 11:17] =>  0:25
   Needs the DispenseUnitDescription fix. Will wait for Qushawn to finish his PR then branch off that.
 - Note taken on [2024-05-08 Wed 09:25] \\
   Branched off WE-470. Will go into review once that branch is merged.
-*** [?] WE-483: Create "GetPatientPrescriptions" for DoseSpot V2
+*** [X] WE-483: Create "GetPatientPrescriptions" for DoseSpot V2
 - Note taken on [2024-05-08 Wed 09:26] \\
   Qushawn has this one.
 *** [X] WE-484: Create "GetPharmacy" for DoseSpot V2
