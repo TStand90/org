@@ -1,0 +1,86 @@
+:PROPERTIES:
+:ID:       805a8d3f-4aaa-44d6-b6e6-015316b20981
+:END:
+#+title: Grokking Functional Programming
+#+filetags: :Functional_Programming:Manning_Books:
+
+* Imperative vs. declarative
+:PROPERTIES:
+:ID:       796de48e-28fa-427e-a12c-40f8e8980502
+:END:
+
+- Imperative programming focuses on _how_ the result should be computed.
+- Declarative programming focuses on _what_ needs to be done.
+
+Functional Programming generally tries to be as _declarative_ as possible.
+
+#+BEGIN_SRC java
+public static int calculateScore(String word) {
+    int score = 0;
+    for(char c : word.toCharArray()) {
+        score++;
+    }
+    return score;
+}
+
+public static int wordScore(String word) {
+    return word.length();
+}
+#+END_SRC
+
+~calculateScore~ is written _imperatively_, while ~wordScore~ is written _declaratively_.
+
+** Coffee break exercise
+Modify the ~calculateScore~ and ~wordScore~ functions so that the score equals the number of letters different than ~a~.
+
+The following should be true:
+
+#+BEGIN_COMMENT
+calculateScore("imperative") == 9     wordScore("declarative") == 9
+calculateScore("no") == 2             wordScore("yes") == 3
+#+END_COMMENT
+
+#+BEGIN_SRC java
+public static int calculateScore(String word) {
+    int score = 0;
+    for(char c : word.toCharArray()) {
+        if (char != 'a') {
+            score++;
+        }
+    }
+    return score;
+}
+
+public static int wordScore(String word) {
+    return word.replace("a", "").length();
+}
+#+END_SRC
+
+
+Alternate declarative answer:
+
+#+BEGIN_SRC java
+public static String stringWithoutChar(String s, char c) {
+    return s.replace(Character.toString(c), "");
+}
+
+public static int wordScore(String word)  {
+    return stringWithoutChar(word, 'a').length();
+}
+#+END_SRC
+
+* Meet the function... in [[id:54edfb9f-3852-44e7-9a53-a56d743d101d][Scala]]
+
+#+BEGIN_SRC java
+public static int add(int a, int b) {
+    return a + b;
+}
+#+END_SRC
+
+The same function written in [[id:54edfb9f-3852-44e7-9a53-a56d743d101d][Scala]]:
+
+#+BEGIN_SRC scala
+def add(a: Int, b: Int): Int = {
+a + b
+}
+#+END_SRC

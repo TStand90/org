@@ -1,0 +1,6 @@
+:PROPERTIES:
+:ID:       54edfb9f-3852-44e7-9a53-a56d743d101d
+:END:
+#+title: Scala
+
+Scala is a programming language that allows both functional and object-oriented programming.

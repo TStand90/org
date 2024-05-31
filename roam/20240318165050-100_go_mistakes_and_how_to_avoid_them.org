@@ -6,6 +6,9 @@
 #+filetags: :Go:Manning_Books:
 
 * 1: Unintended Variable Shadowing
+:PROPERTIES:
+:ID:       c6ec70f4-7cfe-4f87-bee6-9b2ff48d5285
+:END:
 #+BEGIN_SRC go
 var client *http.Client
 if tracing {
@@ -42,6 +45,9 @@ if tracing {
 #+END_SRC
 
 * 2: Unnecessary nested code
+:PROPERTIES:
+:ID:       314f2629-5f02-4bcd-95da-1d9f05488be7
+:END:
 
 Avoid nesting ~if~ statements whenever possible, as they make the code harder to reason about.
 
@@ -122,3 +128,30 @@ The bigger the interface, the weaker the abstraction.
 
 - Rob Pike
 #+END_QUOTE
+
+* 16: Not using linters
+
+Linters can help avoid common mistakes. ~vet~ (included with the Go binary) and ~shadow~ can be used to detect [[id:c6ec70f4-7cfe-4f87-bee6-9b2ff48d5285][1: Unintended Variable Shadowing]].
+
+#+BEGIN_SRC go
+package main
+
+import "fmt"
+
+func main() {
+    i := 0
+    if true {
+        i := 1
+        fmt.Println(i)
+    }
+    fmt.Println(i)
+}
+#+END_SRC
+
+#+BEGIN_SRC shell
+$ go install \
+  golang.org/x/tools/go/analysis/passes/shadow/cmd/shadow
+$ go vet -vettool=$(which shadow)
+./main.go:8:3:
+  declaration of "i" shadows declaration at line 6
+#+END_SRC
