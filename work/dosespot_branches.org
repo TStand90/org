@@ -488,8 +488,8 @@ Stores a JSON dump of DoseSpot's prescription data. This will be different for V
 ** [X] DoseSpot is going to give us an Excel sheet in the next week or two (as of May 6th) which will show which Lexi IDs correspond to which MediSpan IDs.
 This should give us some options when migrating our data from V1 to V2.
 
-** [ ] MonographPath may be a bit tricky. They supplied us with a URL that we have been using to direct patients, but that has been replaced by an API endpoint.
+** [X] MonographPath may be a bit tricky. They supplied us with a URL that we have been using to direct patients, but that has been replaced by an API endpoint.
 The URL looked like this:
 "https://{dosespot_domain}/secure/Monographs/{url_fragment}"
 ~url_fragment~ looks like this: ~HTMLICONS/d00112a1.htm~
-** [ ] We don't save allergy info in DoseSpot. There is an API endpoint for this, so we could.
+** [X] We don't save allergy info in DoseSpot. There is an API endpoint for this, so we could.
