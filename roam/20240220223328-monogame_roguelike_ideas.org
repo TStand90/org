@@ -9,6 +9,40 @@ The message queue should probably use the [[id:8140e038-8424-480c-b6a8-608220c9f
 * Commands
 The game should implement the command pattern.
 
+** Example Command/Action
+
+Example from [[https://www.youtube.com/watch?v=JxI3Eu5DPwE][this talk from Bob Nystrom]]
+
+#+BEGIN_SRC dart
+class WalkAction extends Action {
+  Direction dir;
+
+  ActionResult perform() {
+    var pos = actor.pos + dir;
+
+    // See if there is an actor there
+    var target = game.stage.actorAt(pos);
+    if (target != null) return alternate(AttackAction(target));
+
+    // See if it's a door
+    var tile = game.stage[pos];
+    if (tile.isDoor) return alternate(OpenDoor(pos));
+
+    // See if we can walk there
+    if (!actor.canOccupy(pos)) return fail("You hit the wall!");
+
+    // See if the hero stepped on anything interesting
+    if (actor is Hero) {
+      for (var item in game.stage.itemsAt(pos).toList()) {
+        log("You are standing on $item.");
+      }
+    }
+
+    return succeed();
+  }
+}
+#+END_SRC
+
 * Actions queue
 There should be a queue that takes the player, monsters, and world's Actions in order, and executes them along with their animations. This is so that actions can be "grouped" together, so that certain animations and sound effects can be played in unison.
 
