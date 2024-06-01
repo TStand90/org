@@ -81,6 +81,37 @@ The same function written in [[id:54edfb9f-3852-44e7-9a53-a56d743d101d][Scala]]:
 
 #+BEGIN_SRC scala
 def add(a: Int, b: Int): Int = {
-a + b
+  a + b
+}
+#+END_SRC
+
+
+* Practice Section: Rewrite functions from Java to Scala
+
+#+BEGIN_SRC java
+public static int increment(int x) {
+    return x + 1;
+}
+
+public static char getFirstCharacter(String s) {
+    return s.charAt(0);
+}
+
+public static int wordScore(String word)  {
+    return word.length();
+}
+#+END_SRC
+
+#+BEGIN_SRC scala
+def increment(x: Int): Int = {
+  x + 1
+}
+
+def getFirstCharacter(s: String): Char = {
+  s.charAt(0)
+}
+
+def wordScore(word: String): Int = {
+  word.length()
 }
 #+END_SRC
