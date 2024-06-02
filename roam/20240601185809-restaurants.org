@@ -1,0 +1,24 @@
+:PROPERTIES:
+:ID:       0cc53aca-8ee6-40a2-8c7e-9223cd8e2911
+:END:
+#+title: Restaurants
+
+A list of restaurants and our feelings about them.
+
+* Phoenician Mediterranean Grill
+Don't order again. It made Pooja and Marcus sick after eating the salmon.
+
+* Tandoori Pizza
+Good overall
+
+** Potato Pizza
+Good!
+
+** Achari Wings
+"Authentic", but not as good as Curry Pizza wings
+
+** Tandoori Wings
+Not bad, but also not as good as Curry Pizza's wings
+
+** Mango Lassi
+Aurora likes it. I think it's alright. Pooja did not like it that much.
