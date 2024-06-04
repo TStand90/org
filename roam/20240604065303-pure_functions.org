@@ -1,0 +1,10 @@
+:PROPERTIES:
+:ID:       a80f9e5d-1455-43e7-b876-28c891f3156c
+:END:
+#+title: Pure Functions
+
+#+BEGIN_QUOTE
+Sometimes, the elegant implementation is just a function. Not a method. Not a class. Not a framework. Just a function. -- John Carmack
+#+END_QUOTE
+
+Pure functions are functions without any side effects. They are the foundation of [[id:ddff8999-8f7a-4abe-b756-af97af50dfdc][Functional Programming]].

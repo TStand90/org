@@ -55,8 +55,35 @@ def insert(root, val):
 If the tree is balanced, insertion takes O(log n) time.
 
 * Deletion
+** Explanation
+There are two cases to consider:
+1. When a node has 0 or 1 children
+2. When a node has 2 children.
+
+#1 is significantly easier.
+
+
+** Code
+#+Name: Binary Search Tree deletion pseudocode
+#+BEGIN_SRC python
+#+END_SRC
+
 ** Complexity
 If the tree is balanced, deletion takes O(log n) time.
+
+* Find the minimum value
+** Explanation
+Finding the minimum value is as simple as traversing the tree all the way to the left. Since the tree is balanced, the leftmost node is always the smallest
+
+** Code
+#+NAME: Binary Search Tree find minimum pseudocode
+#+BEGIN_SRC python
+def minValueNode(root):
+    curr = root
+    while curr and curr.left:
+        curr = curr.left
+    return curr
+#+END_SRC
 
 * Creation
 ** Complexity

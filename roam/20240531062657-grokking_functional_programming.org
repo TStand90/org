@@ -4,7 +4,8 @@
 #+title: Grokking Functional Programming
 #+filetags: :Functional_Programming:Manning_Books:
 
-* Imperative vs. declarative
+* Chapter 1
+** Imperative vs. declarative
 :PROPERTIES:
 :ID:       796de48e-28fa-427e-a12c-40f8e8980502
 :END:
@@ -30,7 +31,7 @@ public static int wordScore(String word) {
 
 ~calculateScore~ is written _imperatively_, while ~wordScore~ is written _declaratively_.
 
-** Coffee break exercise
+*** Coffee break exercise
 Modify the ~calculateScore~ and ~wordScore~ functions so that the score equals the number of letters different than ~a~.
 
 The following should be true:
@@ -69,7 +70,7 @@ public static int wordScore(String word)  {
 }
 #+END_SRC
 
-* Meet the function... in [[id:54edfb9f-3852-44e7-9a53-a56d743d101d][Scala]]
+** Meet the function... in [[id:54edfb9f-3852-44e7-9a53-a56d743d101d][Scala]]
 
 #+BEGIN_SRC java
 public static int add(int a, int b) {
@@ -86,7 +87,7 @@ def add(a: Int, b: Int): Int = {
 #+END_SRC
 
 
-* Practice Section: Rewrite functions from Java to Scala
+** Practice Section: Rewrite functions from Java to Scala
 
 #+BEGIN_SRC java
 public static int increment(int x) {
@@ -115,3 +116,5 @@ def wordScore(word: String): Int = {
   word.length()
 }
 #+END_SRC
+
+* Chapter 2 - [[id:a80f9e5d-1455-43e7-b876-28c891f3156c][Pure Functions]]

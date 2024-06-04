@@ -1,0 +1,6 @@
+:PROPERTIES:
+:ID:       ddff8999-8f7a-4abe-b756-af97af50dfdc
+:END:
+#+title: Functional Programming
+
+TODO
