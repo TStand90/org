@@ -50,3 +50,22 @@ ssh-vault -k ~/.ssh/devs_hellowisp edit .envrc.development.encrypted
 #+END_SRC
 
 Hint: cat .envrc =)
+
+* Secrets files
+** Edit secrets files in SWA
+
+#+BEGIN_SRC shell
+aws sso login --profile wisp-tech-root
+AWS_PROFILE=wisp-tech-devops sops ./charts/swa/secrets/<env>.yaml
+#+END_SRC
+
+** Issue with MAC address
+If when trying to edit the secrets files, you get an error like this:
+
+#+BEGIN_SRC shell
+MAC mismatch. File has 33CB2D37F6896A5E8F0B92A2F7E405BB6F014D5C8554F961F549DB2B86F6A0F1E7EB011FF96386B2548E77E2B46EDC7E525E3BEC4C4B8589C34782970448B65E, computed E80EF82920F0BC38B8743ED468332A232569BF33B536301606272AF18AA287FC3D6FA538A2EF280B32DD61F590269C6C07AF5B0FB1998BDDDBB6E2D93C985628
+#+END_SRC
+
+It means that what's in your version of that file does not match the encrypted value at the bottom. This value is updated when you edit the file, and a mismatch there will cause this error.
+
+This tends to occur when you're trying to delete something out of that file, or if you rebase your branch and take the other branch's encrypt value.

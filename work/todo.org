@@ -3,10 +3,12 @@
 Work Todos
 
 * DoseSpot
-** [ ] WE-696: DoseSpot V2 JSON
+** [?] WE-696: DoseSpot V2 JSON
 :LOGBOOK:
 CLOCK: [2024-06-03 Mon 09:48]--[2024-06-03 Mon 10:13] =>  0:25
 :END:
+** [X] [[https://hellowisp.atlassian.net/browse/WISPENG-125][WISPENG-125]]: Use 'GetMedicationByNDC' instead of 'GetMedicationByNameAndStrength' for DoseSpot V2
+** [ ] [[https://hellowisp.atlassian.net/browse/WISPENG-260][WISPENG-260]]: Combine "GenericProductName" and "GenericDrugName"
 
 
 * Misc
