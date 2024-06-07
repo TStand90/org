@@ -14,4 +14,6 @@ CLOCK: [2024-06-03 Mon 09:48]--[2024-06-03 Mon 10:13] =>  0:25
   Currently in draft. Publish it on Monday morning and get reviews.
 
 * Misc
-** [ ] Write a PR to change SnoozeRequestMixin.missed_calls_count to be non-nullable
+** [?] [[https://github.com/hellowisp/secure.hellowisp.com/pull/4260][Unticketed PR]] to change SnoozeRequestMixin.missed_calls_count to be non-nullable
+- Note taken on [2024-06-07 Fri 15:24] \\
+  Currently in draft. Publish it for review on Monday.
