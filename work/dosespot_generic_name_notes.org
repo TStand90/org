@@ -1,0 +1,11 @@
+|   RxCUI | V1 Display Name                                    | V1 GenericDrugName             | V1 GenericProductName                                                 | V2 GenericDrugName             | V2 DisplayName                                                       | V2 DrugName        |
+|---------+----------------------------------------------------+--------------------------------+-----------------------------------------------------------------------+--------------------------------+----------------------------------------------------------------------+--------------------|
+|  197313 | Acyclovir 800 MG                                   | acyclovir                      | acyclovir 800 mg oral tablet                                          | NULL                           | Acyclovir Oral Tablet 800 MG                                         | Acyclovir          |
+| 2266506 | EluRyng 0.015 mg-0.12 mg/24 hours ring             | ethinyl estradiol-etonogestrel | ethinyl estradiol-etonogestrel 0.015 mg-0.12 mg/24 hours vaginal ring | Etonogestrel-Ethinyl Estradiol | EluRyng Vaginal Ring 0.12-0.015 MG/24HR                              | EluRyng            |
+|  596926 | DULoxetine (Oral Pill) 20 mg DR Cap                | DULoxetine                     | DULoxetine 20 mg oral delayed release capsule                         | None                           | DULoxetine HCl Oral Capsule Delayed Release Particles 20 MG          | None               |
+| 1000124 | Provera 10 mg tablet                               | medroxyPROGESTERone            | medroxyPROGESTERone 10 mg oral tablet                                 | medroxyPROGESTERone Acetate    | Provera Oral Tablet 10 MG                                            | Provera            |
+| 2587899 | Paxlovid 150 mg-100 mg (300 mg-100 mg Dose) tablet | nirmatrelvir-ritonavir         | nirmatrelvir-ritonavir 150 mg-100 mg (300 mg-100 mg Dose) oral tablet | Nirmatrelvir&Ritonavir 300/100 | Paxlovid (300/100) Oral Tablet Therapy Pack 20 x 150 MG & 10 x 100MG | Paxlovid (300/100) |
+
+So it seems that display name v1 -> display name v2
+generic v1 -> generic v2
+But V1 GenericProductName does not seem to have a V2 equivalent.

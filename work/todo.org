@@ -2,18 +2,35 @@
 
 Work Todos
 
-* DoseSpot
-** [?] WE-696: DoseSpot V2 JSON
+* DoseSpot [7/8]
+** [X] WE-696: DoseSpot V2 JSON
 :LOGBOOK:
 CLOCK: [2024-06-03 Mon 09:48]--[2024-06-03 Mon 10:13] =>  0:25
 :END:
 ** [X] [[https://hellowisp.atlassian.net/browse/WISPENG-125][WISPENG-125]]: Use 'GetMedicationByNDC' instead of 'GetMedicationByNameAndStrength' for DoseSpot V2
-** [ ] [[https://hellowisp.atlassian.net/browse/WISPENG-260][WISPENG-260]]: Combine "GenericProductName" and "GenericDrugName"
-** [?] [[https://github.com/hellowisp/secure.hellowisp.com/pull/4259][WISPENG-266]]: Adds metadata check in dispensable_drug_id property
+** NO [[https://hellowisp.atlassian.net/browse/WISPENG-260][WISPENG-260]]: Combine "GenericProductName" and "GenericDrugName"
+- Note taken on [2024-06-10 Mon 13:20] \\
+  Won't do. There is no equivalent for "GenericProductName" in DoseSpot V2.
+- Note taken on [2024-06-10 Mon 11:32] \\
+  We may not need to do this one, depending on what DoseSpot says.
+** [X] [[https://github.com/hellowisp/secure.hellowisp.com/pull/4259][WISPENG-266]]: Adds metadata check in dispensable_drug_id property
 - Note taken on [2024-06-07 Fri 15:02] \\
   Currently in draft. Publish it on Monday morning and get reviews.
-
-* Misc
+** [X] Prepare for the DoseSpot call on 2024-06-10 by checking the V1 vs V2 changes for generic product name
+:LOGBOOK:
+CLOCK: [2024-06-10 Mon 11:18]--[2024-06-10 Mon 11:31] =>  0:13
+CLOCK: [2024-06-10 Mon 10:46]--[2024-06-10 Mon 11:11] =>  0:25
+CLOCK: [2024-06-10 Mon 10:10]--[2024-06-10 Mon 10:35] =>  0:25
+:END:
+** [X] [[https://github.com/hellowisp/secure.hellowisp.com/pull/4265][WISPENG-268]]: When getting a medication by RxCUI in V2, ~DrugName~ is null in service response, but not in API JSON response.
+:LOGBOOK:
+CLOCK: [2024-06-10 Mon 11:52]--[2024-06-10 Mon 12:17] =>  0:25
+:END:
+- Note taken on [2024-06-10 Mon 11:35] \\
+  Need tests for this. Tests should have failed before when this didn't work.
+** [X] [[https://hellowisp.atlassian.net/browse/WISPENG-270][WISPENG-270]]: DoseSpotAPIMedicationV2 should accept 'RXCUI' and 'RxCUI'
+** [?] [[https://github.com/hellowisp/secure.hellowisp.com/pull/4270][WISPENG-271]]: Adds guard clause to dosespot_drug_metadata property
+* Misc [0/1]
 ** [?] [[https://github.com/hellowisp/secure.hellowisp.com/pull/4260][Unticketed PR]] to change SnoozeRequestMixin.missed_calls_count to be non-nullable
 - Note taken on [2024-06-07 Fri 15:24] \\
   Currently in draft. Publish it for review on Monday.
