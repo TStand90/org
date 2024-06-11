@@ -7,4 +7,4 @@
   Rereading
 
 * [0/1] Go
-** HOLD [[id:3cb386ec-d975-45e9-adcf-bb6254919586][100 Go Mistakes and How to Avoid Them]]
+** [-] [[id:3cb386ec-d975-45e9-adcf-bb6254919586][100 Go Mistakes and How to Avoid Them]]

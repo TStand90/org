@@ -58,3 +58,69 @@ myPromise
     console.error(err);
   });
   #+END_SRC
+
+* [[id:1e56325a-f43c-4059-9605-d1349e62d641][Getters and Setters]]
+[[id:a39ecfb9-066d-4f6b-8cae-0f1c13345b0d][Javascript]] supports [[id:1e56325a-f43c-4059-9605-d1349e62d641][Getters and Setters]].
+
+#+BEGIN_SRC javascript
+let hat = {
+    name: "Hat",
+    _price: 100,
+    priceIncTax: 100 * 1.2,
+
+    set price(newPrice) {
+        this._price = newPrice;
+        this.priceIncTax = this._price * 1.2;
+    },
+
+    get price() {
+        return this._price;
+    }
+};
+
+let boots = {
+    name: "Boots",
+    price: "100",
+
+    get priceIncTax() {
+        return Number(this.price) * 1.2;
+    }
+}
+
+console.log(`Hat: ${hat.price}, ${hat.priceIncTax}`);
+hat.price = 120;
+console.log(`Hat: ${hat.price}, ${hat.priceIncTax}`);
+
+console.log(`Boots: ${boots.price}, ${boots.priceIncTax}`);
+boots.price = "120";
+console.log(`Boots: ${boots.price}, ${boots.priceIncTax}`);
+#+END_SRC
+
+* Methods
+In [[id:a39ecfb9-066d-4f6b-8cae-0f1c13345b0d][Javascript]], a method is a property whose value is a function. There are two ways of defining a method on a [[id:a39ecfb9-066d-4f6b-8cae-0f1c13345b0d][Javascript]] class.
+
+#+TITLE: Javascript methods definition example #1
+#+BEGIN_SRC javascript
+let hat = {
+    name: "Hat",
+    _price: 100,
+    priceIncTax: 100 * 1.2,
+ 
+    writeDetails: function() {
+        console.log(`${this.name}: ${this.price}, ${this.priceIncTax}`);
+    }
+};
+#+END_SRC
+
+#+TITLE: Javascript methods definition example #2
+#+BEGIN_SRC javascript
+let hat = {
+    name: "Hat",
+    _price: 100,
+    priceIncTax: 100 * 1.2,
+
+    writeDetails() {
+        console.log(`${this.name}: ${this.price}, ${this.priceIncTax}`);
+    }
+};
+#+END_SRC
