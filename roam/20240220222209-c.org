@@ -1,5 +1,6 @@
 :PROPERTIES:
 :ID:       684e6719-609f-4a8a-a8fa-f11d0585ec10
+:ROAM_REFS: https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/enum
 :END:
 #+title: C#
 
@@ -11,3 +12,16 @@ C# is Microsoft Java.
 * Game Engines
 ** [[id:01aa72a1-5e35-4ce9-b30a-56bef6b296d4][Monogame]]
 ** [[id:36100b50-2583-454a-85a0-7a8a86cd08a7][Godot]]
+
+* Concepts
+** Enum
+Enums in C# are a [[id:6601a3de-da15-4c07-b934-4c6225fce6d2][value type]], which use an underlying int type by default.
+
+#+BEGIN_SRC csharp
+enum Season {
+    Spring,
+    Summer,
+    Autumn,
+    Winter
+}
+#+END_SRC

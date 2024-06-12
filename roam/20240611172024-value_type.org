@@ -1,0 +1,6 @@
+:PROPERTIES:
+:ID:       6601a3de-da15-4c07-b934-4c6225fce6d2
+:END:
+#+title: value type
+
+Value Types are one of two types in [[id:684e6719-609f-4a8a-a8fa-f11d0585ec10][C#]], the other being [[id:cbb4a1e8-6515-4ab7-bf58-c435ae0b7b27][reference types]]

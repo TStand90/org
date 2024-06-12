@@ -1,0 +1,6 @@
+:PROPERTIES:
+:ID:       cbb4a1e8-6515-4ab7-bf58-c435ae0b7b27
+:END:
+#+title: reference types
+
+Reference types are one of two types in [[id:684e6719-609f-4a8a-a8fa-f11d0585ec10][C#]], the other being [[id:6601a3de-da15-4c07-b934-4c6225fce6d2][value type]].
