@@ -1,0 +1,12 @@
+:PROPERTIES:
+:ID:       c9c7f557-1120-4841-9eea-d1ee6beb1fc8
+:END:
+#+title: IServiceProvider
+
+Acts as a service locator.
+
+* Methods
+** GetService<T>()
+Returns the requested service ~<T>~ if it is available in the [[id:fdfd76f1-ea62-40fc-9cbc-ba323ca0b5cc][Dependency Injection]] container; otherwise, returns ~null~.
+** GetRequiredService<T>()
+Same as ~GetService<T>~, but throws an [[id:180c2560-b515-4237-a043-848e06059b01][InvalidOperationException]] if the service is not in the container.

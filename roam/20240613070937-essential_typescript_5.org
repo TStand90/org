@@ -1,0 +1,6 @@
+:PROPERTIES:
+:ID:       83cd8059-4db5-4f31-94bb-43ddc9c931e4
+:END:
+#+title: Essential Typescript 5
+
+TODO

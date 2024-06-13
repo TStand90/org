@@ -1,0 +1,7 @@
+:PROPERTIES:
+:ID:       2ec36bbd-f572-491b-beea-625d604feb27
+:ROAM_REFS: https://livebook.manning.com/book/asp-net-core-in-action-third-edition/
+:END:
+#+title: ASP.NET Core In Action
+
+A book by Andrew Lock.

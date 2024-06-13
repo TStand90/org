@@ -1,0 +1,8 @@
+:PROPERTIES:
+:ID:       180c2560-b515-4237-a043-848e06059b01
+:ROAM_REFS: https://learn.microsoft.com/en-us/dotnet/api/system.invalidoperationexception?view=net-8.0
+:END:
+#+title: InvalidOperationException
+#+filetags: :.NET:
+
+The exception that is thrown when a method call is invalid for the object's current state.

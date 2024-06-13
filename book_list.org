@@ -6,5 +6,21 @@
 - Note taken on [2024-04-15 Mon 07:00] \\
   Rereading
 
+* [0/1] C#
+** [-] [[id:2ec36bbd-f572-491b-beea-625d604feb27][ASP.NET Core In Action]]
+- Note taken on [2024-06-13 Thu 07:07] \\
+  Just finished chapter 8
+* [0/1] Elixir
+** [ ] [[id:0fe7bd45-2f50-4e0c-ab38-9e282bc272e6][Elixir in Action]]
+* [0/1] Functional Programming
+** HOLD [[id:805a8d3f-4aaa-44d6-b6e6-015316b20981][Grokking Functional Programming]]
+- Note taken on [2024-06-13 Thu 07:08] \\
+  Going to come back to this one after finishing some other books. It's interesting, but I'm taking on too much right now.
+- Note taken on [2024-06-13 Thu 07:08] \\
+  Finished Chapter 1
 * [0/1] Go
 ** [-] [[id:3cb386ec-d975-45e9-adcf-bb6254919586][100 Go Mistakes and How to Avoid Them]]
+* [1/1] Typescript
+** [X] [[id:83cd8059-4db5-4f31-94bb-43ddc9c931e4][Essential Typescript 5]]
+- Note taken on [2024-06-13 Thu 07:09] \\
+  Probably should revisit this one in the near future. I worry that all the info didn't sink in.

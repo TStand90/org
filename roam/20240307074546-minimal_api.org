@@ -47,3 +47,40 @@ builder.Services.ConfigureRouteHandlerJsonOptions(o => {
 ** Methods
 *** GetPathByName
 *** GetUriByName
+
+* [[id:fdfd76f1-ea62-40fc-9cbc-ba323ca0b5cc][Dependency Injection]]
+[[id:fdfd76f1-ea62-40fc-9cbc-ba323ca0b5cc][Dependency Injection]] is used extensively in [[id:2b730c77-767a-4547-b1bf-53428b3d33a5][ASP.NET Core]], and [[id:08f2d5da-98ab-49b0-93fe-bc39d96f06d9][Minimal API]]s are no exception. There are two main ways to access services from the DI container:
+- Inject services into an endpoint handler.
+- Access the DI container directly in ~Program.cs~
+
+The first method is much more common, and should be the approach you take in almost all cases.
+
+#+NAME: Injecting the LinkGenerator
+#+BEGIN_SRC csharp
+app.MapGet("/links", (LinkGenerator links) =>
+{
+    string link = links.GetPathByName("products");
+    return $"View the product at {link}";
+});
+#+END_SRC
+
+The DI container will also create any dependencies that the [[id:769d0281-8138-47b5-9736-5892047b573b][LinkGenerator]] needs, based on what is in its constructor. It will either create a new instance of [[id:769d0281-8138-47b5-9736-5892047b573b][LinkGenerator]], or reuse an existing one, depending on its lifetime.
+
+If a service is needed outside a request (for example, logging or updating a database schema when the application starts), use [[id:496ff34c-5052-41b5-85be-de05b1ae56cc][WebApplication]]'s ~WebApplication.Services()~ to get the service.
+
+~WebApplication.Services()~ exposes [[id:c9c7f557-1120-4841-9eea-d1ee6beb1fc8][IServiceProvider]], which gives methods for getting the services from the DI container.
+
+#+NAME: Getting services from the DI container using WebApplication.Services()
+#+BEGIN_SRC csharp
+WebApplicationBuilder builder = WebApplication.CreateBuilder(args);
+WebApplication app = builder.Build();
+
+app.MapGet("/", () => "Hello World!");
+
+LinkGenerator links =
+ app.Services.GetRequiredService<LinkGenerator>();
+
+app.Run();
+#+END_SRC
+
+Asking the DI container for a service is an example of the [[id:2807e592-fd35-4551-bb15-fec7cd854666][Service Locator]] pattern. Here, [[id:2807e592-fd35-4551-bb15-fec7cd854666][Service Locator]] is considered an anti-pattern. Don't use it unless necessary!
