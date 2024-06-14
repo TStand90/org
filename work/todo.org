@@ -32,5 +32,3 @@ CLOCK: [2024-06-10 Mon 11:52]--[2024-06-10 Mon 12:17] =>  0:25
 ** [X] [[https://github.com/hellowisp/secure.hellowisp.com/pull/4270][WISPENG-271]]: Adds guard clause to dosespot_drug_metadata property
 * Misc [0/1]
 ** [?] [[https://github.com/hellowisp/secure.hellowisp.com/pull/4260][Unticketed PR]] to change SnoozeRequestMixin.missed_calls_count to be non-nullable
-- Note taken on [2024-06-07 Fri 15:24] \\
-  Currently in draft. Publish it for review on Monday.
