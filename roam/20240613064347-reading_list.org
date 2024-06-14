@@ -8,5 +8,7 @@ A list of books and articles that I'd like to read at some point.
 * [ ] Maybe move this reading list into the Books note in my org files, and rename that one to "Reading List"? I don't know if there's a benefit to this being an org-roam node.
 
 * Articles
-** C#
-*** https://andrewlock.net/series/behind-the-scenes-of-minimal-apis/
+** [0/1] Software planning
+*** [ ] [[https://basecamp.com/shapeup][Shape Up]]
+** [0/1] C#
+*** [ ] [[https://andrewlock.net/series/behind-the-scenes-of-minimal-apis/][Behind the scenes of Minimal APIs]]
