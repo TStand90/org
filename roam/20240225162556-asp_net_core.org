@@ -182,3 +182,164 @@ Best used sparingly. With good URL design, route constraints won't be needed mos
 * [[id:81a41be1-2983-4a8a-b68b-22b41a39c54c][Catch-all Parameters]]
 
 * [[id:08f2d5da-98ab-49b0-93fe-bc39d96f06d9][Minimal API]]
+
+* [[id:fdfd76f1-ea62-40fc-9cbc-ba323ca0b5cc][Dependency Injection]] Container
+
+** Registering services with the DI container
+To register services, use ~WebApplication.Add*~ (~[[id:496ff34c-5052-41b5-85be-de05b1ae56cc][WebApplication]].AddScoped, [[id:496ff34c-5052-41b5-85be-de05b1ae56cc][WebApplication]].AddSingleton, or [[id:496ff34c-5052-41b5-85be-de05b1ae56cc][WebApplication]].AddTransient)
+
+#+BEGIN_SRC csharp
+WebApplicationBuilder builder = WebApplication.CreateBuilder(args);
+
+builder.Services.AddScoped<IEmailSender, EmailSender>();
+builder.Services.AddScoped<NetworkClient>();  // The service type and implementation are the same, so no need to specify twice.
+builder.Services.AddSingleton<MessageFactory>();
+
+WebApplication app = builder.Build();
+
+app.MapGet("/register/{username}", RegisterUser);
+
+app.Run();
+
+string RegisterUser(string username, IEmailSender emailSender)
+{
+    emailSender.SendEmail(username);
+    return $"Email sent to {username}!";
+}
+#+END_SRC
+
+** Registering a service with a lambda
+
+#+BEGIN_SRC csharp
+WebApplicationBuilder builder = WebApplication.CreateBuilder(args);
+
+builder.Services.AddScoped<IEmailSender, EmailSender>();
+builder.Services.AddScoped<NetworkClient>();
+builder.Services.AddSingleton<MessageFactory>();
+builder.Services.AddScoped(  // Uses a lambda to register the service.
+    provider =>
+        new EmailServerSettings(
+            Host: "smpt.server.com",
+            Port: 25
+        ));
+
+WebApplication app = builder.Build();
+
+app.MapGet("/register/{username}", RegisterUser);
+
+app.Run();
+
+string RegisterUser(string username, IEmailSender emailSender)
+{
+    emailSender.SendEmail(username);
+    return $"Email sent to {username}!";
+}
+#+END_SRC
+
+** Creating an extension method to tidy up adding multiple services
+Using an extension method can make things easier to read.
+
+#+BEGIN_SRC csharp
+public static class EmailSenderServiceCollectionExtensions
+{
+    public static IServiceCollection AddEmailSender(
+        this IServiceCollection services)
+    {
+        services.AddScoped<IEmailSender, EmailSender>();
+        services.AddSingleton<NetworkClient>();
+        services.AddScoped<MessageFactory>();
+        services.AddSingleton(
+            new EmailServerSettings
+            (
+                host: "smtp.server.com",
+                port: 25
+            ));
+        return services;
+    }
+}
+#+END_SRC
+
+#+BEGIN_SRC csharp
+WebApplicationBuilder builder = WebApplication.CreateBuilder(args);
+
+builder.Services.AddEmailSender();
+
+WebApplication app = builder.Build();
+
+app.MapGet("/register/{username}", RegisterUser);
+
+app.Run();
+#+END_SRC
+
+** Registering multiple services
+Suppose we want to send a message to a user via email, SMS, and Facebook all at once when a new user registers on our site. We can write multiple implementations of ~IMessageSender~ for each of these, and register them all to the DI container.
+
+#+BEGIN_SRC csharp
+WebApplicationBuilder builder = WebApplication.CreateBuilder(args);
+builder.Services.AddScoped<IMessageSender, EmailSender>();
+builder.Services.AddScoped<IMessageSender, SmsSender>();
+builder.Services.AddScoped<IMessageSender, FacebookSender>();
+#+END_SRC
+
+Then, inject ~IEnumerable<IMessageSender>~ into ~RegisterUser~ and iterate through each one.
+
+#+BEGIN_SRC csharp
+string RegisterUser(
+    string username,
+    IEnumerable<IMessageSender> senders)
+{
+    foreach(var sender in senders)
+    {
+        Sender.SendMessage($"Hello {username}");
+    }
+
+    return $"Welcome message sent to {username}";
+}
+#+END_SRC
+
+*** Injecting a single service when multiple are registered
+What if we have registered multiple services, but we need only one?
+
+#+BEGIN_SRC csharp
+public class SingleMessageSender
+{
+   private readonly IMessageSender _messageSender;
+   public SingleMessageSender(IMessageSender messageSender)
+   {
+       _messageSender = messageSender;
+   }
+}
+#+END_SRC
+
+In this example, we only need one ~IMessageSender~. Because it was the last one registered, ~FacebookSender~ will be used by default.
+
+** Lifetimes
+There are three lifetimes to consider when registering a service.
+
+- Transient: A new service is requested for every request.
+- Scoped: Within a scope, all requests for a service give you the same object. Each web request gets its own scope.
+- [[id:751f6a14-386c-46b9-806a-f51d20fd1e31][Singleton]]: Always get the same instance of the service.
+
+*** Transient
+Like calling ~new~ every time you need an object. Creates a lot of objects.
+
+Not used often.
+
+*** Scoped
+The most commom lifetime, due to the nature of Web requests.
+
+Useful for anything that uses a database, is dependent on the HTTP request, or anything that uses another scoped service.
+
+*** [[id:751f6a14-386c-46b9-806a-f51d20fd1e31][Singleton]]
+Created when it's first needed, and reused every other time.
+
+Convenient for objects that need to be shared, or that are immutable and expensive to create. For example, a caching service.
+
+Any service registered as a singleton should be thread-safe.
+
+*** Captive dependencies
+If service ~A~ is scoped, and service ~B~ is a singleton, and if service ~A~ is injected into ~B~, then ~A~ will keep getting reused, even though it should be scoped.
+
+Captive dependencies can cause subtle, hard to track bugs, so think carefully when registering a singleton service.
+
+ASP.NET Core should automatically check for captive dependencies, but it comes at a performance cost, so it's only enabled in dev environments.

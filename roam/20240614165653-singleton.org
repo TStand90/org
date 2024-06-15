@@ -1,0 +1,6 @@
+:PROPERTIES:
+:ID:       751f6a14-386c-46b9-806a-f51d20fd1e31
+:END:
+#+title: Singleton
+
+TODO: Notes about the singleton pattern here.
