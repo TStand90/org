@@ -1,0 +1,20 @@
+:PROPERTIES:
+:ID:       018e2400-111e-4907-82e0-643a56438ecb
+:END:
+#+title: IOptionsSnapshop<T>
+
+Similar to [[id:4c83ade3-50b9-4b66-93ca-1961cb9219cb][IOptions<T>]], but reloads when the underlying configuration changes.
+
+#+BEGIN_SRC csharp
+app.MapGet("/display-settings",
+    (IOptionsSnapshot<AppDisplaySettings> options) =>
+{
+    AppDisplaySettings settings = options.Value;
+
+    return new
+    {
+        title = settings.Title,
+        showCopyright = settings.ShowCopyright,
+    };
+});
+#+END_SRC

@@ -1,0 +1,10 @@
+:PROPERTIES:
+:ID:       11f264bb-5b70-441b-a047-85b960e0c66b
+:END:
+#+title: ConfigurationManager
+
+A class in [[id:2b730c77-767a-4547-b1bf-53428b3d33a5][ASP.NET Core]] to manage application configuration.
+
+Implements [[id:327f770b-be52-4187-ab36-7a543a7d0561][IConfigurationRoot]], which also implements [[id:21bb745d-76ad-4672-9fdb-9b9c09285c5a][IConfiguration]]. [[id:11f264bb-5b70-441b-a047-85b960e0c66b][ConfigurationManager]] is registered in the [[id:fdfd76f1-ea62-40fc-9cbc-ba323ca0b5cc][Dependency Injection]] container as [[id:21bb745d-76ad-4672-9fdb-9b9c09285c5a][IConfiguration]], not [[id:327f770b-be52-4187-ab36-7a543a7d0561][IConfigurationRoot]].
+
+The order in which configuration providers are added to [[id:11f264bb-5b70-441b-a047-85b960e0c66b][ConfigurationManager]] matters. Later values with the same name will override previous values!

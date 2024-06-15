@@ -343,3 +343,157 @@ If service ~A~ is scoped, and service ~B~ is a singleton, and if service ~A~ is 
 Captive dependencies can cause subtle, hard to track bugs, so think carefully when registering a singleton service.
 
 ASP.NET Core should automatically check for captive dependencies, but it comes at a performance cost, so it's only enabled in dev environments.
+
+* Configuration
+Configuration is handled through the [[id:11f264bb-5b70-441b-a047-85b960e0c66b][ConfigurationManager]].
+
+#+BEGIN_SRC csharp
+WebApplicationBuilder builder = WebApplication.CreateBuilder(args);
+
+builder.Configuration.Sources.Clear();
+builder.Configuration.AddJsonFile("appsettings.json", optional: true);
+
+WebApplication app = builder.Build();
+
+app.MapGet("/", () => app.Configuration.AsEnumerable());
+
+app.Run();
+#+END_SRC
+
+Accessing a configuration object in places other than ~Program.cs~ can be done by injecting [[id:11f264bb-5b70-441b-a047-85b960e0c66b][ConfigurationManager]] (it is registered in the [[id:fdfd76f1-ea62-40fc-9cbc-ba323ca0b5cc][Dependency Injection]] container as [[id:21bb745d-76ad-4672-9fdb-9b9c09285c5a][IConfiguration]]).
+
+** Multiple configuration providers.
+
+It is possible to have configuration from multiple places, simply by adding them to [[id:11f264bb-5b70-441b-a047-85b960e0c66b][ConfigurationManager]].
+
+Be aware that order matters. If values share the same key, later values will override earlier ones.
+
+#+BEGIN_SRC csharp
+WebApplicationBuilder builder = WebApplication.CreateBuilder(args);
+
+builder.Configuration.Sources.Clear();
+builder.Configuration
+    .AddJsonFile("sharedSettings.json", optional: true);
+builder.Configuration.AddJsonFile("appsettings.json", optional: true);
+builder.Configuration.AddEnvironmentVariables();
+
+WebApplication app = builder.Build();
+
+app.MapGet("/", () => app.Configuration.AsEnumerable());
+
+app.Run();
+#+END_SRC
+
+** Reloading on change
+
+It's possible to modify configuration on the fly by providing the ~reloadOnChange~ argument.
+
+#+BEGIN_SRC csharp
+WebApplicationBuilder builder = WebApplication.CreateBuilder(args);
+
+builder.Configuration.Sources.Clear();
+builder.Configuration
+    .AddJsonFile(
+        "appsettings.json",
+        optional: true,
+        reloadOnChange: true);
+
+WebApplication app = builder.Build();
+
+app.MapGet("/", () => app.Configuration.AsEnumerable());
+
+app.Run();
+#+END_SRC
+
+This sets up a file watcher in the background, so be aware that it's not "free" performance wise.
+
+** Strongly typed options
+
+Instead of a bunch of magic string keys everywhere, and every config value being interpreted as a string, it's possible to load configuration into strongly typed [[id:684e6719-609f-4a8a-a8fa-f11d0585ec10][C#]] objects.
+
+Take the following example of an options class:
+
+#+BEGIN_SRC csharp
+public class AppDisplaySettings
+{
+   public string Title { get; set; }
+   public bool ShowCopyright { get; set; }
+}
+#+END_SRC
+
+(Note: options classes need to be non-abstract and have a ~public~ parameterless constructor)
+
+You can also have more complex types than ~string~ and ~bool~.
+
+#+BEGIN_SRC csharp
+WebApplicationBuilder builder = WebApplication.CreateBuilder(args);
+
+builder.Services.Configure<MapSettings>(
+    builder.Configuration.GetSection("MapSettings"));  // The section name can be any value, it doesn't have to match the name of the class.
+builder.Services.Configure<AppDisplaySettings>(
+    builder.Configuration.GetSection("AppDisplaySettings"));
+#+END_SRC
+
+The above is an example of using [[id:4c83ade3-50b9-4b66-93ca-1961cb9219cb][IOptions<T>]].
+
+** Configuring for multiple environments
+
+The environment variable ~ASPNETCORE_ENVIRONMENT~ is used to set the type of environment. The three commonly used ones are:
+- "Development"
+- "Staging"
+- "Production"
+
+There are several helper methods available when sticking with these values:
+- IHostEnvironment.IsDevelopment()
+- IHostEnvironment.IsStaging()
+- IHostEnvironment.IsProduction()
+- IHostEnvironment.IsEnvironment(string environmentName)
+
+
+It's possible to load configuration based on the environment
+
+#+BEGIN_SRC csharp
+WebApplicationBuilder builder = WebApplication.CreateBuilder(args);
+
+IHostEnvironment env = builder.Environment;
+
+builder.Configuration.Sources.Clear();
+builder.Configuration
+    .AddJsonFile(
+        "appsettings.json",
+        optional: false)
+    .AddJsonFile(
+        $”appsettings.{env.EnvironmentName}.json”,
+        Optional: true);
+
+WebApplication app = builder.Build();
+
+app.MapGet("/", () =>"Hello world!");
+
+app.Run();
+#+END_SRC
+
+Example of using the [[id:fb621db6-9121-48bf-9288-c447820ace80][ExceptionHandlerMiddleware]] in non-dev environments:
+
+#+BEGIN_SRC csharp
+WebApplicationBuilder builder = WebApplication.CreateBuilder(args);
+
+builder.AddProblemDetails();
+
+WebApplication app = builder.Build();
+
+if (!builder.Environment.IsDevelopment())
+{
+    app.UseExceptionHandler();
+}
+
+app.MapGet("/", () =>"Hello world!");
+
+app.Run();
+#+END_SRC
+
+Also note that it's possible to set your environment via the CLI tool like this:
+
+#+BEGIN_SRC shell
+dotnet run --no-launch-profile --environment Staging
+#+END_SRC

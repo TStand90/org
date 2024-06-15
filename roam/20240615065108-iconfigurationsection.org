@@ -1,0 +1,13 @@
+:PROPERTIES:
+:ID:       cf0c1d42-122d-4090-969a-ec63167f8871
+:ROAM_REFS: https://learn.microsoft.com/en-us/dotnet/api/microsoft.extensions.configuration.iconfigurationsection?view=net-8.0
+:END:
+#+title: IConfigurationSection
+
+Implements:
+- [[id:21bb745d-76ad-4672-9fdb-9b9c09285c5a][IConfiguration]]
+
+#+TITLE: [[IConfiguration]]Section example
+#+BEGIN_SRC csharp
+var lat = builder.Configuration.GetSection("MapSettings")["DefaultLocation:Latitude"];
+#+END_SRC

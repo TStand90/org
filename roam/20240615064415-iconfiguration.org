@@ -1,0 +1,53 @@
+:PROPERTIES:
+:ID:       21bb745d-76ad-4672-9fdb-9b9c09285c5a
+:ROAM_REFS: https://learn.microsoft.com/en-us/dotnet/api/microsoft.extensions.configuration.iconfiguration?view=net-8.0
+:END:
+#+title: IConfiguration
+
+Stores configuration as a set of key-value string pairs. You can access values with the typical dictionary syntax.
+
+Given the following configuration:
+
+#+BEGIN_SRC json
+{
+  "Logging": {
+    "LogLevel": {
+      "Default": "Information",
+      "Microsoft": "Warning",
+      "Microsoft.Hosting.Lifetime": "Information"
+    }
+  },
+  "AllowedHosts": "*",
+  "MapSettings": {
+    "DefaultZoomLevel": 9,
+    "DefaultLocation": {
+      "latitude": 50.500,
+      "longitude": -4.000
+    }
+  }
+}
+#+END_SRC
+
+You could access the ~DefaultZoomLevel~ like this:
+
+#+BEGIN_SRC csharp
+var zoomLevel = builder.Configuration["MapSettings:DefaultZoomLevel"];
+#+END_SRC
+
+The ~:~ is used to separate sections.
+
+Accessing the ~latitude~ looks loke this:
+
+#+BEGIN_SRC csharp
+var lat = builder.Configuration["MapSettings:DefaultLocation:Latitude"];
+#+END_SRC
+
+Notice that ~Latitude~ is case insensitive.
+
+If a requested key does not exist, you get a ~null~ value.
+
+You can get a whole section of configuration using ~GetSection~, which returns [[id:cf0c1d42-122d-4090-969a-ec63167f8871][IConfigurationSection]] (which also implements [[id:21bb745d-76ad-4672-9fdb-9b9c09285c5a][IConfiguration]]).
+
+#+BEGIN_SRC csharp
+var lat = builder.Configuration.GetSection("MapSettings")["DefaultLocation:Latitude"];
+#+END_SRC

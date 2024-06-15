@@ -1,0 +1,28 @@
+:PROPERTIES:
+:ID:       4c83ade3-50b9-4b66-93ca-1961cb9219cb
+:ROAM_REFS: https://learn.microsoft.com/en-us/dotnet/api/microsoft.extensions.options.ioptions-1?view=net-8.0
+:END:
+#+title: IOptions<T>
+
+Used to create strongly typed configuration objects in [[id:2b730c77-767a-4547-b1bf-53428b3d33a5][ASP.NET Core]].
+
+#+BEGIN_SRC csharp
+public class AppDisplaySettings
+{
+   public string Title { get; set; }
+   public bool ShowCopyright { get; set; }
+}
+#+END_SRC
+
+#+BEGIN_SRC csharp
+WebApplicationBuilder builder = WebApplication.CreateBuilder(args);
+
+builder.Services.Configure<MapSettings>(
+    builder.Configuration.GetSection("MapSettings"));
+builder.Services.Configure<AppDisplaySettings>(
+    builder.Configuration.GetSection("AppDisplaySettings"));
+#+END_SRC
+
+Cannot reload configurations when they change without recompiling.
+
+To reload when things change, use [[id:018e2400-111e-4907-82e0-643a56438ecb][IOptionsSnapshop<T>]].
