@@ -497,3 +497,11 @@ Also note that it's possible to set your environment via the CLI tool like this:
 #+BEGIN_SRC shell
 dotnet run --no-launch-profile --environment Staging
 #+END_SRC
+
+* [[id:182e13e6-9d61-458a-a59b-bc83033f3474][OpenAPI]] integration
+[[id:2b730c77-767a-4547-b1bf-53428b3d33a5][ASP.NET Core]] uses [[id:182e13e6-9d61-458a-a59b-bc83033f3474][OpenAPI]] by default. There are also some libraries to help take full advantage of it.
+
+- NSwag
+- Swashbuckle
+
+* [[id:915de906-dc3c-4c69-88b3-bb7f357e670d][Entity Framework Core]]

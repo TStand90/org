@@ -1,0 +1,18 @@
+:PROPERTIES:
+:ID:       36090c85-6652-4213-b39e-197e4c83b8df
+:END:
+#+title: ORM
+
+ORM stands for "Object Relational Mapper". It's a tool for web developers to avoid learning SQL.
+
+ORMs have several pros and cons.
+
+Pros:
+- Easier to work with
+- Faster to get an application up and running
+- Saves writing a lot of boilerplate youself
+
+Cons:
+- Abstracts away the database itself, so you don't know what's going on under the hood
+- The abstractions aren't free, so it's slower
+- N+1 problems are common

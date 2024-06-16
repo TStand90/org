@@ -1,0 +1,6 @@
+:PROPERTIES:
+:ID:       1291b5b2-5d3d-4736-8030-e76c54c7c5dd
+:END:
+#+title: SQL
+
+SQL is probably the scariest thing for a web developer to deal with.

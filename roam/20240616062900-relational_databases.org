@@ -1,0 +1,6 @@
+:PROPERTIES:
+:ID:       79fb2606-57a3-4b32-bf3d-e1b0594822f0
+:END:
+#+title: Relational Databases
+
+Databases with relations, or joins. Mostly from the [[id:1291b5b2-5d3d-4736-8030-e76c54c7c5dd][SQL]] family.

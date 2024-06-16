@@ -1,0 +1,7 @@
+:PROPERTIES:
+:ID:       915de906-dc3c-4c69-88b3-bb7f357e670d
+:ROAM_REFS: https://learn.microsoft.com/en-us/ef/core/
+:END:
+#+title: Entity Framework Core
+
+Entity Framework Core is the default [[id:36090c85-6652-4213-b39e-197e4c83b8df][ORM]] for [[id:2b730c77-767a-4547-b1bf-53428b3d33a5][ASP.NET Core]]. It supports both [[id:79fb2606-57a3-4b32-bf3d-e1b0594822f0][Relational Databases]] and [[id:a21d60d5-6e64-4715-926b-8d725dc8c963][Non-Relational Databases]], but [[id:1291b5b2-5d3d-4736-8030-e76c54c7c5dd][SQL]] databases are the most commonly used.

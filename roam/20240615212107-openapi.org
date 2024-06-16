@@ -1,0 +1,6 @@
+:PROPERTIES:
+:ID:       182e13e6-9d61-458a-a59b-bc83033f3474
+:END:
+#+title: OpenAPI
+
+OpenAPI (formerly Swagger) is a language-agnostic specification for describing RESTful APIs.
