@@ -1,0 +1,6 @@
+:PROPERTIES:
+:ID:       ccd90ef7-390c-4623-9a21-49340850109b
+:END:
+#+title: Javascript
+
+Javascript is a language that proves that Stockholm Syndrome exists.

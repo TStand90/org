@@ -1,0 +1,8 @@
+:PROPERTIES:
+:ID:       a99e1f45-fc88-4b74-9389-d3321cc995f0
+:END:
+#+title: HATEOAS
+
+Hypermedia As The Engine Of Application State
+
+The idea that the HTML of an application is a direct reflection of what's on the server, which is the single source of truth.

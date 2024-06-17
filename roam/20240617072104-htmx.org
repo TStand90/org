@@ -1,0 +1,6 @@
+:PROPERTIES:
+:ID:       a6d1a195-1919-42ad-9dc5-05b552ad7966
+:END:
+#+title: HTMX
+
+HTMX is a library for backend devs who are scared of frontend [[id:ccd90ef7-390c-4623-9a21-49340850109b][Javascript]] frameworks.
