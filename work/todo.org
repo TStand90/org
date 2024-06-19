@@ -2,7 +2,7 @@
 
 Work Todos
 
-* DoseSpot [8/8]
+* DoseSpot [8/10]
 ** [X] WE-696: DoseSpot V2 JSON
 :LOGBOOK:
 CLOCK: [2024-06-03 Mon 09:48]--[2024-06-03 Mon 10:13] =>  0:25
@@ -30,5 +30,17 @@ CLOCK: [2024-06-10 Mon 11:52]--[2024-06-10 Mon 12:17] =>  0:25
   Need tests for this. Tests should have failed before when this didn't work.
 ** [X] [[https://hellowisp.atlassian.net/browse/WISPENG-270][WISPENG-270]]: DoseSpotAPIMedicationV2 should accept 'RXCUI' and 'RxCUI'
 ** [X] [[https://github.com/hellowisp/secure.hellowisp.com/pull/4270][WISPENG-271]]: Adds guard clause to dosespot_drug_metadata property
+** [ ] Ask if we can get a provider onboard for the DoseSpot launch
+** [-] Write a release plan for DoseSpot V2
+*** [X] Rollback plan?
+*** [X] Schedule of what's going to happen
+*** [X] What's important to us?
+*** [X] How do we make sure everything worked?
+*** [X] Who is going to be doing tests, quick fixes?
+*** [X] Section of metrics that we will be watching
+**** [X] Find a dashboard in Datadog for fill requests
+*** [X] Post-release plan
+*** [X] Document the need to change the feature flag
+*** [X] Docuement the need to change the subscription key
 * Misc [0/1]
 ** [?] [[https://github.com/hellowisp/secure.hellowisp.com/pull/4260][Unticketed PR]] to change SnoozeRequestMixin.missed_calls_count to be non-nullable

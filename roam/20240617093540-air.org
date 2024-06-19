@@ -1,0 +1,7 @@
+:PROPERTIES:
+:ID:       93d46fdd-6d91-4757-8d07-6eb3276168a8
+:END:
+#+title: air
+#+filetags: :Go:
+
+Air is a [[id:1acbf81c-8e58-447c-8b07-a61d9710031c][Go]] library that runs a server that auto-refreshes when changes occur.
