@@ -12,3 +12,7 @@ A list of books and articles that I'd like to read at some point.
 *** [ ] [[https://basecamp.com/shapeup][Shape Up]]
 ** [0/1] C#
 *** [ ] [[https://andrewlock.net/series/behind-the-scenes-of-minimal-apis/][Behind the scenes of Minimal APIs]]
+
+* Books
+** [ ] HTMX
+*** [ ] [[https://hypermedia.systems/][Hypermedia Systems]]
