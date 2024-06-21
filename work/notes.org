@@ -69,3 +69,11 @@ MAC mismatch. File has 33CB2D37F6896A5E8F0B92A2F7E405BB6F014D5C8554F961F549DB2B8
 It means that what's in your version of that file does not match the encrypted value at the bottom. This value is updated when you edit the file, and a mismatch there will cause this error.
 
 This tends to occur when you're trying to delete something out of that file, or if you rebase your branch and take the other branch's encrypt value.
+
+* Cron Jobs
+:PROPERTIES:
+:ID:       8f282901-be25-4ec3-832a-b6d59517ad93
+:END:
+All our cron jobs exist in [[https://github.com/hellowisp/secure.hellowisp.com/blob/dbb7325c965c100d22da94818baf22696cf3004b/charts/swa/values/prod.yaml#L86][charts/swa/values/prod.yaml]]
+
+They show up in DataDog [[https://app.datadoghq.com/dash/integration/30464/kubernetes-jobs-and-cronjobs-overview?fullscreen_end_ts=1706794751129&fullscreen_paused=false&fullscreen_refresh_mode=sliding&fullscreen_section=overview&fullscreen_start_ts=1706189951129&fullscreen_widget=7620774346478920&refresh_mode=sliding&tpl_var_kube_cluster_name%5B0%5D=wisp-prod-use1-eks&tpl_var_kube_cronjob%5B0%5D=invite-people-to-trustpilot-review&view=spans&from_ts=1706189975421&to_ts=1706794775421&live=true][here]].
