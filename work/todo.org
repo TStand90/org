@@ -2,7 +2,7 @@
 
 Work Todos
 
-* DoseSpot [9/10]
+* DoseSpot [11/11]
 ** [X] WE-696: DoseSpot V2 JSON
 :LOGBOOK:
 CLOCK: [2024-06-03 Mon 09:48]--[2024-06-03 Mon 10:13] =>  0:25
@@ -33,7 +33,7 @@ CLOCK: [2024-06-10 Mon 11:52]--[2024-06-10 Mon 12:17] =>  0:25
 ** [X] Ask if we can get a provider onboard for the DoseSpot launch
 - Note taken on [2024-06-20 Thu 14:05] \\
   Andrea will help us out here
-** [-] Write a release plan for DoseSpot V2
+** [X] Write a release plan for DoseSpot V2
 *** [X] Rollback plan?
 *** [X] Schedule of what's going to happen
 *** [X] What's important to us?
@@ -44,7 +44,7 @@ CLOCK: [2024-06-10 Mon 11:52]--[2024-06-10 Mon 12:17] =>  0:25
 *** [X] Post-release plan
 *** [X] Document the need to change the feature flag
 *** [X] Docuement the need to change the subscription key
-** [19/20] Document all possible Patient uses of the DoseSpot API
+** [20/20] Document all possible Patient uses of the DoseSpot API
 *** [X] CancelPrescription
 *** [X] CopyPrescription
 *** [X] CreateCodedFillRequestRx
@@ -54,7 +54,7 @@ CLOCK: [2024-06-10 Mon 11:52]--[2024-06-10 Mon 12:17] =>  0:25
 *** [X] GetClinicianAddress
 *** [X] GetMedicationByNameAndStrength
 *** [X] GetMedicationByNDC
-*** [-] GetMedicationByRxcui
+*** [X] GetMedicationByRxcui
 - Note taken on [2024-06-20 Thu 14:22] \\
   Check ~assert_dosespot_metadata~ usages.
 *** [X] GetMedicationMonograph
@@ -67,7 +67,9 @@ CLOCK: [2024-06-10 Mon 11:52]--[2024-06-10 Mon 12:17] =>  0:25
 *** [X] SearchPharmacies
 *** [X] SendPrescriptions
 *** [X] UpdatePrescriptionPharmacy
-
-
+** [X] Document which services need pagination
+*** [X] GetPatientPrescriptions
+*** [X] SearchMedicationsByName
+*** [X] SearchPharmacies
 * Misc [0/1]
 ** [?] [[https://github.com/hellowisp/secure.hellowisp.com/pull/4260][Unticketed PR]] to change SnoozeRequestMixin.missed_calls_count to be non-nullable
