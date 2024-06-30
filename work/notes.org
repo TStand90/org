@@ -77,3 +77,32 @@ This tends to occur when you're trying to delete something out of that file, or 
 All our cron jobs exist in [[https://github.com/hellowisp/secure.hellowisp.com/blob/dbb7325c965c100d22da94818baf22696cf3004b/charts/swa/values/prod.yaml#L86][charts/swa/values/prod.yaml]]
 
 They show up in DataDog [[https://app.datadoghq.com/dash/integration/30464/kubernetes-jobs-and-cronjobs-overview?fullscreen_end_ts=1706794751129&fullscreen_paused=false&fullscreen_refresh_mode=sliding&fullscreen_section=overview&fullscreen_start_ts=1706189951129&fullscreen_widget=7620774346478920&refresh_mode=sliding&tpl_var_kube_cluster_name%5B0%5D=wisp-prod-use1-eks&tpl_var_kube_cronjob%5B0%5D=invite-people-to-trustpilot-review&view=spans&from_ts=1706189975421&to_ts=1706794775421&live=true][here]].
+
+* Access Prod DB locally (read only)
+https://www.notion.so/wispinc/Connect-to-Prod-Database-in-AWS-9e36d57c8b2e4f7fb1b75bad26b5816f
+
+#+BEGIN_SRC shell
+# Only needs run once per 12 hours
+aws sso login --profile wisp-tech-root
+
+aws ssm start-session --profile wisp-tech-prod \
+    --region us-east-1 \
+    --target i-0858f4eb6ea8f418f \
+    --document-name AWS-StartPortForwardingSessionToRemoteHost \
+    --parameters host="wisp-prod-use1-secure-web-app.c3nyfd391zvt.us-east-1.rds.amazonaws.com",portNumber="5432",localPortNumber="54329"
+#+END_SRC
+
+* Log into prod DB for write access
+
+- login to aws through console with aws sso login --profile wisp-tech-root
+- set prod context with kubectl config use-context prod
+- Lookup available prod pods with kubectl get pods -n swa
+- Pick a web pod (named prod-swa-web-x-y
+- exec into it with kubectl exec -ti <webpod_name> bash -n swa
+- Once you're in bash you can just run ./manage shell like normal and now you're in a full production shell
+
+So with the current pods up right now all you need to run is
+- aws sso login --profile wisp-tech-root
+- kubectl config use-context prod
+- kubectl exec -ti prod-swa-web-756bb547d7-4vfrh bash -n swa
+- ./manage shell
