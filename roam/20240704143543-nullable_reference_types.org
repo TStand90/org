@@ -1,0 +1,5 @@
+:PROPERTIES:
+:ID:       a2fb207c-aea5-4be8-92eb-e074cd8897f2
+:ROAM_REFS: https://learn.microsoft.com/en-us/ef/core/miscellaneous/nullable-reference-types
+:END:
+#+title: Nullable Reference Types

@@ -1,0 +1,6 @@
+:PROPERTIES:
+:ID:       79749f8d-44ba-4013-b4f8-5a8c3c391128
+:END:
+#+title: required
+
+~required~ is a keyword in [[id:684e6719-609f-4a8a-a8fa-f11d0585ec10][C#]] to denote a non-nullable type.
