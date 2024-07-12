@@ -441,9 +441,6 @@ Secondary:
 Arnold Bays DoseSpot ID V1: 226139
 Arnold Bays DoseSpot ID V2: 300787
 
-** [ ] Investigate if "Search Medication by Name and Strength" V2 even works. Pretty sure it doesn't.
-
-
 * Things to do before V2 switch
 ** NO Switch ~dosespot_id~ in all rows in Provider table to their new DoseSpot V2 IDs. Or add a V2 column if we want to keep the original IDs.
 We don't need to do this.
@@ -493,10 +490,3 @@ The URL looked like this:
 "https://{dosespot_domain}/secure/Monographs/{url_fragment}"
 ~url_fragment~ looks like this: ~HTMLICONS/d00112a1.htm~
 ** [X] We don't save allergy info in DoseSpot. There is an API endpoint for this, so we could.
-
-
-
-RX ID: 2754163
-
-{"PrescriptionId": 138302168, "WrittenDate": "2023-12-28T10:07:36.317", "Directions": "Take 1/2 tablet (400mg) by mouth in the morning and evening each day for suppression for 90 days.", "Quantity": "90", "DispenseUnitId": 26, "DispenseUnitDescription": "Tablet(s)", "Refills": "0", "DaysSupply": 90, "PharmacyId": 264388, "PharmacyNotes": "Patient agrees to non-child-resistant packaging and will keep out of the reach of children.", "NoSubstitutions": false, "EffectiveDate": null, "LastFillDate": null, "PrescriberId": 236315, "PrescriberAgentId": null, "RxReferenceNumber": null, "Status": 3, "Formulary": false, "EligibilityId": 0, "Type": 1, "NonDoseSpotPrescriptionId": null, "ErrorIgnored": false, "SupplyId": null, "CompoundId": null, "FreeTextType": null, "ClinicId": 7749, "SupervisorId": null, "IsUrgent": false, "IsRxRenewal": false, "RxRenewalNote": null, "FirstPrescriptionDiagnosis": null, "SecondPrescriptionDiagnosis": null, "PatientMedicationId": 209065240, "MedicationStatus": 1, "Comment": null, "DateInactive": null, "Encounter": null, "DoseForm": "tablet", "Route": "oral", "Strength": "800 mg", "GenericProductName": "acyclovir 800 mg oral tablet", "GenericDrugName": "acyclovir", "LexiGenProductId": 772, "LexiDrugSynId": 18248, "LexiSynonymTypeId": 59, "LexiGenDrugId": "d00001", "RxCUI": "197313", "OTC": false, "NDC": "23155022801", "Schedule": "0", "DisplayName": "Acyclovir 800 mg tablet", "MonographPath": "HTMLICONS/d00001a1.htm", "DrugClassification": "anti-infectives", "StateSchedules": null, "Brand": false, "CompoundIngredients": null}
-
