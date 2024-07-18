@@ -8,6 +8,17 @@ Python is the second best language for just about everything (except game develo
 * Concepts
 ** Testing
 *** ~unittest.mock~
+**** Assert called
+***** assert_any_call
+Used to say "assert that this function was called at some point, with these arguments". Useful if wanting to test a function that was called multiple times.
+#+BEGIN_SRC python
+mock_get_patient_dosespot_id.assert_any_call(
+        patient_id=from_patient_id, provider_id=provider_id
+)
+mock_get_patient_dosespot_id.assert_any_call(
+        patient_id=to_patient_id, provider_id=provider_id
+)
+#+END_SRC
 **** Mock a function with arguments
 By assigning ~side_effect~ of a ~MagicMock~ to a function, you can return different values from a mock based on the inputs. This is useful when mocking a function that is used multiple times in a test, but needs to return different values.
 
