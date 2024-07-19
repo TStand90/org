@@ -44,3 +44,35 @@ Constraints:
 At most 104 calls will be made to add.
 It is guaranteed that there will be at least k elements in the array when you search for the kth element.
 * Solution
+#+BEGIN_SRC python
+import heapq
+
+
+class KthLargest:
+
+    def __init__(self, k: int, nums: List[int]):
+        self.k = k
+        self.min_heap = nums
+        heapq.heapify(self.min_heap)
+
+        self.pop_extras()
+
+    def add(self, val: int) -> int:
+        if len(self.min_heap) > 1 and self.min_heap[0] > val:
+            return self.min_heap[0]
+
+        heapq.heappush(self.min_heap, val)
+
+        self.pop_extras()
+
+        return self.min_heap[0]
+
+    def pop_extras(self) -> None:
+        while len(self.min_heap) > self.k:
+            heapq.heappop(self.min_heap)
+#+END_SRC
+
+** Explanation
+Because we never remove elements from the stream, we can just keep adding to a min-heap of size "K". The element at the root of the heap (the smallest element) will always be the "K-th largest" element of that heap. If the heap gets bigger than K, just pop the extraneous elements.
+
+Also, if an element is smaller than the current root, there is no need to add it. An element smaller than the current root is never going to be larger than the current root, so it won't ever be the "K-th largest" element.
