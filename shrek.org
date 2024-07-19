@@ -1,0 +1,8 @@
+#+title: Shrek
+#+description: A file for organizing notes on "Project Shrek"
+
+[[https://www.notion.so/wispinc/Provider-Platform-Feature-Breakdown-d6eb0f61633f461f83c1939e6b5c724c][Provider Platform Feature Breakdown]]: "Top level" Notion doc for the project.
+
+
+* Questions
+** Should the new Consultation model have an underlying FillRequest to maintain compatibility? Or are we replacing FillRequest?
