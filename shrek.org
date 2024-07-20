@@ -6,3 +6,6 @@
 
 * Questions
 ** Should the new Consultation model have an underlying FillRequest to maintain compatibility? Or are we replacing FillRequest?
+
+* States
+What are the different states a consultation can move into?
