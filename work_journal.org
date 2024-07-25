@@ -2,6 +2,9 @@
 
 This file will be an accounting of what I have done at work, for me to reflect upon in the future.
 
+* Checkout Processor
+** Caching mechanism
+
 * Wisp
 ** DoseSpot API V2
 - Timeline: January 2024 - June 2024 (6 months, with 6 weeks of parental leave)

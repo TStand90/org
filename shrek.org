@@ -3,9 +3,67 @@
 
 [[https://www.notion.so/wispinc/Provider-Platform-Feature-Breakdown-d6eb0f61633f461f83c1939e6b5c724c][Provider Platform Feature Breakdown]]: "Top level" Notion doc for the project.
 
-
 * Questions
 ** Should the new Consultation model have an underlying FillRequest to maintain compatibility? Or are we replacing FillRequest?
+- Sounds like we need to maintain compatibility.
 
 * States
 What are the different states a consultation can move into?
+
+
+* Meeting notes - Provider Platform: RFC Decision and Q&A (July 22nd, 2024)
+- Flexible UI in Retool controlled by Ops is out of scope for this project.
+- We are only creating visibility into the Consultation status from when the Order is placed to sending to Dosespot. We are not updating status based on DoseSpot status, for example.
+  - This (possibly) includes insight into ID verification, symptoms images, and med forms. (Kristin will clarify this later)
+
+- Create a better UI for providers. Their workflow includes a lot of workarounds.
+  - For example, Providers need to Reject a consult to create an Admin task.
+
+- We need to be able to "assign" a consult back to a provider after it goes to Admin, or send it back to the queue.
+  - This is because providers /only/ get paid based on the consults they complete. If they kick it to Admin, and then another Provider completes it, the first Provider /does not get paid/.
+
+** Retool discussion
+- Reece: Seems like we're putting a bunch of business logic into Retool, odd decision. New tool we have to learn. Service architecture is better for this.
+  - John: There are different layers of business logic. The frontend has different decisions to make. Things that are going into Retool are about what provider's workflows are (users, times, etc.). The frontend is a filtering mechanism.
+
+- Joey: Retool prevents Typescript, unit testing. We can e2e test, but we lose stability. We might be setting ourselves up for bugs.
+  - John: The API will not allow the frontend to do anything "incorrect". An error in the fronetend would be something like we're not surfacing consultations. Tradeoff is higher iteration speed.
+
+- Reece: Retool is just giving us two views (queue and patient chart). Are we just getting speed? What's the value prop?
+  - Kristin: Speed, flexibility, and long term goal is stakeholder control over the UI.
+
+- Amanda: Will we have to support Retool like we do Strapi? We do Strapi on a daily basis.
+  - John: Ops will not have /too/ much edit control.
+
+- Simon: Ops changing the UI in Retool is not a reason to pick it. Ops probably won't be able to edit the UI without a lot of eng support anyway.
+
+- Morgan: It'd be good to know what we want Retool for, if configurability is not the main point.
+  - Reece: Same, what is the value prop of Retool?
+
+** Consultation model and status management discussion
+We all agree that event sourcing is the way to go. I suggested a "state machine" implementation on top of that based on the current status, got lots of thumbs up so seems like a good idea.
+
+** Cursor pagination
+We need it for the queue. Do not need for Medications (they can just keep typing).
+
+** API V3 discussion
+- Morgan: iFraming Secure into Retool can work, but it's ugly and could introduce weird bugs, especially with things like SSO.
+
+** Fill request discussion
+- Joey: How do we differentiate between the new and old orders?
+  - John: We need an RFC or document to detail the difference between clinical and financial side.
+
+- Joey: Are we creating Admin views in Retool?
+  - Kristin: There are minor changes we need to make on the Admin side, but will happen in Secure, not Retool.
+
+- Joey: We need to differentiate the new/old Orders for Admins, to avoid error where users try to interact with an old order as if it were a new (and vice versa). Could introduce a lot of scope creep.
+
+
+* Meeting notes - Provider Platform Eng Sync (July 22nd, 2024)
+- The two things the business wants is Medication Editability and the clearer Statuses.
+- Is this the right time? We are trying to get investor money. We need to have confidence in what we can deliver in Q3?
+  - Do we build it the "right" way? Or do we bolt it on?
+    - Consider this question from the "investor" perspective.
+
+* Meeting notes - Provider Platform RFC and Q&A cont'd (July 23rd, 2024)
+- Reece: Extend Rx Preapproval process. When a provider is looking at an Order, and if they want to edit it, they create an entirely new Cart, and it re-processes.
