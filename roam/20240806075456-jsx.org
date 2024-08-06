@@ -1,0 +1,6 @@
+:PROPERTIES:
+:ID:       a91b6fb3-4209-45d0-80d1-6fa59b70a746
+:END:
+#+title: JSX
+
+JSX is a templating language that some swear is the best thing since sliced bread. Other, more sane people merely tolerate it.

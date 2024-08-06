@@ -1,0 +1,41 @@
+:PROPERTIES:
+:ID:       e90eb79d-154e-4f30-b55b-01df68b64954
+:END:
+#+title: Imperative vs. Declarative
+
+Imperative and Declarative are two different programming styles.
+
+* Imperative
+** Imperative works with individual statements that advance the program state.
+** Uses independent function calls
+** Often uses mutable objects
+
+* Declarative
+** Uses expressions that build upon each other to progress the flow of logic.
+** Uses function composition to build composable pieces of logic.
+** Uses immutable data, creates new structures from old ones.
+
+* Examples
+Here is a password checking function, which checks if a password has at least 9 characters.
+
+#+TITLE: Imperative password checker in Javascript
+#+BEGIN_SRC javascript
+function coundGoodPasswords(passwords) {
+    const goodPasswords = [];
+    for (let i = 0; i < passwords.length; i++) {
+        const password = passwords[i];
+        if (password.length < 9) {
+            continue;
+        }
+        goodPasswords.push(password);
+    }
+    return goodPasswords.length;
+}
+#+END_SRC
+
+#+TITLE: Declarative password checker in Javascript
+#+BEGIN_SRC javascript
+function countGoodPasswords(passwords) {
+    return passwords.filter(p => p.length >= 9).length;
+}
+#+END_SRC

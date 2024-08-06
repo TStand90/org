@@ -1,0 +1,27 @@
+:PROPERTIES:
+:ID:       bb077623-5540-4767-b6d9-ae4301af5ef2
+:END:
+#+title: React
+
+React is a [[id:ccd90ef7-390c-4623-9a21-49340850109b][Javascript]] framework that evangelists insist is a library. It is divine punishment for straying from the holy path of [[id:e32c438b-71d7-4647-9132-62d852feee48][jQuery]].
+
+React emphasizes a [[id:cb54393a-8404-4632-bef5-ecd6b4897150][declarative]] style of programming.
+
+React uses the [[id:7c44002d-fa4f-48cf-a98a-10accc14f54b][Virtual DOM]] to make updates.
+
+React uses [[id:a91b6fb3-4209-45d0-80d1-6fa59b70a746][JSX]] to create [[id:b785b344-47c9-4993-96a6-6a267af835b1][HTML]].
+
+* Advantages
+** Simplicity
+[[id:a91b6fb3-4209-45d0-80d1-6fa59b70a746][JSX]] and React itself are simple (at least when getting started).
+** Testability
+The [[id:7c44002d-fa4f-48cf-a98a-10accc14f54b][Virtual DOM]] allows testing to occur without needing to run a headless browser.
+** Ecosystem
+Pretty much everybody uses React these days. There are libraries for everything, and everyone has touched React at least once in their career.
+* Disadvantages
+** Not a complete solution
+You will certainly need to reach for other libraries to do anything that isn't arbitraty
+** Constant library maintenance
+[[id:ccd90ef7-390c-4623-9a21-49340850109b][Javascript]] has a messy ecosystem. Things constantly break, and libraries are replaced.
+** One way binding
+React only supports one way binding, unlike other web frameworks with two way binding.

@@ -1,0 +1,6 @@
+:PROPERTIES:
+:ID:       e32c438b-71d7-4647-9132-62d852feee48
+:END:
+#+title: jQuery
+
+jQuery is a [[id:ccd90ef7-390c-4623-9a21-49340850109b][Javascript]] library that blinds all old developers with nostalgia.

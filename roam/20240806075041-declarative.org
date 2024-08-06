@@ -1,0 +1,8 @@
+:PROPERTIES:
+:ID:       cb54393a-8404-4632-bef5-ecd6b4897150
+:END:
+#+title: Declarative
+
+TODO
+
+See [[id:796de48e-28fa-427e-a12c-40f8e8980502][Imperative vs. declarative]] for comparisons to [[id:fda18a87-d310-45bd-b1c9-69d470b76f1a][Imperative]] style.
