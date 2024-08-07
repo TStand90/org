@@ -1,0 +1,10 @@
+:PROPERTIES:
+:ID:       005f27a8-6c66-427d-84f8-0bfee69c0539
+:END:
+#+title: Vue.js
+#+filetags: :JavaScript:Vue.js:
+
+Vue.js is a much better web framework than [[id:bb077623-5540-4767-b6d9-ae4301af5ef2][React]], but it remains less popular, because +people have shit taste+ it has less momentum.
+
+* Concepts
+** [[id:71707bdc-15e8-4c4f-bd51-5d9d85407c44][Vue.js Slots]]

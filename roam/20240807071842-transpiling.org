@@ -1,0 +1,8 @@
+:PROPERTIES:
+:ID:       fb784133-e962-4b03-950c-87ba24a5986a
+:END:
+#+title: Transpiling
+
+Transpiling is the process of converting one syntax into another.
+
+Example: [[id:a91b6fb3-4209-45d0-80d1-6fa59b70a746][JSX]] gets transpiled into [[id:ccd90ef7-390c-4623-9a21-49340850109b][Javascript]]

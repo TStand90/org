@@ -1,0 +1,10 @@
+:PROPERTIES:
+:ID:       71707bdc-15e8-4c4f-bd51-5d9d85407c44
+:ROAM_REFS: https://vuejs.org/guide/components/slots.html
+:END:
+#+title: Vue.js Slots
+#+filetags: :JavaScript:Vue.js:
+
+Slots in [[id:005f27a8-6c66-427d-84f8-0bfee69c0539][Vue.js]] work similarly to [[id:bb077623-5540-4767-b6d9-ae4301af5ef2][React]] children props.
+
+TODO: more info here.

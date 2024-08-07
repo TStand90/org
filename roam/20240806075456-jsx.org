@@ -2,5 +2,410 @@
 :ID:       a91b6fb3-4209-45d0-80d1-6fa59b70a746
 :END:
 #+title: JSX
+#+filetags: :JavaScript:React:
 
 JSX is a templating language that some swear is the best thing since sliced bread. Other, more sane people merely tolerate it.
+
+JSX is syntactic sugar on top of certain functions and objects, mainly ~React.createElement()~. It isn't required in [[id:bb077623-5540-4767-b6d9-ae4301af5ef2][React]], but it is recommended and widely used.
+
+Below is an example of a React component with and without JSX.
+
+#+BEGIN_SRC javascript
+const element = <main>
+ <Title>Welcome</Title>
+ <Carousel images={6} />
+ <a href="/blog">Go to the blog</a>
+</main>;
+#+END_SRC
+
+#+BEGIN_SRC javascript
+const element = React.createElement(
+ 'main',
+ null,
+ React.createElement(Title, null, 'Welcome'),
+ React.createElement(Carousel, {images: 6}),
+ React.createElement('a', {href: "/blog"}, 'Go to the blog'),
+);
+#+END_SRC
+
+JSX gets compiled into standard [[id:a941d489-dcc9-4444-8c92-55f55764cfda][ECMAScript]]. It needs to be transpiled first, as it isn't valid [[id:ccd90ef7-390c-4623-9a21-49340850109b][Javascript]] on its own.
+
+Below is a table comparing JSX elements to their [[id:ccd90ef7-390c-4623-9a21-49340850109b][Javascript]] equivalents.
+
+| [[id:ccd90ef7-390c-4623-9a21-49340850109b][Javascript]]                                                                                           | JSX Equivalent                                             |
+|------------------------------------------------------------------------------------------------------+------------------------------------------------------------|
+| React.createElement('h1')                                                                            | <h1 />                                                     |
+| React.createElement('h1', null, 'Welcome');                                                          | <h1>Welcome</h1>                                           |
+| React.createElement(Title, null, 'Welcome');                                                         | <Title>Welcome</Title>                                     |
+| React.createElement(Title, {size: 6}, 'Welcome');                                                    | <Title size="6">Welcome</Title>                            |
+| React.createElement(Title, {size: 6}, 'Welcome to ', React.createElement('strong', null, 'Narnia')); | <Title size="6">Welcome to <strong>Narnia</strong></Title> |
+
+To create multiline JSX objects, use parenthesis. This is very commonly paired with ~return~ statements.
+
+#+BEGIN_SRC javascript
+return (
+ <main>
+   <h1>Hello world</h1>
+ </main>
+);
+#+END_SRC
+
+JSX uses curly braces for dynamic variables.
+
+#+BEGIN_SRC javascript
+class DateTimeNow extends React.Component {
+ render() {
+   const dateTimeNow = new Date().toLocaleString()
+   return <span>Current date and time is {dateTimeNow}.</span>
+ }
+}
+#+END_SRC
+
+It's also possible to insert other [[id:bb077623-5540-4767-b6d9-ae4301af5ef2][React]] elements created with JSX.
+
+#+BEGIN_SRC javascript
+const now = <date>{dateTimeNow}</date>;
+const message = <p>Today is {now}</p>;
+#+END_SRC
+
+Props can also be used that way.
+
+#+BEGIN_SRC javascript
+<p>Hello {this.props.userName}, today is {dateTimeNow}.</p>
+#+END_SRC
+
+It's also possible to invoke methods.
+
+#+BEGIN_SRC javascript
+import { Component } from 'react';
+class ButtonList extends Component {
+  getButton(text) {
+    return (
+      <button disabled={this.props.disabled}>{text}</button>
+    );
+  }
+  render() {
+    return (
+      <aside>
+        {this.getButton('Up')}
+        {this.getButton('Down')}
+      </aside>
+    );
+  }
+}
+#+END_SRC
+
+Even arbitrary [[id:ccd90ef7-390c-4623-9a21-49340850109b][Javascript]] can be injected.
+
+#+BEGIN_SRC javascript
+<p>Today is {new Date(Date.now()).toLocaleTimeString()}.</p>
+#+END_SRC
+
+* Children
+Children is a special property in JSX. It allows you to "inject" into a component. It works similar to slots in [[id:005f27a8-6c66-427d-84f8-0bfee69c0539][Vue.js]].
+
+#+BEGIN_SRC javascript
+import { Fragment, Component } from "react";
+class Link extends Component {
+  render() {
+    return (
+      <p>
+        <a href={this.props.url}>
+          {this.props.children}
+        </a>
+      </p>
+    );
+  }
+}
+class App extends Component {
+  render() {
+    return (
+      <Fragment>
+        <Link url="//react.dev">
+          <strong>React</strong>
+        </Link>
+        <Link url="//vuejs.org">Vue</Link>
+        <Link url="//angular.io">Angular</Link>
+      </Fragment>
+    );
+  }
+}
+export default App;
+#+END_SRC
+
+In the above example, we inject the text (and even the ~<strong>~ tag) into the components to be displayed.
+
+* Comments
+Because JSX is written inside [[id:ccd90ef7-390c-4623-9a21-49340850109b][Javascript]], plain old [[id:ccd90ef7-390c-4623-9a21-49340850109b][Javascript]] comments work just fine.
+#+BEGIN_SRC javascript
+// This is the page title
+const title = <h1>Hello world!</h1>;
+#+END_SRC
+
+To add comments in JSX components themselves, ~/* */~ or ~//~ can be used inside ~{}~.
+#+BEGIN_SRC javascript
+const content = (
+ <div>
+   {/* Just like a JS comment */}
+   {/* It can also span
+       multiple lines */}
+   {// Single line comments are possible too
+   }
+ </div>
+);
+#+END_SRC
+
+Note that when you use a single-line comment between curly braces, a newline character is needed before you end the curly brackets.
+
+#+BEGIN_SRC javascript
+const content = (
+ <div>
+   {// This does NOT work! }
+ </div>
+);
+#+END_SRC
+
+* The key property
+~key~ is an important property in JSX when you have a list of items. ~key~ differentiates each item so that [[id:bb077623-5540-4767-b6d9-ae4301af5ef2][React]] can keep track of it in the [[id:d99e159b-96af-4464-831b-b812e5621144][DOM]].
+
+~key~ is an internal property which will not be rendered to the end user. ~key~ should be a unique identifier for the element, not just its index in the array.
+
+If a ~key~ is not unique, you will receive a warning in the console.
+
+#+BEGIN_SRC javascript
+import { Component } from "react";
+class App extends Component {
+  render() {
+    const items = ["apples", "pears", "playstations"];
+    return <Select items={items} />;
+  }
+}
+class Select extends Component {
+  render() {
+    return (
+      <select>
+        {this.props.items.map((item) => (
+          <option key={item}>{item}</option>
+        ))}
+      </select>
+    );
+  }
+}
+export default App;
+#+END_SRC
+
+* Fragment
+Fragments can be used to wrap elements without creating a new element itself (like an unused ~<div>~).
+
+#+BEGIN_SRC javascript
+import { Fragment } from 'react';
+...
+return (
+ <Fragment>
+   <h1>Hello and welcome</h1>
+   <a href="/blog">Go to the blog</a>
+ </Fragment>
+);
+#+END_SRC
+
+From [[id:bb077623-5540-4767-b6d9-ae4301af5ef2][React]] 16.2 (and [[id:a4b94357-697a-42bf-b78b-bafe1ad6a687][Babel]] 7) onwards, it's possible to declare a fragment like this:
+
+#+BEGIN_SRC javascript
+return (
+ <>
+   <h1>Hello and welcome</h1>
+   <a href="/blog">Go to the blog</a>
+ </>
+);
+#+END_SRC
+
+The only time to use the explicit ~Fragment~ is if you need a ~key~. It's not possible to assign properties to the shorthand, so ~Fragment~ is required.
+
+#+BEGIN_SRC javascript
+import { Component, Fragment } from "react";
+class App extends Component {
+  render() {
+    const list = [
+      { breed: "Chihuahua", description: "Small breed of dog." },
+      { breed: "Corgi", description: "Cute breed of dog." },
+      { breed: "Cumberland Sheepdog", description: "Extinct breed of dog."},
+    ];
+    return <Breeds list={list} />;
+  }
+}
+class Breeds extends Component {
+  render() {
+    return (
+      <dl>
+        {this.props.list.map(
+          ({ breed, description }) => (
+            <Fragment key={breed}>
+              <dt>{breed}</dt>
+              <dd>{description}</dd>
+            </Fragment>
+          )
+        )}
+      </dl>
+    );
+  }
+}
+export default App;
+#+END_SRC
+
+* [[id:fb784133-e962-4b03-950c-87ba24a5986a][Transpiling]] JSX
+:PROPERTIES:
+:ID:       105dea70-80ad-4865-8614-9255659e5d43
+:END:
+JSX must be transpiled to work. Most [[id:bb077623-5540-4767-b6d9-ae4301af5ef2][React]] projects will come with one by default (like [[id:e4518d65-64ce-4e54-8710-7ce598847b65][Create React App]]).
+
+The most common transpiler is [[id:a4b94357-697a-42bf-b78b-bafe1ad6a687][Babel]] (as of time of writing anyway), but others exist.
+
+* Gotchas
+
+** Self-closing tags are required for leaf nodes.
+JSX requires a closing ~/~ if the tag has no children.
+
+#+BEGIN_SRC javascript
+<a href="//react.dev">React</a>
+<img src="/logo.png" alt="Logo" />
+#+END_SRC
+
+This differs from plain [[id:b785b344-47c9-4993-96a6-6a267af835b1][HTML]], where the following would be valid:
+
+#+BEGIN_SRC html
+<a href="//react.dev">React
+<img src="/logo.png" alt="Logo">
+#+END_SRC
+
+** Special characters are written literally.
+JSX will auto-escape dangerous [[id:b785b344-47c9-4993-96a6-6a267af835b1][HTML]], so special characters like =&copy;= =&mdash;= =&ldquo;= won't work.
+
+There are a few ways to handle this
+
+- Copy the special character directly into your source code. Just make sure you use a UTF-8 character set. This is the recommended method to deal with special characters.
+- Escape the special character with \u, and use its Unicode number (use a website such as fileformat.info to look it up).
+- Convert from a character code to a character number with String.fromCharCode(charCodeNumber).
+- Use the special property dangerouslySetInnerHTML to set the inner HTML (this is dangerous and not recommended).
+
+** String conversion is a bit peculiar.
+[[id:bb077623-5540-4767-b6d9-ae4301af5ef2][React]] outputs variables as either an element or a string. [[id:bb077623-5540-4767-b6d9-ae4301af5ef2][React]] does some strange things when trying to convert things to string.
+
+Below is a table showing this behavior.
+
+| Type                     | Output     |
+|--------------------------+------------|
+| "string"                 | "string"   |
+| ""                       | ""         |
+| 3.4                      | "3.4"      |
+| 0                        | "0"        |
+| NaN                      | "NaN"      |
+| Number.POSITIVE_INFINITY | "Infinity" |
+| Number.NEGATIVE_INFINITY | "Infinity" |
+| true                     | "true"     |
+| false                    | ""         |
+| undefined                | ""         |
+| null                     | ""         |
+
+The most important thing here is that ~false~ becomes an empty string, but ~true~ becomes "true".
+
+** The style attribute is an object.
+JSX attributes are objects instead of strings (like they are in [[id:b785b344-47c9-4993-96a6-6a267af835b1][HTML]]). So attributes need to be passed as objects, and CSS properties are represented as camelCase.
+
+- ~background-image~ becomes ~backgroundImage~.
+- ~font-size~ becomes ~fontSize~.
+- ~font-family~ becomes ~fontFamily~.
+
+Here's an example of passing an object instead of a string:
+
+#+BEGIN_SRC javascript
+<input style={{ fontSize: '30pt' }} />
+#+END_SRC
+
+** Some attributes have reserved names and must be renamed.
+~class~ and ~for~ are reserved words in [[id:ccd90ef7-390c-4623-9a21-49340850109b][Javascript]], so their [[id:b785b344-47c9-4993-96a6-6a267af835b1][HTML]] equivalent tags have been renamed to ~className~ and ~htmlFor~.
+
+#+BEGIN_SRC javascript
+<p className="hidden">...</p>
+#+END_SRC
+
+#+BEGIN_SRC javascript
+<input type="checkbox" id={this.props.id} value="hasCorgi" />
+<label htmlFor={this.props.id}>Corgi?</label>
+#+END_SRC
+
+You'll get compiler errors if you try using the [[id:b785b344-47c9-4993-96a6-6a267af835b1][HTML]] versions.
+
+** Multiword attributes are in camelCase.
+[[id:b785b344-47c9-4993-96a6-6a267af835b1][HTML]] attributes that are hyphenated are changed to camelCase in JSX. This includes elements like:
+
+- ~clip-path~ -> ~clipPath~
+- ~fill-opacity~ -> ~fillOpacity~
+
+Confusingly, it also includes elements that are not hyphenated, but are composed of two words.
+
+- ~autoplay~ -> ~autoPlay~
+- ~allowfullscreen~ -> ~allowFullscreen~
+- ~maxlength~ -> ~maxLength~
+
+** Boolean attributes are handled differently than in HTML.
+In [[id:b785b344-47c9-4993-96a6-6a267af835b1][HTML]], boolean attributes are set like this:
+
+#+BEGIN_SRC html
+<input disabled="false" /> // Don't do this!
+#+END_SRC
+
+In JSX, they are set like this:
+
+#+BEGIN_SRC javascript
+<input disabled={false} />
+#+END_SRC
+
+If a value is not passed in React, it will be set to ~true~ by default.
+
+#+BEGIN_SRC javascript
+<input required />
+#+END_SRC
+
+This works for custom components as well.
+
+** Some whitespace is collapsed (but not all).
+Newline characters and tabs are ignored in JSX. To properly show whitespace, either don't use newline characters, or add spaces using curly brackets.
+
+#+BEGIN_SRC javascript
+import { Component } from 'react';
+class App extends Component {
+  render() {
+    return (
+      <h1>
+        All <em>corgis</em> are awesome
+      </h1>
+    );
+  }
+}
+export default App;
+#+END_SRC
+
+#+BEGIN_SRC javascript
+import { Component } from 'react';
+class App extends Component {
+  render() {
+    return (
+      <h1>
+        All{" "}
+        <em>corgis</em>{" "}
+        are awesome
+      </h1>
+    );
+  }
+}
+export default App;
+#+END_SRC
+
+** You can add data- attributes where desired.
+Sometimes, attaching data to [[id:d99e159b-96af-4464-831b-b812e5621144][DOM]] nodes is needed (example: working with third party libraries).
+
+To create custom attributes that get rendered, use the ~data-~ prefix.
+
+#+BEGIN_SRC javascript
+<li data-object-id={object.id}>...</li>
+#+END_SRC

@@ -1,0 +1,6 @@
+:PROPERTIES:
+:ID:       a941d489-dcc9-4444-8c92-55f55764cfda
+:END:
+#+title: ECMAScript
+
+TODO
