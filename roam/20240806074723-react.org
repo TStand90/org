@@ -25,3 +25,134 @@ You will certainly need to reach for other libraries to do anything that isn't a
 [[id:ccd90ef7-390c-4623-9a21-49340850109b][Javascript]] has a messy ecosystem. Things constantly break, and libraries are replaced.
 ** One way binding
 React only supports one way binding, unlike other web frameworks with two way binding.
+
+* Functional Components
+:PROPERTIES:
+:ID:       6b73a030-c9ac-4ad0-9685-2982871e94a1
+:END:
+
+Functional components are how all the cool kids are doing [[id:bb077623-5540-4767-b6d9-ae4301af5ef2][React]] these days.
+
+** Arguments to the function
+Functional Components can only receive *one* argument: a frozen object of properties.
+
+** Destructuring properties
+It is common practice to write functional components with a destructured first argument. This ensures that the function does not have a ton of arguments as its scope grows.
+
+#+BEGIN_SRC javascript
+...
+function MenuItem({ href, label }) {
+  return (
+    <li className="menu-item">
+      <a className="menu-link" href={href}>
+        {label}
+      </a>
+    </li>
+  );
+}
+...
+#+END_SRC
+
+A benefit of this approach is that you can specify default arguments.
+
+#+BEGIN_SRC javascript
+...
+function Menu() {
+  return (
+    <nav className="navbar">
+      <h1 className="title">TheMenuCompany</h1>
+      <ul className="menu">
+        <MenuItem label="Home" href="/" />
+        <MenuItem label="About" href="/about/" />
+        <MenuItem
+          label="Blog" href="/blog" target="_blank"
+        />
+      </ul>
+    </nav>
+  );
+}
+function MenuItem({ label, href, target = "_self" }) {
+  return (
+    <li className="menu-item">
+      <a
+        className="menu-link"
+        href={href}
+        target={target}
+      >
+        {label}
+      </a>
+    </li>
+  );
+}
+...
+
+#+END_SRC
+
+The ordering of the properties does not matter, but it's common practice to put those with defaults at the end.
+
+** Pass through properties
+Sometimes, an argument to a functional component is needed by its children, but not the component itself. The [[id:c66f10cf-8136-430a-8b7c-17b259490cc2][rest operator]] can come in handy here.
+
+#+BEGIN_SRC javascript
+function MyComponent({ a, b, ...rest }) {
+ // a = 1, b = 2, rest = { c: 3 }
+}
+// Later:
+<MyComponent a="1" b="2" c="3" />
+#+END_SRC
+
+It's convention to list out the required properties in the function signature, and leave the unneeded ones as a [[id:c66f10cf-8136-430a-8b7c-17b259490cc2][rest operator]].
+
+#+BEGIN_SRC javascript
+...
+function MenuItem({ label, href, ...rest }) {
+  return (
+    <li className="menu-item">
+      <a className="menu-link" href={href} {...rest}>
+        {label}
+      </a>
+    </li>
+  );
+}
+...
+#+END_SRC
+
+** Argument ordering
+The most common way to order arguments in a functional component is:
+1. Properties without defaults
+2. Properties with defaults
+3. Rest
+
+
+** Lack of constructors
+Class based [[id:bb077623-5540-4767-b6d9-ae4301af5ef2][React]] components have constructors, which run only when the component is created. [[id:6b73a030-c9ac-4ad0-9685-2982871e94a1][Functional Components]] do not. The function itself re-runs in its entirety on each re-render.
+
+To replicate the effects of a constructor (something that only runs once upon creation), use [[id:89258539-a6ec-41ef-b4c3-ab696277ac30][useMemo]].
+
+Here's an example where an image component generates a random ID, but only once.
+
+#+BEGIN_SRC javascript
+import { useMemo } from 'react';
+...
+function Image({ index, title }) {
+  const id = useMemo(() =>
+    `image-${Math.floor(Math.random() * 1000000)}`,
+  []);
+  return (
+    <figure style={{ margin: "5px" }} id={id}>
+      <img src={`//picsum.photos/id/${index}/150/150/`} alt={title} />
+      <figcaption>
+        <h3>Species: {title}</h3>
+      </figcaption>
+    </figure>
+  );
+}
+...
+#+END_SRC
+
+* useMemo
+:PROPERTIES:
+:ID:       89258539-a6ec-41ef-b4c3-ab696277ac30
+:END:
+
+TODO

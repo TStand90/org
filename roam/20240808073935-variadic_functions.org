@@ -1,0 +1,7 @@
+:PROPERTIES:
+:ID:       5a16a4b5-16ec-412b-8aa7-d021785b70d7
+:ROAM_REFS: https://en.wikipedia.org/wiki/Variadic_function
+:END:
+#+title: Variadic functions
+
+TODO

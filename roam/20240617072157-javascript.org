@@ -4,3 +4,61 @@
 #+title: Javascript
 
 Javascript is a language that proves that Stockholm Syndrome exists.
+
+* Destructuring
+:PROPERTIES:
+:ID:       5f7b067c-aba1-40f8-adda-6ce2ef1b7dea
+:ROAM_REFS: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment
+:END:
+
+Destructuring in [[id:ccd90ef7-390c-4623-9a21-49340850109b][Javascript]] is a way to unpack values from arrays, properties, or objects into distinct variables.
+
+#+BEGIN_SRC javascript
+let a, b, rest;
+[a, b] = [10, 20];
+
+console.log(a);
+// Expected output: 10
+
+console.log(b);
+// Expected output: 20
+
+[a, b, ...rest] = [10, 20, 30, 40, 50];
+
+console.log(rest);
+// Expected output: Array [30, 40, 50]
+#+END_SRC
+
+* Rest Operator
+:PROPERTIES:
+:ID:       c66f10cf-8136-430a-8b7c-17b259490cc2
+:END:
+
+The rest operator allows for [[id:5a16a4b5-16ec-412b-8aa7-d021785b70d7][variadic functions]] in [[id:ccd90ef7-390c-4623-9a21-49340850109b][Javascript]].
+
+#+BEGIN_SRC javascript
+function sum(...theArgs) {
+  let total = 0;
+  for (const arg of theArgs) {
+    total += arg;
+  }
+  return total;
+}
+
+console.log(sum(1, 2, 3));
+// Expected output: 6
+
+console.log(sum(1, 2, 3, 4));
+// Expected output: 10
+#+END_SRC
+
+A function may only have one rest parameter.
+
+This can also be used to assign variables from an object.
+
+#+BEGIN_SRC javascript
+const someObject = { a: 1, b: 2, c: 3, d: 4 };
+const { a, b, ...otherAttrs } = someObject;
+#+END_SRC
+
+~otherAttrs~ will get ~c~ and ~d~ in this case.
