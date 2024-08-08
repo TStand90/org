@@ -62,3 +62,10 @@ const { a, b, ...otherAttrs } = someObject;
 #+END_SRC
 
 ~otherAttrs~ will get ~c~ and ~d~ in this case.
+
+* Undefined
+:PROPERTIES:
+:ID:       ef839e85-abd9-45fd-867c-4933be461e39
+:END:
+
+TODO

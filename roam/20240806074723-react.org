@@ -150,7 +150,138 @@ function Image({ index, title }) {
 ...
 #+END_SRC
 
-* useMemo
+* Stateless components vs. stateful
+Components that depend only on their properties and have no internal logic beyond that are called *stateless componenets*. The opposite is *stateful components*, which do have some internal state.
+
+While almost all [[id:bb077623-5540-4767-b6d9-ae4301af5ef2][React]] *applications* are stateful, not all *components* are stateful.
+
+- Stateful components are independent of their contexts, and have the ability to update theirselves based on internal triggers.
+- Stateless components can only change or update when their parent component provides new properties.
+
+** Where does state go?
+Generally, state should go as close to the component that actually needs it.
+
+** What kinds of information goes in component state?
+*** Application data
+Data that the user is working on, updating, or reading. Example: information about a logged in user. Often stored globally, or in a data store.
+*** UI state
+The current state of UI components. Should generally be kept local.
+*** Form data
+Usually kept in component state.
+
+** What not to store in state?
+*** Values that don't change
+*** Copies of other state values
+*** Duplicates of the same data
+
+* Hooks
+:PROPERTIES:
+:ID:       30b7d3af-03c7-4534-8386-4e0b9009f8dd
+:END:
+
+"Hook" is an umbrella term for a special kind of function in [[id:bb077623-5540-4767-b6d9-ae4301af5ef2][React]] 16.8 and above. There are many built in hooks, and it's possible to create custom hooks as well (should start with =use*=).
+
+Hooks don't all do the same kinds of things. Hooks are hooks because [[id:bb077623-5540-4767-b6d9-ae4301af5ef2][React]] says they are.
+
+They're called hooks because they are hooks *from* your component *to* the "insides" of [[id:bb077623-5540-4767-b6d9-ae4301af5ef2][React]]. They allow doing things that aren't normally possible.
+
+Hooks *must* always run in a component's render. That is, you cannot conditionally run a hook in an ~if~ statement or something similar.
+
+** useState
+:PROPERTIES:
+:ID:       072acfe3-f6b5-4f03-9675-5a56f2320415
+:END:
+
+~useState~ is a hook that allows for state manipulation.
+
+To use it, provide an initial value, as well as a variable and setter function. In the below example, ~counter~ holds the value (initially ~0~), and ~setCounter~ is the setter function that will update that value.
+
+#+BEGIN_SRC javascript
+import { useState } from "react";
+function Counter() {
+  const [counter, setCounter] = useState(0);
+  return (
+    <main>
+      <p>Clicks: {counter}</p>
+      <button
+        onClick={() => setCounter((value) => value + 1)}
+      >
+        Increment
+      </button>
+    </main>
+  );
+}
+function App() {
+  return <Counter />;
+}
+export default App;
+#+END_SRC
+
+It's common practice to name the state itself after what's stored in it (~counter~ here), and name the setter as =set*= (so ~setCounter~). This isn't mandatory, but most [[id:bb077623-5540-4767-b6d9-ae4301af5ef2][React]] developers will do this.
+
+~useState~ must be called with an initial value. Otherwise, the initial value is assumed to be [[id:ef839e85-abd9-45fd-867c-4933be461e39][undefined]]. This is used to set up a baseline value for the component. It will only be used on the initial render.
+
+It's possible to give an initial value from the componenet's props as well.
+
+#+BEGIN_SRC javascript
+import { useState } from "react";
+function Counter({ start }) {
+  const [counter, setCounter] = useState(start);
+  return (
+    <main>
+      <p>Counter: {counter}</p>
+      <button onClick={() => setCounter(value => value + 1)}>
+        Increment
+      </button>
+    </main>
+  );
+}
+function App() {
+  return (
+    <>
+      <Counter start={0} />
+      <Counter start={123} />
+      <Counter start={-64} />
+    </>
+  );
+}
+export default App;
+#+END_SRC
+
+Sometimes, the initial value must be computed. Here is an example of calling a function for the initial value:
+
+#+BEGIN_SRC javascript
+const [password, setPassword] = useState(() => generatePassword());
+#+END_SRC
+
+And here's an example of an initializer function that takes an argument.
+
+#+BEGIN_SRC javascript
+const [password, setPassword] = useState(() => generatePassword(12));
+#+END_SRC
+
+What if the state *is* a function? For example, if we have a "calculator" that needs to set the state to a function.
+
+#+BEGIN_SRC javascript
+const OPERATORS = {
+ ADDITION: (a, b) => a + b,
+ SUBTRACTION: (a, b) => a - b,
+ PRODUCT: (a, b) => a * b,
+};
+
+function Calculator() {
+ const [operator, setOperator] = useState(() => OPERATORS.ADDITION);
+ ...
+}
+#+END_SRC
+
+Note that the component won't re-render unless the state value actually changes. So if you use the setter function and set the value to what it currently is, [[id:bb077623-5540-4767-b6d9-ae4301af5ef2][React]] will not re-render the component.
+
+This has important implications for things like arrays and objects, because changing those doesn't cause a re-render. Because the *reference* is the same, the internal values aren't checked.
+
+For arrays, you can copy the array and set that new array to the state value. So when deleting something from an array, create a copy without the thing you want to delete. When adding to an array, create a copy with the new item, and set that to the state.
+
+** useMemo
 :PROPERTIES:
 :ID:       89258539-a6ec-41ef-b4c3-ab696277ac30
 :END:
