@@ -150,6 +150,12 @@ function Image({ index, title }) {
 ...
 #+END_SRC
 
+** Re-rendering
+A functional component will re-render in one of the following scenarios:
+- The component just mounted.
+- The parent component re-rendered.
+- The component uses stateful hooks, which have updated.
+
 * Stateless components vs. stateful
 Components that depend only on their properties and have no internal logic beyond that are called *stateless componenets*. The opposite is *stateful components*, which do have some internal state.
 
@@ -287,3 +293,103 @@ For arrays, you can copy the array and set that new array to the state value. So
 :END:
 
 TODO
+
+** useEffect
+:PROPERTIES:
+:ID:       4151f221-bf11-4e97-901e-33eb8a547cc0
+:END:
+
+[[id:4151f221-bf11-4e97-901e-33eb8a547cc0][useEffect]] is triggered when any value in a set of dependencies change.
+
+[[id:4151f221-bf11-4e97-901e-33eb8a547cc0][useEffect]] also allows defining a "cleanup" function that can run in one of two cases:
+- Before the effect is triggered again
+- If the component unmounts.
+
+Here are some likely scenarios to use [[id:4151f221-bf11-4e97-901e-33eb8a547cc0][useEffect]]:
+- Loading external data in a component. Will want to do this when the component mounts.
+- Creating a timer with an interval.
+- Track when a dialog is closed. Can run an effect when the component unmounts.
+- Update the browser window title with the page currently displayed.
+- Run a timer, but only when an ~isActive~ flag is true.
+
+** useReducer
+:PROPERTIES:
+:ID:       a5007b76-578d-4d98-b890-2661828a5f4d
+:END:
+
+[[id:a5007b76-578d-4d98-b890-2661828a5f4d][useReducer]] is a stateful hook which serves as an advanced version of [[id:072acfe3-f6b5-4f03-9675-5a56f2320415][useState]]. It's a good way to generate a new state solely based on the current state and some action that takes a payload.
+
+[[id:a5007b76-578d-4d98-b890-2661828a5f4d][useReducer]] is never strictly necessary - anything possible with it can be done with a combination of [[id:072acfe3-f6b5-4f03-9675-5a56f2320415][useState]]s.
+
+TODO: Examples
+
+** useRef
+:PROPERTIES:
+:ID:       9ca29879-3648-4bf0-8338-7ec862662aa7
+:END:
+
+[[id:9ca29879-3648-4bf0-8338-7ec862662aa7][useRef]] is a hook with _passive state_, which means that it contains state, but setting or updating it does not re-render the component.
+
+It can be useful for storing references to [[id:d99e159b-96af-4464-831b-b812e5621144][DOM]] elements (hence the name) and remembering values between renders.
+
+To read or update the value of a [[id:9ca29879-3648-4bf0-8338-7ec862662aa7][useRef]] hook, access the ~.current~ property on the hook return value.
+
+*** Example: Click counter
+We want to increment a counter only when the user double-clicks a button. We need to store the timestamp of when the user last clicked the button. Another click close enough to that timestamp will count as a double-click.
+
+We could store the last click time using [[id:072acfe3-f6b5-4f03-9675-5a56f2320415][useState]], but that would cause the component to re-render for each click. That's inefficent, so we can instead use [[id:9ca29879-3648-4bf0-8338-7ec862662aa7][useRef]] to store the click time. This will ensure we don't re-render the component unnecessarily.
+
+#+BEGIN_SRC javascript
+import { useState, useRef } from "react";
+const THRESHOLD = 300;
+function DoubleClickCounter() {
+  const [counter, setCounter] = useState(0);
+  const lastClickTime = useRef(null);
+  const onClick = () => {
+    const isDoubleClick =
+      Date.now() - lastClickTime.current < THRESHOLD;
+    if (isDoubleClick) {
+      setCounter((value) => value + 1);
+    } else {
+      lastClickTime.current = Date.now();
+    }
+  };
+  return (
+    <main>
+      <p>Counter: {counter}</p>
+      <button onClick={onClick}>Increment</button>
+    </main>
+  );
+}
+function App() {
+  return <DoubleClickCounter />;
+}
+export default App;
+#+END_SRC
+
+*** Example: Reference to a [[id:d99e159b-96af-4464-831b-b812e5621144][DOM]] element
+#+BEGIN_SRC javascript
+function AutoFocusInput() {
+  const ref = useRef();
+  useEffect(() => ref.current.focus(), []);
+  return <input ref={ref} />;
+}
+#+END_SRC
+
+** useContext
+:PROPERTIES:
+:ID:       7a4d6456-508c-43c9-a857-4dd958d49b0c
+:END:
+
+[[id:7a4d6456-508c-43c9-a857-4dd958d49b0c][useContext]] is a stateful hook, which works in a store in a parent component somewhere up the component tree.
+
+TODO: More info and examples here.
+
+** useCallback
+:PROPERTIES:
+:ID:       94f60755-6b1c-4ed1-937d-35128d29715a
+:END:
+
+[[id:94f60755-6b1c-4ed1-937d-35128d29715a][useCallback]] is a specialized version of [[id:89258539-a6ec-41ef-b4c3-ab696277ac30][useMemo]], which is useful when [[id:89258539-a6ec-41ef-b4c3-ab696277ac30][useMemo]] is used to memoize a function.
+
+TODO: More info and examples here.
