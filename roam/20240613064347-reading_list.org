@@ -18,3 +18,5 @@ A list of books and articles that I'd like to read at some point.
 * Books
 ** [0/1] HTMX
 *** [ ] [[https://hypermedia.systems/][Hypermedia Systems]]
+** [0/1] React
+*** [-] [[https://livebook.manning.com/book/react-quickly-second-edition][React Quickly]]
