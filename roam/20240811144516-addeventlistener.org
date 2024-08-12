@@ -1,0 +1,16 @@
+:PROPERTIES:
+:ID:       8fb566bf-8bbf-4610-853b-0a1747661075
+:END:
+#+title: addEventListener
+
+To add a listener to an element (bubble and target phases):
+
+#+BEGIN_SRC javascript
+element.addEventListener("click", onClick);
+#+END_SRC
+
+To use a capture listener instead:
+
+#+BEGIN_SRC javascript
+element.addEventListener("click", onClick, { capture: true });
+#+END_SRC

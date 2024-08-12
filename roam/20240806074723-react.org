@@ -393,3 +393,152 @@ TODO: More info and examples here.
 [[id:94f60755-6b1c-4ed1-937d-35128d29715a][useCallback]] is a specialized version of [[id:89258539-a6ec-41ef-b4c3-ab696277ac30][useMemo]], which is useful when [[id:89258539-a6ec-41ef-b4c3-ab696277ac30][useMemo]] is used to memoize a function.
 
 TODO: More info and examples here.
+
+* Events
+:PROPERTIES:
+:ID:       34620dda-292e-42ce-8f93-4dbf43ef01fc
+:END:
+If you define a property on a [[id:a91b6fb3-4209-45d0-80d1-6fa59b70a746][JSX]] element that references an [[id:b785b344-47c9-4993-96a6-6a267af835b1][HTML]] node, and that property matches a known event from [[id:bb077623-5540-4767-b6d9-ae4301af5ef2][React]]'s list of supported events, [[id:bb077623-5540-4767-b6d9-ae4301af5ef2][React]] will treat the property as an event listener rather than a [[id:d99e159b-96af-4464-831b-b812e5621144][DOM]] attribute. [[id:bb077623-5540-4767-b6d9-ae4301af5ef2][React]] will correctly add and remove the event listener as the component mounts and unmounts.
+
+Listening to events in React is about three things:
+- Knowing what event to listen for
+- Knowing which element to listen on
+- Assiging a listening function on the correct property on the correct element
+
+Events in [[id:bb077623-5540-4767-b6d9-ae4301af5ef2][React]] "bubble" up. So a "focus" event will fire on a specific input field when it gets the focus, and the parent components can also define some behaviour for that focus events as well (example: highlight a section of a form when an input has focus).
+
+** Events supported directly in [[id:bb077623-5540-4767-b6d9-ae4301af5ef2][React]]
+:PROPERTIES:
+:ID:       23e9aee1-c9e1-41e8-8b97-55bd87a96fb3
+:END:
+| Event type         | Events                                                                |
+|--------------------+-----------------------------------------------------------------------|
+| Clipboard events   | onCopy onCut onPaste                                                  |
+| Composition events | onCompositionEnd onCompositionStart onCompositionUpdate               |
+| Keyboard events    | onKeyDown onKeyPress onKeyUp                                          |
+| Focus events       | onFocus onBlur                                                        |
+| Form events        | onChange onInput onInvalid onReset onSubmit                           |
+| Generic events     | onError onLoad                                                        |
+| Mouse events       | onClick onContextMenu onDoubleClick onDrag onDragEnd                  |
+|                    | onDragEnter onDragExit                                                |
+|                    | onDragLeave onDragOver onDragStart onDrop onMouseDown                 |
+|                    | onMouseEnter onMouseLeaveonMouseMove onMouseOut onMouseOver onMouseUp |
+| Pointer events     | onPointerDown onPointerMove onPointerUp onPointerCancel               |
+|                    | onGotPointerCapture                                                   |
+|                    | onLostPointerCapture onPointerEnter onPointerLeave                    |
+|                    | onPointerOver onPointerOut                                            |
+| Selection events   | onSelect                                                              |
+| Touch events       | onTouchCancel onTouchEnd onTouchMove onTouchStart                     |
+| UI events          | onScroll                                                              |
+| Wheel events       | onWheel                                                               |
+| Media events       | onAbort onCanPlay onCanPlayThrough onDurationChange                   |
+|                    | onEmptied onEncrypted                                                 |
+|                    | onEnded onError onLoadedData onLoadedMetadata onLoadStart             |
+|                    | onPause onPlay                                                        |
+|                    | onPlaying onProgress onRateChange onSeeked onSeeking                  |
+|                    | onStalled onSuspend                                                   |
+|                    | onTimeUpdate onVolumeChange onWaiting                                 |
+| Image events       | onLoad onError                                                        |
+| Animation events   | onAnimationStart onAnimationEnd onAnimationIteration                  |
+| Transition events  | onTransitionEnd                                                       |
+| Other events       | onToggle                                                              |
+
+** Adding to the "Capture" phase
+
+By default, events are added to the "bubble" phase (see [[id:77b9d50f-bd7f-4021-9794-509347634cc0][Events]] in [[id:ccd90ef7-390c-4623-9a21-49340850109b][Javascript]] for info on event phases). To add a listener on the "capture" phase, use the =*Capture= suffix.
+
+#+BEGIN_SRC html
+<main onClickCapture={handler1} onClick={handler4}>
+ <button onClickCapture={handler2} onClick={handler3} />
+</main>
+#+END_SRC
+
+** Note on event bubbling for mouse events
+mouseEnter/mouseLeave and pointerEnter/pointerLeave have some unusual behavior. See [[https://mortenbarklund.com/blog/today-learned-how-mouse-events-bubble-in-react/][this article]] for info.
+
+** Nonbubbling [[id:d99e159b-96af-4464-831b-b812e5621144][DOM]] events
+In the [[id:d99e159b-96af-4464-831b-b812e5621144][DOM]], blur and focus events don't bubble, but note that they do in [[id:bb077623-5540-4767-b6d9-ae4301af5ef2][React]].
+
+** Default actions and how to prevent them
+
+** Examples
+Example: onClick event
+#+BEGIN_SRC javascript
+import { useState } from "react";
+function Counter() {
+  const [counter, setCounter] = useState(0);
+  const onClick = () =>
+    setCounter((value) => value + 1);
+  return (
+    <>
+      <h1>Value: {counter}</h1>
+      <button onClick={onClick}>Increment</button>
+    </>
+  );
+}
+function App() {
+  return <Counter />;
+}
+export default App;
+#+END_SRC
+
+Example: onMouseMove event
+#+BEGIN_SRC javascript
+import { useState, useEffect } from "react";
+function MouseStatus () {
+  const [inMoving, setMoving] = useState(false);
+  const onMouseMove = () => setMoving(true);
+  useEffect(() => {
+    if (!isMoving) return;
+    const timeout = setTimeout(() => setMoving(false), 500);
+    return () => clearTimeout(timeout);
+  }, [isMoving]);
+  return (
+    <section onMouseMove={onMouseMove}>
+      <h2>
+        The mouse is {!isMoving && "not"} moving: {isMoving ? "✓" : "✗"}
+      </h2>
+    </section>
+  );
+}
+function App() {
+  return <MouseStatus />;
+}
+export default App;
+#+END_SRC
+
+Example: A very simple video player
+#+BEGIN_SRC javascript
+import { useState, useRef } from "react";
+const VIDEO_SRC =
+  "//images-assets.nasa.gov/video/One Small Step/One Small Step~orig.mp4";
+function VideoPlayer() {
+  const [isPlaying, setPlaying] = useState(false);
+  const onPlay = () => setPlaying(true);
+  const onPause = () => setPlaying(false);
+  const onClickPlay = () => video.current.play();
+  const onClickPause = () => video.current.pause();
+  const video = useRef();
+  return (
+    <section>
+      <video
+        ref={video}
+        src={VIDEO_SRC}
+        controls
+        width="480"
+        onPlay={onPlay}
+        onPause={onPause}
+      />
+      <button onClick={isPlaying ? onClickPause : onClickPlay}>
+        {isPlaying ? "Pause" : "Play"}
+      </button>
+    </section>
+  );
+}
+
+function App() {
+  return <VideoPlayer />;
+}
+
+export default App;
+#+END_SRC

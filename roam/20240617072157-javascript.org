@@ -69,3 +69,34 @@ const { a, b, ...otherAttrs } = someObject;
 :END:
 
 TODO
+
+* Events
+:PROPERTIES:
+:ID:       77b9d50f-bd7f-4021-9794-509347634cc0
+:ROAM_REFS: https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Building_blocks/Events
+:END:
+
+[[id:ccd90ef7-390c-4623-9a21-49340850109b][Javascript]] events are "things" that happen in the system (in this case, happen to [[id:b785b344-47c9-4993-96a6-6a267af835b1][HTML]] elements).
+
+Events have three phases.
+- Capture phase: Events are dispatched to all parent [[id:d99e159b-96af-4464-831b-b812e5621144][DOM]] nodes in descending order, starting with the window element, going through every ancestor, and ending at the parent of the target element.
+- Target phase: An event is dispatched to the target element itself.
+- Bubble phase: Events are dispatched to all parent [[id:d99e159b-96af-4464-831b-b812e5621144][DOM]] nodes in ascending order, starting with the parent of the target element and moving up through the ancestors until the window element.
+
+To add an event listener to a [[id:d99e159b-96af-4464-831b-b812e5621144][DOM]] element (bubble and target), use [[id:8fb566bf-8bbf-4610-853b-0a1747661075][addEventListener]].
+
+#+BEGIN_SRC javascript
+element.addEventListener("click", onClick);
+#+END_SRC
+
+To use a capture listener instead:
+
+#+BEGIN_SRC javascript
+element.addEventListener("click", onClick, { capture: true });
+#+END_SRC
+
+You can use the ~.eventPhase~ property on the event object to see which phase an event belongs to.
+
+- Event.CAPTURING_PHASE (1) for capture
+- Event.AT_TARGET (2) for target
+- Event.BUBBLING_PHASE (3) for bubble
