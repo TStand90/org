@@ -315,13 +315,117 @@ Here are some likely scenarios to use [[id:4151f221-bf11-4e97-901e-33eb8a547cc0]
 ** useReducer
 :PROPERTIES:
 :ID:       a5007b76-578d-4d98-b890-2661828a5f4d
+:ROAM_REFS: https://livebook.manning.com/book/react-quickly-second-edition/chapter-10/143
 :END:
 
 [[id:a5007b76-578d-4d98-b890-2661828a5f4d][useReducer]] is a stateful hook which serves as an advanced version of [[id:072acfe3-f6b5-4f03-9675-5a56f2320415][useState]]. It's a good way to generate a new state solely based on the current state and some action that takes a payload.
 
+The term "reducer" comes from [[id:762f448a-5ae7-4743-9c16-aa0b312404fb][MapReduce]]. Reducers are generally pure, simple, and side-effect-free functions that are deterministic and defines solely by their parameters.
+
 [[id:a5007b76-578d-4d98-b890-2661828a5f4d][useReducer]] is never strictly necessary - anything possible with it can be done with a combination of [[id:072acfe3-f6b5-4f03-9675-5a56f2320415][useState]]s.
 
-TODO: Examples
+#+BEGIN_SRC javascript
+const [state, dispatch] = useReducer(reducer, initialState);
+#+END_SRC
+
+~state~ and ~initialState~ work just like they do in [[id:072acfe3-f6b5-4f03-9675-5a56f2320415][useState]]. The new things are the ~dispatch~ function and the ~reducer~ function.
+
+*** dispatch
+~dispatch~ works as an enhanced setter function, which allows us to not set the value directly, but rather instruct the reducer function on how to set the value. ~dispatch~ is invoked with an *action* object, which is then passed to the reducer along with the old state.
+
+*** reducer
+~reducer~ is a function that takes the current state and a dispatched action and returns a new state based on them. The ~reducer~ is expected to return the new state.
+
+#+BEGIN_SRC javascript
+function reducer(state, { type, payload }) {
+  switch (type) {
+    case "TYPE_A":
+      // return new state based on TYPE_A
+    case "TYPE_B":
+      // return new state based on TYPE_B
+  }
+}
+#+END_SRC
+
+*** Interdependent state
+Imagine a scenario where we are loading data from an external source. We have three states: =Loading=, =Loading Succeeded=, and =Loading Failed=. We also would have something to hold the loaded data, and an error message if the loading failed. It would not make sense for the error or result to be anything but ~null~ if the state is =LOADING=, and if the state is =FAILED=, then the result would not have a value.
+
+This is a good case for [[id:a5007b76-578d-4d98-b890-2661828a5f4d][useReducer]]. We can define thet states as =INITIALIZE=, =LOADING=, =FAILURE=, and =SUCCESS=.
+
+#+BEGIN_SRC javascript
+function reducer(state, { type, payload }) {
+  switch (type) {
+    case "INITIALIZE":
+      return {
+        status: "INITIALIZE",
+        result: null,
+        error: null,
+      };
+    case "LOADING":
+      return {
+        ...state,
+        status: "LOADING",
+      };
+    case "FAILURE":
+      return {
+        ...state,
+        status: "FAILURE",
+        error: payload,
+      };
+    case "SUCCESS":
+      return {
+        ...state,
+        status: "SUCCESS",
+        result: payload,
+      };
+  }
+}
+#+END_SRC
+
+*** Examples
+
+#+BEGIN_SRC javascript
+import { useReducer } from "react";
+
+function reducer(state, { type }) {
+  switch (type) {
+    case "INCREMENT":
+      return state + 1;
+    case "DECREMENT":
+      return state - 1;
+    default:
+      return state;
+  }
+}
+
+function Counter() {
+  const [counter, dispatch] = useReducer(reducer, 0);
+
+  return (
+    <section>
+      <h1>Counter: {counter}</h1>
+      <div>
+        <button onClick={
+          () => dispatch({ type: "INCREMENT" })
+        }>
+          Increment
+        </button>
+        <button onClick={
+          () => dispatch({ type: "DECREMENT" })
+        }>
+          Decrement
+        </button>
+      </div>
+    </section>
+  )
+}
+
+function App() {
+  return <Counter />;
+}
+
+export default App;
+#+END_SRC
 
 ** useRef
 :PROPERTIES:
@@ -383,7 +487,9 @@ function AutoFocusInput() {
 
 [[id:7a4d6456-508c-43c9-a857-4dd958d49b0c][useContext]] is a stateful hook, which works in a store in a parent component somewhere up the component tree.
 
-TODO: More info and examples here.
+Use ~createContext~ to create the context value, and use this hook to use the value.
+
+The [[id:7a4d6456-508c-43c9-a857-4dd958d49b0c][useContext]] hook is stateful. So if the context value changes, the component will re-render.
 
 ** useCallback
 :PROPERTIES:
@@ -393,6 +499,36 @@ TODO: More info and examples here.
 [[id:94f60755-6b1c-4ed1-937d-35128d29715a][useCallback]] is a specialized version of [[id:89258539-a6ec-41ef-b4c3-ab696277ac30][useMemo]], which is useful when [[id:89258539-a6ec-41ef-b4c3-ab696277ac30][useMemo]] is used to memoize a function.
 
 TODO: More info and examples here.
+
+** Custom Hooks
+:PROPERTIES:
+:ID:       79a8478e-e1db-41fc-afe0-748cec9af872
+:END:
+To create a custom hook, all you have to do is define a function that calls a [[id:bb077623-5540-4767-b6d9-ae4301af5ef2][React]] hook.
+
+#+BEGIN_SRC javascript
+function useName() {
+  return useContext(NameContext);
+}
+#+END_SRC
+
+That's it. Note that the naming convention is to start the function with ~use*~.
+
+[[id:79a8478e-e1db-41fc-afe0-748cec9af872][Custom Hooks]] have to obey the same rules as hooks. You can't use them outside functional components, and you can only use [[id:bb077623-5540-4767-b6d9-ae4301af5ef2][React]] hooks if you always use the same hooks in the same order.
+
+*** Examples
+
+Example: A ~useToggle~ function to toggle boolean values.
+
+#+BEGIN_SRC javascript
+function useToggle(default = false) {
+  const [value, setter] = useState(Boolean(default));
+  const toggle = () => setter(v => !v);
+  return [value, toggle];
+}
+#+END_SRC
+
+It's common to return an array of the value and the function, the same way [[id:072acfe3-f6b5-4f03-9675-5a56f2320415][useState]] does.
 
 * Events
 :PROPERTIES:
@@ -708,6 +844,102 @@ function TicketNumber() {
 }
 function App() {
   return <TicketNumber />;
+}
+export default App;
+#+END_SRC
+
+* React Context
+:PROPERTIES:
+:ID:       693da7bd-8492-4a6e-8bd3-c4f45b9971dc
+:END:
+
+React Context is a way to wrap a number of components with a value that all descendant components can access without going through properties. It is a solution to [[id:1edb99c5-8a4d-4755-994f-4c5f8857c64d][Prop drilling]].
+
+You can use contexts by using ~createContext~ to create the context, and the [[id:7a4d6456-508c-43c9-a857-4dd958d49b0c][useContext]] hook to use the set value.
+
+It is common practice to name a context variable in capital case, as it serves a similar purpose to a [[id:bb077623-5540-4767-b6d9-ae4301af5ef2][React]] component.
+
+~createContext~ takes a single argument, which is the default value.
+
+#+BEGIN_SRC javascript
+import { createContext } from 'react';
+const MyContext = createContext(defaultValue);
+#+END_SRC
+
+Context variables have two properties: ~Provider~ and ~Consumer~.
+
+Provider is used to create a context that can be consumed. The consumer is used to consume the *nearest* provided context. You can use the same context many times in your application, and you can even nest the same context.
+
+When you consume a context, you'll get the value provided by the *nearest* provider, going up the [[id:a91b6fb3-4209-45d0-80d1-6fa59b70a746][JSX]] document tree. If no provider exists above the consumer, the default value is given.
+
+** Prop drilling
+:PROPERTIES:
+:ID:       1edb99c5-8a4d-4755-994f-4c5f8857c64d
+:END:
+The practice of adding properties to a component with the sole purpose of allowing that component to pass those properties on to other components is called *prop drilling*. You _drill_ the _property_ through many layers of components because you need to get it from the outside to the inside.
+
+[[id:693da7bd-8492-4a6e-8bd3-c4f45b9971dc][React Context]] is one of the best tools to combat this.
+
+** Examples
+
+The below example uses contexts to set a ~name~ value that is used in several components.
+
+#+BEGIN_SRC javascript
+import { createContext, useContext } from "react";
+const BUTTON_STYLE = {
+  display: "inline-block",
+  padding: "4px 10px",
+  background: "transparent",
+  border: "0",
+};
+const HEADER_STYLE = {
+  display: "flex",
+  justifyContent: "flex-end",
+  borderBottom: "1px solid",
+};
+const NameContext = createContext();
+function Button({ children }) {
+  return <button style={BUTTON_STYLE}>{children}</button>;
+}
+function UserButton() {
+  const name = useContext(NameContext);
+  return <Button>👤 {name}</Button>;
+}
+function Header() {
+  return (
+    <header style={HEADER_STYLE}>
+      <Button>Home</Button>
+      <Button>Groups</Button>
+      <Button>Profile</Button>
+      <UserButton />
+    </header>
+  );
+}
+function Welcome() {
+  const name = useContext(NameContext);
+  return (
+    <section>
+      <h1>Welcome, {name}!</h1>
+    </section>
+  );
+}
+function Main() {
+  return (
+    <main>
+      <Welcome />
+    </main>
+  );
+}
+function Dashboard({ name }) {
+  return (
+    <NameContext.Provider value={name}>
+      <Header />
+      <Main />
+    </NameContext.Provider>
+  );
+}
+function App() {
+  return <Dashboard name="Alice" />;
 }
 export default App;
 #+END_SRC
