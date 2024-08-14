@@ -165,6 +165,34 @@ const content = (
 );
 #+END_SRC
 
+* Conditional Rendering
+:PROPERTIES:
+:ID:       92da6749-11ed-4e38-a87d-cf525c912457
+:ROAM_REFS: https://legacy.reactjs.org/docs/conditional-rendering.html
+:END:
+The ~&&~ operator can be handy for conditionally rendering an element.
+
+#+BEGIN_SRC javascript
+function Mailbox(props) {
+  const unreadMessages = props.unreadMessages;
+  return (
+    <div>
+      <h1>Hello!</h1>
+      {unreadMessages.length > 0 &&
+        <h2>
+          You have {unreadMessages.length} unread messages.
+        </h2>
+      }
+    </div>
+  );
+}
+
+const messages = ['React', 'Re: React', 'Re:Re: React'];
+
+const root = ReactDOM.createRoot(document.getElementById('root'));
+root.render(<Mailbox unreadMessages={messages} />);
+#+END_SRC
+
 * The key property
 ~key~ is an important property in JSX when you have a list of items. ~key~ differentiates each item so that [[id:bb077623-5540-4767-b6d9-ae4301af5ef2][React]] can keep track of it in the [[id:d99e159b-96af-4464-831b-b812e5621144][DOM]].
 
@@ -193,6 +221,8 @@ class Select extends Component {
 }
 export default App;
 #+END_SRC
+
+Note how we use ~.map~ to loop through items instead of a ~for~ loop. This is common practice in [[id:a91b6fb3-4209-45d0-80d1-6fa59b70a746][JSX]].
 
 * Fragment
 Fragments can be used to wrap elements without creating a new element itself (like an unused ~<div>~).
