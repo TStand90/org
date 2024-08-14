@@ -16,6 +16,8 @@ A list of books and articles that I'd like to read at some point.
 *** [ ] [[https://andrewlock.net/series/behind-the-scenes-of-minimal-apis/][Behind the scenes of Minimal APIs]]
 
 * Books
+** [/] General
+*** [ ] Working Effectively with Legacy Code
 ** [0/1] HTMX
 *** [ ] [[https://hypermedia.systems/][Hypermedia Systems]]
 ** [0/1] React
