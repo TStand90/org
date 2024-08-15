@@ -20,5 +20,11 @@ A list of books and articles that I'd like to read at some point.
 *** [ ] Working Effectively with Legacy Code
 ** [0/1] HTMX
 *** [ ] [[https://hypermedia.systems/][Hypermedia Systems]]
-** [0/1] React
-*** [-] [[https://livebook.manning.com/book/react-quickly-second-edition][React Quickly]]
+** [1/1] React
+*** [X] [[https://livebook.manning.com/book/react-quickly-second-edition][React Quickly]]
+- Note taken on [2024-08-15 Thu 07:47] \\
+  Marking this one done for now. There are still two more exercise chapters left (chapters 12 & 13).
+
+  Maybe I'll come back and do them later. Maybe not.
+
+  Honestly, I can't stand to work with [[id:bb077623-5540-4767-b6d9-ae4301af5ef2][React]] any longer than I have to.
