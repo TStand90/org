@@ -82,3 +82,14 @@ CLOCK: [2024-06-10 Mon 11:52]--[2024-06-10 Mon 12:17] =>  0:25
 *** Rx(?)
 *** Messages
 *** ConsultationRequests
+
+
+* Messages to post
+** [ ] Ask in dev-private what everyone thinks about the type hint for returning "Self" from Pydantic validators.
+We have two options:
+- return ~typing_extensions.Self~
+- return the same class name in quotes.
+
+It doesn't /really/ matter much, but we should pick one and stick with it.
+
+Note that ~Self~ is part of ~typing~ as of Python 3.11, but for now, we need to use ~typing_extensions~. Only mentioning this in case your IDE suggests importing from ~typing~ (mine did).
