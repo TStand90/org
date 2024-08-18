@@ -1,0 +1,9 @@
+:PROPERTIES:
+:ID:       0b9da821-0669-4990-bbb0-af2716691a10
+:END:
+#+title: 100 PostgreSQL Mistakes and How to Avoid Them
+
+100 PostgreSQL Mistakes and How to Avoid Them is a book published by Manning.
+
+* Bad SQL Usage
+** Using NOT IN to exclude

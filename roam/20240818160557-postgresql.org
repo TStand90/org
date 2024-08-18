@@ -1,0 +1,14 @@
+:PROPERTIES:
+:ID:       76edc8e3-e382-4acf-b4f6-3e3b6ede64e5
+:END:
+#+title: PostgreSQL
+
+PostgreSQL is the "default" choice for databases these days.
+
+* Using EXPLAIN
+:PROPERTIES:
+:ID:       fcf84f3b-f22f-4ba0-a85a-d4b51f0eee5b
+:ROAM_REFS: https://www.postgresql.org/docs/current/using-explain.html
+:END:
+
+~EXPLAIN~ is a command to discover what plan the query planner creates for a query.

@@ -1,0 +1,8 @@
+:PROPERTIES:
+:ID:       0931dacb-5232-4b98-a332-452366f019fb
+:END:
+#+title: Predicate
+
+A "predicate" in database terminology is a conditional that resolves to a boolean value.
+
+Example: the ~WHERE~ clause in SQL.
