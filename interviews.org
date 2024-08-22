@@ -1,0 +1,50 @@
+#+title: Interviews
+#+description: A log of interviews I have done
+
+* Ongoing
+** [[https://joinmochi.com/][Mochi Health]]
+*** First call with recruiter
+August 22 8:00 AM
+Alex Hampton
+( based in New York )
+( Australian accent )
+
+Parallel - Search form
+
+Health tech company in San Francisco.
+
+Mochi Health
+
+Founded by Myra Ahmed, MD
+
+Caters to patients dealing with Obesity
+
+Specialist providers in the obesity space (dieticians, nutritionists, sleep therapists, etc.)
+
+Founded about 2 years ago, went through series A funding.
+
+Less than 60 full time, still "very much a startup"
+
+Seats available
+
+Tech stack:
+- Node JS
+- Typescript
+- React
+- Kubernetes
+
+On site 5 days a week
+
+By the Museum of Modern Art.
+
+Equity?
+
+200k is the most.
+
+Alex thinks it's probably not as good insurance.
+
+Rest of the interview process:
+- Talk with chief of staff to talk about company
+- First tech interview
+- May go straight to on site
+- Maybe 3/4 interviews but not any more
