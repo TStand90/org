@@ -1,5 +1,5 @@
 #+title: Study
 
 * Frontend
-** [0/1] React
-*** [-] React Quickly, Second Edition
+** [1/1] React
+*** [X] React Quickly, Second Edition
