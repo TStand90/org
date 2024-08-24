@@ -30,9 +30,10 @@ Constraints:
 -104 <= nums[i] <= 104
 
 * Solution
-Can be done with [[id:92767955-14fb-443d-bc5e-35da7ca59b1c][Quick Sort]] or [[id:c4afc7cd-66e2-46de-8499-fbffd3db543a][Merge Sort]]. Note that [[id:92767955-14fb-443d-bc5e-35da7ca59b1c][Quick Sort]] is too slow when taking the last element as the pivot. It fails on large, almost sorted cases.
+There are two ways I know of to solve this. Sorting, and a [[id:65163304-d9ac-401a-afe4-c2bf19fb73c3][Heap]].
 
-*NOTE*: I have not yet found the solution without sorting, as the problem mentions. The [[id:c4afc7cd-66e2-46de-8499-fbffd3db543a][Merge Sort]] solution does work, but it's a bit slow.
+** Sorting
+Can be done with [[id:92767955-14fb-443d-bc5e-35da7ca59b1c][Quick Sort]] or [[id:c4afc7cd-66e2-46de-8499-fbffd3db543a][Merge Sort]]. Note that [[id:92767955-14fb-443d-bc5e-35da7ca59b1c][Quick Sort]] is too slow when taking the last element as the pivot. It fails on large, almost sorted cases.
 
 ** [[id:3a948b50-dedc-4fdf-a86c-05c1c3a9f230][Python]]
 #+BEGIN_SRC python
@@ -110,4 +111,18 @@ class Solution:
         print(nums)
 
         return nums[-k]
+#+END_SRC
+
+
+** [[id:65163304-d9ac-401a-afe4-c2bf19fb73c3][Heap]]
+
+A better solution (I think?) is to use a Heap.
+
+#+BEGIN_SRC python
+import heapq
+
+
+class Solution:
+    def findKthLargest(self, nums: list[int], k: int) -> int:
+        return heapq.nlargest(k, nums)[-1]
 #+END_SRC
