@@ -96,7 +96,7 @@ aws ssm start-session --profile wisp-tech-prod \
 
 - login to aws through console with aws sso login --profile wisp-tech-root
 - set prod context with kubectl config use-context prod
-- Lookup available prod pods with kubectl get pods -n swa
+- Lookup available prod pods with ~kubectl get pods -n swa~
 - Pick a web pod (named prod-swa-web-x-y
 - exec into it with kubectl exec -ti <webpod_name> bash -n swa
 - Once you're in bash you can just run ./manage shell like normal and now you're in a full production shell
