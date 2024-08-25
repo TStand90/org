@@ -30,7 +30,8 @@ A list of books and articles that I'd like to read at some point.
   Holding off on this one until I finish Letters from a Stoic.
 ** Programming
 *** [0/1] General
-**** [ ] Working Effectively with Legacy Code
+**** [-] Working Effectively with Legacy Code
+DEADLINE: <2024-09-30 Mon>
 *** [0/1] HTMX
 **** [ ] [[https://hypermedia.systems/][Hypermedia Systems]]
 *** [0/3] Interview Prep
