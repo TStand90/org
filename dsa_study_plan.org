@@ -2,5 +2,8 @@
 
 Goal: Be ready by August 31st.
 
+* [ ] Backtracking
+* [ ] Dynamic Programming
+* [ ] Graphs
 * [ ] HashMaps
-* [ ] Heaps
+* [X] Heaps
