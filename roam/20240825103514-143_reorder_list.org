@@ -1,0 +1,62 @@
+:PROPERTIES:
+:ID:       8b026d83-ef9e-4a18-ad4a-bd263b8863b3
+:ROAM_REFS: https://leetcode.com/problems/reorder-list/description/
+:END:
+#+title: 143. Reorder List
+
+* Solution
+** Python
+#+BEGIN_SRC python
+# Definition for singly-linked list.
+# class ListNode:
+#     def __init__(self, val=0, next=None):
+#         self.val = val
+#         self.next = next
+class Solution:
+    def reorderList(self, head: Optional[ListNode]) -> None:
+        """
+        Do not return anything, modify head in-place instead.
+        """
+        if head is None or head.next is None:
+            return head
+
+        nodes_list = []
+
+        current_node = head.next
+
+        while current_node != None:
+            nodes_list.append(current_node)
+            current_node = current_node.next
+
+        pick_from_left = False
+
+        previous_node = head
+        current_node = None
+
+        left_index = 0
+        right_index = len(nodes_list) - 1
+
+        while left_index <= right_index:
+            if left_index == right_index:
+                current_node = nodes_list[left_index]
+                previous_node.next = current_node
+                current_node.next = None
+                break
+
+            if pick_from_left:
+                current_node = nodes_list[left_index]
+                previous_node.next = current_node
+                current_node.next = None
+
+                left_index += 1
+            else:
+                current_node = nodes_list[right_index]
+                previous_node.next = current_node
+                current_node.next = None
+
+                right_index -= 1
+
+            pick_from_left = not pick_from_left
+
+            previous_node = current_node
+#+END_SRC
