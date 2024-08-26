@@ -1,0 +1,20 @@
+:PROPERTIES:
+:ID:       341e261f-8bf0-4518-ad78-73d0f4b4b399
+:END:
+#+title: Unit Test
+
+In the book [[id:42a0e03e-ed8b-4922-96c0-d60ffed1f7b1][Working Effectively with Legacy Code]], author Michael C. Feathers describes unit tests as such:
+1. They run fast.
+2. They help us localize problems.
+
+A unit test that takes 1/10th of a second is _not fast_. This is because if you have 30,000 unit tests in a codebase, it will take nearly an hour to run.
+
+Running fast is important, as you want to be able to run your entire unit test suite quickly (ideally 10 minutes or less).
+
+He also says that a test is *not* a unit test if:
+1. It talks to a database.
+2. It communicates across a network.
+3. It touches the file system.
+4. You have to do special things to your environment (such as editing configuration files) for it to run.
+
+Such tests are useful, but they are not [[id:341e261f-8bf0-4518-ad78-73d0f4b4b399][Unit Test]]s.

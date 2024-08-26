@@ -1,0 +1,142 @@
+:PROPERTIES:
+:ID:       42a0e03e-ed8b-4922-96c0-d60ffed1f7b1
+:END:
+#+title: Working Effectively with Legacy Code
+#+description: A book by Michael C. Feathers
+
+* Chapter 1: Changing Software
+:PROPERTIES:
+:ID:       7d9ed93b-e047-4312-a8a9-3cf142c0baee
+:END:
+
+There are four primary reasons to change software.
+1. Adding a feature
+2. Fixing a bug
+3. Improving the design
+4. Optimizing resource usage
+
+* Chapter 2: Working with Feedback
+:PROPERTIES:
+:ID:       c969fb5b-4892-4617-a065-c571a1f79161
+:END:
+[[id:341e261f-8bf0-4518-ad78-73d0f4b4b399][Unit Test]]s are invaluable for making changes to legacy code.
+
+When classes depend directly on things that are hard to use in a test, they are hard to modify and hard to work with.
+
+A lot of legacy code work involves breaking dependencies so that change can be easier.
+
+*The Legacy Code Dilemma*
+#+BEGIN_QUOTE
+When we change code, we should have tests in place. To put tests in place, we often have to change code.
+#+END_QUOTE
+
+Examples: Primitive Parameter (385) and Extract Interface (362).
+
+** The Legacy Code Change Algorithm
+1. Identify change points
+2. Find test points
+3. Break dependencies
+4. Write tests
+5. Make changes and refactor
+
+*** Identify change points
+The places where you need to make your changes depends sensitively on your archetecture.
+
+- [[id:dd0d7e4d-845b-49dc-bdac-ed6ed203523a][Chapter 16: I Don't Understand the Code Well Enough to Change It.]]
+- [[id:b2c7ccd5-1f39-4ff5-8131-7c1fb13bb472][Chapter 17: My Application Has No Structure.]]
+
+*** Find test points
+Finding places to write tests for legacy code is not always easy.
+
+- [[id:41d68397-7046-41dc-83f7-85bc3a7106ad][Chapter 11: I Need to Make a Change. What Methods Should I Test?]]
+- [[id:5fe0534a-8d61-41bc-87b0-9aa3aabbd47f][Chapter 12: I Need to Make Many Changes in One Area. Do I Have to Break Dependencies for All the Classes Involved?]]
+
+*** Break dependencies
+Dependencies are often a huge impediment to testing. The two ways this problem manifests:
+- Difficulty instantiating objects in test harnesses
+- Difficulty running methods in test harnesses.
+
+- [[id:8bdec501-dea0-4172-bb68-1367ecf6878e][Chapter 23: How Do I Know That I'm Not Breaking Anything?]]
+- [[id:ba70d248-dbeb-40d2-b3d0-110fde4986d8][Chapter 9: I Can't Get This Class into a Test Harness.]]
+- [[id:e304cda9-bf18-4a2a-9dfd-d3a74d3c2541][Chapter 10: I Can't Run This Method in a Test Harness.]]
+- [[id:1b57e501-463c-49a7-9332-d72653cae96c][Chapter 22: I Need to Change a Monster Method and I Can't Write Tests for It.]]
+- [[id:6cf272a1-b60b-4e93-aa92-341f66a08319][Chapter 7: It Takes Forever to Make a Change.]]
+
+*** Write tests
+- [[id:b8d9621f-28d2-44ce-92f8-c65f2dab0337][Chapter 13: I Need to Make a Change but I Don't Know What Tests to Write.]]
+
+*** Make changes and refactor
+- [[id:9fa2652c-2ac2-4cda-b331-f043746f42aa][Chapter 8: How Do I Add a Feature?]]
+- [[id:9da59c39-ebfc-4048-b876-2d8e160367e2][Chapter 20: This Class Is Too Big and I Don't Want It to Get Any Bigger]]
+- [[id:1b57e501-463c-49a7-9332-d72653cae96c][Chapter 22: I Need to Change a Monster Method and I Can't Write Tests for It.]]
+- [[id:1d35f9c6-af51-4212-9bba-91cc36ca39b3][Chapter 21: I'm Changing the Same Code All Over the Place]]
+
+* Chapter 3: Sensing and Separation
+:PROPERTIES:
+:ID:       fc4440ec-2c41-4fdc-a786-aa0abe39f55d
+:END:
+
+* Chapter 7: It Takes Forever to Make a Change.
+:PROPERTIES:
+:ID:       6cf272a1-b60b-4e93-aa92-341f66a08319
+:END:
+
+* Chapter 8: How Do I Add a Feature?
+:PROPERTIES:
+:ID:       9fa2652c-2ac2-4cda-b331-f043746f42aa
+:END:
+
+* Chapter 9: I Can't Get This Class into a Test Harness.
+:PROPERTIES:
+:ID:       ba70d248-dbeb-40d2-b3d0-110fde4986d8
+:END:
+
+* Chapter 10: I Can't Run This Method in a Test Harness.
+:PROPERTIES:
+:ID:       e304cda9-bf18-4a2a-9dfd-d3a74d3c2541
+:END:
+
+* Chapter 11: I Need to Make a Change. What Methods Should I Test?
+:PROPERTIES:
+:ID:       41d68397-7046-41dc-83f7-85bc3a7106ad
+:END:
+
+* Chapter 12: I Need to Make Many Changes in One Area. Do I Have to Break Dependencies for All the Classes Involved?
+:PROPERTIES:
+:ID:       5fe0534a-8d61-41bc-87b0-9aa3aabbd47f
+:END:
+
+* Chapter 13: I Need to Make a Change but I Don't Know What Tests to Write.
+:PROPERTIES:
+:ID:       b8d9621f-28d2-44ce-92f8-c65f2dab0337
+:END:
+
+* Chapter 16: I Don't Understand the Code Well Enough to Change It.
+:PROPERTIES:
+:ID:       dd0d7e4d-845b-49dc-bdac-ed6ed203523a
+:END:
+
+* Chapter 17: My Application Has No Structure.
+:PROPERTIES:
+:ID:       b2c7ccd5-1f39-4ff5-8131-7c1fb13bb472
+:END:
+
+* Chapter 20: This Class Is Too Big and I Don't Want It to Get Any Bigger
+:PROPERTIES:
+:ID:       9da59c39-ebfc-4048-b876-2d8e160367e2
+:END:
+
+* Chapter 21: I'm Changing the Same Code All Over the Place
+:PROPERTIES:
+:ID:       1d35f9c6-af51-4212-9bba-91cc36ca39b3
+:END:
+
+* Chapter 22: I Need to Change a Monster Method and I Can't Write Tests for It.
+:PROPERTIES:
+:ID:       1b57e501-463c-49a7-9332-d72653cae96c
+:END:
+
+* Chapter 23: How Do I Know That I'm Not Breaking Anything?
+:PROPERTIES:
+:ID:       8bdec501-dea0-4172-bb68-1367ecf6878e
+:END:
