@@ -76,6 +76,45 @@ Dependencies are often a huge impediment to testing. The two ways this problem m
 :ID:       fc4440ec-2c41-4fdc-a786-aa0abe39f55d
 :END:
 
+Generally, when we want to get tests in place, there are two reasons to break dependencies: /sensing/ and /separation/.
+1. *Sensing* - We break dependencies to /sense/ when we can't access values our code computes.
+2. *Separation* - We break dependencies to /separate/ when we can't even get a piece of code into a test harness to run.
+
+*** Faking collaborators
+Fake objects can be helpful when writings tests. An example might be a "Display" object which displays to some output screen (a cash register screen, perhaps). ~FakeDisplay~ could just hold and print out the string in the tests.
+
+Fake objects can be created in [[id:0cabecd4-2482-413f-a76a-81ad31b6bd2b][Object Oriented]] languages by creating simple, fake classes (often using an interface shared with the real class).
+
+Non [[roam:Object Oriented]] languages can still use the fake pattern, by defining alternate functions that record values in some global data structure that we access in tests. For more details, see [[id:d090755d-9397-4128-98cd-82c8ec222671][Chapter 19: My Project is Not Object-Oriented. How Do I Make Safe Changes?]]
+
+*** Mock objects
+Mock objects are a more advanced type of fake object. They are fakes that perform assertions internally.
+
+Example: SaleTest in Java
+#+BEGIN_SRC java
+import junit.framework.*;
+
+public class SaleTest extends TestCase
+{
+    public void testDisplayAnItem() {
+        MockDisplay display = new MockDisplay();
+        display.setExpectation("showLine", "Milk $3.99");
+        Sale sale = new Sale(display);
+        sale.scan("1");
+        display.verify();
+    }
+}
+#+END_SRC
+
+Mocks tend to be better than Fake objects when they are available, but not every language supports them. Fake objects are oftentimes good enough.
+
+* Chapter 4: The Seam Model
+:PROPERTIES:
+:ID:       85ffa26e-14d9-4563-8768-c5625a01ec92
+:END:
+
+
+
 * Chapter 7: It Takes Forever to Make a Change.
 :PROPERTIES:
 :ID:       6cf272a1-b60b-4e93-aa92-341f66a08319
@@ -119,6 +158,11 @@ Dependencies are often a huge impediment to testing. The two ways this problem m
 * Chapter 17: My Application Has No Structure.
 :PROPERTIES:
 :ID:       b2c7ccd5-1f39-4ff5-8131-7c1fb13bb472
+:END:
+
+* Chapter 19: My Project is Not Object-Oriented. How Do I Make Safe Changes?
+:PROPERTIES:
+:ID:       d090755d-9397-4128-98cd-82c8ec222671
 :END:
 
 * Chapter 20: This Class Is Too Big and I Don't Want It to Get Any Bigger
