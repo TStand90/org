@@ -113,7 +113,15 @@ Mocks tend to be better than Fake objects when they are available, but not every
 :ID:       85ffa26e-14d9-4563-8768-c5625a01ec92
 :END:
 
+* Chapter 5: Tools
+:PROPERTIES:
+:ID:       6133839c-71e7-444c-be04-8cb8e08a8d22
+:END:
 
+* Chapter 6: I Don't Have Much Time and I Have to Change It
+:PROPERTIES:
+:ID:       269d0141-1442-443e-bf04-32d6f338a26c
+:END:
 
 * Chapter 7: It Takes Forever to Make a Change.
 :PROPERTIES:
@@ -150,6 +158,16 @@ Mocks tend to be better than Fake objects when they are available, but not every
 :ID:       b8d9621f-28d2-44ce-92f8-c65f2dab0337
 :END:
 
+* Chapter 14: Dependencies on Libraries Are Killing Me
+:PROPERTIES:
+:ID:       15004104-4888-4c93-90c6-cd71d8b9bf7d
+:END:
+
+* Chapter 15: My Application Is All API Calls
+:PROPERTIES:
+:ID:       e1cad0d0-5276-4f1a-829e-a34b48c0c10a
+:END:
+
 * Chapter 16: I Don't Understand the Code Well Enough to Change It.
 :PROPERTIES:
 :ID:       dd0d7e4d-845b-49dc-bdac-ed6ed203523a
@@ -158,6 +176,11 @@ Mocks tend to be better than Fake objects when they are available, but not every
 * Chapter 17: My Application Has No Structure.
 :PROPERTIES:
 :ID:       b2c7ccd5-1f39-4ff5-8131-7c1fb13bb472
+:END:
+
+* Chapter 18: My Test Code Is in the Way
+:PROPERTIES:
+:ID:       1145c8c3-16e2-48ce-a358-4aa788e5b49a
 :END:
 
 * Chapter 19: My Project is Not Object-Oriented. How Do I Make Safe Changes?
@@ -184,3 +207,10 @@ Mocks tend to be better than Fake objects when they are available, but not every
 :PROPERTIES:
 :ID:       8bdec501-dea0-4172-bb68-1367ecf6878e
 :END:
+
+* Chapter 24: We Feel Overwhelmed. It Isn't Going to Get Any Better
+:PROPERTIES:
+:ID:       0c087728-6b55-4eb1-96a0-2deb0c1ad86e
+:END:
+
+* Chapter 25: Dependency-Breaking Techniques
