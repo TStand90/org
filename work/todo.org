@@ -71,18 +71,26 @@ CLOCK: [2024-06-10 Mon 11:52]--[2024-06-10 Mon 12:17] =>  0:25
 *** [X] GetPatientPrescriptions
 *** [X] SearchMedicationsByName
 *** [X] SearchPharmacies
-* Misc [1/2]
+* Misc [2/5]
 ** [?] [[https://github.com/hellowisp/secure.hellowisp.com/pull/4260][Unticketed PR]] to change SnoozeRequestMixin.missed_calls_count to be non-nullable
 ** [X] Remove feature flag for disabling DoseSpot API
 
 ** [ ] models.Patient.has_synchronous_state can return None
 This method should only ever return True or False
 ** [ ] models.Patient.has_synchronous_state can cause memory leaks because of lru_cache
+** [X] Un-fucking my local DB
+*** [X] Copying migrations into the new migrations folder
+:LOGBOOK:
+CLOCK: [2024-08-26 Mon 17:22]--[2024-08-26 Mon 17:47] =>  0:25
+:END:
 * Editable Medications
 ** [X] WE-460: New Provider UI
+** HOLD Investigating UI failure for lab slips
+- Note taken on [2024-08-26 Mon 21:00] \\
+  I have no idea why what I did for this task would mess up the lab slips component. I'm guessing it's unrelated.
 ** [-] WE-460 Tests
 :LOGBOOK:
-CLOCK: [2024-08-26 Mon 15:06]
+CLOCK: [2024-08-26 Mon 15:06]--[2024-08-26 Mon 15:31] =>  0:25
 :END:
 * Messages to post
 ** [ ] Ask in dev-private what everyone thinks about the type hint for returning "Self" from Pydantic validators.
