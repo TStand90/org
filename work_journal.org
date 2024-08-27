@@ -13,3 +13,6 @@ This file will be an accounting of what I have done at work, for me to reflect u
 The goal of this project was to upgrade our codebase from DoseSpot's API V1 to their V2 API. DoseSpot informed us that we had a set time limit to get this done. As it turns out, their timeline was more flexible than we thought (they pushed it for several other clients), but we needed to get it done sooner rather than later anyway.
 
 Our codebase called DoseSpot API V1 all over our backend. Calls to their API were scattered throughout, with no patterns or structure to much of anything.
+
+** Editable Medications
+- Timeline: July 2024 - Today
