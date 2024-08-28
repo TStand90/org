@@ -85,9 +85,20 @@ CLOCK: [2024-08-26 Mon 17:22]--[2024-08-26 Mon 17:47] =>  0:25
 :END:
 * Editable Medications
 ** [X] WE-460: New Provider UI
-** HOLD Investigating UI failure for lab slips
-- Note taken on [2024-08-26 Mon 21:00] \\
-  I have no idea why what I did for this task would mess up the lab slips component. I'm guessing it's unrelated.
+** [X] Investigating UI failure for lab slips
+- Note taken on [2024-08-27 Tue 07:06] \\
+  Investigation lead to creation of WE-579
+** [-] [[https://hellowisp.atlassian.net/browse/WISPENG-579][WISPENG-579]]
+:LOGBOOK:
+CLOCK: [2024-08-27 Tue 17:00]--[2024-08-27 Tue 18:27] =>  1:27
+CLOCK: [2024-08-27 Tue 16:12]--[2024-08-27 Tue 16:37] =>  0:25
+CLOCK: [2024-08-27 Tue 14:29]--[2024-08-27 Tue 15:27] =>  0:58
+CLOCK: [2024-08-27 Tue 13:59]--[2024-08-27 Tue 14:24] =>  0:25
+CLOCK: [2024-08-27 Tue 12:30]--[2024-08-27 Tue 12:42] =>  0:12
+CLOCK: [2024-08-27 Tue 11:49]--[2024-08-27 Tue 12:14] =>  0:25
+CLOCK: [2024-08-27 Tue 11:19]--[2024-08-27 Tue 11:44] =>  0:25
+CLOCK: [2024-08-27 Tue 07:07]--[2024-08-27 Tue 07:32] =>  0:25
+:END:
 ** [-] WE-460 Tests
 :LOGBOOK:
 CLOCK: [2024-08-26 Mon 15:06]--[2024-08-26 Mon 15:31] =>  0:25
