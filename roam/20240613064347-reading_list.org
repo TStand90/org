@@ -33,6 +33,7 @@ A list of books and articles that I'd like to read at some point.
 **** [-] [[id:42a0e03e-ed8b-4922-96c0-d60ffed1f7b1][Working Effectively with Legacy Code]]
 DEADLINE: <2024-09-30 Mon>
 :LOGBOOK:
+CLOCK: [2024-08-26 Mon 21:26]--[2024-08-26 Mon 21:51] =>  0:25
 CLOCK: [2024-08-26 Mon 09:16]--[2024-08-26 Mon 09:41] =>  0:25
 CLOCK: [2024-08-26 Mon 08:41]--[2024-08-26 Mon 09:06] =>  0:25
 :END:
