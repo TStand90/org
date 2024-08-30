@@ -1,0 +1,6 @@
+:PROPERTIES:
+:ID:       335ead28-9e9b-4df0-8e57-e270f8bf9447
+:END:
+#+title: Java
+
+Java is a programming language that I /think/ is the same thing as [[id:ccd90ef7-390c-4623-9a21-49340850109b][Javascript]].

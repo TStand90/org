@@ -1,0 +1,6 @@
+:PROPERTIES:
+:ID:       c3e62fad-98dc-4ee0-a155-fd48c924ea87
+:END:
+#+title: C
+
+C is a programming language for talented and beautiful people.

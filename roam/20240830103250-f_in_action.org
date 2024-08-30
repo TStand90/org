@@ -1,0 +1,6 @@
+:PROPERTIES:
+:ID:       b62df05a-56ae-416a-932f-868114759457
+:ROAM_REFS: https://www.manning.com/books/f-sharp-in-action
+:DESCRIPTION: A book by Isaac Abraham, published by Manning
+:END:
+#+title: F# In Action

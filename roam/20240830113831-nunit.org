@@ -1,0 +1,6 @@
+:PROPERTIES:
+:ID:       bab9f0de-5428-45fe-b8ad-07fc66cd70e7
+:END:
+#+title: NUnit
+
+NUnit is a testing framework for [[id:e3f7ab88-17ea-4b07-94d5-4498b0681491][.NET]] languages.

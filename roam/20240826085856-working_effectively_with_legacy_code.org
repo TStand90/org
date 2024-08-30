@@ -85,7 +85,7 @@ Fake objects can be helpful when writings tests. An example might be a "Display"
 
 Fake objects can be created in [[id:0cabecd4-2482-413f-a76a-81ad31b6bd2b][Object Oriented]] languages by creating simple, fake classes (often using an interface shared with the real class).
 
-Non [[roam:Object Oriented]] languages can still use the fake pattern, by defining alternate functions that record values in some global data structure that we access in tests. For more details, see [[id:d090755d-9397-4128-98cd-82c8ec222671][Chapter 19: My Project is Not Object-Oriented. How Do I Make Safe Changes?]]
+Non [[id:5f847578-387b-47f2-9c6c-18aa0e899ebf][Object Oriented]] languages can still use the fake pattern, by defining alternate functions that record values in some global data structure that we access in tests. For more details, see [[id:d090755d-9397-4128-98cd-82c8ec222671][Chapter 19: My Project is Not Object-Oriented. How Do I Make Safe Changes?]]
 
 *** Mock objects
 Mock objects are a more advanced type of fake object. They are fakes that perform assertions internally.
@@ -113,10 +113,108 @@ Mocks tend to be better than Fake objects when they are available, but not every
 :ID:       85ffa26e-14d9-4563-8768-c5625a01ec92
 :END:
 
+** What is a Seam?
+#+TITLE: Seam
+#+BEGIN_QUOTE
+A seam is a place where you can alter behavior in your program without editing in that place.
+- Michael C. Feathers, Working Effectively With Legacy Code
+#+END_QUOTE
+
+#+TITLE: Enabling Point
+#+BEGIN_QUOTE
+Every seam has an enabling point, a place where you can make the decision to use one behavior or another.
+- Michael C. Feathers, Working Effectively With Legacy Code
+#+END_QUOTE
+
+*** Example
+#+BEGIN_SRC cpp
+bool CAsyncSslRec::Init()
+{
+  // ... Some code up here
+  if (!m_bFailureSent) {
+    m_bFailureSent=TRUE;
+    PostReceiveError(SOCKETCALLBACK, SSL_FAILURE);
+  }
+  // ... Some code down here
+}
+#+END_SRC
+
+Let's imagine ~PostReceiveError~ is a global function that isn't part of the class. We want to avoid executing it when running tests.
+
+We could add a method with the exact same signature to the ~CAsyncSslRec~ class.
+
+#+BEGIN_SRC cpp
+class CAsyncSslRec
+{
+  // ...
+  virtual void PostReceiveError(UINT type, UINT errorcode);
+  // ...
+}
+#+END_SRC
+
+In the implementation file, we can add a body like this:
+
+#+BEGIN_SRC cpp
+void CAsyncSslRec::PostReceiveError(UINT type, UINT errorcode)
+{
+  ::PostReceiveError(type, errorcode);
+}
+#+END_SRC
+
+That preserves the behavior. It's a bit of inderection, but we ultimately call the same global function.
+
+We can now subclass the ~CAsyncSslRec~ class and override the PostReceiveError method.
+
+#+BEGIN_SRC cpp
+class TestingAsyncSslRec : public CAsyncSslRec
+{
+  virtual void PostReceiveError(UINT type, UINT errorcode)
+  {
+  }
+}
+#+END_SRC
+
+We can now write tests for that code without the side effect.
+
+This is an example of an /object seam/, which is available in object oriented programming languages.
+
+** What good are Seams?
+Seams can help break dependencies for the sake of writing tests. They do so without making drastic alterations to existing code.
+
+** Seam Types
+*** Preprocessing Seams
+- Note taken on [2024-08-30 Fri 11:17] \\
+  I would add examples here, but I don't work in these languages a lot. If I ever do, I'll revisit this.
+Preprocessing Seams come up in languages like [[id:c3e62fad-98dc-4ee0-a155-fd48c924ea87][C]] and [[id:856eb9cd-3205-46f3-83e4-70825a935fd2][C++]].
+
+*** Link Seams
+- Note taken on [2024-08-30 Fri 11:23] \\
+  Same as Preprocessing Seams, may come back to this later, but probably isn't too relevant for me right now.
+
+*** Object Seams
+These are the most useful seams available in [[id:0cabecd4-2482-413f-a76a-81ad31b6bd2b][Object Oriented]] languages.
+
+When calling a method on an object, you can substitute the method body using inheritance. This way, you can define custom method behavior for tests. This is helpful if there are things you don't want to do during a test (call a database, hit an external API, etc.).
+
 * Chapter 5: Tools
 :PROPERTIES:
 :ID:       6133839c-71e7-444c-be04-8cb8e08a8d22
 :END:
+
+** Refactoring Tools
+There are many tools for various languages that can refactor code automatically.
+
+Take caution when using these tools, however, as they may make unsafe changes, or changes you're not expecting.
+
+** Mock Objects
+Mock Objects are helpful in breaking up dependencies, especially in [[id:0cabecd4-2482-413f-a76a-81ad31b6bd2b][Object Oriented]] codebases
+
+** Unit-Testing Harness
+Various unit testing tools exist for different languages.
+
+- [[id:06381540-2615-434f-a33e-98d778e63de2][xUnit]] is one of the more popular ones.
+  - [[id:cb42f494-fb85-4423-b56e-40ab39841fbe][JUnit]] is the [[id:335ead28-9e9b-4df0-8e57-e270f8bf9447][Java]] version.
+  - [[id:bab9f0de-5428-45fe-b8ad-07fc66cd70e7][NUnit]] is another for [[id:e3f7ab88-17ea-4b07-94d5-4498b0681491][.NET]] languages.
 
 * Chapter 6: I Don't Have Much Time and I Have to Change It
 :PROPERTIES:
@@ -214,3 +312,89 @@ Mocks tend to be better than Fake objects when they are available, but not every
 :END:
 
 * Chapter 25: Dependency-Breaking Techniques
+:PROPERTIES:
+:ID:       2d973a0b-d2ed-400c-af9a-6e0816af35cf
+:END:
+** Preserve Signatures
+:PROPERTIES:
+:ID:       70f8af14-ef01-4b92-8b54-f19af6ed7790
+:END:
+
+** Extract and Override Call
+:PROPERTIES:
+:ID:       f3685e54-1ab0-4b72-a2d7-f8b04ed14038
+:END:
+
+#+BEGIN_SRC java
+public class PageLayout
+{
+    private int id = 0;
+    private List styles;
+    private StyleTemplate template;
+
+    // ...
+
+    protected void rebindStyles() {
+        styles = StyleMaster.formStyles(template, id);
+        // ...
+    }
+
+    // ...
+}
+#+END_SRC
+
+~PageLayout~ makes a call to the static function named ~formStyles~ on a class named ~StyleMaster~.
+
+What if we want to /sense/ through ~formStyles~ or separate our dependency on ~StyleMaster~? One option is to extract the call to a new method and override it in a /testing subclass/.
+
+#+BEGIN_SRC java
+public class PageLayout
+{
+    private int id = 0;
+    private List styles;
+    private StyleTemplate template;
+
+    // ...
+
+    protected void rebindStyles() {
+        styles = formStyles(template, id);
+        // ...
+    }
+
+    protected List formStyles(StyleTemplate template, int id) {
+        return StyleMaster.formStyles(template, id);
+    }
+
+    // ...
+}
+#+END_SRC
+
+We can override the local ~formStyles~ methods for testing.
+
+#+BEGIN_SRC java
+public class TestingPageLayout extends PageLayout {
+    protected List formStyles(StyleTemplate template, int id) {
+        return new ArrayList();
+    }
+}
+#+END_SRC
+
+In this example, we don't need styles for whatever we are testing, so we can just return an empty list.
+
+With an automated refactoring tool, this can be trivial. You can use [[id:f303a682-6f21-4dac-a471-d150b5f70782][Extract Method]].
+
+Without automated tools, use the following steps:
+
+1. Identify the call that you want to extract. Find the declaration of its method. Copy its method signature so that you can [[id:70f8af14-ef01-4b92-8b54-f19af6ed7790][Preserve Signatures]].
+2. Create a new method on the current class. Give it the signature you've copied.
+3. Copy the call to the new method and replace the call with a call to the new method.
+4. Introduce a testing subclass and override the new method.
+
+* Refactoring
+:PROPERTIES:
+:ID:       135e5b2e-997e-47ef-ada6-800505f38455
+:END:
+** Extract Method
+:PROPERTIES:
+:ID:       f303a682-6f21-4dac-a471-d150b5f70782
+:END:

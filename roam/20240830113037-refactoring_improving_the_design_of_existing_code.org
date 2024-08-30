@@ -1,0 +1,12 @@
+:PROPERTIES:
+:ID:       b692fa86-e93e-4684-998a-36bd8b29a9e4
+:DESCRIPTION: A book by Martin Fowler, published by Addison-Wesley
+:END:
+#+title: Refactoring: Improving the Design of Existing Code
+
+TODO: Buy this book!
+
+#+BEGIN_QUOTE
+refactoring (n.) A change made to the internal structure of software to make it easier to understand and cheaper to modify without changing its existing behavior.
+- Martin Fowler, Refactoring: Improving the Design of Existing Code
+#+END_QUOTE

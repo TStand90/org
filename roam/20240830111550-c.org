@@ -1,0 +1,6 @@
+:PROPERTIES:
+:ID:       5f8dff80-2320-45db-b18b-a1f652ea3889
+:END:
+#+title: C++
+
+C++ is like [[id:c3e62fad-98dc-4ee0-a155-fd48c924ea87][C]] but with extra levels of insanity.

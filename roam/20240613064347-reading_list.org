@@ -8,8 +8,10 @@ A list of books and articles that I'd like to read at some point.
 * [ ] Maybe move this reading list into the Books note in my org files, and rename that one to "Reading List"? I don't know if there's a benefit to this being an org-roam node.
 
 * Articles
-** [0/1] Software planning
-*** [ ] [[https://basecamp.com/shapeup][Shape Up]]
+** [1/1] Software planning
+*** NO [[https://basecamp.com/shapeup][Shape Up]]
+- Note taken on [2024-08-30 Fri 10:34] \\
+  Will want to read eventually, but we are moving away from this approach at work, so no point in prioritizing it.
 ** [0/1] Architecture
 *** [-] [[https://martinfowler.com/eaaDev/EventSourcing.html][Event Sourcing]] by Martin Fowler
 ** [0/1] C#
@@ -29,10 +31,14 @@ A list of books and articles that I'd like to read at some point.
 - Note taken on [2024-08-15 Thu 08:05] \\
   Holding off on this one until I finish Letters from a Stoic.
 ** Programming
+*** [0/1] [[id:1c0131b0-54d9-4b00-9214-3920c53984d2][F#]]
+**** [ ] [[id:b62df05a-56ae-416a-932f-868114759457][F# In Action]]
 *** [0/1] General
 **** [-] [[id:42a0e03e-ed8b-4922-96c0-d60ffed1f7b1][Working Effectively with Legacy Code]]
 DEADLINE: <2024-09-30 Mon>
 :LOGBOOK:
+CLOCK: [2024-08-30 Fri 11:28]
+CLOCK: [2024-08-30 Fri 10:54]--[2024-08-30 Fri 11:19] =>  0:25
 CLOCK: [2024-08-26 Mon 21:26]--[2024-08-26 Mon 21:51] =>  0:25
 CLOCK: [2024-08-26 Mon 09:16]--[2024-08-26 Mon 09:41] =>  0:25
 CLOCK: [2024-08-26 Mon 08:41]--[2024-08-26 Mon 09:06] =>  0:25
@@ -45,7 +51,7 @@ CLOCK: [2024-08-26 Mon 08:41]--[2024-08-26 Mon 09:06] =>  0:25
 **** [ ] System Design Interview, Volume 2
 *** [0/1] PostgreSQL
 **** [-] 100 PostgreSQL Mistakes and how to avoid them
-*** [1/1] React
+*** [1/2] React
 **** [X] [[https://livebook.manning.com/book/react-quickly-second-edition][React Quickly]]
 - Note taken on [2024-08-15 Thu 07:47] \\
   Marking this one done for now. There are still two more exercise chapters left (chapters 12 & 13).
@@ -53,3 +59,5 @@ CLOCK: [2024-08-26 Mon 08:41]--[2024-08-26 Mon 09:06] =>  0:25
   Maybe I'll come back and do them later. Maybe not.
 
   Honestly, I can't stand to work with [[id:bb077623-5540-4767-b6d9-ae4301af5ef2][React]] any longer than I have to.
+
+**** [ ] [[id:16ea837b-410d-4e87-9eea-90033c2e013b][React In Depth]]

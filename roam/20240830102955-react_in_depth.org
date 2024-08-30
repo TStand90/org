@@ -1,0 +1,6 @@
+:PROPERTIES:
+:ID:       16ea837b-410d-4e87-9eea-90033c2e013b
+:ROAM_REFS: https://www.manning.com/books/react-in-depth
+:DESCRIPTION: A book by Morten Barklund, published by Manning
+:END:
+#+title: React In Depth

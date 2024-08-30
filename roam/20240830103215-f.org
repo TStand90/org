@@ -1,0 +1,6 @@
+:PROPERTIES:
+:ID:       1c0131b0-54d9-4b00-9214-3920c53984d2
+:END:
+#+title: F#
+
+F# is functional [[id:684e6719-609f-4a8a-a8fa-f11d0585ec10][C#]].
