@@ -1,0 +1,6 @@
+:PROPERTIES:
+:ID:       12f47e49-c623-4ee7-9d3e-bca827dbd10b
+:ROAM_REFS: https://leetcode.com/problems/relative-ranks/description/
+:END:
+#+title: 506. Relative Ranks
+#+filetags: :Leetcode:
