@@ -1,0 +1,6 @@
+:PROPERTIES:
+:ID:       b4a820bc-0722-4dde-8b64-ad097b7b1f58
+:END:
+#+title: Graphs
+
+Graphs are a type of data structure, consisting of "Nodes" and "Edges".

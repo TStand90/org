@@ -1,0 +1,6 @@
+:PROPERTIES:
+:ID:       ea14196c-d3da-4d52-ba27-648d81c50ce3
+:END:
+#+title: Statically Typed
+
+TODO

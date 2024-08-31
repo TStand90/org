@@ -3,6 +3,13 @@
 :END:
 #+title: Declarative
 
-TODO
+Declarative code focuses on /what/ we want, rather than the /how/.
 
 See [[id:796de48e-28fa-427e-a12c-40f8e8980502][Imperative vs. declarative]] for comparisons to [[id:fda18a87-d310-45bd-b1c9-69d470b76f1a][Imperative]] style.
+
+* Examples
+** GetEvenNumbers in [[id:1c0131b0-54d9-4b00-9214-3920c53984d2][F#]]
+#+BEGIN_SRC fsharp
+let getEvenNumbers =
+    Seq.filter (fun number -> number % 2 = 0)
+#+END_SRC

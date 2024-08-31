@@ -3,6 +3,22 @@
 :END:
 #+title: Imperative
 
-TODO
+Imperative code focuses on low level instructions, or on the /how/.
 
 See [[id:796de48e-28fa-427e-a12c-40f8e8980502][Imperative vs. declarative]] for a comparison to [[id:cb54393a-8404-4632-bef5-ecd6b4897150][Declarative]] programming.
+
+* Examples
+** GetEvenNumbers in [[id:684e6719-609f-4a8a-a8fa-f11d0585ec10][C#]]
+#+BEGIN_SRC csharp
+IEnumerable<int> GetEvenNumbers(IEnumerable<int>)
+{
+    var output = new List<int>();
+    foreach (var number in numbers) {
+        if (number % 2 == 0)
+            output.Add(number);
+    }
+    return output;
+}
+#+END_SRC
+
+Compare this example to the [[id:cb54393a-8404-4632-bef5-ecd6b4897150][Declarative]] [[id:1c0131b0-54d9-4b00-9214-3920c53984d2][F#]] example.

@@ -4,3 +4,9 @@
 :DESCRIPTION: A book by Isaac Abraham, published by Manning
 :END:
 #+title: F# In Action
+
+* Chapter 2: Hands on with [[id:1c0131b0-54d9-4b00-9214-3920c53984d2][F#]]
+** Data and behavior
+In [[id:0cabecd4-2482-413f-a76a-81ad31b6bd2b][Object Oriented]] languages, you might have a ~Basket~ class with methods such as ~AddItem~, ~Clear~, and ~Checkout~.
+
+In a [[id:ddff8999-8f7a-4abe-b756-af97af50dfdc][Functional Programming]] language like [[id:1c0131b0-54d9-4b00-9214-3920c53984d2][F#]], you would have an immutable record that represents a basket (with the items in it), and a module with /stateless/ functions such as ~AddItem~, ~Clear~, and ~Checkout~. Each function would do some action, then return an updated version of the basket. This generally leads to simpler code that's easier to understand.

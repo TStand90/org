@@ -1,0 +1,10 @@
+:PROPERTIES:
+:ID:       6e9a83b4-be40-427b-95c5-a7b9a4b0da9a
+:END:
+#+title: REPL
+
+REPL stands for "Read, Evaluate, Print, Loop". It's a useful tool available in certain languages.
+
+Langauges:
+- [[id:3a948b50-dedc-4fdf-a86c-05c1c3a9f230][Python]]
+- [[id:1c0131b0-54d9-4b00-9214-3920c53984d2][F#]]

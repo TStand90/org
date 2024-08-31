@@ -4,3 +4,19 @@
 #+title: F#
 
 F# is functional [[id:684e6719-609f-4a8a-a8fa-f11d0585ec10][C#]].
+
+* Typing
+F# is a [[Id:ea14196c-d3da-4d52-ba27-648d81c50ce3][statically typed]] language, but it also has a very powerful /type inference/ engine.
+
+* [[id:6e9a83b4-be40-427b-95c5-a7b9a4b0da9a][REPL]]
+F# has its own [[id:6e9a83b4-be40-427b-95c5-a7b9a4b0da9a][REPL]] called FSI, which can be started with ~dotnet fsi~.
+
+* What is "it"?
+In the [[id:6e9a83b4-be40-427b-95c5-a7b9a4b0da9a][REPL]], you may notice ~val it~ in executed commands. ~it~ is the default symbol that expressions are bound to if you don't supply one.
+
+So, executing ~1 + 1;;~ is the same as executing ~let it = 1 + 1;;~
+
+* Interactive scripts
+Files ending in the =.fsx= extension are F# scripts.
+
+You can use these files to more interactively work with the [[id:6e9a83b4-be40-427b-95c5-a7b9a4b0da9a][REPL]], with Intellisense and all that IDE good stuff.

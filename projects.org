@@ -5,3 +5,15 @@
 * Web projects
 ** Goals tracker
 Stack: Golang, HTMX, PostgreSQL
+* Miscellaneous
+** Git diff builder
+*** Idea
+By inspecting branches (or maybe tags?) in a git repository, construct a set of "diff" files that can be used to display differences between the branches/tags.
+
+The output would look like the code listings in the [[https://rogueliketutorials.com/][Roguelike Tutorial]].
+
+This would make writing new tutorials in that style much, much easier.
+*** Technology
+It would be cool to write this project on the [[id:e3f7ab88-17ea-4b07-94d5-4498b0681491][.NET]] platform, either with [[id:684e6719-609f-4a8a-a8fa-f11d0585ec10][C#]] or [[id:1c0131b0-54d9-4b00-9214-3920c53984d2][F#]]. It'd probably be easier to start with [[id:684e6719-609f-4a8a-a8fa-f11d0585ec10][C#]] and rewrite to [[id:1c0131b0-54d9-4b00-9214-3920c53984d2][F#]] later.
+
+The [[https://github.com/libgit2/libgit2sharp/wiki][libgit2sharp]] could help a lot here.

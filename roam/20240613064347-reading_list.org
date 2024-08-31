@@ -31,8 +31,28 @@ A list of books and articles that I'd like to read at some point.
 - Note taken on [2024-08-15 Thu 08:05] \\
   Holding off on this one until I finish Letters from a Stoic.
 ** Programming
-*** [0/1] [[id:1c0131b0-54d9-4b00-9214-3920c53984d2][F#]]
-**** [ ] [[id:b62df05a-56ae-416a-932f-868114759457][F# In Action]]
+*** [[id:1c0131b0-54d9-4b00-9214-3920c53984d2][F#]]
+**** [2/16] [[id:b62df05a-56ae-416a-932f-868114759457][F# In Action]]
+***** [X] Chapter 1
+***** [X] Chapter 2
+:LOGBOOK:
+CLOCK: [2024-08-30 Fri 17:00]--[2024-08-30 Fri 17:46] =>  0:46
+:END:
+***** [ ] Chapter 3
+***** [ ] Chapter 4
+***** [ ] Chapter 5
+***** [ ] Chapter 6
+***** [ ] Chapter 7
+***** [ ] Chapter 8
+***** [ ] Chapter 9
+***** [ ] Chapter 10
+***** [ ] Chapter 11
+***** [ ] Chapter 12
+***** [ ] Chapter 13
+***** [ ] Chapter 14
+***** [ ] Chapter 15
+***** [ ] Chapter 16
+
 *** [0/1] General
 **** [-] [[id:42a0e03e-ed8b-4922-96c0-d60ffed1f7b1][Working Effectively with Legacy Code]]
 DEADLINE: <2024-09-30 Mon>
