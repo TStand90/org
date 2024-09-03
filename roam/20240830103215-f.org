@@ -167,3 +167,19 @@ combineElements 1 2 3
 #+END_SRC
 
 The inputs to ~combineElements~ are generalized automatically.
+
+** Limitations
+Most cases where type inference doesn't work are around the object-oriented parts of F#. Any classes that you create or reference from [[id:684e6719-609f-4a8a-a8fa-f11d0585ec10][C#]] won't be inferred based on member access. This includes all of the framework class library. Types like ~String~ or ~DateTime~ can't be inferred based on member access.
+
+Example:
+
+#+BEGIN_SRC fsharp
+let addThreeDays (theDate:System.DateTime) =
+    theDate.AddDays 3
+
+let addAYearAndThreeDays theDate =
+    let threeDaysForward = addThreeDays theDate
+    theDate.AddYears 1
+#+END_SRC
+
+~addThreeDays~ requires a type annotation to access the ~AddDays~ member. However, ~addAYearAndThreeDays~ doesn't require one since we used ~theDate~ by calling ~addThreeDays~, so the compiler can infer the type of ~theDate~.

@@ -1,5 +1,10 @@
 #+title: Study
 
+* Data Structures & Algorithms
+
+* Languages
+** F#
+*** [-] [[id:b62df05a-56ae-416a-932f-868114759457][F# In Action]]
 * Frontend
 ** [1/1] React
 *** [X] React Quickly, Second Edition
