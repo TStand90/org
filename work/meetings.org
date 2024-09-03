@@ -1,0 +1,27 @@
+#+title: Meetings
+
+* Lab Slips & Subscriptions - September 3rd, 2024
+:LOGBOOK:
+CLOCK: [2024-09-03 Tue 10:30]--[2024-09-03 Tue 11:13] =>  0:43
+:END:
+Need to have estimates on this work at the end of the week
+
+Doc Kristin shared:
+https://www.notion.so/wispinc/Lab-Slips-Subscription-1bd8ffca78ef48b0924191c8a4e212d1
+
+Ops wants lab slips and medications to be independent. A lab can be sent at any time.
+
+Andrea wants Lab Slips to be shown in a "separate" area from medications.
+
+They want Lab Slips to be separate from Orders, not part of the Orders UI.
+
+We probably /do/ want Lab Slips to be attached for Orders. We may need to move the Lab Slips section into each individual Order component, and attach the Lab Slips to that specific Order.
+
+Two paths:
+- Separate UI components, lab slips are one thing, medications are another thing.
+- Combine Order view, and add the Lab Slips UI to that Order component. Make it clear that there is an association. Would need to remove Orders with Lab Slips from the Provider Queue. Or maybe Providers can reject an order/medication but add a Lab Slip after.
+
+TODOs:
+** Subscription renewal on the FillRequest component
+Fill Request # blah blah should indicate if something is a FillRequest or a subscription renewal. Investigate
+FillRequest.subscription_renewal on the frontend model. Check the backend.
