@@ -20,3 +20,150 @@ So, executing ~1 + 1;;~ is the same as executing ~let it = 1 + 1;;~
 Files ending in the =.fsx= extension are F# scripts.
 
 You can use these files to more interactively work with the [[id:6e9a83b4-be40-427b-95c5-a7b9a4b0da9a][REPL]], with Intellisense and all that IDE good stuff.
+
+* Syntax
+** Syntax basics
+*** Whitespace for scoping.
+F# does not use curly braces for scoping or declaring function bodies. Like [[id:3a948b50-dedc-4fdf-a86c-05c1c3a9f230][Python]], it uses whitespace (four spaces).
+
+*** Let vs var
+~var~ declares variables, ~let~ creates an immutable reference to a value. Once you've bound a value to a symbol with ~let~, it cannot be changed.
+
+*** Declaring functions
+Here is an example of a function declaration that adds the first two numbers, multiplies them by the third, and returns a string with the answer
+
+#+BEGIN_SRC fsharp
+let addThenMultiply first second third =
+    let inProgress = first + second
+    let answer = inProgress * third
+
+    $"The answer is {answer}"
+#+END_SRC
+
+Notice that there are no parenthesis around the method arguments, and the equals sign at the end of the line. Function declarations use the same ~let~ keyword that symbol binding does. This is because functions are the same as any other value in F#, and can be treated as such.
+
+** Scoping
+*** Nested scopes
+It's common in F# to use arbitrary scopes to nest statements.
+
+Here's an example of some code with no scopes.
+
+#+BEGIN_SRC fsharp
+let fname = "Frank"
+let sname = "Schmidt"
+let fullName = $"{fname} {sname}"
+let greetingText = $"Greetings, {fullName}"
+#+END_SRC
+
+This is fine, but ~fname~ and ~sname~ are only used to create ~fullName~. Also, ~fullName~ is only used to construct ~greetingText~. Therefore, we can rewrite in this way:
+
+#+BEGIN_SRC fsharp
+let greetingText =
+    let fullName =
+        let fname = "Frank"
+        let sname = "Schmidt"
+        $"{fname} {sname}"
+    $"Greetings, {fullName}"
+#+END_SRC
+
+*** Nested functions
+Because functions are just values, you can create nested functions inside scopes or other functions.
+
+Here is the example in "Nested scopes" again:
+
+#+BEGIN_SRC fsharp
+let greetingTextWithFunction person =
+    let makeFullName fname sname =
+        $"{fname} {sname}"
+    let fullName = makeFullName "Frank" "Schmidt"
+    $"Greetings {fullName} from {person}."
+#+END_SRC
+
+*** Accessing outer scoped values
+You cannot access symbols that are declared within a scope afterward. But if you declare a symbol before a nested scope starts, that scope will have access to it.
+
+#+BEGIN_SRC fsharp
+let greetingTextWithFunction =
+    let city = "London"
+    let makeFullName fname sname =
+        $"{fname} {sname} from {city}"
+    let fullName = makeFullName "Frank" "Schmidt"
+    // let surnameCity = $"{sname} from {city}"  // This statement is invalid.
+    $"Greetings, {fullName}"
+#+END_SRC
+
+Referencing outer scoped variables inside a function is known as capturing the value.
+
+* Type inference
+F# uses type inference with its ~let~ and ~var~ keywords.
+
+F# uses a type inference implementation known as the [[id:c17d05ef-e38f-4c0c-a380-50fcf4a43e9c][Hindley-Milner type system]], which is more powerful than systems found in ones like [[id:684e6719-609f-4a8a-a8fa-f11d0585ec10][C#]].
+
+You can be explicit with type definitions if you choose.
+
+#+BEGIN_SRC fsharp
+let i = 10
+let i: int = 10
+#+END_SRC
+
+Both the examples above are the same. Note that the annotation comes /after/ the declaration, similar to [[id:1acbf81c-8e58-447c-8b07-a61d9710031c][Go]], [[id:4ad28b6e-cef9-4aae-9621-a214c906951c][TypeScript]], and [[id:335e0eec-b345-49bb-9ee2-56f50d5b28b7][Rust]].
+
+If you are going to be explicit with types in the function signatures, you need parenthesis.
+
+#+BEGIN_SRC fsharp
+let add (a:int) (b:int) : int =
+    let answer : int = a + b
+    answer
+#+END_SRC
+
+** Generics
+
+Here is an example of ~ResizeArray~, a [[id:e3f7ab88-17ea-4b07-94d5-4498b0681491][.NET]] list that will automatically resize as you add new items to it. In [[id:684e6719-609f-4a8a-a8fa-f11d0585ec10][C#]], ~ResizeArray~ is just a type alias for ~System.Collections.Generic.List<'T>~;
+
+#+BEGIN_SRC fsharp
+let explicit = ResizeArray<int>()
+let typeHole = ResizeArray<_>()
+let omitted = ResizeArray()
+
+typeHole.Add 99
+omitted.Add 10
+#+END_SRC
+
+The first expression sets the type to ~int~ explicitly. The other two let the compiler determine the type based on the usage (the call to ~Add~ in this case).
+
+** Automatic Generalization
+F# will automatically generalize functions. If F# decides an argument to a function is generic, it converts it to a generic for you.
+
+#+BEGIN_SRC fsharp
+let combineElements<'T> (a:'T) (b:'T) (c:'T) =
+    let output = ResizeArray<'T>()
+    output.Add a
+    output.Add b
+    output.Add c
+    output
+
+combineElements<int> 1 2 3
+#+END_SRC
+
+Note that this is *not* weak/dynamic typing. The following is invalid.
+
+#+BEGIN_SRC fsharp
+combineElements<int> 1 2 "test"
+#+END_SRC
+
+This results in an error.
+
+However, automatic generalization means we can do away with type annotations and let the compiler do this all for us:
+
+#+BEGIN_SRC fsharp
+let combineElements a b c =
+    let output = ResizeArray()
+    output.Add a
+    output.Add b
+    output.Add c
+    output
+
+combineElements 1 2 3
+#+END_SRC
+
+The inputs to ~combineElements~ are generalized automatically.

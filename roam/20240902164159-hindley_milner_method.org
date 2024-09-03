@@ -1,0 +1,9 @@
+:PROPERTIES:
+:ID:       c17d05ef-e38f-4c0c-a380-50fcf4a43e9c
+:ROAM_REFS: https://en.wikipedia.org/wiki/Hindley%E2%80%93Milner_type_system
+:END:
+#+title: Hindley-Milner type system
+
+The Hindley-Milner type system is a way to get type inference in a programming language.
+
+It is used by [[id:aac20819-0f4b-48ad-8f69-d59d69b0d469][ML]] derived languages, such as [[id:1c0131b0-54d9-4b00-9214-3920c53984d2][F#]], [[id:9dcfc575-adfb-433a-aa29-c52363a15649][Ocaml]], [[id:d3eda935-ea5e-4f2c-8e5a-e06e001e5c5e][Haskell]], and [[id:5a730c3e-cc01-4dc4-a1f0-2a2dbb29a2ab][Elm]].

@@ -1,0 +1,6 @@
+:PROPERTIES:
+:ID:       4ad28b6e-cef9-4aae-9621-a214c906951c
+:END:
+#+title: TypeScript
+
+TODO
