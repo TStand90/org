@@ -183,3 +183,83 @@ let addAYearAndThreeDays theDate =
 #+END_SRC
 
 ~addThreeDays~ requires a type annotation to access the ~AddDays~ member. However, ~addAYearAndThreeDays~ doesn't require one since we used ~theDate~ by calling ~addThreeDays~, so the compiler can infer the type of ~theDate~.
+
+* Expressions
+Expressions and statements are two sides of the same coin. Here's how they work in F#:
+
+|             | Returns something? | Has side-effects? |
+|-------------+--------------------+-------------------|
+| Expressions | Always             | Occasionally      |
+| Statements  | Never              | Always            |
+
+F# is an expression-oriented language. Virtually everything is an expression; there are no statements, or functions that return ~void~. This is why you don't need ~return~ in F#, since every branch of code must return /something/.
+
+** Unit
+How do we handle the case where our code doesn't return any value (like a function that prints something, or writes to the file system)?
+
+F# has a built in ~unit~ that represents nothing. Unlike ~void~ in other languages, ~unit~ acts like a regular value that can be returned from any piece of code or even bound to a symbol. In this way, you could say every function returns a value, even if that value is ~unit~.
+
+#+BEGIN_SRC fsharp
+let printAddition a b =
+    let answer = a + b
+    printfn $"{a} plus {b} equals {answer}."
+#+END_SRC
+
+*** Interop with void
+F# implicitly converts ~unit~ to ~void~, so anywhere you see [[id:e3f7ab88-17ea-4b07-94d5-4498b0681491][.NET]] code that returns ~void~, F# will represent it as ~unit~, and vice-versa.
+
+*** Unit as an input
+~unit~ can be an input to a function. This is useful if you want to have some code that is executed every single time it is called.
+
+#+BEGIN_SRC fsharp
+let getTheCurrentTime = System.DateTime.Now
+let x = getTheCurrentTime
+let y = getTheCurrentTime
+#+END_SRC
+
+The problem with this example is that ~getTheCurrentTime~ will always return the initial value. It won't recalculate once it has been bound. However, if we change the definition to take ~unit~ as an input, signified by ~()~, this changes the behavior:
+
+#+BEGIN_SRC fsharp
+let getTheCurrentTime () = System.DateTime.Now
+let x = getTheCurrentTime ()
+let y = getTheCurrentTime ()
+#+END_SRC
+
+*** Unit and side effects
+Seeing ~unit~ in a function signature, as input /or/ output, is a sign that the function has some kind of side effect in it, and calling it multiple times will probably have different results every time:
+- ~Unit~ as input: Probably calling some impure code that will affect the result (getting the current time, generating a random number, etc.)
+- ~Unit~ as output: Probably writing to some I/O as the final action in the body (print to console, write to filesystem, save to database, etc.)
+
+F# does not enforce purity, so it's still possible to write code that has side effects but does not use ~unit~
+
+#+BEGIN_SRC fsharp
+let addDays days =
+    let newDays = System.DateTime.Today.AddDays days
+    printfn $"You gave me {days} days and I gave you {newDays}"
+    newDays
+let result = addDays 3
+#+END_SRC
+
+** Ignore
+Sometimes, you want to call a function for its side effects, but ignore what it returns.
+
+In such cases, you must explicitly tell F# that you wish to ignore the result. This is done using the built-in F# function, ~ignore~. It simply takes in any value and gives back a ~unit~ value (which the compiler understands can be discarded without warning).
+
+Example: Add several days, but don't care about the return.
+
+#+BEGIN_SRC fsharp
+let addSeveralDays() =
+    ignore (addDays 3)
+    ignore (addDays 5)
+    addDays 7
+#+END_SRC
+
+* Immutable data
+Data in F# is immutable by default. Mutable data is possible, but requires a bit more syntax.
+
+#+BEGIN_SRC fsharp
+let name = "marcus"
+let mutable age = 0
+age <- 1
+if age = 1 then ...
+#+END_SRC
