@@ -1,6 +1,6 @@
 #+title: Meetings
 
-* Lab Slips & Subscriptions - September 3rd, 2024
+* Lab Slips & Subscriptions - September 3rd, 2024 - 10:30 AM
 :LOGBOOK:
 CLOCK: [2024-09-03 Tue 10:30]--[2024-09-03 Tue 11:13] =>  0:43
 :END:
@@ -25,3 +25,11 @@ TODOs:
 ** Subscription renewal on the FillRequest component
 Fill Request # blah blah should indicate if something is a FillRequest or a subscription renewal. Investigate
 FillRequest.subscription_renewal on the frontend model. Check the backend.
+
+* September 3rd, 2024 - 1:45 PM
+The lab slip does show up on a refresh, as I expected.
+
+* Weekly Provider Platform Check-In - September 5th, 2024 - 11:30 AM
+:LOGBOOK:
+CLOCK: [2024-09-05 Thu 11:30]--[2024-09-05 Thu 12:10] =>  0:40
+:END:
