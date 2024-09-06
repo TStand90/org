@@ -263,3 +263,85 @@ let mutable age = 0
 age <- 1
 if age = 1 then ...
 #+END_SRC
+
+* Composing Types
+F# has a few way of defining its own types.
+
+** Product types
+Product types are "and" types. For example, a soccer player has a name, age, /and/ a team.
+
+** Sum types
+Sum types are "or" types. For example, a soccer player's position is either forward, middle, /or/ defense.
+
+* Tuples
+Tuples are the quickest way to compose multiple fields together in F#. They're lightweight, easy to create, and quick to use.
+
+#+BEGIN_SRC fsharp
+let name = "marcus", "pawara-standridge"
+let firstName, lastName = name
+#+END_SRC
+
+F# does not allow you to specify names for fields in a tuple. F# only knows that this tuple has two values, both of which are strings.
+
+Tuples can be of more than one type.
+
+#+BEGIN_SRC fsharp
+let info = "marcus", "aarav", 1, "california"
+#+END_SRC
+
+The types are listed as ~string * string * int * string~.
+
+** Wildcards
+You can discard values you do not care about with the underscore symbol
+
+#+BEGIN_SRC fsharp
+let nameAndAge = "Aurora", "Ekta", 3
+let firstName, middleName, _ = nameAndAge
+#+END_SRC
+
+The underscore is special in F#: It tells the type system that you explicitly don't want to use the value.
+
+** Type inference
+F# can infer tuples as both inputs and outputs of functions.
+
+#+BEGIN_SRC fsharp
+let makeDoctor name =
+    let _, sname = name
+    "Dr", sname
+#+END_SRC
+
+** Inline deconstruction
+It's possible to deconstruct a tuple that's supplied to a function inline.
+
+#+BEGIN_SRC fsharp
+let makeDoctor (_, sname) =
+    "Dr", sname
+#+END_SRC
+
+** Nesting
+Tuples can also be nested.
+
+#+BEGIN_SRC fsharp
+let nameAndAge = ("Marcus", "Aarav"), 1
+let name, age = nameAndAge
+let (firstName, middleName), theAge = nameAndAge
+#+END_SRC
+
+** Tuple and ValueTuple
+By default, F# tuples are compiled into the [[id:e3f7ab88-17ea-4b07-94d5-4498b0681491][.NET]] type ~System.Tuple~. These values are known as [[id:cbb4a1e8-6515-4ab7-bf58-c435ae0b7b27][reference types]]. They are stored on the heap and are subject to garbage collection.
+
+When [[id:684e6719-609f-4a8a-a8fa-f11d0585ec10][C#]] later gained language-level support for tuples, the [[id:684e6719-609f-4a8a-a8fa-f11d0585ec10][C#]] team created an alternative called [[id:c7e7c246-c863-4be0-b0c3-53cbe0188a88][ValueTuple]]. They are stored on the stack and are not subject to garbage collection.
+
+You can create value tuples in F# by preceding type annotations with the keyword ~struct~.
+
+#+BEGIN_SRC fsharp
+let makeDoctor (name : struct (string * string)) =
+    let struct(_, sname) = name
+    struct ("Dr", sname)
+#+END_SRC
+
+Which type is better? Both have performance implications. Reference types pay the cost of garbage collection, while value tuples pay the cost of copying a tuple whenever it is passed from one function to another.
+
+Generally, stick with reference tuples unless you have a specific performance requirement.
+
+Both interop with [[id:684e6719-609f-4a8a-a8fa-f11d0585ec10][C#]] without issue.

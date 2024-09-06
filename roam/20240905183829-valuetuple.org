@@ -1,0 +1,9 @@
+:PROPERTIES:
+:ID:       c7e7c246-c863-4be0-b0c3-53cbe0188a88
+:END:
+#+title: ValueTuple
+#+filetags: :C#:
+
+TODO
+
+ValueTuples are [[id:6601a3de-da15-4c07-b934-4c6225fce6d2][value type]]s, passed by value. They are stored on the stack and are not subject to garbage collection.
