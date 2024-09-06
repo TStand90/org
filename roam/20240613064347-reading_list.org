@@ -40,7 +40,10 @@ CLOCK: [2024-08-30 Fri 17:00]--[2024-08-30 Fri 17:46] =>  0:46
 :END:
 ***** [X] Chapter 3
 ***** [X] Chapter 4
-***** [ ] Chapter 5
+***** [-] Chapter 5
+:LOGBOOK:
+CLOCK: [2024-09-05 Thu 18:05]--[2024-09-05 Thu 18:40] =>  0:35
+:END:
 ***** [ ] Chapter 6
 ***** [ ] Chapter 7
 ***** [ ] Chapter 8
