@@ -274,6 +274,9 @@ Product types are "and" types. For example, a soccer player has a name, age, /an
 Sum types are "or" types. For example, a soccer player's position is either forward, middle, /or/ defense.
 
 * Tuples
+:PROPERTIES:
+:ID:       fd6afca0-845a-412d-8e45-16239e02af07
+:END:
 Tuples are the quickest way to compose multiple fields together in F#. They're lightweight, easy to create, and quick to use.
 
 #+BEGIN_SRC fsharp
@@ -345,3 +348,147 @@ Which type is better? Both have performance implications. Reference types pay th
 Generally, stick with reference tuples unless you have a specific performance requirement.
 
 Both interop with [[id:684e6719-609f-4a8a-a8fa-f11d0585ec10][C#]] without issue.
+
+** Shortcomings of Tuples
+Tuples are easy to use, but they have some key downsides
+
+- It's not possible to assign names to elements
+- The only way to get values out is via deconstruction
+
+Tuples are best for simple values that are relatively short-lived.
+
+* Records
+:PROPERTIES:
+:ID:       e4bf9d59-0697-4f51-bb0e-f8aa5d6d2141
+:END:
+Records are like Tuples, but are more structured.
+
+Records allow for specifying names for each value, known as /fields/.
+
+Unlike [[id:fd6afca0-845a-412d-8e45-16239e02af07][Tuples]], Records must be defined before using them.
+
+#+BEGIN_SRC fsharp
+type Person =
+    {
+        FirstName : string
+        LastName : string
+        Age : int
+    }
+#+END_SRC
+
+It's also possible to define records on one line.
+
+#+BEGIN_SRC fsharp
+type Person = { FirstName : string; LastName: string; Age: int }
+#+END_SRC
+
+Notice the =;= separating the fields when declaring a record on one line.
+
+Heres how to create an instance of the record.
+
+#+BEGIN_SRC fsharp
+let marcus =
+    {
+        FirstName = "Marcus"
+        LastName = "Pawara-Standridge"
+        Age = 1
+    }
+#+END_SRC
+
+To consume, use dot notation:
+
+#+BEGIN_SRC fsharp
+let fullName = $"{marcus.FirstName} {marcus.LastName}"
+#+END_SRC
+
+It's possible to use both Records and [[id:fd6afca0-845a-412d-8e45-16239e02af07][Tuples]] in the definition of a record.
+
+#+BEGIN_SRC fsharp
+type Address =
+    {
+        Line1 : string
+        Line2 : string
+        Town : string
+        Country : string
+    }
+
+type Person =
+    {
+        Name : string * string
+        Address : Address
+    }
+#+END_SRC
+
+Notice that ~Address~ must be declared before ~Person~.
+
+** Copy and Update
+Fields on [[id:e4bf9d59-0697-4f51-bb0e-f8aa5d6d2141][Records]] are immutable by default. If you try using the mutate operator (=<-=), you'll get a compiler error.
+
+To change values, F# provides the /copy-and-update/ syntax.
+
+#+BEGIN_SRC fsharp
+let theAddress =
+    {
+        Line1 = "1st Street"
+        Line2 = "Apt. 1"
+        Town = "London"
+        Country = "UK"
+    }
+
+let addressInDE =
+    {
+        theAddress with
+            Town = "Berlin"
+            Country = "DE"
+    }
+#+END_SRC
+
+You can add the ~mutable~ keyword to a field to make it mutable, but this should only be done in a very small number of scenarios. Prefer immutability wherever possible.
+
+** Equality Checking
+Two records or tuples are considered the same if the data they store is the same.
+
+#+BEGIN_SRC fsharp
+let isaac =
+    {
+        Name = "Isaac", "Abraham"
+        Address = theAddress
+    }
+
+let isaacTwo =
+    {
+        Name = "Isaac", "Abraham"
+        Address = theAddress
+    }
+
+let areTheyTheSame = (isaac = isaacTwo) // true
+#+END_SRC
+
+** Value Type records
+Records are [[id:cbb4a1e8-6515-4ab7-bf58-c435ae0b7b27][reference types]] by default. You can use the ~[<Struct>]~ attribute to turn a record into a [[id:6601a3de-da15-4c07-b934-4c6225fce6d2][value type]].
+
+#+BEGIN_SRC fsharp
+[<Struct>]
+type address =
+    {
+        Line1 : string
+        // ...
+    }
+#+END_SRC
+
+** Anonymous Records
+:PROPERTIES:
+:ID:       78227198-a938-444a-bdff-cf3bda597a07
+:END:
+
+Anonymous records allow you to create a record without a formal definition. The =|= operator between the curly brackets denotes an anonymous record.
+
+#+BEGIN_SRC fsharp
+let company =
+    {|
+        Name = "My Company Inc."
+        Town = "The Town"
+        Country = "UK"
+        TaxNumber = 123456
+    |}
+#+END_SRC
