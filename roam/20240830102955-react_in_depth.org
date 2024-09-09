@@ -4,3 +4,6 @@
 :DESCRIPTION: A book by Morten Barklund, published by Manning
 :END:
 #+title: React In Depth
+
+* Chapter 2: Advanced Component Patterns
+** The Provider Pattern

@@ -85,3 +85,17 @@ CLOCK: [2024-08-26 Mon 08:41]--[2024-08-26 Mon 09:06] =>  0:25
   Honestly, I can't stand to work with [[id:bb077623-5540-4767-b6d9-ae4301af5ef2][React]] any longer than I have to.
 
 **** [ ] [[id:16ea837b-410d-4e87-9eea-90033c2e013b][React In Depth]]
+***** [X] Chapter 1
+***** [ ] Chapter 2
+***** [ ] Chapter 3
+***** [ ] Chapter 4
+***** [ ] Chapter 5
+***** [ ] Chapter 6
+***** [ ] Chapter 7
+***** [ ] Chapter 8
+***** [ ] Chapter 9
+***** [ ] Chapter 10
+***** [ ] Chapter 11
+***** [ ] Chapter 12
+***** [ ] Chapter 13
+***** [ ] Chapter 14
