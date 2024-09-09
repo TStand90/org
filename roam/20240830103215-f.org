@@ -5,6 +5,13 @@
 
 F# is functional [[id:684e6719-609f-4a8a-a8fa-f11d0585ec10][C#]].
 
+* Creating a console application
+To create a new F# console app, use the following command.
+
+#+BEGIN_SRC shell
+dotnet new console -lang F#
+#+END_SRC
+
 * Typing
 F# is a [[Id:ea14196c-d3da-4d52-ba27-648d81c50ce3][statically typed]] language, but it also has a very powerful /type inference/ engine.
 
@@ -492,3 +499,109 @@ let company =
         TaxNumber = 123456
     |}
 #+END_SRC
+
+* Forward pipes
+:PROPERTIES:
+:ID:       8717dfd1-7008-44c4-9465-39e94fb158f7
+:END:
+F# has the forward pipe operator, which allows you to "pipe" the output of a function into another function. The piped value is piped to the _last_ argument in the function.
+
+#+BEGIN_SRC fsharp
+let pipelineSingleLine 10 |> add 5 |> add 7 |> multiply 2
+
+let pipelineMultiline =
+    10
+    |> add 5
+    |> add 7
+    |> multiply 2
+#+END_SRC
+
+* Compose operator
+:PROPERTIES:
+:ID:       aaf6352f-8e29-4bd7-88f4-b950cbab3332
+:END:
+F# has a built in *compose* operator, which allows you to compose two functions together into a new one if the first's output matches the second's input.
+
+It's not used that often, but it's worth keeping in mind.
+
+Example: These two functions do the same thing.
+
+#+BEGIN_SRC fsharp
+let addFiveAndDouble input = input |> add 5 |> multiply 2
+let addFiveAndDoubleShort = add 5 >> multiply 2
+#+END_SRC
+
+* Namespaces
+:PROPERTIES:
+:ID:       8d578b51-e915-45f0-940e-f66f195b6b52
+:END:
+F# supports namespaces for organizing code. Namespaces store types, but /not/ values.
+
+#+BEGIN_SRC fsharp
+namespace Foo
+type Order = { Name: string }
+
+namespace Bar.Baz
+type customer =
+    {
+        Name : string
+        LastOrder: Foo.Order
+    }
+#+END_SRC
+
+To use something from a namespace, you can prepend the name of the namespace, like with ~Foo.Order~.
+
+Alternatively, you cae use the ~open~ keyword.
+
+#+BEGIN_SRC fsharp
+namespace Bar.Baz
+open Foo
+type customer = { LastOrder: Order }
+#+END_SRC
+
+* Modules
+:PROPERTIES:
+:ID:       5056dc47-684e-4e95-9474-a0af286b559d
+:END:
+Modules are a way to store types /and/ values.
+
+#+BEGIN_SRC fsharp
+module FsInAction.MyMaths
+
+let add x y = x + y
+let subtract x y = x - y
+
+module Complicated =
+    open System
+    let ten = 10
+    let addTogetherThenSubtractTen x y = add x y |> subtract ten
+#+END_SRC
+
+Declaring a module within a module makes the second module a *child* of the first. Nested modules do not need to ~open~ their parents. Nested modules _must_ have their contents indented.
+
+In scripts, declaring the module is optional. F# will use the name of the file as the module in that case.
+
+** Private values
+The ~private~ keyword can make a value private within a module. This can be useful for things like internal functions.
+
+** [<AutoOpen>]
+You can use ~[<AutoOpen>]~ to automatically open a module in its parent.
+
+** [<RequireQualifiedAccess>]
+~[<RequireQualifiedAccess>]~ essentially does the opposite of ~[<AutoOpen>]~: you cannot ~open~ the module, and must always use the module name to access its contents.
+
+* Project file
+F# projects include a project file, which have the =.fsproj= extension.
+
+** Ordering of files
+The order of files declared in the project matters. Files that are declared first cannot see files that are declared further down the list.
+
+Therefore, files that have no dependencies should go at the top, and files that depend on everything else need to go at the bottom.
+
+* #load directive
+:PROPERTIES:
+:ID:       b6a73bdd-e498-4c89-96b6-a98bfe01b0c3
+:END:
+You can load a =.fs= file directly into a script (and FSI) using the =#load= directive.
+
+You can also load an entire DLL that you've build using =#r=. This can make loading an entire application or library easier.
