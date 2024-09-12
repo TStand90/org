@@ -191,11 +191,11 @@ Note that ~Self~ is part of ~typing~ as of Python 3.11, but for now, we need to 
 These tests are misplaced. They should be in tests/app/controllers/api/v3
 ** [X] ProductFactory.description should not be None
 The DB does not have the column as nullabe, so this should not be ~None~ by default.
-** [?] Patient.has_synchronous_state can be None
+** [X] [[https://github.com/hellowisp/secure.hellowisp.com/pull/4740][Patient.has_synchronous_state can be None]]
 :LOGBOOK:
 CLOCK: [2024-09-10 Tue 17:15]--[2024-09-10 Tue 17:24] =>  0:09
 CLOCK: [2024-09-10 Tue 16:44]--[2024-09-10 Tue 17:09] =>  0:25
 :END:
 This should only ever be True or False, but it can be None. Write a test to expose this behavior and fix it.
-** [ ] Add PLR0917 to exceptions list for new test suite
+** [?] [[https://github.com/hellowisp/secure.hellowisp.com/pull/4753][Add PLR0917 to exceptions list for new test suite]]
 This is "Too many positional arguments". When you have a lot of stuff you need to mock, this makes no sense.
