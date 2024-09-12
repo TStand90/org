@@ -1,0 +1,51 @@
+:PROPERTIES:
+:ID:       bc4d000f-da53-413a-9d83-db93a9cea64a
+:ROAM_REFS: https://factoryboy.readthedocs.io/en/latest/index.html
+:END:
+#+title: Factory Boy
+
+Factory Boy is a [[id:3a948b50-dedc-4fdf-a86c-05c1c3a9f230][Python]] library for creating test factories.
+
+* Build Batch
+:PROPERTIES:
+:ID:       a97712d0-52ae-48ce-ad8a-1d5014aa4f73
+:ROAM_REFS: https://factoryboy.readthedocs.io/en/latest/reference.html#factory.build_batch
+:END:
+
+Same as [[id:86ae4f36-17d0-47ec-9d19-4f0fcf306e01][Create Batch]], but uses the build strategy instead.
+
+* Create Batch
+:PROPERTIES:
+:ID:       86ae4f36-17d0-47ec-9d19-4f0fcf306e01
+:ROAM_REFS: https://factoryboy.readthedocs.io/en/latest/reference.html#factory.create_batch
+:END:
+
+~.create_batch~ allows you to create multiple instances of the same object with the ~size~ parameter.
+#+BEGIN_SRC python
+
+# Instead of this:
+FillRequestFactory(
+    patient=patient,
+    capture_on_approve=True,
+    local_rx=None,
+    pharmacy=pharmacy,
+    product=product,
+)
+FillRequestFactory(
+    patient=patient,
+    capture_on_approve=True,
+    local_rx=None,
+    pharmacy=pharmacy,
+    product=product,
+)
+
+# Do this:
+FillRequestFactory.create_batch(
+    size=2,
+    patient=patient,
+    capture_on_approve=True,
+    local_rx=None,
+    pharmacy=pharmacy,
+    product=product,
+)
+#+END_SRC

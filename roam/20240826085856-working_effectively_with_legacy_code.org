@@ -221,6 +221,94 @@ Various unit testing tools exist for different languages.
 :ID:       269d0141-1442-443e-bf04-32d6f338a26c
 :END:
 
+** Sprout Method
+:PROPERTIES:
+:ID:       3c0196e9-4ab9-4e7a-a28d-b068d2b85a4d
+:END:
+A "sprouted" method is when you take new functionality that you want to add to some code, and break it out into its own method. This is helpful when the old code is not under test, and you don't have time to bring it under test.
+
+*** Steps
+1. Identify where you need to make your code change.
+2. If the change can be formulated as a single sequence of statements in one place in a method, write down a call for a new method that will do the work involved and then comment it out. Doing this before writing the new method itself can help you see what the new method will look like in context.
+3. Determine what local variables you need from the source method, and make them arguments to the call.
+4. Determine whether the sprouted method will need to return values to the source method. If so, change the call so that its return value is assigned to a variable.
+5. Develop the sprout method using /test-driven development/.
+6. Remove the comment in the source method to enable the call.
+
+*** Advantages
+- Clean separation from old, bad code, and new, better code.
+- Easy to see the changes you made.
+*** Disadvantages
+- Old code is left untested and unimproved.
+- May be unclear when reading later why the sprouted method was broken out into its own method.
+
+** Sprout Class
+:PROPERTIES:
+:ID:       ea2eb027-9241-4a8f-89bd-61ed98e94f9b
+:END:
+Sometimes, it makes sense to create an entirely new class instead of just a method. /Sprout Class/ can come in handy here over /Sprout Method/.
+
+*** Steps
+1. Identify where you need to make your code change.
+2. Think of a good name for the class. Write a commented out line that instantiates the class, and a commented out line that calls some method on that class.
+3. Determine what local variables you need for the class, pass them to the classes' constructor.
+4. Determine whether the sprouted class will need to return values to the source method. If so, provide a method in the new class that will supply those values, and add a call in the source method to receive those values.
+5. Develop the sprout class test first, using /test-driven development/.
+6. Remove the comment in the source method to enable the object creation and calls.
+
+*** Advantages
+- Allows you to move forward with your work with more confidence than making invasive changes.
+*** Disadvantages
+- Adds conceptual complexity to the code base.
+
+** Wrap Method
+:PROPERTIES:
+:ID:       e0854ed1-cbc9-4a4d-b0fe-9dc19aeabb30
+:END:
+What if you need to add functionality in the same place a method is called, but you don't want to modify the original method? For example, in a method to pay an employee for their time worked, you also want to send a report to some log about the payment.
+
+You could rename the original method, make it private, and expose a new wrapper method with the same name as the original method. This adds functionality, and does not require updating the callers.
+
+Alternatively, you can add the wrapper method and leave the original alone, so callers have the option of not using the new functionality.
+
+By "wrapping" an existing method in a new method, you can add functionality without modifying the code for the original method.
+
+*** Steps
+**** To replace the old method
+1. Identify the method you need to change.
+2. Rename the method and create the new method with the same name and signature as the old method.
+3. Place a call to the old method in the new method.
+4. Develop a method for the new feature, test first, and call it from the new method.
+**** To leave the old method as-is
+1. Identify the method you need to change.
+2. Develop a new method using test-driven development.
+3. Create another method that calls the new method and the old method.
+*** Advantages
+- Good way of getting new, tested functionality into an application when we can't easily write tests for the calling code.
+- Does not increase the size of the original method (like [[id:3c0196e9-4ab9-4e7a-a28d-b068d2b85a4d][Sprout Method]] and [[id:ea2eb027-9241-4a8f-89bd-61ed98e94f9b][Sprout Class]]).
+- Not intertwining code with one purpose with code that has another.
+*** Disadvantages
+- Can lead to poor method names.
+- [[id:f303a682-6f21-4dac-a471-d150b5f70782][Extract Method]] may be a better approach when available.
+
+** Wrap Class
+:PROPERTIES:
+:ID:       3f9b59a2-6e0c-4cd2-99fe-b0e1bde6fdb7
+:END:
+
+This is the class-based version of [[id:e0854ed1-cbc9-4a4d-b0fe-9dc19aeabb30][Wrap Method]].
+
+*** When to use
+- The behavior you want to add is completely independent, and you don't want to pollute the existing class with behavior that is low level or unrelated.
+- The class has grown so large that you can't stand to make it worse.
+
+*** Steps
+1. Identify the method you need to change.
+2. Create a class that accepts the class you are going to wrap as a constructor argument. [[id:69d9c2cb-eb61-4f3f-bf9f-bffa324c481d][Extract Implementer]] and [[id:f9307327-5991-41c1-af4a-e3c69bf65551][Extract Interface]] can be helpful here.
+3. Create a method on that class, using test-driven development. Write another method that calls the new method and the old method on the wrapped class.
+4. Instantiate the wrapper class in your code in the place where you need to enable the new behavior.
+
+
 * Chapter 7: It Takes Forever to Make a Change.
 :PROPERTIES:
 :ID:       6cf272a1-b60b-4e93-aa92-341f66a08319
@@ -393,6 +481,14 @@ Without automated tools, use the following steps:
 * Refactoring
 :PROPERTIES:
 :ID:       135e5b2e-997e-47ef-ada6-800505f38455
+:END:
+** Extract Implementer
+:PROPERTIES:
+:ID:       69d9c2cb-eb61-4f3f-bf9f-bffa324c481d
+:END:
+** Extract Interface
+:PROPERTIES:
+:ID:       f9307327-5991-41c1-af4a-e3c69bf65551
 :END:
 ** Extract Method
 :PROPERTIES:

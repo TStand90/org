@@ -11,4 +11,4 @@ SCHEDULED: <2024-04-02 Tue>
 - Note taken on [2024-03-20 Wed 22:35] \\
   I don't necessarily want to pollute my personal TODOs with work stuff.
 
-** [ ] Investigate the Key Promoter plugin for JetBrains IDEs
+** [X] Investigate the Key Promoter plugin for JetBrains IDEs

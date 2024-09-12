@@ -6,6 +6,19 @@
 Python is the second best language for just about everything (except game development, it sucks at that).
 
 * Concepts
+** Abstract classes
+You can make a class abstract by adding ~abc.ABC~ as a superclass.
+
+#+BEGIN_SRC python
+import abc
+
+class MyAbstractClass(abc.ABC):
+    @abc.abstractmethod
+    def do_something(self):
+        raise NotImplementedError("Implement the thing please!")
+#+END_SRC
+
+*NOTE*: You _must_ add /at least one/ abstract method to a class for it to be truly abstract. Otherwise, the class can still be instatiated!
 ** Testing
 *** ~unittest.mock~
 **** Assert called
