@@ -6,6 +6,13 @@
 * Do an empty commit
 This can come in handy to trigger CI workflows, such as a redeployment.
 
-#+BEGIN_SRC
+#+BEGIN_SRC shell
 git commit -m 'fix: empty commit' --allow-empty
+#+END_SRC
+
+* Restore a file deleted on the current branch from another
+Use [[https://git-scm.com/docs/git-restore][git restore]] like this:
+
+#+BEGIN_SRC shell
+git restore -s main -- path/to/file.txt
 #+END_SRC
