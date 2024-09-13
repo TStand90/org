@@ -1,0 +1,7 @@
+:PROPERTIES:
+:ID:       0b8f74cf-62b3-465f-bd38-475357551e05
+:ROAM_REFS: https://en.wikipedia.org/wiki/Higher-order_function
+:END:
+#+title: Higher-order functions
+
+Higher-order functions are functions that take /another/ function as an argument.

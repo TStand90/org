@@ -605,3 +605,42 @@ Therefore, files that have no dependencies should go at the top, and files that 
 You can load a =.fs= file directly into a script (and FSI) using the =#load= directive.
 
 You can also load an entire DLL that you've build using =#r=. This can make loading an entire application or library easier.
+
+* Lists
+Declare a list using ~[]~.
+
+#+BEGIN_SRC fsharp
+type Result =
+    { HomeTeam : string; HomeGoals : int
+      AwayTeam : string; AwayGoals : int }
+let create home hg away ag =
+    { HomeTeam = home; HomeGoals = hg
+      AwayTeam = away; AwayGoals = ag }
+let results = [
+    create "Messiville" 1 "Ronaldo City" 2
+    create "Messiville" 1 "Bale Town" 3
+    create "Ronaldo City" 2 "Bale Town" 3
+    create "Bale Town" 2 "Messiville" 1
+]
+#+END_SRC
+
+You can put all the entries on a single line as well, separated by a =;= (/not/ a =,= like most other languages!).
+
+You can use the =@= operator to append one list to the end of another, creating a new list (lists are immutable).
+
+You can also use the =::= operator to append a single item to the beginning of a list (again, creatinga new list).
+
+#+BEGIN_SRC fsharp
+let a = [ 1;2;3 ]
+let b = [ 4;5;6 ]
+
+let c = a @ b
+// val c: int list = [1; 2; 3; 4; 5; 6]
+
+let d = 0 :: a
+// val d: int list = [0; 1; 2; 3]
+#+END_SRC
+
+Note that there is no operator to append a single item to the end of a list; you must create a list of a single item and append that.
+
+Be careful when appending long lists. ~List.append~ and ~@~ can run into issues if you start adding thousands of items in a tight loop. F# List is optimized for adding single items at the front.
