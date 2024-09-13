@@ -131,6 +131,7 @@ CLOCK: [2024-09-03 Tue 11:37]--[2024-09-03 Tue 12:02] =>  0:25
 :END:
 ** [-] [[https://hellowisp.atlassian.net/browse/WISPENG-603][WISPENG-603]]: Lab slips do not show if the Order is rejected first
 :LOGBOOK:
+CLOCK: [2024-09-12 Thu 16:56]--[2024-09-12 Thu 17:21] =>  0:25
 CLOCK: [2024-09-12 Thu 08:42]--[2024-09-12 Thu 09:07] =>  0:25
 CLOCK: [2024-09-12 Thu 08:07]--[2024-09-12 Thu 08:32] =>  0:25
 CLOCK: [2024-09-11 Wed 16:30]--[2024-09-11 Wed 17:02] =>  0:32
@@ -183,6 +184,7 @@ CLOCK: [2024-09-10 Tue 07:22]--[2024-09-10 Tue 07:47] =>  0:25
 :LOGBOOK:
 CLOCK: [2024-09-12 Thu 10:41]--[2024-09-12 Thu 11:06] =>  0:25
 :END:
+*** [ ] FIX: The Orders section is still loading the Lab Slips
 * Messages to post
 ** [ ] Ask in dev-private what everyone thinks about the type hint for returning "Self" from Pydantic validators.
 We have two options:
