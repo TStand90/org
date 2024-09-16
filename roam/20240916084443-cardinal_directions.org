@@ -1,0 +1,7 @@
+:PROPERTIES:
+:ID:       60fb45c8-3f9e-402d-a95c-2fdbfc61651a
+:ROAM_REFS: https://en.wikipedia.org/wiki/Cardinal_direction
+:END:
+#+title: Cardinal Directions
+
+Cardinal Directions are North, East, South, and West.

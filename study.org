@@ -1,6 +1,11 @@
 #+title: Study
 
 * Data Structures & Algorithms
+** [[id:b4a820bc-0722-4dde-8b64-ad097b7b1f58][Graphs]]
+:LOGBOOK:
+CLOCK: [2024-09-16 Mon 07:58]--[2024-09-16 Mon 09:03] =>  1:05
+:END:
+
 
 * Languages
 ** F#

@@ -1,6 +1,101 @@
 :PROPERTIES:
 :ID:       b4a820bc-0722-4dde-8b64-ad097b7b1f58
+:ROAM_REFS: https://neetcode.io/courses/dsa-for-beginners/28
 :END:
 #+title: Graphs
+#+filetags: :Data_Structures:
 
 Graphs are a type of data structure, consisting of "Nodes" and "Edges".
+
+(Vertices are another word for Nodes, Vertex is the singular)
+
+E <= V^{2}
+- This is because each vertex can have an edge with each node, including itself.
+
+
+* Directed Graphs
+:PROPERTIES:
+:ID:       f8af1612-3939-42f0-8e1f-34a995904dd5
+:END:
+If the pointers connecting the edges together have a direction, this is called a _directed graph_. This means that if =A= points to =B=, then =B= does not necessarily point to =A= (though it could.)
+
+[[id:df0100b8-8894-4071-864a-f5a56e357ea5][Binary Tree]]s are a type of directed graph.
+
+* Undirected Graphs
+:PROPERTIES:
+:ID:       a079f029-54bc-4814-a348-2ea84abc2bdb
+:END:
+
+Contrary to [[id:f8af1612-3939-42f0-8e1f-34a995904dd5][Directed Graphs]], Undirected Graphs don't have direction. So each edge can go either direction.
+
+* Matrix
+:PROPERTIES:
+:ID:       0739131a-6dbf-4033-889d-c5096cb44e81
+:END:
+A Matrix is a 2D [[id:721cecef-36a5-4fe7-9cf0-b885d92dc690][Array]], but it can be used to represent a graph.
+
+#+BEGIN_SRC python
+grid = [[0, 0, 0, 0],
+        [1, 1, 0, 0],
+        [0, 0, 0, 1],
+        [0, 1, 0, 0]]
+#+END_SRC
+
+| 0 | 0 | 0 | 0 |
+| 1 | 1 | 0 | 0 |
+| 0 | 0 | 0 | 1 |
+| 0 | 1 | 0 | 0 |
+
+Imagine a 0 meaning a "free" space, and a 1 meaning a "blocked" space. If you are creating a "path", you can move through the zeroes, but not the ones. We can move in the [[id:60fb45c8-3f9e-402d-a95c-2fdbfc61651a][Cardinal Directions]].
+
+Sometimes, diagonal movement is allowed, but it's less common.
+
+
+Imagine a 0 meaning a "free" space, and a 1 meaning a "blocked" space. If you are creating a "path", you can move through the zeroes, but not the ones. We can move in the [[id:60fb45c8-3f9e-402d-a95c-2fdbfc61651a][Cardinal Directions]].
+
+Sometimes, diagonal movement is allowed, but it's less common.
+
+In this case, this is an [[id:a079f029-54bc-4814-a348-2ea84abc2bdb][Undirected Graph]]. You can move from one node to another and back.
+
+** Adjacency Matrix
+:PROPERTIES:
+:ID:       e4d738f0-b059-4253-9fa5-88f96d4f32e9
+:END:
+
+Take the same graph as before
+
+| 0 | 0 | 0 | 0 |
+| 1 | 1 | 0 | 0 |
+| 0 | 0 | 0 | 1 |
+| 0 | 1 | 0 | 0 |
+
+We have rows and columns 0-3, so imagine that we have vertices =0=, =1=, =2=, and =3=.
+
+In an [[id:e4d738f0-b059-4253-9fa5-88f96d4f32e9][Adjacency Matrix]], a 0 means that there is *not* and edge from the vertices represented by the x and y (row/column) indexes.
+
+For example:
+- The =0= at potision [0, 1] (row 0, column 1) means that there is *not* an edge from =0= to =1=.
+- The =1= at position [2, 3] (row 2, column 3) means that there *is* an edge from =2= to =3=.
+- The =1= at position [1, 1] means that there *is* an edge from =1= to itself.
+
+This is an example of a [[id:f8af1612-3939-42f0-8e1f-34a995904dd5][Directed Graph]].
+
+It's a bit rare to actually use an [[id:e4d738f0-b059-4253-9fa5-88f96d4f32e9][Adjacency Matrix]], because the space complexity is O(V^{2}).
+
+** Adjacency List
+:PROPERTIES:
+:ID:       00f78124-16ba-4618-ab37-6a136d813315
+:END:
+
+[[id:00f78124-16ba-4618-ab37-6a136d813315][Adjacency List]]s are very similar to [[id:d0b02bbc-6d2e-4905-aba3-a3cbe3e97b20][Linked List]]s. They consist of nodes with values that have connections to other nodes (vertices).
+
+#+BEGIN_SRC python
+class GraphNode:
+    def __init__(self, val):
+        self.val = val
+        self.neighbors = []
+#+END_SRC
+
+In this example, ~neighbors~ is a list of ~GraphNode~. ~neighbors~ tells us which other vertices the ~GraphNode~ has edges to (in other words, which other nodes it points to).
+
+This is an example of a [[id:f8af1612-3939-42f0-8e1f-34a995904dd5][Directed Graph]]. You could also implement an [[id:a079f029-54bc-4814-a348-2ea84abc2bdb][Undirected Graph]] using this structure.
