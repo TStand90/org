@@ -129,7 +129,7 @@ CLOCK: [2024-09-04 Wed 06:53]--[2024-09-04 Wed 07:13] =>  0:20
 CLOCK: [2024-09-03 Tue 15:02]--[2024-09-03 Tue 15:27] =>  0:25
 CLOCK: [2024-09-03 Tue 11:37]--[2024-09-03 Tue 12:02] =>  0:25
 :END:
-** [-] [[https://hellowisp.atlassian.net/browse/WISPENG-603][WISPENG-603]]: Lab slips do not show if the Order is rejected first
+** [X] [[https://hellowisp.atlassian.net/browse/WISPENG-603][WISPENG-603]]: Lab slips do not show if the Order is rejected first
 :LOGBOOK:
 CLOCK: [2024-09-12 Thu 16:56]--[2024-09-12 Thu 17:21] =>  0:25
 CLOCK: [2024-09-12 Thu 08:42]--[2024-09-12 Thu 09:07] =>  0:25
@@ -180,16 +180,34 @@ CLOCK: [2024-09-10 Tue 13:05]--[2024-09-10 Tue 13:30] =>  0:25
 CLOCK: [2024-09-10 Tue 10:29]--[2024-09-10 Tue 10:54] =>  0:25
 CLOCK: [2024-09-10 Tue 07:22]--[2024-09-10 Tue 07:47] =>  0:25
 :END:
-*** [-] Frontend UI improvements
+*** [X] Frontend UI improvements
 :LOGBOOK:
 CLOCK: [2024-09-12 Thu 10:41]--[2024-09-12 Thu 11:06] =>  0:25
 :END:
 *** [X] FIX: The Orders section is still loading the Lab Slips
-*** [-] Frontend refactors
+*** [X] Frontend refactors
 :LOGBOOK:
 CLOCK: [2024-09-13 Fri 15:27]--[2024-09-13 Fri 15:52] =>  0:25
 CLOCK: [2024-09-13 Fri 14:00]--[2024-09-13 Fri 14:25] =>  0:25
 CLOCK: [2024-09-13 Fri 11:44]--[2024-09-13 Fri 12:09] =>  0:25
+:END:
+** [-] [[https://github.com/hellowisp/secure.hellowisp.com/pull/4704][PR to get a Cart by ID]]
+- Note taken on [2024-09-16 Mon 21:22] \\
+  Just need to finish tests for this. The tricky part is mocking the Talon return values.
+:LOGBOOK:
+CLOCK: [2024-09-17 Tue 16:48]--[2024-09-17 Tue 16:52] =>  0:04
+CLOCK: [2024-09-17 Tue 15:15]--[2024-09-17 Tue 16:45] =>  1:30
+CLOCK: [2024-09-17 Tue 14:37]--[2024-09-17 Tue 15:02] =>  0:25
+CLOCK: [2024-09-17 Tue 13:49]--[2024-09-17 Tue 14:14] =>  0:25
+CLOCK: [2024-09-17 Tue 13:00]--[2024-09-17 Tue 13:49] =>  0:49
+CLOCK: [2024-09-17 Tue 12:23]--[2024-09-17 Tue 12:48] =>  0:25
+CLOCK: [2024-09-17 Tue 11:36]--[2024-09-17 Tue 12:02] =>  0:26
+CLOCK: [2024-09-17 Tue 11:00]--[2024-09-17 Tue 11:36] =>  0:36
+CLOCK: [2024-09-17 Tue 08:22]--[2024-09-17 Tue 08:47] =>  0:25
+CLOCK: [2024-09-17 Tue 07:35]--[2024-09-17 Tue 08:00] =>  0:25
+CLOCK: [2024-09-16 Mon 18:30]--[2024-09-16 Mon 21:22] =>  2:52
+CLOCK: [2024-09-16 Mon 14:38]--[2024-09-16 Mon 15:27] =>  0:49
+CLOCK: [2024-09-16 Mon 11:45]--[2024-09-16 Mon 13:03] =>  1:18
 :END:
 * Messages to post
 ** [ ] Ask in dev-private what everyone thinks about the type hint for returning "Self" from Pydantic validators.

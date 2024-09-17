@@ -106,4 +106,3 @@ So with the current pods up right now all you need to run is
 - kubectl config use-context prod
 - kubectl exec -ti prod-swa-web-756bb547d7-4vfrh bash -n swa
 - ./manage shell
-  
