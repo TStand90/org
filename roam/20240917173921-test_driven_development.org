@@ -1,0 +1,21 @@
+:PROPERTIES:
+:ID:       8ce5b790-7f76-45ad-a8ec-8b91cc146405
+:END:
+#+title: Test-Driven Development
+
+Test-Driven Development, or TDD, is a technique that many swear by, but nobody actually does.
+
+Here are the steps:
+1. Write a failing test case (for something that does not yet exist).
+2. Get it to compile.
+3. Make the test pass.
+4. Remove duplication and refactor.
+5. Repeat.
+
+For existing, legacy code bases, you can adapt TDD like this:
+0. /Get the class you want to change under test/.
+1. Write a failing test case.
+2. Get it to compile.
+3. Make the test pass (try not to change existing code as you do this).
+4. Remove duplication and refactor.
+5. Repeat.

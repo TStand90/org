@@ -1,0 +1,13 @@
+:PROPERTIES:
+:ID:       911b8df8-a924-4d8a-84ea-6bdc2ae99d86
+:ROAM_REFS: https://en.wikipedia.org/wiki/Dependency_inversion_principle
+:END:
+#+title: Dependency Inversion Principle
+
+#+BEGIN_QUOTE
+When your code depends on an interface, that dependency is usually very minor and unobtrusive. Your code doesn't have to change unless the interface changes, and interfaces change far less often than the code behind them. When you have an interface, you can edi classes that implement that interface or add new classes that implement the interface, all without code that uses the interface.
+
+For this reason, it is better to depend on interfaces or abstract classes than it is to depend on concrete classes. When you depend on less volatile things, you minimize the chance that particular changes will trigger massive recompilation.
+
+- Michael C. Feathers, Working Effectively With Legacy Code, page 84
+#+END_QUOTE

@@ -314,10 +314,18 @@ This is the class-based version of [[id:e0854ed1-cbc9-4a4d-b0fe-9dc19aeabb30][Wr
 :ID:       6cf272a1-b60b-4e93-aa92-341f66a08319
 :END:
 
+When recompliation takes a long time, breaking up dependencies so that a class can be recompiled on its own is a helpful technique.
+
+We can do so by implementing interfaces on the classes, and having our class we want to test rely on those interfaces rather than the concrete implementations.
+
+See [[id:911b8df8-a924-4d8a-84ea-6bdc2ae99d86][Dependency Inversion Principle]] for more info on what this technique entails.
+
 * Chapter 8: How Do I Add a Feature?
 :PROPERTIES:
 :ID:       9fa2652c-2ac2-4cda-b331-f043746f42aa
 :END:
+
+[[id:8ce5b790-7f76-45ad-a8ec-8b91cc146405][Test-Driven Development]] is a technique recommended here by the author.
 
 * Chapter 9: I Can't Get This Class into a Test Harness.
 :PROPERTIES:
