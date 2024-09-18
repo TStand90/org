@@ -99,3 +99,56 @@ class GraphNode:
 In this example, ~neighbors~ is a list of ~GraphNode~. ~neighbors~ tells us which other vertices the ~GraphNode~ has edges to (in other words, which other nodes it points to).
 
 This is an example of a [[id:f8af1612-3939-42f0-8e1f-34a995904dd5][Directed Graph]]. You could also implement an [[id:a079f029-54bc-4814-a348-2ea84abc2bdb][Undirected Graph]] using this structure.
+
+** Matrix Depth First Search
+:PROPERTIES:
+:ID:       7aa2c5e2-2a07-48ad-b04c-d28ff733bab3
+:END:
+
+Imagine we want to count every unique path from the top left of the matrix to the bottom right. We can use [[id:ee841753-8ab3-49ae-8274-d7bf89c9e04f][Depth First Search]] to accomplish this.
+
+| 0 | 0 | 0 | 0 |
+| 1 | 1 | 0 | 0 |
+| 0 | 0 | 0 | 1 |
+| 0 | 1 | 0 | 0 |
+
+Visit every =0= node and create a path. Note that you cannot visit a =0= that has already been visited. Doing so could cause an infinite loop.
+
+#+BEGIN_SRC python
+def dfs(grid, r, c, visit):  # "visit" is a hash set of all the positions we have visited thus far.
+    ROWS, COLS = len(grid), len(grid[0])  # Gets the size of the rows and columns. (This could be calculated once and passed as a param instead.)
+
+    # These are the two base cases.
+    if min(r, c) < 0 or  # Out of bounds.
+        r == ROWS or c == COLS or  # Also out of bounds.
+        (r, c) in visit or  # Position has already been visited.
+        grid[r][c] == 1):  # Position has a "1", this way is blocked.
+        return 0  # No valid path.
+    if r == ROWS - 1 and c == COLS - 1:  # If we are at the bottom right position (success!).
+        return 1  # We have found a valid path.
+
+    visit.add((r, c))  # Add the current position to the "visited" hash set.
+
+    count = 0
+    count += dfs(grid, r + 1, c, visit)  # Move down
+    count += dfs(grid, r - 1, c, visit)  # Move up
+    count += dfs(grid, r, c + 1, visit)  # Move right
+    count += dfs(grid, r, c - 1, visit)  # Move left
+
+    visit.remove((r, c))  # Mark the position as "unvisited". This enables backtracking.
+    return count
+
+print(dfs(grid, 0, 0, set()))
+#+END_SRC
+
+*** Time Complexity
+The worst case would be a matrix with no blocked paths. Each node would have four choices, and there would be the size of the matrix rows (n) times cols (m).
+
+O(4^{n * m})
+
+Not very efficient.
+
+*** Space Complexity
+Each recursive call adds to the stack.
+
+O(n * m)

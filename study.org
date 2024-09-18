@@ -3,7 +3,11 @@
 * Data Structures & Algorithms
 ** [[id:b4a820bc-0722-4dde-8b64-ad097b7b1f58][Graphs]]
 :LOGBOOK:
-CLOCK: [2024-09-16 Mon 07:58]--[2024-09-16 Mon 09:03] =>  1:05
+CLOCK: [2024-09-16 Mon 07:58]--[2024-09-16 Mon 08:50] =>  0:52
+:END:
+** [[id:0739131a-6dbf-4033-889d-c5096cb44e81][Matrix]]
+:LOGBOOK:
+CLOCK: [2024-09-18 Wed 07:20]
 :END:
 
 
