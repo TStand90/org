@@ -113,7 +113,7 @@ CLOCK: [2024-08-27 Tue 07:07]--[2024-08-27 Tue 07:32] =>  0:25
 :LOGBOOK:
 CLOCK: [2024-08-29 Thu 09:05]--[2024-08-29 Thu 09:25] =>  0:20
 :END:
-** [-] Service method to get a Cart by ID
+** [?] Service method to get a Cart by ID
 :PROPERTIES:
 :DESCRIPTION: We need a service method to get carts by Cart ID. This will be used by the messaging system to display what changed in a user's cart.
 :END:
@@ -193,10 +193,13 @@ CLOCK: [2024-09-13 Fri 15:27]--[2024-09-13 Fri 15:52] =>  0:25
 CLOCK: [2024-09-13 Fri 14:00]--[2024-09-13 Fri 14:25] =>  0:25
 CLOCK: [2024-09-13 Fri 11:44]--[2024-09-13 Fri 12:09] =>  0:25
 :END:
-** [-] [[https://github.com/hellowisp/secure.hellowisp.com/pull/4704][PR to get a Cart by ID]]
+** [?] [[https://github.com/hellowisp/secure.hellowisp.com/pull/4704][PR to get a Cart by ID]]
 - Note taken on [2024-09-16 Mon 21:22] \\
   Just need to finish tests for this. The tricky part is mocking the Talon return values.
 :LOGBOOK:
+CLOCK: [2024-09-18 Wed 10:07]--[2024-09-18 Wed 10:32] =>  0:25
+CLOCK: [2024-09-18 Wed 09:33]--[2024-09-18 Wed 09:58] =>  0:25
+CLOCK: [2024-09-18 Wed 08:30]--[2024-09-18 Wed 09:33] =>  1:03
 CLOCK: [2024-09-17 Tue 16:48]--[2024-09-17 Tue 17:00] =>  0:12
 CLOCK: [2024-09-17 Tue 15:15]--[2024-09-17 Tue 16:45] =>  1:30
 CLOCK: [2024-09-17 Tue 14:37]--[2024-09-17 Tue 15:02] =>  0:25
@@ -211,6 +214,7 @@ CLOCK: [2024-09-16 Mon 18:30]--[2024-09-16 Mon 21:22] =>  2:52
 CLOCK: [2024-09-16 Mon 14:38]--[2024-09-16 Mon 15:27] =>  0:49
 CLOCK: [2024-09-16 Mon 11:45]--[2024-09-16 Mon 13:03] =>  1:18
 :END:
+** [ ] [[https://hellowisp.atlassian.net/browse/WISPENG-466][WISPENG-466]]: Create and send dynamic message to patient in Secure for deny/approve
 * Messages to post
 ** [ ] Ask in dev-private what everyone thinks about the type hint for returning "Self" from Pydantic validators.
 We have two options:

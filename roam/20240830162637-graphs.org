@@ -122,7 +122,7 @@ def dfs(grid, r, c, visit):  # "visit" is a hash set of all the positions we hav
     if min(r, c) < 0 or  # Out of bounds.
         r == ROWS or c == COLS or  # Also out of bounds.
         (r, c) in visit or  # Position has already been visited.
-        grid[r][c] == 1):  # Position has a "1", this way is blocked.
+        grid[r][c] == 1:  # Position has a "1", this way is blocked.
         return 0  # No valid path.
     if r == ROWS - 1 and c == COLS - 1:  # If we are at the bottom right position (success!).
         return 1  # We have found a valid path.
@@ -139,6 +139,33 @@ def dfs(grid, r, c, visit):  # "visit" is a hash set of all the positions we hav
     return count
 
 print(dfs(grid, 0, 0, set()))
+#+END_SRC
+
+Version of above with better variable names and type hints:
+
+#+BEGIN_SRC python
+def matrix_depth_first_search(grid: list[list[int]], row: int, col: int, visited: set) -> int:
+    ROWS, COLS = len(grid), len(grid[0])
+
+    if min(row, col) < 0 or
+        row == ROWS or col == COLS or
+        (row, col) in visited or
+        grid[row][col] == 1:
+        return 0
+    if r == ROWS - 1 and c == COLS - 1:
+        return 1
+
+    visit.add((row, col))
+
+    count = 0
+    count += matrix_depth_first_search(grid, row + 1, col, visited)
+    count += matrix_depth_first_search(grid, row - 1, col, visited)
+    count += matrix_depth_first_search(grid, row, col + 1, visited)
+    count += matrix_depth_first_search(grid, row, col - 1, visited)
+
+    visited.remove((row, col))
+
+    return count
 #+END_SRC
 
 *** Time Complexity
