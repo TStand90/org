@@ -89,6 +89,8 @@ CLOCK: [2024-08-26 Mon 17:22]--[2024-08-26 Mon 17:47] =>  0:25
 :END:
 ** [ ] Validator to get the current provider
 Morgan called this out [[https://github.com/hellowisp/secure.hellowisp.com/pull/4742#discussion_r1757271214][here]].
+** [ ] data.convert_skus_to_cart_items() in the carts controller should be removed
+I left a tech-debt comment about this ages ago. I /think/ what we did was moved from just SKUs to "cart items" to support attributes on each item. But we did not want to mess up "in flight" carts, so we left SKUs in the schemas and made this function to "convert" the SKUs into cart items. Obviously, we were supposed to delete the SKUs attribute and this conversion method, but I guess I never did.
 * Editable Medications
 ** [X] WE-460: New Provider UI
 ** [X] Investigating UI failure for lab slips
@@ -195,7 +197,7 @@ CLOCK: [2024-09-13 Fri 11:44]--[2024-09-13 Fri 12:09] =>  0:25
 - Note taken on [2024-09-16 Mon 21:22] \\
   Just need to finish tests for this. The tricky part is mocking the Talon return values.
 :LOGBOOK:
-CLOCK: [2024-09-17 Tue 16:48]--[2024-09-17 Tue 16:52] =>  0:04
+CLOCK: [2024-09-17 Tue 16:48]--[2024-09-17 Tue 17:00] =>  0:12
 CLOCK: [2024-09-17 Tue 15:15]--[2024-09-17 Tue 16:45] =>  1:30
 CLOCK: [2024-09-17 Tue 14:37]--[2024-09-17 Tue 15:02] =>  0:25
 CLOCK: [2024-09-17 Tue 13:49]--[2024-09-17 Tue 14:14] =>  0:25
