@@ -41,5 +41,10 @@ CLOCK: [2024-09-11 Wed 10:03]--[2024-09-11 Wed 10:49] =>  0:46
 
 * Eng working group - September 18 2024 - 11:00 AM
 :LOGBOOK:
-CLOCK: [2024-09-18 Wed 11:00]
+CLOCK: [2024-09-18 Wed 11:00]--[2024-09-18 Wed 14:05] =>  3:05
+:END:
+
+* Editable Medications data cont'd <2024-09-19 Thu 09:30>
+:LOGBOOK:
+CLOCK: [2024-09-19 Thu 09:33]--[2024-09-19 Thu 10:05] =>  0:32
 :END:
