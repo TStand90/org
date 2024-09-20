@@ -1,0 +1,7 @@
+:PROPERTIES:
+:ID:       35525a86-2001-4cea-86c1-1367bc0caa7b
+:ROAM_REFS: https://en.wikipedia.org/wiki/Boyer%E2%80%93Moore_string-search_algorithm
+:END:
+#+title: Boyer Moore Algorithm
+
+TODO

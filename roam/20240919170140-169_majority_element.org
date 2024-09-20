@@ -1,0 +1,71 @@
+:PROPERTIES:
+:ID:       ffbf62bc-7687-46d7-ab16-49818005fdfe
+:ROAM_REFS: https://www.youtube.com/watch?v=7pnhv842keE https://leetcode.com/problems/majority-element/description/
+:END:
+#+title: 169. Majority Element
+#+filetags: :Leetcode:
+
+* Description
+Given an array nums of size n, return the majority element.
+
+The majority element is the element that appears more than ⌊n / 2⌋ times. You may assume that the majority element always exists in the array.
+
+Example 1:
+
+Input: nums = [3,2,3]
+Output: 3
+Example 2:
+
+Input: nums = [2,2,1,1,1,2,2]
+Output: 2
+
+* Solution
+** HashMap
+#+BEGIN_SRC python
+from collections import defaultdict
+
+
+class Solution:
+    def majorityElement(self, nums: list[int]) -> int:
+        majority_element_threshold = len(nums) // 2
+        number_counts = defaultdict(int)
+
+        for num in nums:
+            number_counts[num] += 1
+
+            if number_counts[num] > majority_element_threshold:
+                return num
+
+        return -1
+#+END_SRC
+
+** [[id:35525a86-2001-4cea-86c1-1367bc0caa7b][Boyer Moore Algorithm]]
+*** Code
+#+BEGIN_SRC python
+class Solution:
+    def majorityElement(self, nums: List[int]) -> int:
+        result = nums[0]
+        count = 1
+
+        for num in nums[1:]:
+            if count == 0:
+                result = num
+
+            if num == result:
+                count += 1
+            else:
+                count -= 1
+
+        return result
+#+END_SRC
+
+*** Explanation
+Keep two variables: ~count~ and ~result~.
+
+~result~ will hold the result, which we will assign to the first variable in the array at the start.
+
+~count~ will keep track of the count we have seen *so far in the array* for the current ~result~.
+
+[2, 2, 1, 1, 1, 2, 2]
+
+TODO: Finish the explanation!
