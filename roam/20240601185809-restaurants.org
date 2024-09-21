@@ -6,6 +6,16 @@
 A list of restaurants and our feelings about them.
 
 * Clovis
+** Curry Pizza Company
+*** Pizza
+**** The Savage Pizza
+Their version of a combo. This is what Aurora likes.
+
+*** Wings
+**** Curry Madala Rub
+Not Spicy.
+
+Aurora likes these a lot, and so does Pooja.
 ** Gulab Indian Bistro
 *** Chicken Curry
 Okay. Probably won't get again
