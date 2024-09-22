@@ -19,11 +19,11 @@ A list of books and articles that I'd like to read at some point.
 
 * Books
 ** Life
-*** [0/2] Habits
+*** [1/2] Habits
 **** HOLD Atomic Habits
 - Note taken on [2024-08-15 Thu 08:07] \\
   Read the intro. Will pick it up again after finishing The Power of Habit.
-**** [-] The Power of Habit
+**** [X] The Power of Habit
 ** Philosophy
 *** [0/2] Stoicism
 **** [-] Letters from a Stoic
