@@ -1,0 +1,14 @@
+:PROPERTIES:
+:ID:       72a629dd-d09d-4da2-bbc2-ce92fe89a4f2
+:END:
+#+title: readOnlyDict
+#+filetags: :F#:
+
+#+BEGIN_SRC fsharp
+let data = [
+    "Isaac", "F#"; "Fred", "C#"; "Sam", "F#"; "Jo", "PHP"
+]
+let lookup = readOnlyDict data
+let isaacsLang = lookup["Isaac"]
+lookup["Isaac"] <- "Python"
+#+END_SRC

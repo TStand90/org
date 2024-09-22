@@ -1,0 +1,7 @@
+:PROPERTIES:
+:ID:       5bf58f1a-995a-4b24-ae95-44cde5f4a322
+:END:
+#+title: IReadOnlyDictionary
+#+filetags: :F#:
+
+TODO

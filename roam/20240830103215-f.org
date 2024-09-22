@@ -644,3 +644,42 @@ let d = 0 :: a
 Note that there is no operator to append a single item to the end of a list; you must create a list of a single item and append that.
 
 Be careful when appending long lists. ~List.append~ and ~@~ can run into issues if you start adding thousands of items in a tight loop. F# List is optimized for adding single items at the front.
+
+** Ranges, slices, and indexing
+
+#+BEGIN_SRC fsharp
+let numbers = [ 1..10 ]
+let secondItem = numbers[i]
+let itemsOneToSix = numbers[ 1..6 ]
+#+END_SRC
+
+* Arrays
+Arrays have similar functions to Lists, but interop with [[id:684e6719-609f-4a8a-a8fa-f11d0585ec10][C#]].
+
+Use ~[|~ and ~|]~ to denote an Array.
+
+#+BEGIN_SRC fsharp
+let numbers = [| 1..10 |]
+let secondElement = [1]
+let squares = numbers |> Array.map (fun x -> x * x)
+#+END_SRC
+
+* Sequences
+
+Sequences correspond to the [[id:684e6719-609f-4a8a-a8fa-f11d0585ec10][C#]] type ~System.Collections.Generic.IEnumerable<T>~.
+
+They allow for lazy, forward-only navigation of a sequence of items.
+
+#+BEGIN_SRC fsharp
+let numbers = seq { 1 .. 10 }
+let secondElement = numbers |> Seq.item 1
+let squares = numbers |> Seq.map (fun x -> x * x)
+#+END_SRC
+
+* ResizeArray
+
+Corresponds to [[id:684e6719-609f-4a8a-a8fa-f11d0585ec10][C#]] ~System.Collections.Generic.List<T>~.
+
+* Dictionary
+
+F# has the type [[id:72a629dd-d09d-4da2-bbc2-ce92fe89a4f2][readOnlyDict]], which is the equivalent of [[id:684e6719-609f-4a8a-a8fa-f11d0585ec10][C#]] [[id:5bf58f1a-995a-4b24-ae95-44cde5f4a322][IReadOnlyDictionary]].
