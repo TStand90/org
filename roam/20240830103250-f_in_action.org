@@ -10,3 +10,64 @@
 In [[id:0cabecd4-2482-413f-a76a-81ad31b6bd2b][Object Oriented]] languages, you might have a ~Basket~ class with methods such as ~AddItem~, ~Clear~, and ~Checkout~.
 
 In a [[id:ddff8999-8f7a-4abe-b756-af97af50dfdc][Functional Programming]] language like [[id:1c0131b0-54d9-4b00-9214-3920c53984d2][F#]], you would have an immutable record that represents a basket (with the items in it), and a module with /stateless/ functions such as ~AddItem~, ~Clear~, and ~Checkout~. Each function would do some action, then return an updated version of the basket. This generally leads to simpler code that's easier to understand.
+
+* Chapter 7: Working with collections
+** Comparing the different collection types
+
+| Collection | Eagerness | Immutable | Performance | .NET Interop | Indexing? |
+|------------+-----------+-----------+-------------+--------------+-----------|
+| Seq        | Lazy      | Yes       | Medium      | Good         | No        |
+| List       | Eager     | Yes       | Medium/Fast | Medium       | Yes       |
+| Array      | Eager     | No        | Fast        | Good         | Yes       |
+
+The author advises starting with List in most cases.
+
+** Aggregations
+
+Aggregations represent a type of operation commonly seen when working with collections. They provide a way to collapse data from several values into a single value.
+
+Examples:
+- "I want to total up all debt of a list of customers."
+- "What's the total price of the user's basket at checkout?"
+
+*** Imperative loops
+
+#+BEGIN_SRC fsharp
+let numbers = [ 1..10 ] |> List.map string
+
+for n in numbers do
+    printfn $"Number {n}"
+
+for n in 1 .. 10 do
+    printfn "Number %i" n
+
+let mutable counter = 1
+while counter <= 10 do
+    printfn $"Number {counter}"
+    counter <- counter + 1
+#+END_SRC
+
+Example: implement ~sum~ using ~for~ loops.
+
+#+BEGIN_SRC fsharp
+let inputs = [ 1 .. 10 ]
+let sum inputs =
+    let mutable accumulator = 0
+    for input in inputs do
+        accumulator <- accumulator + input
+    accumulator
+#+END_SRC
+
+*** Functional folds
+
+~.fold~ is a more functional way of doing the above. It lives in ~Seq~, ~Array~, and ~List~.
+
+#+BEGIN_SRC fsharp
+let sum inputs =
+    inputs
+    |> Seq.fold
+        (fun accumulator input -> accumulator + input)
+        0
+#+END_SRC
+
+=0= is the starting value of the accumulator. The ~fun~ is the logic for how to aggregate the next item in the collection to the accumulator.

@@ -683,3 +683,53 @@ Corresponds to [[id:684e6719-609f-4a8a-a8fa-f11d0585ec10][C#]] ~System.Collectio
 * Dictionary
 
 F# has the type [[id:72a629dd-d09d-4da2-bbc2-ce92fe89a4f2][readOnlyDict]], which is the equivalent of [[id:684e6719-609f-4a8a-a8fa-f11d0585ec10][C#]] [[id:5bf58f1a-995a-4b24-ae95-44cde5f4a322][IReadOnlyDictionary]].
+
+* Map
+:PROPERTIES:
+:ID:       919520f1-146b-46a7-a0b6-6673a193810e
+:END:
+Map is an F# specific dictionary. It is immutable, so adding an item to it returns a new map with the new value inside it.
+
+#+BEGIN_SRC fsharp
+let lookupMap = Map data
+let newLookupMap = lookupMap.Add("Isaac", "Python")
+let newLookupMap = lookupMap |> Map.add "Isaac" "Python"
+#+END_SRC
+
+Note that if you adda key to a Map that alreade exists, it will replace the old value.
+
+* Set
+:PROPERTIES:
+:ID:       294cb1ad-c434-4399-aad2-2087feaa2e18
+:END:
+
+Sets are unordered collections of unique values. Note that because F# tuples and records implement comparison for free, you can use Sets with records out of the box.
+
+#+BEGIN_SRC fsharp
+type Employee = { Name: string }
+let salesEmployee = Set [ { Name = "Isaac" }; { Name = "Brian" } ]
+let bonusEmployee = Set [ { Name = "Isaac" }; { Name = "Tanya" } ]
+
+let allBonusesForSalesStaff =
+    salesEmployees |> Set.isSubset bonusEmployees
+
+let salesWithoutBonuses =
+    salesEmployees - bonusEmployees
+#+END_SRC
+
+Sets support =+= and =-=, which are aliases for ~Set.union~ and ~Set.difference~, respectively.
+
+* Comprehensions
+:PROPERTIES:
+:ID:       0c125931-2813-4122-ad77-bca4ee779f0d
+:END:
+
+In the example below, the sequence will have the numbers ~[1, 2, 4]~, unless it is Tuesday, in which case the sequence will be ~[1, 2, 99, 4]~.
+#+BEGIN_SRC fsharp
+let comp = seq {
+    1
+    2
+    if DateTime.Today.DayOfWeek = DayOfWeek.Tuesday then 99
+    4
+}
+#+END_SRC
