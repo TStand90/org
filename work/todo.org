@@ -233,11 +233,24 @@ CLOCK: [2024-09-18 Wed 15:11]--[2024-09-18 Wed 15:36] =>  0:25
 CLOCK: [2024-09-18 Wed 14:41]--[2024-09-18 Wed 15:06] =>  0:25
 CLOCK: [2024-09-18 Wed 14:05]--[2024-09-18 Wed 14:30] =>  0:25
 :END:
-** [-] [[https://hellowisp.atlassian.net/browse/WISPENG-690][WISPENG-690 (Spike)]]: Investigate work required to support "pending" patients
+** [X] [[https://hellowisp.atlassian.net/browse/WISPENG-690][WISPENG-690 (Spike)]]: Investigate work required to support "pending" patients
 :LOGBOOK:
 CLOCK: [2024-09-24 Tue 12:50]--[2024-09-24 Tue 13:20] =>  0:30
 CLOCK: [2024-09-23 Mon 15:08]--[2024-09-23 Mon 15:33] =>  0:25
 CLOCK: [2024-09-23 Mon 14:35]--[2024-09-23 Mon 15:00] =>  0:25
+:END:
+** [-] Migration to add Proposed Carts table
+:LOGBOOK:
+CLOCK: [2024-09-25 Wed 15:30]--[2024-09-25 Wed 15:49] =>  0:19
+CLOCK: [2024-09-25 Wed 13:35]--[2024-09-25 Wed 14:00] =>  0:25
+CLOCK: [2024-09-25 Wed 13:00]--[2024-09-25 Wed 13:35] =>  0:35
+:END:
+** [-] Add Proposed Cart service method
+:LOGBOOK:
+CLOCK: [2024-09-25 Wed 16:00]--[2024-09-25 Wed 16:45] =>  0:45
+CLOCK: [2024-09-25 Wed 15:10]--[2024-09-25 Wed 15:49] =>  0:39
+CLOCK: [2024-09-25 Wed 14:44]--[2024-09-25 Wed 15:09] =>  0:25
+CLOCK: [2024-09-25 Wed 14:00]--[2024-09-25 Wed 14:10] =>  0:10
 :END:
 * Messages to post
 ** [ ] Ask in dev-private what everyone thinks about the type hint for returning "Self" from Pydantic validators.
@@ -248,8 +261,6 @@ We have two options:
 It doesn't /really/ matter much, but we should pick one and stick with it.
 
 Note that ~Self~ is part of ~typing~ as of Python 3.11, but for now, we need to use ~typing_extensions~. Only mentioning this in case your IDE suggests importing from ~typing~ (mine did).
-
-
 
 * Tests
 ** [ ] Move tests in tests/api/v3
