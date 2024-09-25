@@ -197,7 +197,7 @@ CLOCK: [2024-09-13 Fri 11:44]--[2024-09-13 Fri 12:09] =>  0:25
 - Note taken on [2024-09-16 Mon 21:22] \\
   Just need to finish tests for this. The tricky part is mocking the Talon return values.
 :LOGBOOK:
-CLOCK: [2024-09-18 Wed 10:07]--[2024-09-18 Wed 10:32] =>  0:25
+CLOCK: [2024-09-18 Wed 10:07]--[2024-09-23 Mon 10:43] => 120:36
 CLOCK: [2024-09-18 Wed 09:33]--[2024-09-18 Wed 09:58] =>  0:25
 CLOCK: [2024-09-18 Wed 08:30]--[2024-09-18 Wed 09:33] =>  1:03
 CLOCK: [2024-09-17 Tue 16:48]--[2024-09-17 Tue 17:00] =>  0:12
@@ -216,6 +216,11 @@ CLOCK: [2024-09-16 Mon 11:45]--[2024-09-16 Mon 13:03] =>  1:18
 :END:
 ** [-] [[https://hellowisp.atlassian.net/browse/WISPENG-466][WISPENG-466]]: Create and send dynamic message to patient in Secure for deny/approve
 :LOGBOOK:
+CLOCK: [2024-09-23 Mon 13:45]--[2024-09-23 Mon 14:10] =>  0:25
+CLOCK: [2024-09-23 Mon 13:20]--[2024-09-23 Mon 13:45] =>  0:25
+CLOCK: [2024-09-23 Mon 12:54]--[2024-09-23 Mon 13:19] =>  0:25
+CLOCK: [2024-09-23 Mon 10:43]--[2024-09-23 Mon 11:08] =>  0:25
+CLOCK: [2024-09-23 Mon 10:30]--[2024-09-23 Mon 10:43] =>  0:13
 CLOCK: [2024-09-19 Thu 15:19]--[2024-09-19 Thu 15:44] =>  0:25
 CLOCK: [2024-09-19 Thu 14:49]--[2024-09-19 Thu 15:14] =>  0:25
 CLOCK: [2024-09-19 Thu 14:23]--[2024-09-19 Thu 14:48] =>  0:25
@@ -227,6 +232,12 @@ CLOCK: [2024-09-18 Wed 15:40]--[2024-09-18 Wed 16:02] =>  0:22
 CLOCK: [2024-09-18 Wed 15:11]--[2024-09-18 Wed 15:36] =>  0:25
 CLOCK: [2024-09-18 Wed 14:41]--[2024-09-18 Wed 15:06] =>  0:25
 CLOCK: [2024-09-18 Wed 14:05]--[2024-09-18 Wed 14:30] =>  0:25
+:END:
+** [-] [[https://hellowisp.atlassian.net/browse/WISPENG-690][WISPENG-690 (Spike)]]: Investigate work required to support "pending" patients
+:LOGBOOK:
+CLOCK: [2024-09-24 Tue 12:50]--[2024-09-24 Tue 13:20] =>  0:30
+CLOCK: [2024-09-23 Mon 15:08]--[2024-09-23 Mon 15:33] =>  0:25
+CLOCK: [2024-09-23 Mon 14:35]--[2024-09-23 Mon 15:00] =>  0:25
 :END:
 * Messages to post
 ** [ ] Ask in dev-private what everyone thinks about the type hint for returning "Self" from Pydantic validators.
@@ -253,3 +264,6 @@ CLOCK: [2024-09-10 Tue 16:44]--[2024-09-10 Tue 17:09] =>  0:25
 This should only ever be True or False, but it can be None. Write a test to expose this behavior and fix it.
 ** [X] [[https://github.com/hellowisp/secure.hellowisp.com/pull/4753][Add PLR0917 to exceptions list for new test suite]]
 This is "Too many positional arguments". When you have a lot of stuff you need to mock, this makes no sense.
+
+* Things to do for others
+** [ ] Look at WISPENG-467 and WISPENG-468 and see if they can be broken down. Let Kristin know.

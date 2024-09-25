@@ -1,0 +1,39 @@
+#+title: Wispeng 690
+#+description: Notes for the spike ticket WISPENG-690
+
+https://hellowisp.atlassian.net/browse/WISPENG-690
+
+* Stories
+** As a patient, I am notified if I still have pending tasks awaiting my review and action, so that my order is not delayed.
+*** Create a model that holds the following data:
+- The Patient ID (FK)
+- The Provider ID (FK) (The provider who proposed the cart)
+- The pending Cart ID (stored in Talon.One)
+- The status
+  - Pending
+  - Accepted
+  - Rejected
+    (We could also turn to the Order activity log for status, maybe)
+*** Can we acheive this /only/ with the activity log?
+Probably not, we need a way to track the "pending" cart. But we probably do want to track updates to this model via the activity log.
+
+** As an Admin Team, we are notified if a user has been in a “pending” state for a period of time, so that we can help their order progress.
+*** Create a cron job that can check for all "pending" carts.
+*** Create an admin view that shows all the "pending" carts.
+
+** As a business, we are able to effectively track the status of a user across their editable medications journey, including if they accept, reject, or fail to take action on the requested changes.
+
+
+** As a business, we have the event data available to take action on users in specific states, so that we can personalize their experience, communications, or outreach from Admins based on specific actions they have or have not taken.
+
+* A few additional questions to make sure we answer during this spike:
+
+** Does this work need to be completed as a pre-requisite to launch, or can any of it be completed as a fast-follow/v2?
+*** We could continue with the current plan for now, and implement this later.
+That may result in some odd discrepancies between what was implemented now, and what was implemented later.
+
+** What are the risks if we do not do this work? (Feel free to work directly with Mike on this)
+- We don't track pending orders/carts.
+- Pending orders/carts "get lost".
+- Customers get frustrated due to ordering items and not realizing they need to do "more" for their order. They just sit around for days, wondering where their medication is.
+- Lost revenue. Patients may turn to competitors while waiting for their orders, not realizing they have a "pending" cart to review.

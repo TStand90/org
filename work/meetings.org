@@ -48,3 +48,8 @@ CLOCK: [2024-09-18 Wed 11:00]--[2024-09-18 Wed 14:05] =>  3:05
 :LOGBOOK:
 CLOCK: [2024-09-19 Thu 09:33]--[2024-09-19 Thu 10:05] =>  0:32
 :END:
+
+* Provider Platform Stand-Up <2024-09-23 Mon 11:00>
+:LOGBOOK:
+CLOCK: [2024-09-23 Mon 11:00]--[2024-09-23 Mon 11:33] =>  0:33
+:END:
