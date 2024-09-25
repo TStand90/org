@@ -24,3 +24,10 @@ It's also possible to assert the exception message, using the ~match~ argument f
 with pytest.raises(ValueError, match='invalid literal for int() with base 10: "This won\'t work!"'):
     int("This won't work!")
 #+END_SRC
+
+** Printing output
+Output will be printed if the test fails, so ~assert False~ will work.
+
+Also, you can use the ~-s~ flag.
+
+Docs: https://docs.pytest.org/en/latest/how-to/capture-stdout-stderr.html
