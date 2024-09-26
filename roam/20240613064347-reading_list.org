@@ -16,6 +16,8 @@ A list of books and articles that I'd like to read at some point.
 *** [-] [[https://martinfowler.com/eaaDev/EventSourcing.html][Event Sourcing]] by Martin Fowler
 ** [0/1] C#
 *** [ ] [[https://andrewlock.net/series/behind-the-scenes-of-minimal-apis/][Behind the scenes of Minimal APIs]]
+** [/] Wezterm
+*** [ ] [[https://www.florianbellmann.com/blog/switch-from-tmux-to-wezterm][How to switch from Tmux to WezTerm]]
 
 * Books
 ** Life
