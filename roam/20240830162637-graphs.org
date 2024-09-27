@@ -155,7 +155,7 @@ def matrix_depth_first_search(grid: list[list[int]], row: int, col: int, visited
     if r == ROWS - 1 and c == COLS - 1:
         return 1
 
-    visit.add((row, col))
+    visited.add((row, col))
 
     count = 0
     count += matrix_depth_first_search(grid, row + 1, col, visited)
