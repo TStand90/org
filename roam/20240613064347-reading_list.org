@@ -60,7 +60,12 @@ CLOCK: [2024-09-13 Fri 09:10]--[2024-09-13 Fri 09:38] =>  0:28
 CLOCK: [2024-09-13 Fri 08:48]--[2024-09-13 Fri 09:05] =>  0:17
 :END:
 ***** [-] Chapter 8
+- Note taken on [2024-09-27 Fri 22:04] \\
+  Left off at section 8.3, Discriminated Unions.
+
+  I think I'm going to need my full brain power to read this one. I'm way too tired right now.
 :LOGBOOK:
+CLOCK: [2024-09-27 Fri 21:20]--[2024-09-27 Fri 22:04] =>  0:44
 CLOCK: [2024-09-17 Tue 17:35]--[2024-09-17 Tue 17:44] =>  0:09
 :END:
 ***** [ ] Chapter 9

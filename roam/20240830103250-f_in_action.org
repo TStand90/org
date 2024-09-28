@@ -71,3 +71,137 @@ let sum inputs =
 #+END_SRC
 
 =0= is the starting value of the accumulator. The ~fun~ is the logic for how to aggregate the next item in the collection to the accumulator.
+
+* Chapter 8: Patterns and unions
+** Introducing pattern matching
+
+#+BEGIN_SRC fsharp
+let value = System.ConsoleModifiers.Alt
+
+let description =
+    match value with
+    | System.ConsoleModifiers.Alt -> "Alt was pressed"
+    | System.ConsoleModifiers.Control -> "You hit control!"
+    | System.ConsoleModifiers.Shift -> "Shift held down..."
+    | _ -> "Some modifier was pressed"
+#+END_SRC
+
+Pattern matching is an expression, so each branch needs to return a value of the same type.
+
+If you remove the ~_~, which is the wildcard match case, you'll get a compiler warning.
+
+*** Tuple matching
+Example: a bank wants to deny loans to anyone with 0 year history with the bank, or anyone with 1 year history that is currently overdrafted.
+
+#+BEGIN_SRC fsharp
+let canTakeOutALoanSimplest =
+    match customerDetails with
+    | 0, _
+    | 1, true ->
+        false
+    | _ ->
+        true
+#+END_SRC
+
+*** Record matching
+Example: Same as above, but with records rather than tuples.
+
+#+BEGIN_SRC fsharp
+type CustomerDetails =
+    { YearsOfHistory : int;  HasOverdraft : bool }
+let customerDetailsRecord =
+    { YearsOfHistory = 2; HasOverdraft = true }
+
+let canTakeOutALoanRecord =
+    match customerDetailsRecord with
+    | { YearsOfHistory = 0 } -> false
+    | { YearsOfHistory = 1; HasOverdraft = true } -> false
+    | { YearsOfHistory = 1; HasOverdraft = false } -> true
+    | _ -> true
+#+END_SRC
+
+*** When guards
+When guards allow you to match on some computation, rather than an absolute value.
+
+Example: The bank example again, except we only deny customers with one year of history if their overdraft fee is over $500.
+
+#+BEGIN_SRC fsharp
+let canTakeOutALoanRecord =
+    match customerDetailsRecord with
+    | { YearsOfHistory = 0 } -> false
+    | { YearsOfHistory = 1; HasOverdraft = true } when
+        customerDetailsRecord.Overdraft > 500 -> false
+    | { YearsOfHistory = 1 } -> true
+    | _ -> true
+#+END_SRC
+
+** More advanced pattern matching
+*** Recursive matching
+#+BEGIN_SRC fsharp
+type OverdraftDetails =
+    {
+        Approved : bool
+        MaxAmount : decimal
+        CurrentAmount : decimal
+    }
+
+type CustomerWithOverdraft =
+    {
+        YearsOfHistory : int
+        Overdraft : OverdraftDetails
+    }
+
+let canTakeOutALoanRecursive customer =
+    match customer with
+    | { YearsOfHistory = 0; Overdraft = { Approved = true } } ->
+        true
+    | { YearsOfHistory = 0 } ->
+        false
+    | { YearsOfHistory = 1; Overdraft = { Approved = true } } ->
+        true
+    | { YearsOfHistory = 1 } ->
+        false
+    | _ ->
+        true
+#+END_SRC
+
+~Overdraft~ gets unwrapped, and we can match against the contents of ~Approved~.
+
+*** Nested or conditions
+Notice how in the above example, the first and third statements are the same, except the ~YearsOfHistory~? We can merge that check with an "or" statement.
+
+#+BEGIN_SRC fsharp
+match customer with
+| { YearsOfHistory = 0 | 1; Overdraft = { Approved = true } } -> true
+| { YearsOfHistory = 0 | 1 } -> false
+| _ -> true
+#+END_SRC
+
+*** Collection matching
+F# Lists can be used with pattern matching.
+
+#+BEGIN_SRC fsharp
+type LoanRequest =
+    { YearsOfHistory : int
+      HasOverdraft : bool
+      LoanRequestAmount : decimal
+      IsLargeRequest : bool }
+
+let summariseLoanRequests requests =
+    match requests with
+    | [] ->
+        "No requests made!"
+    | [ { IsLargeRequest = true } ] ->
+        "Single large request!"
+    | [ { IsLargeRequest = true }; { IsLargeRequest = true } ] ->
+        "Two large requests!"
+    | { IsLargeRequest = false } :: remainingItems ->
+        $"Several items, the first of which is a small request.
+ Remaining items: {remainingItems}."
+    | _ :: { HasOverdraft = true } :: _ ->
+        "Second item has an overdraft!"
+    | _ ->
+        "Anything else"
+#+END_SRC
+
+** Discriminated Unions
