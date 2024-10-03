@@ -193,7 +193,7 @@ CLOCK: [2024-09-13 Fri 15:27]--[2024-09-13 Fri 15:52] =>  0:25
 CLOCK: [2024-09-13 Fri 14:00]--[2024-09-13 Fri 14:25] =>  0:25
 CLOCK: [2024-09-13 Fri 11:44]--[2024-09-13 Fri 12:09] =>  0:25
 :END:
-** [?] [[https://github.com/hellowisp/secure.hellowisp.com/pull/4704][PR to get a Cart by ID]]
+** [X] [[https://github.com/hellowisp/secure.hellowisp.com/pull/4704][PR to get a Cart by ID]]
 - Note taken on [2024-09-16 Mon 21:22] \\
   Just need to finish tests for this. The tricky part is mocking the Talon return values.
 :LOGBOOK:
@@ -214,7 +214,7 @@ CLOCK: [2024-09-16 Mon 18:30]--[2024-09-16 Mon 21:22] =>  2:52
 CLOCK: [2024-09-16 Mon 14:38]--[2024-09-16 Mon 15:27] =>  0:49
 CLOCK: [2024-09-16 Mon 11:45]--[2024-09-16 Mon 13:03] =>  1:18
 :END:
-** [-] [[https://hellowisp.atlassian.net/browse/WISPENG-466][WISPENG-466]]: Create and send dynamic message to patient in Secure for deny/approve
+** [?] [[https://hellowisp.atlassian.net/browse/WISPENG-466][WISPENG-466]]: Create and send dynamic message to patient in Secure for deny/approve
 :LOGBOOK:
 CLOCK: [2024-09-23 Mon 13:45]--[2024-09-23 Mon 14:10] =>  0:25
 CLOCK: [2024-09-23 Mon 13:20]--[2024-09-23 Mon 13:45] =>  0:25
@@ -239,13 +239,13 @@ CLOCK: [2024-09-24 Tue 12:50]--[2024-09-24 Tue 13:20] =>  0:30
 CLOCK: [2024-09-23 Mon 15:08]--[2024-09-23 Mon 15:33] =>  0:25
 CLOCK: [2024-09-23 Mon 14:35]--[2024-09-23 Mon 15:00] =>  0:25
 :END:
-** [-] Migration to add Proposed Carts table
+** [X] Migration to add Proposed Carts table
 :LOGBOOK:
 CLOCK: [2024-09-25 Wed 15:30]--[2024-09-25 Wed 15:49] =>  0:19
 CLOCK: [2024-09-25 Wed 13:35]--[2024-09-25 Wed 14:00] =>  0:25
 CLOCK: [2024-09-25 Wed 13:00]--[2024-09-25 Wed 13:35] =>  0:35
 :END:
-** [-] Add Proposed Cart service method
+** [X] Add Proposed Cart service method
 :LOGBOOK:
 CLOCK: [2024-09-25 Wed 16:00]--[2024-09-25 Wed 16:45] =>  0:45
 CLOCK: [2024-09-25 Wed 15:10]--[2024-09-25 Wed 15:49] =>  0:39
@@ -281,4 +281,9 @@ This should only ever be True or False, but it can be None. Write a test to expo
 This is "Too many positional arguments". When you have a lot of stuff you need to mock, this makes no sense.
 
 * Things to do for others
-** [ ] Look at WISPENG-467 and WISPENG-468 and see if they can be broken down. Let Kristin know.
+** [-] Look at WISPENG-467 and WISPENG-468 and see if they can be broken down. Let Kristin know.
+WISPENG-467, no. WISPENG-468, probably.
+** [ ] Ask the data team if the Proposed Cart table is enough to satisfy the requirements in [[https://hellowisp.atlassian.net/browse/WISPENG-472][WISPENG-472]] and [[https://hellowisp.atlassian.net/browse/WISPENG-481][WISPENG-481]].
+Ask the devs too.
+** [ ] Ask the channel if we need to do anything for [[https://hellowisp.atlassian.net/browse/WISPENG-482][WISPENG-482]]: handle patient text response
+We alreade create an admin task. Do we need to do anything more?
