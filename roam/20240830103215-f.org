@@ -733,3 +733,32 @@ let comp = seq {
     4
 }
 #+END_SRC
+
+* Option
+F# does not have null or nullables. Instead, it has ~option~, which is a discriminated union with two cases: either it has some content, or it has nothing.
+
+#+BEGIN_SRC fsharp
+let presentNumber : int option = Some 10
+let missingNumber : int option = None
+let mandatoryNumber : int = 10
+#+END_SRC
+
+It's illegal to acces the data of an ~option~ value without pattern matching to check that the value actually exists.
+
+#+BEGIN_SRC fsharp
+mandatoryNumber.CompareTo 55     // Legal
+missingNumber.CompareTo 55       // Error, no such method called CompareTo exist on Option
+missingNumber + mandatoryNumber  // Error, can't add an optional int to a mandatory int
+
+let description =
+    match optionalNumber with
+    | Some number -> $"The number is {number}"
+    | None -> "There is no number"
+#+END_SRC
+
+~Some~ gives the option as a value. ~None~ is used when there is no value.
+
+** .Value member
+There is a ~.Value~ member of the option type to just get a value, but this is only intended for quick scripts. /Never/ use this in a real application
+
+** Option.map
