@@ -205,3 +205,46 @@ let summariseLoanRequests requests =
 #+END_SRC
 
 ** Discriminated Unions
+Discriminated Unions are a way of doing "or" types instead of "and" types.
+
+#+BEGIN_SRC fsharp
+type ContactMethod =
+    | Email of address:string
+    | Telephone of country:string * number:string
+    | Post of
+        {|
+            Line1 : string
+            Line2 : string
+            City : string
+            Country : string
+        |}
+#+END_SRC
+
+So in this case, ~ContactMethod~ is /one of/ ~Email~, ~Telephone~, or ~Post~.
+
+Each case of a discriminated union has the format: ~<name> of <data>~. The data portion can be any type, such as a simple type, a record, a tuple, an anonymous record, or even another discriminated union (including itself).
+
+#+BEGIN_SRC fsharp
+let myEmail = Email "me@myemailaddress.com"
+let myPhone = Telephone ("US", "555-100-1234")
+let myPost = Post {| Line1 = "1 The Street" ... |}  // etc.
+#+END_SRC
+
+Each of these is of type ~ContactMethod~. They are /not/ of type ~Email~, ~Telephone~, or ~Post~.
+
+*** Pattern matching
+
+To consume discriminated unions, we can't simply use dot syntax. We have to use pattern matching.
+
+#+BEGIN_SRC fsharp
+let message = "Discriminated unions are great!"
+
+match customer.ContactMethod with
+| Email address -> $"Emailing '{message}' to {address}."
+| Telephone(country, number) ->
+    $"Calling {country}-{number} with the
+    message '{message}'!"
+| Post postDetails ->
+    $"Printing a letter with contents '{message}'
+    to {postDetails.Line1} {postDetails.City}..."
+#+END_SRC

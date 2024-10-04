@@ -34,7 +34,7 @@ A list of books and articles that I'd like to read at some point.
   Holding off on this one until I finish Letters from a Stoic.
 ** Programming
 *** [[id:1c0131b0-54d9-4b00-9214-3920c53984d2][F#]]
-**** [7/16] [[id:b62df05a-56ae-416a-932f-868114759457][F# In Action]]
+**** [8/16] [[id:b62df05a-56ae-416a-932f-868114759457][F# In Action]]
 ***** [X] Chapter 1
 ***** [X] Chapter 2
 :LOGBOOK:
@@ -49,7 +49,7 @@ CLOCK: [2024-09-05 Thu 18:05]--[2024-09-05 Thu 18:40] =>  0:35
 :END:
 ***** [X] Chapter 6
 :LOGBOOK:
-CLOCK: [2024-09-09 Mon 08:04]--[2024-09-09 Mon 08:30] =>  0:26
+CLOCK: [2024-09-09 Mon 08:04]--[2024-09-09 Mon 08:05] =>  0:01
 :END:
 ***** [X] Chapter 7
 :LOGBOOK:
@@ -59,12 +59,13 @@ CLOCK: [2024-09-13 Fri 09:38]--[2024-09-13 Fri 09:44] =>  0:06
 CLOCK: [2024-09-13 Fri 09:10]--[2024-09-13 Fri 09:38] =>  0:28
 CLOCK: [2024-09-13 Fri 08:48]--[2024-09-13 Fri 09:05] =>  0:17
 :END:
-***** [-] Chapter 8
+***** [X] Chapter 8
 - Note taken on [2024-09-27 Fri 22:04] \\
   Left off at section 8.3, Discriminated Unions.
 
   I think I'm going to need my full brain power to read this one. I'm way too tired right now.
 :LOGBOOK:
+CLOCK: [2024-10-03 Thu 23:10]--[2024-10-03 Thu 23:32] =>  0:22
 CLOCK: [2024-09-27 Fri 21:20]--[2024-09-27 Fri 22:04] =>  0:44
 CLOCK: [2024-09-17 Tue 17:35]--[2024-09-17 Tue 17:44] =>  0:09
 :END:
