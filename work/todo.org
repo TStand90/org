@@ -285,5 +285,5 @@ This is "Too many positional arguments". When you have a lot of stuff you need t
 WISPENG-467, no. WISPENG-468, probably.
 ** [ ] Ask the data team if the Proposed Cart table is enough to satisfy the requirements in [[https://hellowisp.atlassian.net/browse/WISPENG-472][WISPENG-472]] and [[https://hellowisp.atlassian.net/browse/WISPENG-481][WISPENG-481]].
 Ask the devs too.
-** [ ] Ask the channel if we need to do anything for [[https://hellowisp.atlassian.net/browse/WISPENG-482][WISPENG-482]]: handle patient text response
+** [-] Ask the channel if we need to do anything for [[https://hellowisp.atlassian.net/browse/WISPENG-482][WISPENG-482]]: handle patient text response
 We alreade create an admin task. Do we need to do anything more?
