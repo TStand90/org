@@ -100,6 +100,76 @@ In this example, ~neighbors~ is a list of ~GraphNode~. ~neighbors~ tells us whic
 
 This is an example of a [[id:f8af1612-3939-42f0-8e1f-34a995904dd5][Directed Graph]]. You could also implement an [[id:a079f029-54bc-4814-a348-2ea84abc2bdb][Undirected Graph]] using this structure.
 
+Another common way to represent [[id:00f78124-16ba-4618-ab37-6a136d813315][Adjacency List]]s is with a [[id:26fcbf3c-dee7-40a8-92e3-2fa7079c97e4][HashMap]]/dictionary of [[id:721cecef-36a5-4fe7-9cf0-b885d92dc690][Array]]s/lists.
+
+#+BEGIN_SRC python
+adjacency_list = {}
+edges = [["A", "B"], ["B", "C"], ["B", "E"], ["C", "E"], ["E", "D"]]
+
+for node_val, neighbor in edges:
+    if node_val not in adjacency_list:
+        adjacency_list[node_val] = []
+    if neighbor not in adjacency_list:  # Need this, in case the "neighbor" node does not have any neighbors.
+        adjacency_list[neighbor] = []
+    adjacency_list[node_val].append(neighbor)
+#+END_SRC
+
+This is a directed graph, where a key represents the node and the "neighbors" represents the nodes it connects to.
+
+*** Depth First Search
+For an Adjacency List, depth first search looks something like this:
+
+#+BEGIN_SRC python
+def dfs(node: str, target: str, adjacency_list: dict[str, str], visited_nodes: set[str]) -> int:
+    if node in visited_nodes:
+        return 0
+    if node == target:
+        return 1
+
+    count = 0
+    visited_nodes.add(node)
+    for neighbor in adjacency_list[node]:
+        count += dfs(neighbor, target, adjacency_list, visited_nodes)
+    visited_nodes.remove(node)
+
+    return count
+#+END_SRC
+
+*** Breadth First Search
+
+#+BEGIN_SRC python
+def bfs(node: str, target: str, adjacency_list: dict[str, str]) -> int:
+    length = 0
+    visited_nodes = set()
+    visited_nodes.add(node)
+    queue = deque()
+    queue.append(node)
+
+    while queue:
+        for i in range(len(queue)):
+            current = queue.poplest()
+            if current == target:
+                return length
+
+            for neighbor in adjacency_list[current]:
+                if neighbor not in visited_nodes:
+                    visited_nodes.add(neighbor)
+                    queue.append(neighbor)
+
+        length += 1
+
+    return length
+
+print(bfs("A", "E", adjacency_list))
+#+END_SRC
+
+**** Time complexity
+O(V + E)
+
+**** Space Complexity
+O(V)
+
+
 ** Matrix Depth First Search
 :PROPERTIES:
 :ID:       7aa2c5e2-2a07-48ad-b04c-d28ff733bab3
