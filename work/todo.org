@@ -258,9 +258,10 @@ CLOCK: [2024-09-25 Wed 14:00]--[2024-09-25 Wed 14:10] =>  0:10
 
   Waiting on Reece to return to do this.
 :LOGBOOK:
+CLOCK: [2024-10-09 Wed 12:25]--[2024-10-09 Wed 16:25] =>  4:00
 CLOCK: [2024-09-30 Mon 14:35]--[2024-09-30 Mon 18:00] =>  3:25
 :END:
-** [?] [[https://github.com/hellowisp/secure.hellowisp.com/pull/4807][WISPENG-576]]: Removes feature flag and old UI for fill requests in provider
+** [X] [[https://github.com/hellowisp/secure.hellowisp.com/pull/4807][WISPENG-576]]: Removes feature flag and old UI for fill requests in provider
 * Messages to post
 ** [ ] Ask in dev-private what everyone thinks about the type hint for returning "Self" from Pydantic validators.
 We have two options:
