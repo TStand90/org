@@ -25,9 +25,15 @@ with pytest.raises(ValueError, match='invalid literal for int() with base 10: "T
     int("This won't work!")
 #+END_SRC
 
+** Disable Traceback
+Use the ~--tb=no~ flag to disable tracebacks. This can make the output look a lot smaller and simpler.
+
 ** Printing output
 Output will be printed if the test fails, so ~assert False~ will work.
 
 Also, you can use the ~-s~ flag.
 
 Docs: https://docs.pytest.org/en/latest/how-to/capture-stdout-stderr.html
+
+** Run a specific test in a file
+You can specify a specific test within a file with the =::= syntax, like this: =test_file.py::test_function=
