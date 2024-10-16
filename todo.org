@@ -12,3 +12,12 @@ SCHEDULED: <2024-04-02 Tue>
   I don't necessarily want to pollute my personal TODOs with work stuff.
 
 ** [X] Investigate the Key Promoter plugin for JetBrains IDEs
+
+** [1/1] Work on Wezterm config
+*** [X] When opening Wezterm at work, automatically open tabs to all project directories
+:LOGBOOK:
+CLOCK: [2024-10-16 Wed 09:00]--[2024-10-16 Wed 10:17] =>  1:17
+:END:
+** [ ] Call EECU about the strange wire transfer to my account
+DEADLINE: <2024-10-16 Wed>
+** [ ] Call EECU about a new wire transfer form
