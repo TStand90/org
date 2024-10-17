@@ -7,6 +7,19 @@
 ~pytest~ is the most popular testing libary for [[id:3a948b50-dedc-4fdf-a86c-05c1c3a9f230][Python]].
 
 * Tips and Tricks
+** \__tracebackhide__
+~__tracebackhide__~ can be set on a method to hide it from the traceback. This is helpful for things like helper functions.
+
+In this example, the equality check for the ~Card~ class does not check the ~id~ field by default. This helper does check the ID, and fails if they are not the same.
+
+#+BEGIN_SRC python
+def assert_identical(c1: Card, c2: Card):
+    __tracebackhide__ = True
+    assert c1 == c2
+    if c1.id != c2.id:
+        pytest.fail(f"id's don't match. {c1.id} != {c2.id}")
+#+END_SRC
+
 ** Asserting that an exception was raised.
 You can assert that an exception is raised in code with ~pytest.raises~. For example:
 
@@ -34,6 +47,41 @@ Output will be printed if the test fails, so ~assert False~ will work.
 Also, you can use the ~-s~ flag.
 
 Docs: https://docs.pytest.org/en/latest/how-to/capture-stdout-stderr.html
+
+** pytest.fail
+Tests will fail if an exception is raised. This can be done by asserting a ~False~ statement, raising an uncaught exception from the code under test, or calling ~pytest.fail()~.
+
+Some linters will complain if you do something like ~assert False~ instead of ~pytest.fail()~.
+
+You can pass a message to show to the user in ~pytest.fail~, which can be helpful for debugging.
+
+Can be used in conjunction with ~__tracebackhide__~ to create nice helper functions.
+
+** pytest.raises
+Use ~pytest.raises~ to test that an exception /was/ raised. Will pass if the given exception is raised, and fail if it was not.
+
+In this example, ~CardsDB~ is supposed to receive a ~db_path~ argument to be initialized.
+
+#+BEGIN_SRC python
+import pytest
+import cards
+
+def test_no_path_raises():
+    with pytest.raises(TypeError):
+        cards.CardsDB()
+#+END_SRC
+
+You can also specify the expected error message with the ~match~ keyword argument.
+
+#+BEGIN_SRC python
+import pytest
+import cards
+
+def test_no_path_raises():
+    match_regex = "missing 1.* positional argument"
+    with pytest.raises(TypeError, match=match_regex):
+        cards.CardsDB()
+#+END_SRC
 
 ** Run a specific test in a file
 You can specify a specific test within a file with the =::= syntax, like this: =test_file.py::test_function=

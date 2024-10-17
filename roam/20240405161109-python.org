@@ -19,6 +19,38 @@ class MyAbstractClass(abc.ABC):
 #+END_SRC
 
 *NOTE*: You _must_ add /at least one/ abstract method to a class for it to be truly abstract. Otherwise, the class can still be instatiated!
+** Dataclasses
+:PROPERTIES:
+:ID:       0ea785b4-8093-44ae-b09a-3df2c100b656
+:END:
+
+Dataclasses in Python are a nice way to create classes without the need for the ~__init__~ method.
+
+*** field
+**** compare
+If True, will be used to compare two dataclasses (True by default).
+
+You can specify ~compare=False~ to say "this field should /not/ be used in equality checks."
+
+#+BEGIN_SRC python
+from dataclasses import dataclass, field
+
+@dataclass
+class Card:
+    summary: str = None
+    owner: str = None
+    state: str = "todo"
+    id: int = field(default=None, compare=False)
+
+card_1 = Card(id=1)
+card_2 = Card(id=2)
+
+assert card_1 == card_2  # Will be True
+#+END_SRC
+**** default_factory
+
+
+
 ** Testing
 *** ~unittest.mock~
 **** Assert called
