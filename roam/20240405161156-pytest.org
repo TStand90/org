@@ -41,6 +41,61 @@ with pytest.raises(ValueError, match='invalid literal for int() with base 10: "T
 ** Disable Traceback
 Use the ~--tb=no~ flag to disable tracebacks. This can make the output look a lot smaller and simpler.
 
+** Fixtures
+Fixtures can be used to set up and tear down before and after each test. They can be re-used across tests as well.
+
+Fixtures must be placed in the file that uses them, or in a ~conftest.py~ file. Put them in the same file if they are only used by that file. Put them in ~conftest.py~ if they get re-used across files.
+
+Fixtures can use other fixtures that have the same level scope as them, or wider. For example, a function scope fixture can use a module scope fixture, but not vice versa.
+
+*** Built-in fixtures
+**** capsys
+Captures output that is supposed to output to ~stdout~, ~stderr~, etc.
+**** tmp_path
+Function scope fixture that returns a ~pathlib.Path~ instance that points to a temporary directory that sticks around during your test and a bit longer.
+**** tmp_path_factory
+Like ~tmp_path~, but session scoped.
+
+*** Scope
+~@pytest.fixture~ allows for a "scope" to be given. Example: ~@pytest.fixture(scope="module")~
+
+Here is a list of all the possible scopes:
+**** function
+Run once per test function. The default.
+**** class
+Run once per test class, regardless of how many methods are in the class.
+**** module
+Run once per module.
+**** package
+Run once per package, or test directory.
+**** session
+Run once per session. /All/ test methods and functions will share the same fixture.
+
+*** Find all fixtures
+It can be difficult to remember what fixtures you have, and where they are. When this happens, try the ~--fixtures~ flag.
+
+#+BEGIN_SRC shell
+pytest --fixtures
+#+END_SRC
+
+The optional -v flag will print the entire docstring of each fixture.
+
+The ~--fixtures-per-test~ flag can tell you which test uses which fixtures.
+
+*** Renaming
+By passing the ~name~ keyword argument to the fixture, you can give it a different name for the test to use. This can be helpful if you want to, for example, give all your fixtures a =_fixture= suffix, but not have that be the variable name.
+
+#+BEGIN_SRC python
+import pytest
+
+@pytest.fixture(name="ultimate_answer")
+def ultimate_answer_fixture():
+    return 42
+
+def test_everything(ultimate_answer):
+    assert ultimate_answer == 42
+#+END_SRC
+
 ** Printing output
 Output will be printed if the test fails, so ~assert False~ will work.
 
@@ -85,3 +140,6 @@ def test_no_path_raises():
 
 ** Run a specific test in a file
 You can specify a specific test within a file with the =::= syntax, like this: =test_file.py::test_function=
+
+** Show setup and teardown of fixtures
+Use the ~--setup-show~ flag to see a report of when fixtures are set up and torn down when running your tests.
