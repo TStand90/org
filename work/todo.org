@@ -262,6 +262,15 @@ CLOCK: [2024-10-09 Wed 12:25]--[2024-10-09 Wed 16:25] =>  4:00
 CLOCK: [2024-09-30 Mon 14:35]--[2024-09-30 Mon 18:00] =>  3:25
 :END:
 ** [-] [[https://hellowisp.atlassian.net/browse/WISPENG-468][WISPENG-468]]: Handle patient accept
+- Note taken on [2024-10-18 Fri 21:37] \\
+  I don't think an order is being created. Need to do that. Maybe in the checkout processor?
+*** [-] Write tests for CartServiceUtils
+:LOGBOOK:
+CLOCK: [2024-10-17 Thu 16:00]--[2024-10-17 Thu 17:24] =>  1:24
+:END:
+*** [ ] Write tests for views/proposed_carts.py for the approve path
+*** [ ] Write tests for approve_proposed_cart.py
+*** [ ] Make sure deny_proposed_cart.py is still okay as far as testing goes after changes.
 ** [X] [[https://github.com/hellowisp/secure.hellowisp.com/pull/4807][WISPENG-576]]: Removes feature flag and old UI for fill requests in provider
 * Messages to post
 ** [ ] Ask in dev-private what everyone thinks about the type hint for returning "Self" from Pydantic validators.
@@ -288,7 +297,7 @@ This should only ever be True or False, but it can be None. Write a test to expo
 This is "Too many positional arguments". When you have a lot of stuff you need to mock, this makes no sense.
 
 * Things to do for others
-** [-] Look at WISPENG-467 and WISPENG-468 and see if they can be broken down. Let Kristin know.
+** [X] Look at WISPENG-467 and WISPENG-468 and see if they can be broken down. Let Kristin know.
 WISPENG-467, no. WISPENG-468, probably.
 ** [ ] Ask the data team if the Proposed Cart table is enough to satisfy the requirements in [[https://hellowisp.atlassian.net/browse/WISPENG-472][WISPENG-472]] and [[https://hellowisp.atlassian.net/browse/WISPENG-481][WISPENG-481]].
 Ask the devs too.
