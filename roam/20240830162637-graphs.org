@@ -50,11 +50,6 @@ Imagine a 0 meaning a "free" space, and a 1 meaning a "blocked" space. If you ar
 
 Sometimes, diagonal movement is allowed, but it's less common.
 
-
-Imagine a 0 meaning a "free" space, and a 1 meaning a "blocked" space. If you are creating a "path", you can move through the zeroes, but not the ones. We can move in the [[id:60fb45c8-3f9e-402d-a95c-2fdbfc61651a][Cardinal Directions]].
-
-Sometimes, diagonal movement is allowed, but it's less common.
-
 In this case, this is an [[id:a079f029-54bc-4814-a348-2ea84abc2bdb][Undirected Graph]]. You can move from one node to another and back.
 
 ** Adjacency Matrix
@@ -169,7 +164,6 @@ O(V + E)
 **** Space Complexity
 O(V)
 
-
 ** Matrix Depth First Search
 :PROPERTIES:
 :ID:       7aa2c5e2-2a07-48ad-b04c-d28ff733bab3
@@ -222,7 +216,7 @@ def matrix_depth_first_search(grid: list[list[int]], row: int, col: int, visited
         (row, col) in visited or
         grid[row][col] == 1:
         return 0
-    if r == ROWS - 1 and c == COLS - 1:
+    if row == ROWS - 1 and col == COLS - 1:
         return 1
 
     visited.add((row, col))
@@ -238,6 +232,8 @@ def matrix_depth_first_search(grid: list[list[int]], row: int, col: int, visited
     return count
 #+END_SRC
 
+#+RESULTS:
+
 *** Time Complexity
 The worst case would be a matrix with no blocked paths. Each node would have four choices, and there would be the size of the matrix rows (n) times cols (m).
 
@@ -249,3 +245,36 @@ Not very efficient.
 Each recursive call adds to the stack.
 
 O(n * m)
+
+** Matrix Breadth First Search
+:PROPERTIES:
+:ID:       c91ba9b2-6ac6-4733-bb2a-fc0f820c532c
+:END:
+
+[[id:3bd27895-fcc3-496c-8fa7-a149295140a6][Breadth First Search]] is commonly used to find the shortest path in a graph.
+
+#+BEGIN_SRC python
+def bfs(grid):
+    ROWS, COLS = len(grid), len(grid[0])
+    visit = set()
+    queue = deque()
+    queue.append(0, 0)
+    visit.add((0, 0))
+
+    length = 0
+    while queue:
+        for i in range(len(queue)):
+            r, c = queue.popleft()
+            if r == ROWS - 1 and c == COLS - 1:
+                return length
+
+            neighbors = [[0, 1], [0, -1], [1, 0], [-1, 0]]
+            for dr, dc in neighbors:
+                if (min(r + dr, c + dc) < 0 or
+                    r + dr == ROWS or c + dc == COLS or
+                    (r + dr, c + dc) in visit or grid[r + dr][c + dc] == 1):
+                    continue
+                queue.append((r + dr, c + dc))
+                visit.add((r + dr, c + dc))
+        length += 1
+#+END_SRC
