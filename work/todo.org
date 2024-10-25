@@ -264,14 +264,36 @@ CLOCK: [2024-09-30 Mon 14:35]--[2024-09-30 Mon 18:00] =>  3:25
 ** [-] [[https://hellowisp.atlassian.net/browse/WISPENG-468][WISPENG-468]]: Handle patient accept
 - Note taken on [2024-10-18 Fri 21:37] \\
   I don't think an order is being created. Need to do that. Maybe in the checkout processor?
-*** [-] Write tests for CartServiceUtils
+*** [X] Write tests for CartServiceUtils
 :LOGBOOK:
 CLOCK: [2024-10-17 Thu 16:00]--[2024-10-17 Thu 17:24] =>  1:24
 :END:
-*** [ ] Write tests for views/proposed_carts.py for the approve path
-*** [ ] Write tests for approve_proposed_cart.py
-*** [ ] Make sure deny_proposed_cart.py is still okay as far as testing goes after changes.
+*** [X] Write tests for views/proposed_carts.py for the approve path
+*** [X] Write tests for approve_proposed_cart.py
+:LOGBOOK:
+CLOCK: [2024-10-23 Wed 16:31]--[2024-10-23 Wed 16:56] =>  0:25
+CLOCK: [2024-10-23 Wed 16:15]--[2024-10-23 Wed 16:31] =>  0:16
+CLOCK: [2024-10-23 Wed 15:30]--[2024-10-23 Wed 15:55] =>  0:25
+CLOCK: [2024-10-23 Wed 14:59]--[2024-10-23 Wed 15:24] =>  0:25
+CLOCK: [2024-10-23 Wed 14:55]--[2024-10-23 Wed 14:59] =>  0:04
+CLOCK: [2024-10-23 Wed 14:09]--[2024-10-23 Wed 14:34] =>  0:25
+CLOCK: [2024-10-23 Wed 13:50]--[2024-10-23 Wed 14:06] =>  0:16
+CLOCK: [2024-10-23 Wed 13:23]--[2024-10-23 Wed 13:48] =>  0:25
+:END:
+*** [X] Make sure deny_proposed_cart.py is still okay as far as testing goes after changes.
+- Note taken on [2024-10-24 Thu 11:01] \\
+  Seems fine
+*** [-] If authorization fails for the proposed cart, create an admin task
+- Note taken on [2024-10-24 Thu 18:21] \\
+  We may want to create a task when *anything* in the service fails
+:LOGBOOK:
+CLOCK: [2024-10-24 Thu 15:59]--[2024-10-24 Thu 16:24] =>  0:25
+:END:
 ** [X] [[https://github.com/hellowisp/secure.hellowisp.com/pull/4807][WISPENG-576]]: Removes feature flag and old UI for fill requests in provider
+** [ ] [[https://hellowisp.atlassian.net/browse/WISPENG-812][WISPENG-812]]: Replace placeholder text for approve/deny cart flash messages
+[[https://www.notion.so/wispinc/Copy-for-Medications-Flow-6868dd0bca464d0fbdc342727c9375cb#1208c5dde52180d2a0b5c72c9d4afa9d][Notion doc]] with the text.
+- Note taken on [2024-10-24 Thu 20:42] \\
+  I think the text provided is just for the system message. We still need text for the flash messages.
 * Messages to post
 ** [ ] Ask in dev-private what everyone thinks about the type hint for returning "Self" from Pydantic validators.
 We have two options:

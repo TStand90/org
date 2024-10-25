@@ -38,6 +38,19 @@ with pytest.raises(ValueError, match='invalid literal for int() with base 10: "T
     int("This won't work!")
 #+END_SRC
 
+** Custom markers
+You can add custom markers. For example, for a custom "smoke" tag for smoke tests, ~@pytest.mark.smoke~.
+
+Any custom markers can be run by themselves with the ~-m~ flag, so ~pytest -m smoke~.
+
+You'll get a warning if you don't add the custom tag to ~pytest.ini~. This helps prevent typos.
+
+#+BEGIN_SRC
+[pytest]
+markers =
+    smoke: subset of tests
+#+END_SRC
+
 ** Disable Traceback
 Use the ~--tb=no~ flag to disable tracebacks. This can make the output look a lot smaller and simpler.
 
