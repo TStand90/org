@@ -283,7 +283,9 @@ CLOCK: [2024-10-23 Wed 13:23]--[2024-10-23 Wed 13:48] =>  0:25
 *** [X] Make sure deny_proposed_cart.py is still okay as far as testing goes after changes.
 - Note taken on [2024-10-24 Thu 11:01] \\
   Seems fine
-*** [-] If authorization fails for the proposed cart, create an admin task
+*** [X] If authorization fails for the proposed cart, create an admin task
+- Note taken on [2024-10-25 Fri 14:40] \\
+  We will proceed with an admin task if _anything_ goes wrong.
 - Note taken on [2024-10-24 Thu 18:21] \\
   We may want to create a task when *anything* in the service fails
 :LOGBOOK:
