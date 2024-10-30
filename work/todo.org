@@ -261,7 +261,7 @@ CLOCK: [2024-09-25 Wed 14:00]--[2024-09-25 Wed 14:10] =>  0:10
 CLOCK: [2024-10-09 Wed 12:25]--[2024-10-09 Wed 16:25] =>  4:00
 CLOCK: [2024-09-30 Mon 14:35]--[2024-09-30 Mon 18:00] =>  3:25
 :END:
-** [-] [[https://hellowisp.atlassian.net/browse/WISPENG-468][WISPENG-468]]: Handle patient accept
+** [?] [[https://hellowisp.atlassian.net/browse/WISPENG-468][WISPENG-468]]: Handle patient accept
 - Note taken on [2024-10-18 Fri 21:37] \\
   I don't think an order is being created. Need to do that. Maybe in the checkout processor?
 *** [X] Write tests for CartServiceUtils
@@ -292,10 +292,31 @@ CLOCK: [2024-10-23 Wed 13:23]--[2024-10-23 Wed 13:48] =>  0:25
 CLOCK: [2024-10-24 Thu 15:59]--[2024-10-24 Thu 16:24] =>  0:25
 :END:
 ** [X] [[https://github.com/hellowisp/secure.hellowisp.com/pull/4807][WISPENG-576]]: Removes feature flag and old UI for fill requests in provider
-** [ ] [[https://hellowisp.atlassian.net/browse/WISPENG-812][WISPENG-812]]: Replace placeholder text for approve/deny cart flash messages
+** [?] [[https://hellowisp.atlassian.net/browse/WISPENG-812][WISPENG-812]]: Replace placeholder text for approve/deny cart flash messages
+:LOGBOOK:
+CLOCK: [2024-10-29 Tue 17:42]--[2024-10-29 Tue 17:58] =>  0:16
+:END:
+- Note taken on [2024-10-29 Tue 11:32] \\
+  Received offical text, time to implement it.
+- Note taken on [2024-10-28 Mon 11:14] \\
+  Waiting for text from Alka and others
 [[https://www.notion.so/wispinc/Copy-for-Medications-Flow-6868dd0bca464d0fbdc342727c9375cb#1208c5dde52180d2a0b5c72c9d4afa9d][Notion doc]] with the text.
 - Note taken on [2024-10-24 Thu 20:42] \\
   I think the text provided is just for the system message. We still need text for the flash messages.
+** [?] [[https://hellowisp.atlassian.net/browse/WISPENG-843][WISPENG-843]]: When a patient accepts a ProposedCart, send the cart through the checkout processor
+- Note taken on [2024-10-29 Tue 12:17] \\
+  Need to write tests. Everything appears to work.
+:LOGBOOK:
+CLOCK: [2024-10-29 Tue 20:20]--[2024-10-29 Tue 21:50] =>  1:30
+CLOCK: [2024-10-29 Tue 17:33]--[2024-10-29 Tue 17:42] =>  0:09
+CLOCK: [2024-10-29 Tue 17:03]--[2024-10-29 Tue 17:28] =>  0:25
+CLOCK: [2024-10-29 Tue 16:25]--[2024-10-29 Tue 17:03] =>  0:38
+CLOCK: [2024-10-29 Tue 16:00]--[2024-10-29 Tue 16:25] =>  0:25
+CLOCK: [2024-10-29 Tue 13:00]--[2024-10-29 Tue 13:30] =>  0:30
+CLOCK: [2024-10-29 Tue 12:09]--[2024-10-29 Tue 12:34] =>  0:25
+CLOCK: [2024-10-29 Tue 11:23]--[2024-10-29 Tue 11:48] =>  0:25
+:END:
+Branched off of WISPENG-468 [[*\[\[https://hellowisp.atlassian.net/browse/WISPENG-468\]\[WISPENG-468\]\]: Handle patient accept][WISPENG-468: Handle patient accept]]
 * Messages to post
 ** [ ] Ask in dev-private what everyone thinks about the type hint for returning "Self" from Pydantic validators.
 We have two options:
