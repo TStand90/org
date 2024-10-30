@@ -292,7 +292,7 @@ CLOCK: [2024-10-23 Wed 13:23]--[2024-10-23 Wed 13:48] =>  0:25
 CLOCK: [2024-10-24 Thu 15:59]--[2024-10-24 Thu 16:24] =>  0:25
 :END:
 ** [X] [[https://github.com/hellowisp/secure.hellowisp.com/pull/4807][WISPENG-576]]: Removes feature flag and old UI for fill requests in provider
-** [?] [[https://hellowisp.atlassian.net/browse/WISPENG-812][WISPENG-812]]: Replace placeholder text for approve/deny cart flash messages
+** [X] [[https://hellowisp.atlassian.net/browse/WISPENG-812][WISPENG-812]]: Replace placeholder text for approve/deny cart flash messages
 :LOGBOOK:
 CLOCK: [2024-10-29 Tue 17:42]--[2024-10-29 Tue 17:58] =>  0:16
 :END:
@@ -303,7 +303,9 @@ CLOCK: [2024-10-29 Tue 17:42]--[2024-10-29 Tue 17:58] =>  0:16
 [[https://www.notion.so/wispinc/Copy-for-Medications-Flow-6868dd0bca464d0fbdc342727c9375cb#1208c5dde52180d2a0b5c72c9d4afa9d][Notion doc]] with the text.
 - Note taken on [2024-10-24 Thu 20:42] \\
   I think the text provided is just for the system message. We still need text for the flash messages.
-** [?] [[https://hellowisp.atlassian.net/browse/WISPENG-843][WISPENG-843]]: When a patient accepts a ProposedCart, send the cart through the checkout processor
+** [X] [[https://hellowisp.atlassian.net/browse/WISPENG-843][WISPENG-843]]: When a patient accepts a ProposedCart, send the cart through the checkout processor
+- Note taken on [2024-10-30 Wed 11:03] \\
+  Will merge after one more review
 - Note taken on [2024-10-29 Tue 12:17] \\
   Need to write tests. Everything appears to work.
 :LOGBOOK:
