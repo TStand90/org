@@ -17,3 +17,11 @@ This would make writing new tutorials in that style much, much easier.
 It would be cool to write this project on the [[id:e3f7ab88-17ea-4b07-94d5-4498b0681491][.NET]] platform, either with [[id:684e6719-609f-4a8a-a8fa-f11d0585ec10][C#]] or [[id:1c0131b0-54d9-4b00-9214-3920c53984d2][F#]]. It'd probably be easier to start with [[id:684e6719-609f-4a8a-a8fa-f11d0585ec10][C#]] and rewrite to [[id:1c0131b0-54d9-4b00-9214-3920c53984d2][F#]] later.
 
 The [[https://github.com/libgit2/libgit2sharp/wiki][libgit2sharp]] could help a lot here.
+** Hacker News reader
+*** Idea
+A TUI application to read Hacker News.
+*** Technology
+**** API
+The [[https://github.com/HackerNews/API][Hacker News API]] could be used to get the stories to dislay. Maybe the comments and upvotes as well.
+**** TUI
+I'm thinking the Go programming language with something like [[https://github.com/charmbracelet/bubbletea][Bubble Tea]] for the TUI portion.
