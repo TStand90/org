@@ -261,7 +261,9 @@ CLOCK: [2024-09-25 Wed 14:00]--[2024-09-25 Wed 14:10] =>  0:10
 CLOCK: [2024-10-09 Wed 12:25]--[2024-10-09 Wed 16:25] =>  4:00
 CLOCK: [2024-09-30 Mon 14:35]--[2024-09-30 Mon 18:00] =>  3:25
 :END:
-** [?] [[https://hellowisp.atlassian.net/browse/WISPENG-468][WISPENG-468]]: Handle patient accept
+** [X] [[https://hellowisp.atlassian.net/browse/WISPENG-468][WISPENG-468]]: Handle patient accept
+- Note taken on [2024-11-04 Mon 08:49] \\
+  Joey merged this while I was out.
 - Note taken on [2024-10-18 Fri 21:37] \\
   I don't think an order is being created. Need to do that. Maybe in the checkout processor?
 *** [X] Write tests for CartServiceUtils
@@ -309,7 +311,7 @@ CLOCK: [2024-10-29 Tue 17:42]--[2024-10-29 Tue 17:58] =>  0:16
 - Note taken on [2024-10-29 Tue 12:17] \\
   Need to write tests. Everything appears to work.
 :LOGBOOK:
-CLOCK: [2024-10-29 Tue 20:20]--[2024-10-29 Tue 21:50] =>  1:30
+CLOCK: [2024-10-29 Tue 20:20]--[2024-10-29 Tue 19:50] => -0:30
 CLOCK: [2024-10-29 Tue 17:33]--[2024-10-29 Tue 17:42] =>  0:09
 CLOCK: [2024-10-29 Tue 17:03]--[2024-10-29 Tue 17:28] =>  0:25
 CLOCK: [2024-10-29 Tue 16:25]--[2024-10-29 Tue 17:03] =>  0:38
@@ -319,6 +321,16 @@ CLOCK: [2024-10-29 Tue 12:09]--[2024-10-29 Tue 12:34] =>  0:25
 CLOCK: [2024-10-29 Tue 11:23]--[2024-10-29 Tue 11:48] =>  0:25
 :END:
 Branched off of WISPENG-468 [[*\[\[https://hellowisp.atlassian.net/browse/WISPENG-468\]\[WISPENG-468\]\]: Handle patient accept][WISPENG-468: Handle patient accept]]
+** [-] [[https://hellowisp.atlassian.net/browse/WISPENG-878][WISPENG-878]]: [Nice-to-have] Display generated patient message text to providers
+:LOGBOOK:
+CLOCK: [2024-11-05 Tue 11:40]--[2024-11-05 Tue 12:00] =>  0:20
+CLOCK: [2024-11-05 Tue 11:14]--[2024-11-05 Tue 11:39] =>  0:25
+CLOCK: [2024-11-05 Tue 10:50]--[2024-11-05 Tue 11:14] =>  0:24
+CLOCK: [2024-11-05 Tue 09:16]--[2024-11-05 Tue 09:41] =>  0:25
+CLOCK: [2024-11-05 Tue 08:43]--[2024-11-05 Tue 09:08] =>  0:25
+CLOCK: [2024-11-05 Tue 06:23]--[2024-11-05 Tue 07:00] =>  0:37
+CLOCK: [2024-11-04 Mon 12:40]--[2024-11-04 Mon 14:02] =>  1:22
+:END:
 * Messages to post
 ** [ ] Ask in dev-private what everyone thinks about the type hint for returning "Self" from Pydantic validators.
 We have two options:
@@ -346,7 +358,11 @@ This is "Too many positional arguments". When you have a lot of stuff you need t
 * Things to do for others
 ** [X] Look at WISPENG-467 and WISPENG-468 and see if they can be broken down. Let Kristin know.
 WISPENG-467, no. WISPENG-468, probably.
-** [ ] Ask the data team if the Proposed Cart table is enough to satisfy the requirements in [[https://hellowisp.atlassian.net/browse/WISPENG-472][WISPENG-472]] and [[https://hellowisp.atlassian.net/browse/WISPENG-481][WISPENG-481]].
+** [X] Ask the data team if the Proposed Cart table is enough to satisfy the requirements in [[https://hellowisp.atlassian.net/browse/WISPENG-472][WISPENG-472]] and [[https://hellowisp.atlassian.net/browse/WISPENG-481][WISPENG-481]].
+- Note taken on [2024-11-04 Mon 08:48] \\
+  Data team confirmed (in a rather condescending way) that this is fine.
 Ask the devs too.
-** [-] Ask the channel if we need to do anything for [[https://hellowisp.atlassian.net/browse/WISPENG-482][WISPENG-482]]: handle patient text response
+** [X] Ask the channel if we need to do anything for [[https://hellowisp.atlassian.net/browse/WISPENG-482][WISPENG-482]]: handle patient text response
+- Note taken on [2024-11-04 Mon 08:48] \\
+  We will indeed do nothing here.
 We alreade create an admin task. Do we need to do anything more?
