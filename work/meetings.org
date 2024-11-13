@@ -59,3 +59,8 @@ CLOCK: [2024-09-23 Mon 11:00]--[2024-09-23 Mon 11:33] =>  0:33
 CLOCK: [2024-10-09 Wed 10:02]--[2024-10-09 Wed 10:34] =>  0:32
 :END:
 Will possibly send customers through checkout for V1, UI for proposed carts coming in V2 with possible improvements in V3.
+
+* Sprint 3 retro, <2024-11-11 Mon 10:30>
+:LOGBOOK:
+CLOCK: [2024-11-11 Mon 10:30]--[2024-11-11 Mon 11:08] =>  0:38
+:END:

@@ -5,6 +5,9 @@
 * Web projects
 ** Goals tracker
 Stack: Golang, HTMX, PostgreSQL
+** Fire Emblem API
+Stack: F#, Giraffe, PostgreSQL.
+- What to do for the frontend? React?
 * Miscellaneous
 ** Git diff builder
 *** Idea

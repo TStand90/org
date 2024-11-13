@@ -1,0 +1,43 @@
+:PROPERTIES:
+:ID:       c5de081a-b009-4913-a63e-e47d61dfb521
+:END:
+#+title: Transitioning from QWERTY to Colemak
+
+About one year ago, I started transitioning my keyboard (a Moonlander) from a QWERTY layout to Colemak-DH. I wanted to talk a bit about the process, the benefits, the and drawbacks.
+
+* The benefits
+
+* The downsides
+All the downsides I'm about to talk about can be summarized as "the world was designed around QWERTY". QWERTY is, as you'll know, the default layout for English keyboards. It's what you learned when you were young, and it's what almost all people use.
+
+** Vim keybindings
+I use Vim. Well, I use Vim keybindings anyway. I use them in JetBrains editors, as well as in Doom Emacs (where I'm typing this now!). I even use NeoVim occasionally.
+
+Why do I use Vim keybindings? Well, my first job out of college, I used Vim, because I didn't have much choice. It was that, Nano, or Emacs. But that's a story for another day.
+
+Why do I /still/ use them? I like them. I think they make editing text faster, for me anyway. I use them wherever possible.
+
+And, for the most part, using Vim keybindings with Colemak is not a /huge/ issue. The Vim keybindings are (mostly) mnemonic, so if I want to go to the end of a word, I think to myself "press e". If I want to insert text, I think "press i". Using a different keyboard doesn't change that.
+
+Of course, as anyone who has actually used Vim before is probably wondering to themselves right now, "what about hjkl"?
+
+That's the downside. Those keys aren't in the same positions anymore, and that's a bit of a pain. But there's some ways to mitigate this.
+
+*** A movement layer
+When I hold the first left thumb button on my keyboard, it switches to a layer I call "movement".
+
+** Gaming
+Most PC games assume you are on QWERTY, for obvious reasons. This is pretty easy to fix: I have a dedicated QWERTY layout for playing games.
+
+Funny enough, when playing Civilization 6 or Age of Mythology: Retold, I still use Colemak. I guess the keybindings are stuck in my head as the letters rather than the positions on the keyboard, so I don't use QWERTY for these games. But just about anything where movement is controlled via ASDF, I go back to QWERTY.
+
+* Things that didn't change
+** My typing speed & accuracy
+My speed is still between 55-60 words per minute, and my accuracy is about 97%. It took some time to get back up to that point with Colemak (it went down to 15-20 WPM for a bit!), but I'm now back up to where I was before.
+
+If you're considering switching to a new keyboard layout so that you can type faster, I'd say: don't. You might be a bit faster after a few years, but probably not by much.
+
+** My layout on my laptops
+While you /can/ change they layouts on laptops to use Colemak, I didn't. I still use QWERTY whenever my hands are directly on a keyboard. The only place I use Colemak is on my Moonlander keyboard.
+
+This has a few benefits.

@@ -1,0 +1,53 @@
+:PROPERTIES:
+:ID:       2d52c9ef-d387-444c-af42-9d836e8648b6
+:END:
+#+title: Thoughts on "never write comments"
+#+filetags: :Blog:
+
+A common piece of advice I hear these days is that you should (almost) never write comments in your code.
+
+Respectfully, I disagree.
+
+Here's a few common arguments I hear for this approach:
+
+1. Code should be so obvious, it doesn't /need/ any comments.
+
+   Okay, fine, I concede that *some* simple functions, methods, and classes might not need comments at all. Consider this:
+
+   #+BEGIN_SRC python
+def get_task_by_id(task_id: int) -> Task
+"""Gets a Task by its ID.
+
+    Args:
+        task_id (int): The ID of the Task to retrieve.
+
+    Returns:
+        Task: The found Task.
+"""
+    return Task.objects.get(pk=task_id)
+   #+END_SRC
+
+   (Assuming this is a Django codebase. Please excuse the lack of exception handling.)
+
+   Does this function (or maybe it's a method?) need comments? Nah, it's fine as is. It's so simple that I'd expect just about anybody to tell me what's it is doing. No comments necessary.
+
+   But does your /entire/ codebase consist of functions like that? If so, you're probably not working on anything terribly complex. Or maybe your code is so "clean", Uncle Bob himself had a hand in writing it. Chances are though, you've got some spots in your code doing more complicated things.
+
+2. Code and comments can get out-of-sync.
+
+   Yes, keeping code and comments is a bit more work. I'd prefer that up-front work than trying hopelessly to figure out what the author meant though.
+
+3. Comments are largely redundant.
+
+   This depends on what /type/ of comments you write. If you write comments that explain /what/ code does, rather than /why/ it does it, this can absolutely be true.
+
+   #+BEGIN_SRC python
+   #+END_SRC
+
+How many times do I think to myself, "This code has far too many comments! I'm so distracted from what the code is /actually/ doing! I wish the author had written /fewer/ comments here!"
+
+Two, maybe three times... in my entire life.
+
+How many times do I think to myself, "I wish this code had more comments, so I can better understand what's going on!"
+
+Two, maybe three times... a day.

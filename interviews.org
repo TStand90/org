@@ -2,6 +2,13 @@
 #+description: A log of interviews I have done
 
 * Ongoing
+** Rinsed
+Status: Applied
+- Applied on Sunday, November 10th
+
+Office: Remote
+
+* Archived
 ** [[https://joinmochi.com/][Mochi Health]]
 Status: Ghosted
 - I am not expecting to hear back at this point. The recruiter did not sound happy that I mentioned that I will not be working nights/weekends.
