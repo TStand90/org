@@ -1,0 +1,51 @@
+:PROPERTIES:
+:ID:       31d53317-eaf9-4d88-a7b3-f7d0357fefc1
+:END:
+#+title: Terminal Tricks
+
+* Background and foreground tasks
+Use =ctrl + z= to run a task in the background. Use =fg= to bring it back.
+
+* Get current IP address
+#+BEGIN_SRC shell
+curl ifconfig.me
+#+END_SRC
+
+* History
+Use ~history~ to view previous commands. You can use ~!<number>~ to re-run a given command that is displayed with ~history~.
+
+* pushd and popd
+=pushd= "pushes" a directory onto a stack. =popd= pops the stack.
+
+* Re-run previous command
+Use =!!= to re-run the previous command.
+
+#+BEGIN_SRC shell
+!!
+#+END_SRC
+
+* Re-use the previous command arg
+You can re-use the previous command's args with =!$=. For example, say you used ~ls~ to look inside a directory, and now you want to ~cd~ into it.
+
+#+BEGIN_SRC shell
+ls Documents
+cd !$
+#+END_SRC
+
+* Run multiple commands
+| input | description                               |
+|-------+-------------------------------------------|
+| ;     | Run commands sequentially                 |
+| &&    | If first command fails, next will not run |
+| =||=  | Second command runs only if first fails   |
+
+* Shortcuts
+
+| shortcut | description                    |
+|----------+--------------------------------|
+| ctrl + l | Clear                          |
+| ctrl + r | Search history                 |
+| ctrl + w | Delete word in front of cursor |
+| ctrl + z | Run task in the background     |
+| ctrl + + | Increase font size             |
+| ctrl + - | Decrease font size             |

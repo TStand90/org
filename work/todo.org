@@ -362,6 +362,7 @@ CLOCK: [2024-11-11 Mon 17:00]--[2024-11-11 Mon 17:49] =>  0:49
 CLOCK: [2024-11-11 Mon 16:20]--[2024-11-11 Mon 16:58] =>  0:38
 CLOCK: [2024-11-11 Mon 15:43]--[2024-11-11 Mon 16:08] =>  0:25
 :END:
+** [-] [[https://hellowisp.atlassian.net/browse/WISPENG-933][WISPENG-933]]: Forward coupon codes from original order to proposed cart
 * Messages to post
 ** [ ] Ask in dev-private what everyone thinks about the type hint for returning "Self" from Pydantic validators.
 We have two options:

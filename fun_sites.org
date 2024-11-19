@@ -1,3 +1,17 @@
 #+title: Fun Sites
 
 http://textfiles.com/underconstruction/
+
+* Game dev resources
+[[https:game-icons.net][game-icons.net]]: Free icons for game development.
+
+* Music
+[[https://rainbowhunt.com/][rainbowhunt.com]]: Rain background sounds.
+[[https:tree.fm][tree.fm]]: Listen to a random forest.
+[[https://vipvgm.net][vipvgm.net]]: Various video game soundtracks.
+
+* SQL
+[[https://mystery.knightlab.com/][SQL Murder Mystery]]: Can you find out whodunnit?
+
+* Vim
+[[https:vim-racer.com][Vim Racer]]: Test your speed with Vim commands.

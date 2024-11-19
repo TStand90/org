@@ -7,6 +7,11 @@ A list of books and articles that I'd like to read at some point.
 
 * [ ] Maybe move this reading list into the Books note in my org files, and rename that one to "Reading List"? I don't know if there's a benefit to this being an org-roam node.
 
+* Things to subscribe to
+I probably need to subscribe to these sites somehow. RSS? Mailing list? Not sure yet.
+
+** [ ] [[https://devblogs.microsoft.com/][Microsoft Developer Blogs]]
+
 * Articles
 ** [1/1] Software planning
 *** NO [[https://basecamp.com/shapeup][Shape Up]]
@@ -16,8 +21,16 @@ A list of books and articles that I'd like to read at some point.
 *** [-] [[https://martinfowler.com/eaaDev/EventSourcing.html][Event Sourcing]] by Martin Fowler
 ** [0/1] C#
 *** [ ] [[https://andrewlock.net/series/behind-the-scenes-of-minimal-apis/][Behind the scenes of Minimal APIs]]
-** [/] Wezterm
+** [0/1] Git
+*** [ ] [[https://git-scm.com/book/en/v2/Git-Tools-Rerere][Git Rerere]]
+** [0/1] (Neo)Vim
+*** [ ] [[https://lazyvim-ambitious-devs.phillips.codes/][LazyVim for Ambitious Developers]]
+** [0/2] Wezterm
 *** [ ] [[https://www.florianbellmann.com/blog/switch-from-tmux-to-wezterm][How to switch from Tmux to WezTerm]]
+*** [ ] [[https://alexplescan.com/posts/2024/08/10/wezterm/][Okay, I really like WezTerm]]
+** [0/2] General
+*** [ ] [[https://newsletter.eng-leadership.com/p/engineers-guide-to-convincing-your][Engineer's guide to convincing your Product Manager to prioritize technical debt]]
+*** [ ] [[https:howtodeal.dev][How to Deal with Difficult People on Software Projects]]
 
 * Books
 ** Life
