@@ -2,6 +2,15 @@
 #+description: A list of my personal projects
 
 * Games
+** Monogame Roguelike
+*** Pathfinding
+**** [-] Crappy depth first search version
+- Note taken on [2024-11-19 Tue 23:23] \\
+  Almost there. The enemy correctly moves up, but not left and right. It moves back-and-forth between the same x tiles. It does attack the player if the player is adjacent, so that's progress I guess.
+:LOGBOOK:
+CLOCK: [2024-11-19 Tue 22:00]--[2024-11-19 Tue 23:22] =>  1:22
+:END:
+**** [ ] Better version with Dijkstra's Algorithm
 * Web projects
 ** Goals tracker
 Stack: Golang, HTMX, PostgreSQL
