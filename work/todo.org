@@ -323,6 +323,8 @@ CLOCK: [2024-10-29 Tue 11:23]--[2024-10-29 Tue 11:48] =>  0:25
 Branched off of WISPENG-468 [[*\[\[https://hellowisp.atlassian.net/browse/WISPENG-468\]\[WISPENG-468\]\]: Handle patient accept][WISPENG-468: Handle patient accept]]
 ** [?] [[https://hellowisp.atlassian.net/browse/WISPENG-878][WISPENG-878]]: [Nice-to-have] Display generated patient message text to providers
 :LOGBOOK:
+CLOCK: [2024-11-19 Tue 16:26]--[2024-11-19 Tue 16:51] =>  0:25
+CLOCK: [2024-11-19 Tue 15:51]--[2024-11-19 Tue 16:16] =>  0:25
 CLOCK: [2024-11-11 Mon 15:13]--[2024-11-11 Mon 15:38] =>  0:25
 CLOCK: [2024-11-11 Mon 14:25]--[2024-11-11 Mon 14:50] =>  0:25
 CLOCK: [2024-11-11 Mon 13:55]--[2024-11-11 Mon 14:20] =>  0:25
@@ -362,7 +364,12 @@ CLOCK: [2024-11-11 Mon 17:00]--[2024-11-11 Mon 17:49] =>  0:49
 CLOCK: [2024-11-11 Mon 16:20]--[2024-11-11 Mon 16:58] =>  0:38
 CLOCK: [2024-11-11 Mon 15:43]--[2024-11-11 Mon 16:08] =>  0:25
 :END:
-** [-] [[https://hellowisp.atlassian.net/browse/WISPENG-933][WISPENG-933]]: Forward coupon codes from original order to proposed cart
+** [?] [[https://hellowisp.atlassian.net/browse/WISPENG-933][WISPENG-933]]: Forward coupon codes from original order to proposed cart
+:LOGBOOK:
+CLOCK: [2024-11-19 Tue 13:37]--[2024-11-19 Tue 14:02] =>  0:25
+CLOCK: [2024-11-19 Tue 11:58]--[2024-11-19 Tue 12:16] =>  0:18
+CLOCK: [2024-11-19 Tue 11:27]--[2024-11-19 Tue 11:52] =>  0:25
+:END:
 * Messages to post
 ** [ ] Ask in dev-private what everyone thinks about the type hint for returning "Self" from Pydantic validators.
 We have two options:
