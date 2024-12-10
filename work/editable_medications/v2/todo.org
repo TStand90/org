@@ -1,6 +1,22 @@
 #+title: Editable Medications V2 - TODO
 
+[[https://www.figma.com/design/8fpr75UqvO70UFUuM7zvS7/Pending-Orders?node-id=1-2&node-type=canvas&t=14jfXwqdT3PBqYZr-0][Alka's Figma UI Mockup]]
+
 * Investigations, Estimations, and Spikes
 ** [ ] Make estimations for Editable Meds V2 UI
 *** [ ] Estimation for the UI using Jinja templates
-*** [ ] Estimation for the UI using React
+**** [ ] Backend
+***** [ ] API endpoint for the proposed carts (displayed as "pending orders")
+- Note taken on [2024-12-10 Tue 11:03] \\
+  We can probably use the ProposedCart API V3 endpoint that already exists. This endpoint currenly only has a POST action, for creating the ProposedCart.
+***** [ ] Rewrite the current accept/deny actions to refresh the page instead of redirect to the patient dashboard home page
+**** [ ] Frontend
+***** [ ] Create table to display the proposed cart
+***** [ ] Create "loading" indicator and overlay for when the proposed cart is processing.
+- Note taken on [2024-12-10 Tue 11:07] \\
+  Apparently Bootstrap 4 does not have a built-in component for this.
+***** [ ] Optional: Refactor existing Orders table, use the same Flask component for both ProposedCart and Orders
+- Note taken on [2024-12-10 Tue 11:12] \\
+  May not be possile. The UI mockup has different fields than the existing table.
+*** NO Estimation for the UI using React
+Don't think this is a good idea. Won't explore this unless someone says we need to do it.
