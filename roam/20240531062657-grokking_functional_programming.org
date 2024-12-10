@@ -10,8 +10,8 @@
 :ID:       796de48e-28fa-427e-a12c-40f8e8980502
 :END:
 
-- Imperative programming focuses on _how_ the result should be computed.
-- Declarative programming focuses on _what_ needs to be done.
+- [[id:fda18a87-d310-45bd-b1c9-69d470b76f1a][Imperative]] programming focuses on _how_ the result should be computed.
+- [[id:cb54393a-8404-4632-bef5-ecd6b4897150][Declarative]] programming focuses on _what_ needs to be done.
 
 Functional Programming generally tries to be as _declarative_ as possible.
 

@@ -1,0 +1,6 @@
+:PROPERTIES:
+:ID:       eebe6604-70a4-455e-9d3a-ad9abc807d6a
+:END:
+#+title: Django
+
+Django is the [[id:3a948b50-dedc-4fdf-a86c-05c1c3a9f230][Python]] web framework for people who don't want to customize anything and who want to just get shit done.

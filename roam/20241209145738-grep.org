@@ -1,0 +1,6 @@
+:PROPERTIES:
+:ID:       640cc412-53be-4cf6-bc54-638b8f5c25fb
+:END:
+#+title: grep
+
+Grep is a tool to find what you want in a bunch of text.

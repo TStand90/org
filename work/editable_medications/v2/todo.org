@@ -1,0 +1,6 @@
+#+title: Editable Medications V2 - TODO
+
+* Investigations, Estimations, and Spikes
+** [ ] Make estimations for Editable Meds V2 UI
+*** [ ] Estimation for the UI using Jinja templates
+*** [ ] Estimation for the UI using React

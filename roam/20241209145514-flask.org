@@ -1,0 +1,15 @@
+:PROPERTIES:
+:ID:       e633d0b7-610b-447c-8c09-fd5c7cd308f6
+:END:
+#+title: Flask
+
+Flask is the [[id:3a948b50-dedc-4fdf-a86c-05c1c3a9f230][Python]] web framework for people who think they are too smart or too cool to use [[id:eebe6604-70a4-455e-9d3a-ad9abc807d6a][Django]].
+
+* Tips and Tricks
+
+** Show all routes
+#+BEGIN_SRC shell
+flask routes
+#+END_SRC
+
+Use this command to list all the routes available in the project. Pair with [[id:640cc412-53be-4cf6-bc54-638b8f5c25fb][grep]] to find the potential route you are looking for.
