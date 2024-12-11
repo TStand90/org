@@ -46,6 +46,20 @@ I probably need to subscribe to these sites somehow. RSS? Mailing list? Not sure
 - Note taken on [2024-08-15 Thu 08:05] \\
   Holding off on this one until I finish Letters from a Stoic.
 ** Programming
+*** [[id:ddff8999-8f7a-4abe-b756-af97af50dfdc][Functional Programming]]
+**** [2/12] [[id:805a8d3f-4aaa-44d6-b6e6-015316b20981][Grokking Functional Programming]]
+***** [X] Chapter 1
+***** [X] Chapter 2
+***** [ ] Chapter 3
+***** [ ] Chapter 4
+***** [ ] Chapter 5
+***** [ ] Chapter 6
+***** [ ] Chapter 7
+***** [ ] Chapter 8
+***** [ ] Chapter 9
+***** [ ] Chapter 10
+***** [ ] Chapter 11
+***** [ ] Chapter 12
 *** [[id:1c0131b0-54d9-4b00-9214-3920c53984d2][F#]]
 **** [8/16] [[id:b62df05a-56ae-416a-932f-868114759457][F# In Action]]
 ***** [X] Chapter 1

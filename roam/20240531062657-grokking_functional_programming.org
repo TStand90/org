@@ -118,3 +118,112 @@ def wordScore(word: String): Int = {
 #+END_SRC
 
 * Chapter 2 - [[id:a80f9e5d-1455-43e7-b876-28c891f3156c][Pure Functions]]
+** Separation of Concerns
+#+BEGIN_QUOTE
+In [[id:ddff8999-8f7a-4abe-b756-af97af50dfdc][Functional Programming]], we separate concerns into different functions.
+#+END_QUOTE
+
+** The three rules of pure functions
+1. A pure function always returns a single value.
+2. A pure function calculates the return value based only on its arguments.
+3. A pure function doesn't mutate any existing values.
+
+
+** Coffee break: Refactoring to a pure function
+
+Before:
+#+BEGIN_SRC java
+class TipCalculator {
+ private List<String> names = new ArrayList<>();
+ private int tipPercentage = 0;
+
+ public void addPerson(String name) {
+   names.add(name);
+   if(names.size() > 5) {
+     tipPercentage = 20;
+   } else if(names.size() > 0) {
+     tipPercentage = 10;
+   }
+ }
+
+ public List<String> getNames() {
+   return names;
+ }
+
+ public int getTipPercentage() {
+   return tipPercentage;
+ }
+}
+#+END_SRC
+
+After:
+#+BEGIN_SRC java
+class TipCalculator {
+    public static int getTipPercentage(List<String> names) {
+        if (names.size() > 5) {
+            return 20;
+        } else if (names.size() > 0) {
+            return 10;
+        }
+
+        return 0;
+    }
+}
+#+END_SRC
+
+** Referential transparency
+Referential transparency means that a function can be called any time, as many times as we want, and it will /always/ return the same value.
+
+If the function only uses its arguments to compute a value, and it doesn't mutate any existing values, it automatically becomes referentially transparent.
+
+** Using Scala to write pure functions
+Example of the shopping cart discount calculator in Java:
+
+#+BEGIN_SRC java
+class ShoppingCart {
+    public static int getDiscountPercentage(List<String> items) {
+        if(items.contains("Book")) {
+            return 5;
+        } else {
+            return 0;
+        }
+    }
+}
+#+END_SRC
+
+Same example, in Scala:
+#+BEGIN_SRC scala
+object ShoppingCart {
+  def getDiscountPercentage(items: List[String]): Int = {
+    if (items.contains("Book")) {
+      5
+    } else {
+      0
+    }
+  }
+}
+#+END_SRC
+
+Tip Calculator in Java:
+#+BEGIN_SRC java
+class TipCalculator {
+    public static int getTipPercentage(List<String> names) {
+        if(names.size() > 5) {
+            return 20;
+        } else if(names.size() > 0) {
+            return 10;
+        } else return 0;
+    }
+}
+#+END_SRC
+
+Tip Calculator in Scala:
+#+BEGIN_SRC scala
+object TipCalculator {
+  def getTipPercentage(names: List[String]): Int = {
+    if (names.size() > 5) 20
+    else if (names.size() > 0) 10
+    else 0
+  }
+}
+#+END_SRC
