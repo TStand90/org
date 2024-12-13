@@ -20,3 +20,16 @@
   May not be possile. The UI mockup has different fields than the existing table.
 *** NO Estimation for the UI using React
 Don't think this is a good idea. Won't explore this unless someone says we need to do it.
+
+* [[https://hellowisp.atlassian.net/browse/WISPENG-970][WISPENG-970]]: Editable Meds V2
+** [[https://hellowisp.atlassian.net/browse/WISPENG-971][WISPENG-971]]: PreApprovals - Approval Process Automation
+*** [?] [[https://hellowisp.atlassian.net/browse/WISPENG-978][WISPENG-978]]: Create new database table for recording proposed cart authorizations
+*** [-] [[https://hellowisp.atlassian.net/browse/WISPENG-979][WISPENG-979]]: Populate new database table upon proposed cart creation
+:LOGBOOK:
+CLOCK: [2024-12-13 Fri 11:35]--[2024-12-13 Fri 11:58] =>  0:23
+:END:
+**** [ ] Unticked PR to create a ~GetPackages~ service method
+:LOGBOOK:
+CLOCK: [2024-12-13 Fri 12:05]--[2024-12-13 Fri 12:33] =>  0:28
+:END:
+Need this because WISPENG-979 needs to query multiple packages. This is better than querying in a for loop.
