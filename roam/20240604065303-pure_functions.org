@@ -8,3 +8,10 @@ Sometimes, the elegant implementation is just a function. Not a method. Not a cl
 #+END_QUOTE
 
 Pure functions are functions without any side effects. They are the foundation of [[id:ddff8999-8f7a-4abe-b756-af97af50dfdc][Functional Programming]].
+
+Pure functions have three rules:
+1. They always returns a single value.
+2. They calculates the return value based only on its arguments.
+3. They doesn't mutate any existing values.
+
+Note: They /can/ mutate local variables, so long as they're not returned.
