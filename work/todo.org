@@ -75,8 +75,6 @@ CLOCK: [2024-06-10 Mon 11:52]--[2024-06-10 Mon 12:17] =>  0:25
 *** [X] GetPatientPrescriptions
 *** [X] SearchMedicationsByName
 *** [X] SearchPharmacies
-* Editable Meds V2
-** [ ] Make estimations for Editable Meds V2
 * Misc [4/5]
 ** [?] [[https://github.com/hellowisp/secure.hellowisp.com/pull/4260][Unticketed PR]] to change SnoozeRequestMixin.missed_calls_count to be non-nullable
 ** [X] Remove feature flag for disabling DoseSpot API
