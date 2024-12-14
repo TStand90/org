@@ -14,10 +14,11 @@ SCHEDULED: <2024-12-13 Fri .+4d/7d>
 :PROPERTIES:
 :STYLE: habit
 ** [ ] Work out legs - Ring Fit
-SCHEDULED: <2024-12-10 Tue .+5d/7d>
+SCHEDULED: <2024-12-19 Thu .+5d/7d>
 :PROPERTIES:
-:LAST_REPEAT: [2024-12-05 Thu 11:26]
+:LAST_REPEAT: [2024-12-14 Sat 11:15]
 :END:
+- State "[X]"        from "[ ]"        [2024-12-14 Sat 11:15]
 - State "[X]"        from "[ ]"        [2024-12-05 Thu 11:26]
 - State "[X]"        from "[ ]"        [2024-11-20 Wed 08:29]
 - State "[X]"        from "[ ]"        [2024-11-12 Tue 09:20]
