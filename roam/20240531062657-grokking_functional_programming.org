@@ -227,3 +227,43 @@ object TipCalculator {
   }
 }
 #+END_SRC
+
+* Chapter 3 - Immutable Values
+** Shared mutable state
+Shared mutable state is state (variables, data structures, etc.) that is shared in multiple places across a program, that can be mutated.
+
+This causes higher cognitive load for the programmer, as you must know the places where this state can be modified to truly understand what's happening.
+
+There are a few ways to deal with this.
+
+1. Copy the value in your function
+2. The [[id:5f847578-387b-47f2-9c6c-18aa0e899ebf][Object Oriented]] way, encapsulating the mutable state in an object (perhaps as a private variable).
+3. The [[id:ddff8999-8f7a-4abe-b756-af97af50dfdc][Functional Programming]] way, using immutable state (this is gaining traction in [[id:5f847578-387b-47f2-9c6c-18aa0e899ebf][Object Oriented]] programming as well).
+
+** Immutability in [[id:ddff8999-8f7a-4abe-b756-af97af50dfdc][Functional Programming]] languages
+Functional languages support immutability in their data structures by default. For example, [[id:54edfb9f-3852-44e7-9a53-a56d743d101d][Scala]]'s List data structure is immutable, so you can trust that operations on it will not alter the original list.
+
+** Coffee break - The immutable ~String~ API
+Task: Implement an =abbreviate= function in [[id:54edfb9f-3852-44e7-9a53-a56d743d101d][Scala]], which takes a name like "Alonso Church", and returns "A. Church".
+
+Sample inputs & outputs:
+| Input         | Output    |
+|---------------+-----------|
+| Alonso Church | A. Church |
+| A. Church     | A. Church |
+| A Church      | A. Church |
+
+#+BEGIN_SRC scala
+def abbreviate(name: String): String = {
+  val firstNameInitial = name.substring(0, 1)
+  val separator = name.indexOf(' ')
+  val lastName = name.substring(separator + 1)
+
+  firstNameInitial + ". " + lastName
+}
+#+END_SRC
+
+** Aren't immutable values worse for performance?
+Yes, but in most cases, this won't matter. What will matter a lot more is how easy something is for the developer.
+
+** Exercises: Practicing immutable slicing and appending
