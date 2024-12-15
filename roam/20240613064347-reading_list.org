@@ -51,6 +51,8 @@ I probably need to subscribe to these sites somehow. RSS? Mailing list? Not sure
 ***** [X] Chapter 1
 ***** [X] Chapter 2
 ***** [-] Chapter 3
+- Note taken on [2024-12-15 Sun 12:05] \\
+  Just need to do the exercises at the end of the chapter.
 :LOGBOOK:
 CLOCK: [2024-12-15 Sun 11:34]--[2024-12-15 Sun 12:05] =>  0:31
 CLOCK: [2024-12-15 Sun 09:00]--[2024-12-15 Sun 09:26] =>  0:26
