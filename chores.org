@@ -1,0 +1,23 @@
+#+title: Chores
+#+description: A log of chores that are reocurring
+
+* Cats
+** De-shedding
+*** [ ] De-shed Andromeda
+SCHEDULED: <2024-12-18 Wed .+1w>
+*** [ ] De-shed Orion
+SCHEDULED: <2024-12-25 Wed .+1w>
+:PROPERTIES:
+:LAST_REPEAT: [2024-12-18 Wed 14:44]
+:END:
+
+- State "[X]"        from "[ ]"        [2024-12-18 Wed 14:44]
+** Brushing
+*** [ ] Brush Andromeda
+SCHEDULED: <2024-12-18 Wed .+1w>
+*** [ ] Brush Orion
+SCHEDULED: <2024-12-20 Fri .+2d>
+:PROPERTIES:
+:LAST_REPEAT: [2024-12-18 Wed 14:43]
+:END:
+- State "[X]"        from "[ ]"        [2024-12-18 Wed 14:43]
