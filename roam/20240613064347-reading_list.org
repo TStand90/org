@@ -47,12 +47,10 @@ I probably need to subscribe to these sites somehow. RSS? Mailing list? Not sure
   Holding off on this one until I finish Letters from a Stoic.
 ** Programming
 *** [[id:ddff8999-8f7a-4abe-b756-af97af50dfdc][Functional Programming]]
-**** [2/12] [[id:805a8d3f-4aaa-44d6-b6e6-015316b20981][Grokking Functional Programming]]
+**** [3/12] [[id:805a8d3f-4aaa-44d6-b6e6-015316b20981][Grokking Functional Programming]]
 ***** [X] Chapter 1
 ***** [X] Chapter 2
-***** [-] Chapter 3
-- Note taken on [2024-12-15 Sun 12:05] \\
-  Just need to do the exercises at the end of the chapter.
+***** [X] Chapter 3
 :LOGBOOK:
 CLOCK: [2024-12-15 Sun 11:34]--[2024-12-15 Sun 12:05] =>  0:31
 CLOCK: [2024-12-15 Sun 09:00]--[2024-12-15 Sun 09:26] =>  0:26
@@ -125,7 +123,7 @@ CLOCK: [2024-08-26 Mon 08:41]--[2024-08-26 Mon 09:06] =>  0:25
 **** [ ] [[https://hypermedia.systems/][Hypermedia Systems]]
 *** [0/3] Interview Prep
 **** [ ] Cracking the Coding Interview
-**** [ ] System Design Interview, Volume 1
+**** [-] System Design Interview, Volume 1
 **** [ ] System Design Interview, Volume 2
 *** [0/1] PostgreSQL
 **** [-] 100 PostgreSQL Mistakes and how to avoid them

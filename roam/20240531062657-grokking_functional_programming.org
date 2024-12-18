@@ -268,22 +268,61 @@ Yes, but in most cases, this won't matter. What will matter a lot more is how ea
 
 ** Exercises: Practicing immutable slicing and appending
 *** Exercise: Write a function called ~firstTwo~
+**** My solution
 #+BEGIN_SRC scala
 def firstTwo(list: List[String]): List[String] = {
   list.take(2)
 }
 #+END_SRC
+**** Book solution
+#+BEGIN_SRC scala
+def firstTwo(list: List[String]): List[String] = {
+  list.slice(0, 2)
+}
+#+END_SRC
 
 *** Exercise: Write a function called ~lastTwo~
+**** My solution
 #+BEGIN_SRC scala
 def lastTwo(list: List[String]): List[String] = {
   list.takeRight(2)
 }
 #+END_SRC
+**** Book solution
+#+BEGIN_SRC scala
+def lastTwo(list: List[String]): List[String] = {
+  list.slice(list.size - 2, list.size)
+}
+#+END_SRC
 
 *** Exercise: Write a function called ~movedFirstTwoToTheEnd~
+**** My solution
 #+BEGIN_SRC scala
 def moveFirstTwoToTheEnd(list: List[String]): List[String] = {
   list.drop(2).appendedAll(list.take(2))
+}
+#+END_SRC
+**** Book solution
+#+BEGIN_SRC scala
+def moveFirstTwoToTheEnd(list: List[String]): List[String] = {
+  val firstTwo = list.slice(0, 2)
+  val withoutFirstTwo = list.slice(2, list.size)
+  withoutFirstTwo.appendedAll(firstTwo)
+}
+#+END_SRC
+
+*** Exercise: Write a function called ~insertedBeforeLast~
+**** My solution
+#+BEGIN_SRC scala
+def insertedBeforeLast(list: List[String], newElement: String): String = {
+  list.drop(2).appended(newElement).appendedAll(list.takeRight(1))
+}
+#+END_SRC
+**** Book solution
+#+BEGIN_SRC scala
+def insertedBeforeLast(list: List[String], element: String): String = {
+  val last = list.slice(list.size - 1, list.size)
+  val withoutLast = list.slice(0, list.size - 1)
+  withoutLast.appended(element).appendedAll(last)
 }
 #+END_SRC
