@@ -4,3 +4,31 @@
 #+title: Scala
 
 Scala is a programming language that allows both functional and object-oriented programming.
+
+* List
+** sortBy
+~List.sortBy~ takes a function as an argument, and uses that function to sort the given list.
+
+#+BEGIN_SRC scala
+def score(word: String): Int =
+  word.replaceAll("a", "").length
+
+score("java")  // Result: 2
+val words = List("rust", "java")
+words.sortBy(score)  // Result: List(java, rust)
+
+List("rust", "java").sortBy(score)  // This also works
+#+END_SRC
+
+Note that ~sortBy~ sorts in ascending order by default.
+
+* Function parameters
+To denote a parameter that is a function, use ~=>~.
+
+#+BEGIN_SRC scala
+def rankedWords(wordScore: String => Int, words: List[String]): List[String]
+#+END_SRC
+
+In this example, ~rankedWords~ takes two arguments:
+- A function that takes a ~String~ and returns an ~Int~
+- A ~List~ of ~String~.
