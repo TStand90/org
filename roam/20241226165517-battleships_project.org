@@ -1,0 +1,8 @@
+:PROPERTIES:
+:ID:       78e28826-ad18-4a09-b9f0-b73cbf2a0d4a
+:END:
+#+title: Battleships Project
+
+Idea: Play Battleships against another player, either human or AI, using a web backend and either a web frontend or a TUI.
+
+Stack: C# with SignalR / Elixir & Phoenix with websockets, (something with a terminal GUI), (maybe a web frontend?), PostgreSQL

@@ -422,3 +422,36 @@ def penalty(word: String): Int = if (word.contains("s")) 7 else 0
 
 rankedWords(w => score(w) + bonus(w) - penalty(w), words)
 #+END_SRC
+
+** Coffee break: Returning functions
+*** Return a new ~List~ with all numbers larger than =4= (or =1=)
+#+BEGIN_SRC scala
+def largerThan(n: Int): Int => Boolean = i => i > n
+List(5, 1, 2, 4, 0).filter(largerThan(4))
+List(5, 1, 2, 4, 0).filter(largerThan(1))
+#+END_SRC
+
+*** Return a new ~List~ that contains only numbers divisible by =5= (or =2=).
+#+BEGIN_SRC scala
+def divisibleBy(n: Int): Int => Boolean = i => i % n == 0
+#+END_SRC
+
+*** Return a new List that contains only numbers divisible by 5.
+input: List(5, 1, 2, 4, 15)
+output: List(5, 15)
+
+#+BEGIN_SRC scala
+def divisibleByNumber(numbers: List[Int]): Int => List[Int] = {
+  divisibleBy => numbers.filter(number => number % 5 == 0)
+}
+#+END_SRC
+
+**** Change: Now return a new List that contains only number divisible by 2.
+input: List(5, 1, 2, 4, 15)
+output: List(2, 4)
+
+#+BEGIN_SRC scala
+def divisibleByNumber(numbers: List[Int]): Int => List[Int] = {
+  divisibleBy => numbers.filter(number => number % 5 == 0)
+}
+#+END_SRC
