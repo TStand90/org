@@ -12,8 +12,7 @@ CLOCK: [2024-11-19 Tue 22:00]--[2024-11-19 Tue 22:55] =>  0:55
 :END:
 **** [X] Better version with Dijkstra's Algorithm
 * Web projects
-** Battleships
-Stack: C# with SignalR / Elixir & Phoenix with websockets, (something with a terminal GUI), (maybe a web frontend?), PostgreSQL
+** [[id:78e28826-ad18-4a09-b9f0-b73cbf2a0d4a][Battleships Project]]
 ** Goals tracker
 Stack: Golang, HTMX, PostgreSQL
 ** Fire Emblem API
