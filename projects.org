@@ -18,6 +18,10 @@ Stack: Golang, HTMX, PostgreSQL
 ** Fire Emblem API
 Stack: F#, Giraffe, PostgreSQL.
 - What to do for the frontend? React?
+** Org mode - habit updater
+This would be a simple web app that would update my org agenda files for my habits via the web. I think by loading the file from Github, making the change, and doing the commit via a web app and a backend process, I could "check off" habits like my workouts from a web interface.
+
+Obviously this would not replace opening Org mode for more complicated things, but it might be nice to be able to say "I did my workout today" without needing to boot up my computer and Emacs.
 * Miscellaneous
 ** Git diff builder
 *** Idea

@@ -35,7 +35,9 @@ I probably need to subscribe to these sites somehow. RSS? Mailing list? Not sure
 * Books
 ** Life
 *** [1/2] Habits
-**** HOLD Atomic Habits
+**** [-] Atomic Habits
+- Note taken on [2024-12-27 Fri 21:26] \\
+  Resumed reading, roughly halfway through now.
 - Note taken on [2024-08-15 Thu 08:07] \\
   Read the intro. Will pick it up again after finishing The Power of Habit.
 **** [X] The Power of Habit
@@ -55,7 +57,7 @@ I probably need to subscribe to these sites somehow. RSS? Mailing list? Not sure
 CLOCK: [2024-12-15 Sun 11:34]--[2024-12-15 Sun 12:05] =>  0:31
 CLOCK: [2024-12-15 Sun 09:00]--[2024-12-15 Sun 09:26] =>  0:26
 :END:
-***** [ ] Chapter 4
+***** [-] Chapter 4
 ***** [ ] Chapter 5
 ***** [ ] Chapter 6
 ***** [ ] Chapter 7
