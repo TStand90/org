@@ -27,10 +27,11 @@ SCHEDULED: <2024-12-25 Wed .+5d/7d>
 :PROPERTIES:
 :STYLE: habit
 ** [ ] Work out arms - Weights
-SCHEDULED: <2024-12-22 Sun .+5d/7d>
+SCHEDULED: <2025-01-02 Thu .+5d/7d>
 :PROPERTIES:
-:LAST_REPEAT: [2024-12-17 Tue 23:59]
+:LAST_REPEAT: [2024-12-28 Sat 17:40]
 :END:
+- State "[X]"        from "[ ]"        [2024-12-28 Sat 17:40]
 - State "[X]"        from "[ ]"        [2024-12-17 Tue 23:59]
 - State "[X]"        from "[ ]"        [2024-12-10 Tue 17:18]
 - State "[X]"        from "[ ]"        [2024-11-23 Sat 23:59]
