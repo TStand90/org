@@ -434,24 +434,23 @@ List(5, 1, 2, 4, 0).filter(largerThan(1))
 *** Return a new ~List~ that contains only numbers divisible by =5= (or =2=).
 #+BEGIN_SRC scala
 def divisibleBy(n: Int): Int => Boolean = i => i % n == 0
+List(5, 1, 2, 4, 15).filter(divisibleBy(5))
+List(5, 1, 2, 4, 15).filter(divisibleBy(2))
 #+END_SRC
 
-*** Return a new List that contains only numbers divisible by 5.
-input: List(5, 1, 2, 4, 15)
-output: List(5, 15)
-
+*** Return words that are shorter than four characters.
 #+BEGIN_SRC scala
-def divisibleByNumber(numbers: List[Int]): Int => List[Int] = {
-  divisibleBy => numbers.filter(number => number % 5 == 0)
-}
+def shorterThan(n: Int): String => Boolean = s => s.length < n
+List("scala", "ada").filter(shorterThan(4))
+List("scala", "ada").filter(shorterThan(7))
 #+END_SRC
 
-**** Change: Now return a new List that contains only number divisible by 2.
-input: List(5, 1, 2, 4, 15)
-output: List(2, 4)
-
+*** Return words that have more than two (or zero) of the letter =s= inside.
 #+BEGIN_SRC scala
-def divisibleByNumber(numbers: List[Int]): Int => List[Int] = {
-  divisibleBy => numbers.filter(number => number % 5 == 0)
-}
+def numberOfS(s: String): Int =
+  s.length - s.replaceAll("s", "").length
+def containsS(moreThan: Int): String => Boolean =
+  s => numberOfS(s) > moreThan
+List("rust", "ada").filter(containsS(2))
+List("rust", "ada").filter(containsS(0))
 #+END_SRC
