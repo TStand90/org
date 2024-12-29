@@ -67,7 +67,9 @@ CLOCK: [2024-12-15 Sun 09:00]--[2024-12-15 Sun 09:26] =>  0:26
 ***** [ ] Chapter 11
 ***** [ ] Chapter 12
 *** [[id:684e6719-609f-4a8a-a8fa-f11d0585ec10][C#]]
-**** *[[https://www.manning.com/books/building-web-apis-with-asp-net-core][Building Web APIs with ASP.NET Core]]
+**** [[https://www.manning.com/books/building-web-apis-with-asp-net-core][Building Web APIs with ASP.NET Core]]
+- Note taken on [2024-12-28 Sat 22:23] \\
+  This one might be good to learn how to make the API backends I want specifically, without the unneeded chapters on things like Razor.
 *** [[id:1c0131b0-54d9-4b00-9214-3920c53984d2][F#]]
 **** [8/16] [[id:b62df05a-56ae-416a-932f-868114759457][F# In Action]]
 ***** [X] Chapter 1
