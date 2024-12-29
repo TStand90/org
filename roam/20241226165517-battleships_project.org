@@ -6,3 +6,43 @@
 Idea: Play Battleships against another player, either human or AI, using a web backend and either a web frontend or a TUI.
 
 Stack: C# with SignalR / Elixir & Phoenix with websockets, (something with a terminal GUI), (maybe a web frontend?), PostgreSQL
+
+* Database
+Game
+-----
+id: Primary Key
+player1: User
+player2: User
+status: enum(GameStatus)
+ruleset (?)
+board: Board (?)
+
+GameStatus
+----------
+PLAYER_1_TURN
+PLAYER_2_TURN
+PLAYER_1_WINS
+PLAYER_2_WINS
+DRAW      (may not be reachable? But might as well include I guess)
+
+Ship
+-----
+id: Primary Key
+name: string
+size: int
+
+* Rule sets
+** Normal
+Each player takes their shots one at a time.
+
+** Silo
+Each player fires off ~n~ number of shots per turn. ~n~ could be a fixed number, or be the number of ships that player has remaining.
+
+* Rule variations
+** No indicator of ship hit
+Normally, you announce the ship that was hit. In this variation, the type of ship that was hit is /not/ announced. Players must guess which ship they have hit. When the ship sinks, the player will be informed of which ship was sunk (as it will be obvious from the number of tiles).
+
+* Time limits
+There should probably be time limits on moves. Perhaps when the time limit runs out, the player either forefeits their turn, or the entire match, based on ruleset.
+
+Could also impose a timer for the entire game, like in chess, with an increment (or without). Though that probably isn't all that interesting, as there isn't as much to think about in this game. A per-move timer is probably all that's needed.
