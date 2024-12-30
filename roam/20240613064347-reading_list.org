@@ -49,7 +49,7 @@ I probably need to subscribe to these sites somehow. RSS? Mailing list? Not sure
   Holding off on this one until I finish Letters from a Stoic.
 ** Programming
 *** [[id:ddff8999-8f7a-4abe-b756-af97af50dfdc][Functional Programming]]
-**** [3/12] [[id:805a8d3f-4aaa-44d6-b6e6-015316b20981][Grokking Functional Programming]]
+**** [4/12] [[id:805a8d3f-4aaa-44d6-b6e6-015316b20981][Grokking Functional Programming]]
 ***** [X] Chapter 1
 ***** [X] Chapter 2
 ***** [X] Chapter 3
@@ -57,7 +57,7 @@ I probably need to subscribe to these sites somehow. RSS? Mailing list? Not sure
 CLOCK: [2024-12-15 Sun 11:34]--[2024-12-15 Sun 12:05] =>  0:31
 CLOCK: [2024-12-15 Sun 09:00]--[2024-12-15 Sun 09:26] =>  0:26
 :END:
-***** [-] Chapter 4
+***** [X] Chapter 4
 ***** [ ] Chapter 5
 ***** [ ] Chapter 6
 ***** [ ] Chapter 7
