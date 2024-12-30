@@ -454,3 +454,33 @@ def containsS(moreThan: Int): String => Boolean =
 List("rust", "ada").filter(containsS(2))
 List("rust", "ada").filter(containsS(0))
 #+END_SRC
+
+** Practicing ~foldLeft~
+*** Return a sum of all integers in the given list.
+input: List(5, 1, 2, 4, 100)
+output: 112
+
+#+BEGIN_SRC scala
+List(5, 1, 2, 4, 100).foldLeft(0)((total, number) => total + number)
+#+END_SRC
+*** Return the total length of all the words in the given list.
+input: List("scala", "rust", "ada")
+output: 12
+
+#+BEGIN_SRC scala
+List("scala", "rust", "ada").foldLeft(0)((total, word) => total + word.length)
+#+END_SRC
+*** Return the number of the letter 's' found in all the words in the given list.
+input: List("scala", "haskell", "rust", "ada")
+output: 3
+
+#+BEGIN_SRC scala
+List("scala", "haskell", "rust", "ada").foldLeft(0)((total, word) => total + word.length - word.replace("s", "").length)
+#+END_SRC
+*** Return the maximum of all integers in the given list.
+input: List(5, 1, 2, 4, 15)
+output: 15
+
+#+BEGIN_SRC scala
+List(5, 1, 2, 4, 15).foldLeft(0)((maximum, number) => if (number > maximum) number else maximum)
+#+END_SRC

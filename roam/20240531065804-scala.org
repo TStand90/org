@@ -6,6 +6,16 @@
 Scala is a programming language that allows both functional and object-oriented programming.
 
 * List
+** foldLeft
+~List.foldLeft~ takes each element of a list, applies the provided function to it and an ongoing total, and passes the result to the next element.
+
+#+BEGIN_SRC scala
+def cumulativeScore(wordScore: String => Int, words: List[String]): Int = {
+  words.foldLeft(0)((total, word) => total + wordScore(word))
+}
+#+END_SRC
+
+=0= is the initial value in this case.
 ** sortBy
 ~List.sortBy~ takes a function as an argument, and uses that function to sort the given list.
 
@@ -32,3 +42,32 @@ def rankedWords(wordScore: String => Int, words: List[String]): List[String]
 In this example, ~rankedWords~ takes two arguments:
 - A function that takes a ~String~ and returns an ~Int~
 - A ~List~ of ~String~.
+
+* Product Type
+To define a product type in Scala, use the keywords ~case class~.
+
+#+BEGIN_SRC scala
+case class ProgrammingLanguage(name: String, year: Int)
+val javalang = ProgrammingLanguage("Java", 1995)
+val scalalang = ProgrammingLanguage("Scala", 2004)
+
+javalang.name  // "Java"
+scalalang.year // "2004"
+#+END_SRC
+
+Product types are immutable. It is not possible to reassign a value after creation.
+
+Product types can be used with higher order functions such as ~map~ and ~filter~.
+
+#+BEGIN_SRC scala
+val languages = List(javalang, scalalang)
+languages.map(lang => lang.name)
+languages.filter(lang => lang.year > 2000)
+#+END_SRC
+
+You can use the underscore shortcut to write more consise code with product types:
+
+#+BEGIN_SRC scala
+languages.map(_.name)
+languages.filter(_.year > 2000)
+#+END_SRC
