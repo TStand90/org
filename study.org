@@ -21,3 +21,8 @@ CLOCK: [2024-09-03 Tue 06:36]--[2024-09-03 Tue 06:48] =>  0:12
 * Frontend
 ** [1/1] React
 *** [X] React Quickly, Second Edition
+
+* Things I want to know in general
+** [ ] How do cookies on the web actually work?
+*** [ ] How is session info stored in a cookie?
+** [ ] How do JWTs actually work?
