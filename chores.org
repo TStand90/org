@@ -6,11 +6,12 @@
 *** [ ] De-shed Andromeda
 SCHEDULED: <2024-12-18 Wed .+1w>
 *** [ ] De-shed Orion
-SCHEDULED: <2025-01-08 Wed .+1w>
+SCHEDULED: <2025-01-15 Wed .+1w>
 :PROPERTIES:
-:LAST_REPEAT: [2025-01-01 Wed 15:59]
+:LAST_REPEAT: [2025-01-08 Wed 08:51]
 :END:
 
+- State "[X]"        from "[ ]"        [2025-01-08 Wed 08:51]
 - State "[X]"        from "[ ]"        [2025-01-01 Wed 15:59]
 - State "[X]"        from "[ ]"        [2024-12-18 Wed 14:44]
 ** Brushing
