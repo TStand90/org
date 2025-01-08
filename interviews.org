@@ -1,15 +1,19 @@
 #+title: Interviews
 #+description: A log of interviews I have done
 
-* Ongoing
-** Rinsed
-Status: Ghosted
-- Have not heard anything as of December 6th.
-- Applied on Sunday, November 10th
+* Resources
+- [[https://recruiterflow.com/candidate/suggested-jobs/cdb220c3][Worth Search dashboard]]
 
-Office: Remote
+* Ongoing
+** [[https://trunk.io/][Trunk.io]]
+Status: Application Submitted <2025-01-07 Tue>
+Job title: Senior Software Engineer (Platform)
 
 * Archived
+** [[https://www.faynutrition.com/][Fay Nutrition]]
+- Note taken on [2025-01-07 Tue 17:32] \\
+  Rejected at the resume submission, via recruiter
+Status: Rejected
 ** [[https://joinmochi.com/][Mochi Health]]
 Status: Ghosted
 - I am not expecting to hear back at this point. The recruiter did not sound happy that I mentioned that I will not be working nights/weekends.
@@ -59,3 +63,15 @@ Rest of the interview process:
 - First tech interview
 - May go straight to on site
 - Maybe 3/4 interviews but not any more
+** Rinsed
+Status: Rejected
+- Note taken on [2025-01-07 Tue 17:30] \\
+  Rejected after resume submission
+- Have not heard anything as of December 6th.
+- Applied on Sunday, November 10th
+
+Office: Remote
+** [[https://turquoise.health/][Turquoise Health]]
+Status: Rejected
+- Note taken on [2025-01-07 Tue 17:43] \\
+  Rejected at the resume submission, via recruiter
