@@ -3,10 +3,11 @@
 
 * Workouts
 ** [ ] Work out core - Ring Fit
-SCHEDULED: <2025-01-05 Sun .+4d/7d>
+SCHEDULED: <2025-01-15 Wed .+4d/7d>
 :PROPERTIES:
-:LAST_REPEAT: [2025-01-01 Wed 15:59]
+:LAST_REPEAT: [2025-01-11 Sat 23:59]
 :END:
+- State "[X]"        from "[ ]"        [2025-01-08 Wed 23:59]
 - State "[X]"        from "[ ]"        [2025-01-01 Wed 15:59]
 - State "[X]"        from "[ ]"        [2024-12-18 Wed 14:29]
 - State "[X]"        from "[ ]"        [2024-12-09 Mon 12:11]
@@ -29,10 +30,11 @@ SCHEDULED: <2025-01-07 Tue .+5d/7d>
 :PROPERTIES:
 :STYLE: habit
 ** [ ] Work out arms - Weights
-SCHEDULED: <2025-01-02 Thu .+5d/7d>
+SCHEDULED: <2025-01-17 Fri .+5d/7d>
 :PROPERTIES:
-:LAST_REPEAT: [2024-12-28 Sat 17:40]
+:LAST_REPEAT: [2025-01-12 Sun 07:18]
 :END:
+- State "[X]"        from "[ ]"        [2025-01-12 Sun 07:18]
 - State "[X]"        from "[ ]"        [2024-12-28 Sat 17:40]
 - State "[X]"        from "[ ]"        [2024-12-17 Tue 23:59]
 - State "[X]"        from "[ ]"        [2024-12-10 Tue 17:18]
