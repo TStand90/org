@@ -36,3 +36,5 @@ Need this because WISPENG-979 needs to query multiple packages. This is better t
 *** [-] [[https://hellowisp.atlassian.net/browse/WISPENG-981][WISPENG-981]]: Send new line item data to the server
 
 ** [?] [[https://hellowisp.atlassian.net/browse/WISPENG-996][WISPENG-996]]: Pending - Admin Cancel
+** [?] [[https://github.com/hellowisp/secure.hellowisp.com/pull/5307][WISPENG-1025]]: Formats provider custom messages for editable meds
+** [-] [[https://hellowisp.atlassian.net/browse/WISPENG-1066][WISPENG-1066]]: Update Provider Message On Editable Meds
