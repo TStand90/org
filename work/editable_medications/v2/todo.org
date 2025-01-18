@@ -24,7 +24,7 @@ Don't think this is a good idea. Won't explore this unless someone says we need 
 * [[https://hellowisp.atlassian.net/browse/WISPENG-970][WISPENG-970]]: Editable Meds V2
 ** [[https://hellowisp.atlassian.net/browse/WISPENG-971][WISPENG-971]]: PreApprovals - Approval Process Automation
 *** [?] [[https://hellowisp.atlassian.net/browse/WISPENG-978][WISPENG-978]]: Create new database table for recording proposed cart authorizations
-*** [-] [[https://hellowisp.atlassian.net/browse/WISPENG-979][WISPENG-979]]: Populate new database table upon proposed cart creation
+*** [?] [[https://hellowisp.atlassian.net/browse/WISPENG-979][WISPENG-979]]: Populate new database table upon proposed cart creation
 :LOGBOOK:
 CLOCK: [2024-12-13 Fri 11:35]--[2024-12-13 Fri 11:58] =>  0:23
 :END:
@@ -33,8 +33,14 @@ CLOCK: [2024-12-13 Fri 11:35]--[2024-12-13 Fri 11:58] =>  0:23
 CLOCK: [2024-12-13 Fri 12:05]--[2024-12-13 Fri 12:33] =>  0:28
 :END:
 Need this because WISPENG-979 needs to query multiple packages. This is better than querying in a for loop.
-*** [-] [[https://hellowisp.atlassian.net/browse/WISPENG-981][WISPENG-981]]: Send new line item data to the server
+*** [?] [[https://hellowisp.atlassian.net/browse/WISPENG-981][WISPENG-981]]: Send new line item data to the server
 
 ** [?] [[https://hellowisp.atlassian.net/browse/WISPENG-996][WISPENG-996]]: Pending - Admin Cancel
-** [?] [[https://github.com/hellowisp/secure.hellowisp.com/pull/5307][WISPENG-1025]]: Formats provider custom messages for editable meds
-** [-] [[https://hellowisp.atlassian.net/browse/WISPENG-1066][WISPENG-1066]]: Update Provider Message On Editable Meds
+*** Ask Charlotte if there are other ways to cancel an Order besides going to the \/fill_request\/ page for a patient and hitting void/cancel for a Fill Request
+*** Ask Charlotte if we want to consider a way to cancel pending carts in the UI vs. automated.
+** [X] [[https://github.com/hellowisp/secure.hellowisp.com/pull/5307][WISPENG-1025]]: Formats provider custom messages for editable meds
+** [X] [[https://hellowisp.atlassian.net/browse/WISPENG-1066][WISPENG-1066]]: Update Provider Message On Editable Meds
+
+
+* Other
+Create a ticket for sanitizing provider inputs, see [[https://github.com/hellowisp/secure.hellowisp.com/pull/5307#discussion_r1915795938][this discussion]].
