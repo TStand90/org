@@ -4,22 +4,23 @@
 #+title: Leetcode
 #+filetags: :Leetcode:
 
-| Name                                 | Difficulty | Concepts    | Status | Python |
-|--------------------------------------+------------+-------------+--------+--------|
-| [[id:582f5b5a-9718-44ee-a53f-fbd5e6ad5f5b][1. Two Sum]]                           | Easy       | [[id:26fcbf3c-dee7-40a8-92e3-2fa7079c97e4][HashMap]]     | DONE   | DONE   |
-| [[id:e55e0a75-958e-4bcc-a3d1-79f2b41e0a2c][13. Roman Integer]]                    | Easy       | Iteration   | DONE   | DONE   |
-| [[id:ca5fcfc1-6803-4e3c-a87e-19591f0c9d5a][49. Group Anagrams]]                   | Medium     | [[id:26fcbf3c-dee7-40a8-92e3-2fa7079c97e4][HashMap]]     | DONE   | DONE   |
-| [[id:8b026d83-ef9e-4a18-ad4a-bd263b8863b3][143. Reorder List]]                    | Medium     | [[id:d0b02bbc-6d2e-4905-aba3-a3cbe3e97b20][Linked List]] | DONE   | DONE   |
-| [[id:e0184029-0c62-46b4-9e28-8666268df8fb][146. LRU Cache]]                       | Medium     | [[id:26fcbf3c-dee7-40a8-92e3-2fa7079c97e4][HashMap]]     |        |        |
-| [[id:ffbf62bc-7687-46d7-ab16-49818005fdfe][169. Majority Element]]                | Easy       | [[id:721cecef-36a5-4fe7-9cf0-b885d92dc690][Array]]       | DONE   | DONE   |
-| [[id:d609edb6-4bcc-4751-959b-b61050715da9][215. Kth Largest Element in an Array]] | Medium     |             |        |        |
-| [[id:bc466c07-bec0-4000-8097-9b42535779e1][217. Contains Duplicate]]              | Easy       | [[id:26fcbf3c-dee7-40a8-92e3-2fa7079c97e4][HashMap]]     | DONE   | DONE   |
-| [[id:62d40d57-4a5c-456b-a454-eb95eee819fc][258. Add Digits]]                      | Easy       | Iteration   |        |        |
-| [[id:52e640bc-2842-4061-807d-2b484057e228][283. Move Zeroes]]                     | Easy       |             | DONE   | DONE   |
-| [[id:12f47e49-c623-4ee7-9d3e-bca827dbd10b][506. Relative Ranks]]                  | Easy       | Sorting     | DONE   | DONE   |
-| [[id:b5f03f91-11e0-49d5-be9e-61085adaead6][703. Kth Largest Element in a Stream]] | Easy       | [[id:65163304-d9ac-401a-afe4-c2bf19fb73c3][Heap]]        | DONE   | DONE   |
-| [[id:5a2d8c07-3504-4646-98fe-e0a9ef389759][705. Design HashSet]]                  | Easy       | [[id:26fcbf3c-dee7-40a8-92e3-2fa7079c97e4][HashMap]]     |        |        |
-| [[id:1ade312b-fdfa-4d45-8616-8a5c923a5709][706. Design HashMap]]                  | Easy       | [[id:26fcbf3c-dee7-40a8-92e3-2fa7079c97e4][HashMap]]     |        |        |
-| [[id:c6280f9a-77b1-45b5-a807-34d7432f391d][973. K Closest Points to Origin]]      |            |             |        |        |
-| [[id:1243f66c-2231-428d-86a6-3b8853a1ac03][1046. Last Stone Weight]]              | Easy       | [[id:65163304-d9ac-401a-afe4-c2bf19fb73c3][Heap]]        | DONE   | DONE   |
-| [[id:b4fbd151-1fd4-4eed-8c2c-770e17e69ba7][1929. Concatenation of Array]]    |            |             |        |        |
+| Name                                 | Difficulty | Concepts    | Status | Python | Go   |
+|--------------------------------------+------------+-------------+--------+--------+------|
+| [[id:582f5b5a-9718-44ee-a53f-fbd5e6ad5f5b][1. Two Sum]]                           | Easy       | [[id:26fcbf3c-dee7-40a8-92e3-2fa7079c97e4][HashMap]]     | DONE   | DONE   |      |
+| [[id:fcf08021-5cc7-46a1-a1ac-5b892bcfb440][9. Palindrome Number]]                 | Easy       | [[id:721cecef-36a5-4fe7-9cf0-b885d92dc690][Array]]       |        |        | DONE |
+| [[id:e55e0a75-958e-4bcc-a3d1-79f2b41e0a2c][13. Roman Integer]]                    | Easy       | Iteration   | DONE   | DONE   |      |
+| [[id:ca5fcfc1-6803-4e3c-a87e-19591f0c9d5a][49. Group Anagrams]]                   | Medium     | [[id:26fcbf3c-dee7-40a8-92e3-2fa7079c97e4][HashMap]]     | DONE   | DONE   |      |
+| [[id:8b026d83-ef9e-4a18-ad4a-bd263b8863b3][143. Reorder List]]                    | Medium     | [[id:d0b02bbc-6d2e-4905-aba3-a3cbe3e97b20][Linked List]] | DONE   | DONE   |      |
+| [[id:e0184029-0c62-46b4-9e28-8666268df8fb][146. LRU Cache]]                       | Medium     | [[id:26fcbf3c-dee7-40a8-92e3-2fa7079c97e4][HashMap]]     |        |        |      |
+| [[id:ffbf62bc-7687-46d7-ab16-49818005fdfe][169. Majority Element]]                | Easy       | [[id:721cecef-36a5-4fe7-9cf0-b885d92dc690][Array]]       | DONE   | DONE   |      |
+| [[id:d609edb6-4bcc-4751-959b-b61050715da9][215. Kth Largest Element in an Array]] | Medium     |             |        |        |      |
+| [[id:bc466c07-bec0-4000-8097-9b42535779e1][217. Contains Duplicate]]              | Easy       | [[id:26fcbf3c-dee7-40a8-92e3-2fa7079c97e4][HashMap]]     | DONE   | DONE   |      |
+| [[id:62d40d57-4a5c-456b-a454-eb95eee819fc][258. Add Digits]]                      | Easy       | Iteration   |        |        |      |
+| [[id:52e640bc-2842-4061-807d-2b484057e228][283. Move Zeroes]]                     | Easy       |             | DONE   | DONE   |      |
+| [[id:12f47e49-c623-4ee7-9d3e-bca827dbd10b][506. Relative Ranks]]                  | Easy       | Sorting     | DONE   | DONE   |      |
+| [[id:b5f03f91-11e0-49d5-be9e-61085adaead6][703. Kth Largest Element in a Stream]] | Easy       | [[id:65163304-d9ac-401a-afe4-c2bf19fb73c3][Heap]]        | DONE   | DONE   |      |
+| [[id:5a2d8c07-3504-4646-98fe-e0a9ef389759][705. Design HashSet]]                  | Easy       | [[id:26fcbf3c-dee7-40a8-92e3-2fa7079c97e4][HashMap]]     |        |        |      |
+| [[id:1ade312b-fdfa-4d45-8616-8a5c923a5709][706. Design HashMap]]                  | Easy       | [[id:26fcbf3c-dee7-40a8-92e3-2fa7079c97e4][HashMap]]     |        |        |      |
+| [[id:c6280f9a-77b1-45b5-a807-34d7432f391d][973. K Closest Points to Origin]]      |            |             |        |        |      |
+| [[id:1243f66c-2231-428d-86a6-3b8853a1ac03][1046. Last Stone Weight]]              | Easy       | [[id:65163304-d9ac-401a-afe4-c2bf19fb73c3][Heap]]        | DONE   | DONE   |      |
+| [[id:b4fbd151-1fd4-4eed-8c2c-770e17e69ba7][1929. Concatenation of Array]]         |            |             |        |        |      |

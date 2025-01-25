@@ -1,0 +1,31 @@
+:PROPERTIES:
+:ID:       fcf08021-5cc7-46a1-a1ac-5b892bcfb440
+:ROAM_REFS: https://leetcode.com/problems/palindrome-number/description/
+:END:
+#+title: 9. Palindrome Number
+#+filetags: :Leetcode:
+
+https://leetcode.com/problems/palindrome-number/description/
+
+#+BEGIN_SRC golang
+func isPalindrome(x int) bool {
+    xAsString := strconv.Itoa(x)
+
+    left_pointer_index := 0
+    right_pointer_index := len(xAsString) - 1
+
+    for left_pointer_index < right_pointer_index {
+        left_char := xAsString[left_pointer_index]
+        right_char := xAsString[right_pointer_index]
+
+        if left_char != right_char {
+            return false
+        }
+
+        left_pointer_index++
+        right_pointer_index--
+    }
+
+    return true
+}
+#+END_SRC
