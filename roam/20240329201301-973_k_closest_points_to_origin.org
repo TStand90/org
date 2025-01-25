@@ -1,6 +1,7 @@
 :PROPERTIES:
 :ID:       c6280f9a-77b1-45b5-a807-34d7432f391d
 :END:
-#+title: #+title: 973. K Closest Points to Origin
+#+title: 973. K Closest Points to Origin
+#+filetags: :Leetcode:
 
 TODO

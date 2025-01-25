@@ -3,6 +3,7 @@
 :ROAM_REFS: https://en.wikipedia.org/wiki/Digital_root https://leetcode.com/problems/add-digits/
 :END:
 #+title: 258. Add Digits
+#+filetags: :Leetcode:
 
 * Description
 Given an integer num, repeatedly add all its digits until the result has only one digit, and return it.

@@ -2,6 +2,7 @@
 :ID:       ca5fcfc1-6803-4e3c-a87e-19591f0c9d5a
 :END:
 #+title: 49. Group Anagrams
+#+filetags: :Leetcode:
 
 * Description
 Given an array of strings strs, group the anagrams together. You can return the answer in any order.

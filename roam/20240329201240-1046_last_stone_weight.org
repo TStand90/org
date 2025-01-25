@@ -2,5 +2,6 @@
 :ID:       1243f66c-2231-428d-86a6-3b8853a1ac03
 :END:
 #+title: 1046. Last Stone Weight
+#+filetags: :Leetcode:
 
 TODO

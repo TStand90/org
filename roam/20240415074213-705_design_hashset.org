@@ -3,6 +3,7 @@
 :ROAM_REFS: https://leetcode.com/problems/design-hashset/description/
 :END:
 #+title: 705. Design HashSet
+#+filetags: :Leetcode:
 
 * Problem
 Design a HashSet without using any built-in hash table libraries.

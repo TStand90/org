@@ -2,5 +2,6 @@
 :ID:       e0184029-0c62-46b4-9e28-8666268df8fb
 :END:
 #+title: 146. LRU Cache
+#+filetags: :Leetcode:
 
 TODO
