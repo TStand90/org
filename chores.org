@@ -4,10 +4,11 @@
 * Cats
 ** De-shedding
 *** [ ] De-shed Andromeda
-SCHEDULED: <2025-01-18 Sat .+1w>
+SCHEDULED: <2025-02-05 Wed .+1w>
 :PROPERTIES:
-:LAST_REPEAT: [2025-01-11 Sat 23:59]
+:LAST_REPEAT: [2025-01-29 Wed 12:26]
 :END:
+- State "[X]"        from "[ ]"        [2025-01-29 Wed 12:26]
 - State "[X]"        from "[ ]"        [2025-01-11 Sat 23:59]
 *** [ ] De-shed Orion
 SCHEDULED: <2025-02-03 Mon .+1w>
@@ -25,10 +26,11 @@ SCHEDULED: <2025-02-03 Mon .+1w>
 *** [ ] Brush Andromeda
 SCHEDULED: <2024-12-18 Wed .+1w>
 *** [ ] Brush Orion
-SCHEDULED: <2025-01-29 Wed .+2d>
+SCHEDULED: <2025-01-31 Fri .+2d>
 :PROPERTIES:
-:LAST_REPEAT: [2025-01-27 Mon 16:20]
+:LAST_REPEAT: [2025-01-29 Wed 12:26]
 :END:
+- State "[X]"        from "[ ]"        [2025-01-29 Wed 12:26]
 - State "[X]"        from "[ ]"        [2025-01-27 Mon 16:20]
 - State "[X]"        from "[ ]"        [2024-12-20 Fri 23:59]
 - State "[X]"        from "[ ]"        [2024-12-18 Wed 14:43]
@@ -44,4 +46,8 @@ SCHEDULED: <2025-02-27 Thu .+1m>
 
 ** Auto-feeder
 *** [ ] Change desiccant bag
-SCHEDULED: <2025-01-28 Tue .+1m>
+SCHEDULED: <2025-03-01 Sat .+1m>
+:PROPERTIES:
+:LAST_REPEAT: [2025-01-29 Wed 12:39]
+:END:
+- State "[X]"        from "[ ]"        [2025-01-29 Wed 12:39]
