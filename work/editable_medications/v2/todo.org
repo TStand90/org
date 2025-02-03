@@ -39,6 +39,9 @@ CLOCK: [2024-12-13 Fri 11:35]--[2024-12-13 Fri 11:58] =>  0:23
 *** [X] Test that the cancellation feature does *not* activate during the approval of a proposed cart.
 ** [X] [[https://github.com/hellowisp/secure.hellowisp.com/pull/5307][WISPENG-1025]]: Formats provider custom messages for editable meds
 ** [X] [[https://hellowisp.atlassian.net/browse/WISPENG-1066][WISPENG-1066]]: Update Provider Message On Editable Meds
+** [?] WISPENG-973: Void carts
+*** [X] Create an admin task when carts are expired
+*** [X] Create an Order Activity Log entry when carts are expired
 
 
 * Other
