@@ -42,6 +42,7 @@ CLOCK: [2024-12-13 Fri 11:35]--[2024-12-13 Fri 11:58] =>  0:23
 ** [?] WISPENG-973: Void carts
 *** [X] Create an admin task when carts are expired
 *** [X] Create an Order Activity Log entry when carts are expired
+** [-] [[https://hellowisp.atlassian.net/browse/WISPENG-972][WISPENG-972]]: Pending Cart - Daily Email Notification
 
 
 * Other
