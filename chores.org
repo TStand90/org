@@ -11,11 +11,12 @@ SCHEDULED: <2025-02-05 Wed .+1w>
 - State "[X]"        from "[ ]"        [2025-01-29 Wed 12:26]
 - State "[X]"        from "[ ]"        [2025-01-11 Sat 23:59]
 *** [ ] De-shed Orion
-SCHEDULED: <2025-02-03 Mon .+1w>
+SCHEDULED: <2025-02-11 Tue .+1w>
 :PROPERTIES:
-:LAST_REPEAT: [2025-01-27 Mon 16:20]
+:LAST_REPEAT: [2025-02-04 Tue 15:26]
 :END:
 
+- State "[X]"        from "[ ]"        [2025-02-04 Tue 15:26]
 - State "[X]"        from "[ ]"        [2025-01-27 Mon 16:20]
 - State "[X]"        from "[ ]"        [2025-01-22 Wed 13:01]
 - State "[X]"        from "[ ]"        [2025-01-13 Mon 23:59]
