@@ -25,12 +25,17 @@ SCHEDULED: <2025-02-11 Tue .+1w>
 - State "[X]"        from "[ ]"        [2024-12-18 Wed 14:44]
 ** Brushing
 *** [ ] Brush Andromeda
-SCHEDULED: <2024-12-18 Wed .+1w>
-*** [ ] Brush Orion
-SCHEDULED: <2025-01-31 Fri .+2d>
+SCHEDULED: <2025-02-12 Wed .+1w>
 :PROPERTIES:
-:LAST_REPEAT: [2025-01-29 Wed 12:26]
+:LAST_REPEAT: [2025-02-05 Wed 14:20]
 :END:
+- State "[X]"        from "[ ]"        [2025-02-05 Wed 14:20]
+*** [ ] Brush Orion
+SCHEDULED: <2025-02-07 Fri .+2d>
+:PROPERTIES:
+:LAST_REPEAT: [2025-02-05 Wed 14:20]
+:END:
+- State "[X]"        from "[ ]"        [2025-02-05 Wed 14:20]
 - State "[X]"        from "[ ]"        [2025-01-29 Wed 12:26]
 - State "[X]"        from "[ ]"        [2025-01-27 Mon 16:20]
 - State "[X]"        from "[ ]"        [2024-12-20 Fri 23:59]
