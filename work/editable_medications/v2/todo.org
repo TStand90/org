@@ -45,6 +45,9 @@ CLOCK: [2024-12-13 Fri 11:35]--[2024-12-13 Fri 11:58] =>  0:23
 ** NO [[https://hellowisp.atlassian.net/browse/WISPENG-972][WISPENG-972]]: Pending Cart - Daily Email Notification
 - Note taken on [2025-02-04 Tue 16:49] \\
   Charlotte put this one as "Won't Do", we may revisit later.
+** [-] [[https://hellowisp.atlassian.net/browse/WISPENG-1161][WISPENG-1161]]: Add script to cancel a given Proposed Cart
+*** [ ] Allow users to pass in their user ID into the script to act as the ~actor_user_id~
+**** [ ] If a user does not pass in the ~actor_user_id~, confirm with the user that they wish to use the system ID (or exit)
 
 * Other
 Create a ticket for sanitizing provider inputs, see [[https://github.com/hellowisp/secure.hellowisp.com/pull/5307#discussion_r1915795938][this discussion]].
