@@ -393,6 +393,9 @@ CLOCK: [2024-09-10 Tue 16:44]--[2024-09-10 Tue 17:09] =>  0:25
 This should only ever be True or False, but it can be None. Write a test to expose this behavior and fix it.
 ** [X] [[https://github.com/hellowisp/secure.hellowisp.com/pull/4753][Add PLR0917 to exceptions list for new test suite]]
 This is "Too many positional arguments". When you have a lot of stuff you need to mock, this makes no sense.
+** [X] [[https://github.com/hellowisp/secure.hellowisp.com/pull/5388][PR to remove PLR2004]]
+- Note taken on [2025-02-10 Mon 12:48] \\
+  Just waiting for a chance to merge.
 
 * Things to do for others
 ** [X] Look at WISPENG-467 and WISPENG-468 and see if they can be broken down. Let Kristin know.
