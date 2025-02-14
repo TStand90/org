@@ -1,0 +1,34 @@
+#+title: Notes
+#+description: Notes regarding the Flask 3 upgrade project
+
+* Steps taken so far
+** pip install --upgrade Flask
+#+BEGIN_QUOTE
+ERROR: pip's dependency resolver does not currently take into account all the packages that are installed. This behaviour is the source of the following dependency conflicts.
+flask-jwt-extended 4.3.1 requires Flask<3.0,>=1.0, but you have flask 3.1.0 which is incompatible.
+#+END_QUOTE
+** pip install --upgrade flask-jwt-extended
+** pip install --upgrade Flask-SQLAlchemy Flask-Login Flask-WTF
+#+BEGIN_QUOTE
+ERROR: pip's dependency resolver does not currently take into account all the packages that are installed. This behaviour is the source of the following dependency conflicts.
+graphene-sqlalchemy 2.3.0 requires SQLAlchemy<2,>=1.2, but you have sqlalchemy 2.0.38 which is incompatible.
+#+END_QUOTE
+** pip install --upgrade alembic
+
+* Incompatible libraries
+** flask-jwt-extended
+#+BEGIN_QUOTE
+ERROR: pip's dependency resolver does not currently take into account all the packages that are installed. This behaviour is the source of the following dependency conflicts.
+flask-jwt-extended 4.3.1 requires Flask<3.0,>=1.0, but you have flask 3.1.0 which is incompatible.
+#+END_QUOTE
+
+It looks like we need at least version 4.5.3, that release mentions support for Flask 3.0
+
+* Mypy errors when upgrading
+These errors occur when upgrading the packages. Is mypy getting upgraded as well?
+
+mypy...
+app/controllers/api/v3/legacy_base_schemas.py:25: error: Function is missing a return type annotation  [no-untyped-def]
+app/controllers/api/v3/base_schemas.py:25: error: Function is missing a return type annotation  [no-untyped-def]
+app/models/subscription.py:1157: error: Item "None" of "Optional[Any]" has no attribute "custom_discount"  [union-attr]
+app/models/subscription.py:1161: error: Item "None" of "Optional[Any]" has no attribute "activate"  [union-attr]

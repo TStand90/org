@@ -45,12 +45,12 @@ CLOCK: [2024-12-13 Fri 11:35]--[2024-12-13 Fri 11:58] =>  0:23
 ** NO [[https://hellowisp.atlassian.net/browse/WISPENG-972][WISPENG-972]]: Pending Cart - Daily Email Notification
 - Note taken on [2025-02-04 Tue 16:49] \\
   Charlotte put this one as "Won't Do", we may revisit later.
-** [-] [[https://hellowisp.atlassian.net/browse/WISPENG-1161][WISPENG-1161]]: Add script to cancel a given Proposed Cart
-*** [-] Allow users to pass in their user ID into the script to act as the ~actor_user_id~
+** [X] [[https://hellowisp.atlassian.net/browse/WISPENG-1161][WISPENG-1161]]: Add script to cancel a given Proposed Cart
+*** [X] Allow users to pass in their user ID into the script to act as the ~actor_user_id~
 :LOGBOOK:
 CLOCK: [2025-02-10 Mon 12:39]--[2025-02-10 Mon 13:29] =>  0:50
 :END:
-**** [-] If a user does not pass in the ~actor_user_id~, confirm with the user that they wish to use the system ID (or exit)
+**** [X] If a user does not pass in the ~actor_user_id~, confirm with the user that they wish to use the system ID (or exit)
 
 * Other
 Create a ticket for sanitizing provider inputs, see [[https://github.com/hellowisp/secure.hellowisp.com/pull/5307#discussion_r1915795938][this discussion]].
@@ -60,3 +60,7 @@ Create a ticket for sanitizing provider inputs, see [[https://github.com/hellowi
 CLOCK: [2024-12-13 Fri 12:05]--[2024-12-13 Fri 12:33] =>  0:28
 :END:
 Need this because WISPENG-979 needs to query multiple packages. This is better than querying in a for loop.
+
+** [-] Run cancellation script for proposed carts listed in [[https://docs.google.com/spreadsheets/d/1yxGGUuidmblfXltwVuxkVwuh3YvEIM9yixic9t-QZQk/edit?gid=0#gid=0][Excel sheet]]
+- Note taken on [2025-02-11 Tue 17:04] \\
+  Waiting on answer about what to do with patients with multiple carts.
