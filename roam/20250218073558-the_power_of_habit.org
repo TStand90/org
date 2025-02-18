@@ -8,85 +8,380 @@
 * Highlights
 ** Prologue: The Habit Cure
 *** Page xvi · Location 157
+:PROPERTIES:
+:AUTHOR: Charles Duhigg
+:CHAPTER: Prologue: The Habit Cure
+:SOURCE: The Power of Habit
+:PAGE: xvi
+:KINDLE_LOCATION: 157
+:END:
+#+BEGIN_QUOTE
 Most of the choices we make each day may feel like the products of well - considered decision making, but they’re not. They’re habits. And though each habit means relatively little on its own, over time, the meals we order, what we say to our kids each night, whether we save or spend, how often we exercise, the empathy we automatically show others, and the way we organize our thoughts and work routines have enormous impacts on our health, productivity, financial security, and happiness.
+#+END_QUOTE
 *** Page xvi · Location 160
+:PROPERTIES:
+:AUTHOR: Charles Duhigg
+:CHAPTER: Prologue: The Habit Cure
+:SOURCE: The Power of Habit
+:PAGE: xvi
+:KINDLE_LOCATION: 160
+:END:
+#+BEGIN_QUOTE
 One paper published by a Duke University researcher in 2006 found that more than 40 percent of the actions people performed each day weren’t actual decisions, but habits.
+#+END_QUOTE
 ** Part One: The Habits of Individuals
 *** 1. The Habit Loop: How Habits Work
 **** Page 17 · Location 446
+:PROPERTIES:
+:AUTHOR: Charles Duhigg
+:CHAPTER: 1. The Habit Loop: How Habits Work
+:SOURCE: The Power of Habit
+:PAGE: 17
+:KINDLE_LOCATION: 446
+:END:
 #+BEGIN_QUOTE
 Habits, scientists say, emerge because the brain is constantly looking for ways to save effort.
 #+END_QUOTE
 **** Page 19 · Location 462
+:PROPERTIES:
+:AUTHOR: Charles Duhigg
+:CHAPTER: 1. The Habit Loop: How Habits Work
+:SOURCE: The Power of Habit
+:PAGE: 19
+:KINDLE_LOCATION: 462
+:END:
+#+BEGIN_QUOTE
 This process within our brains is a three - step loop. First, there is a cue, a trigger that tells your brain to go into automatic mode and which habit to use. Then there is the routine, which can be physical or mental or emotional. Finally, there is a reward, which helps your brain figure out if this particular loop is worth remembering for the future :
+#+END_QUOTE
 **** Page 20 · Location 471
+:PROPERTIES:
+:AUTHOR: Charles Duhigg
+:CHAPTER: 1. The Habit Loop: How Habits Work
+:SOURCE: The Power of Habit
+:PAGE: 20
+:KINDLE_LOCATION: 471
+:END:
+#+BEGIN_QUOTE
 When a habit emerges, the brain stops fully participating in decision making. It stops working so hard, or diverts focus to other tasks. So unless you deliberately fight a habit — unless you find new routines — the pattern will unfold automatically.
+#+END_QUOTE
 *** 2. The Craving Brain: How to Create New Habits
 **** Page 33 · Location 668
+:PROPERTIES:
+:AUTHOR: Charles Duhigg
+:CHAPTER: 2. The Craving Brain: How to Create New Habits
+:SOURCE: The Power of Habit
+:PAGE: 33
+:KINDLE_LOCATION: 668
+:END:
+#+BEGIN_QUOTE
 He created a craving. And that craving, it turns out, is what makes cues and rewards work. That craving is what powers the habit loop.
+#+END_QUOTE
 **** Page 36 · Location 703
+:PROPERTIES:
+:AUTHOR: Charles Duhigg
+:CHAPTER: 2. The Craving Brain: How to Create New Habits
+:SOURCE: The Power of Habit
+:PAGE: 33
+:KINDLE_LOCATION: 668
+:END:
+#+BEGIN_QUOTE
 First, find a simple and obvious cue. Second, clearly define the rewards.
+#+END_QUOTE
 **** Page 47 · Location 873
-This explains why habits are so powerful : They create neurological cravings.
+:PROPERTIES:
+:AUTHOR: Charles Duhigg
+:CHAPTER: 2. The Craving Brain: How to Create New Habits
+:SOURCE: The Power of Habit
+:PAGE: 47
+:KINDLE_LOCATION: 873
+:END:
+#+BEGIN_QUOTE
+This explains why habits are so powerful: They create neurological cravings.
+#+END_QUOTE
 **** Page 49 · Location 891
-This is how new habits are created : by putting together a cue, a routine, and a reward, and then cultivating a craving that drives the loop.
+:PROPERTIES:
+:AUTHOR: Charles Duhigg
+:CHAPTER: 2. The Craving Brain: How to Create New Habits
+:SOURCE: The Power of Habit
+:PAGE: 49
+:KINDLE_LOCATION: 891
+:END:
+#+BEGIN_QUOTE
+This is how new habits are created: by putting together a cue, a routine, and a reward, and then cultivating a craving that drives the loop.
+#+END_QUOTE
 **** Page 49 · Location 893
+:PROPERTIES:
+:AUTHOR: Charles Duhigg
+:CHAPTER: 2. The Craving Brain: How to Create New Habits
+:SOURCE: The Power of Habit
+:PAGE: 49
+:KINDLE_LOCATION: 893
+:END:
+#+BEGIN_QUOTE
 When a smoker sees a cue — say, a pack of Marlboros — her brain starts anticipating a hit of nicotine. Just the sight of cigarettes is enough for the brain to crave a nicotine rush. If it doesn’t arrive, the craving grows until the smoker reaches, unthinkingly, for a Marlboro.
+#+END_QUOTE
 **** Page 58 · Location 1019
+:PROPERTIES:
+:AUTHOR: Charles Duhigg
+:CHAPTER: 2. The Craving Brain: How to Create New Habits
+:SOURCE: The Power of Habit
+:PAGE: 58
+:KINDLE_LOCATION: 1019
+:END:
+#+BEGIN_QUOTE
 Want to craft a new eating habit ? When researchers affiliated with the National Weight Control Registry — a project involving more than six thousand people who have lost more than thirty pounds — looked at the habits of successful dieters, they found that 78 percent of them ate breakfast every morning, a meal cued by a time of day. But most of the successful dieters also envisioned a specific reward for sticking with their diet — a bikini they wanted to wear or the sense of pride they felt when they stepped on the scale each day — something they chose carefully and really wanted . They focused on the craving for that reward when temptations arose, cultivated the craving into a mild obsession . And their cravings for that reward, researchers found, crowded out the temptation to drop the diet . The craving drove the habit loop.
+#+END_QUOTE
 **** Page 59 · Location 1036
+:PROPERTIES:
+:AUTHOR: Charles Duhigg
+:CHAPTER: 2. The Craving Brain: How to Create New Habits
+:SOURCE: The Power of Habit
+:PAGE: 59
+:KINDLE_LOCATION: 1036
+:END:
+#+BEGIN_QUOTE
 Cravings are what drive habits. And figuring out how to spark a craving makes creating a new habit easier.
+#+END_QUOTE
 *** 3. The Golden Rule of Habit Change: Why Transformation Occurs
 **** Page 62 · Location 1075
-Rather, to change a habit, you must keep the old cue, and deliver the old reward, but insert a new routine. That’s the rule : If you use the same cue, and provide the same reward, you can shift the routine and change the habit . Almost any behavior can be transformed if the cue and reward stay the same.
+:PROPERTIES:
+:AUTHOR: Charles Duhigg
+:CHAPTER: 3. The Golden Rule of Habit Change: Why Transformation Occurs
+:SOURCE: The Power of Habit
+:PAGE: 62
+:KINDLE_LOCATION: 1075
+:END:
+#+BEGIN_QUOTE
+Rather, to change a habit, you must keep the old cue, and deliver the old reward, but insert a new routine. That’s the rule: If you use the same cue, and provide the same reward, you can shift the routine and change the habit . Almost any behavior can be transformed if the cue and reward stay the same.
+#+END_QUOTE
 **** Page 74 · Location 1254
+:PROPERTIES:
+:AUTHOR: Charles Duhigg
+:CHAPTER: 3. The Golden Rule of Habit Change: Why Transformation Occurs
+:SOURCE: The Power of Habit
+:PAGE: 74
+:KINDLE_LOCATION: 1254
+:END:
+#+BEGIN_QUOTE
 Asking patients to describe what triggers their habitual behavior is called awareness training, and like AA’s insistence on forcing alcoholics to recognize their cues, it’s the first step in habit reversal training.
+#+END_QUOTE
 **** Page 77 · Location 1283
+:PROPERTIES:
+:AUTHOR: Charles Duhigg
+:CHAPTER: 3. The Golden Rule of Habit Change: Why Transformation Occurs
+:SOURCE: The Power of Habit
+:PAGE: 77
+:KINDLE_LOCATION: 1283
+:END:
+#+BEGIN_QUOTE
 Often, we don’t really understand the cravings driving our behaviors until we look for them.
+#+END_QUOTE
 **** Page 78 · Location 1294
-If you identify the cues and rewards, you can change the routine. At least, most of the time . For some habits, however, there’s one other ingredient that’s necessary : belief.
+:PROPERTIES:
+:AUTHOR: Charles Duhigg
+:CHAPTER: 3. The Golden Rule of Habit Change: Why Transformation Occurs
+:SOURCE: The Power of Habit
+:PAGE: 78
+:KINDLE_LOCATION: 1294
+:END:
+#+BEGIN_QUOTE
+If you identify the cues and rewards, you can change the routine. At least, most of the time . For some habits, however, there’s one other ingredient that’s necessary: belief.
+#+END_QUOTE
 **** Page 85 · Location 1395
+:PROPERTIES:
+:AUTHOR: Charles Duhigg
+:CHAPTER: 3. The Golden Rule of Habit Change: Why Transformation Occurs
+:SOURCE: The Power of Habit
+:PAGE: 85
+:KINDLE_LOCATION: 1395
+:END:
+#+BEGIN_QUOTE
 Once people learned how to believe in something, that skill started spilling over to other parts of their lives, until they started believing they could change. Belief was the ingredient that made a reworked habit loop into a permanent behavior.
+#+END_QUOTE
 **** Page 85 · Location 1398
+:PROPERTIES:
+:AUTHOR: Charles Duhigg
+:CHAPTER: 3. The Golden Rule of Habit Change: Why Transformation Occurs
+:SOURCE: The Power of Habit
+:PAGE: 85
+:KINDLE_LOCATION: 1398
+:END:
+#+BEGIN_QUOTE
 You don’t have to believe in God, but you do need the capacity to believe that things will get better.
+#+END_QUOTE
 **** Page 92 · Location 1508
-We know that a habit cannot be eradicated — it must, instead, be replaced. And we know that habits are most malleable when the Golden Rule of habit change is applied : If we keep the same cue and the same reward, a new routine can be inserted . But that’s not enough . For a habit to stay changed, people must believe change is possible . And most often, that belief only emerges with the help of a group.
+:PROPERTIES:
+:AUTHOR: Charles Duhigg
+:CHAPTER: 3. The Golden Rule of Habit Change: Why Transformation Occurs
+:SOURCE: The Power of Habit
+:PAGE: 92
+:KINDLE_LOCATION: 1508
+:END:
+#+BEGIN_QUOTE
+We know that a habit cannot be eradicated — it must, instead, be replaced. And we know that habits are most malleable when the Golden Rule of habit change is applied: If we keep the same cue and the same reward, a new routine can be inserted . But that’s not enough . For a habit to stay changed, people must believe change is possible . And most often, that belief only emerges with the help of a group.
+#+END_QUOTE
 **** Page 92 · Location 1517
-The evidence is clear : If you want to change a habit, you must find an alternative routine, and your odds of success go up dramatically when you commit to changing as part of a group. Belief is essential, and it grows out of a communal experience, even if that community is only as large as two people.
+:PROPERTIES:
+:AUTHOR: Charles Duhigg
+:CHAPTER: 3. The Golden Rule of Habit Change: Why Transformation Occurs
+:SOURCE: The Power of Habit
+:PAGE: 92
+:KINDLE_LOCATION: 1517
+:END:
+#+BEGIN_QUOTE
+The evidence is clear: If you want to change a habit, you must find an alternative routine, and your odds of success go up dramatically when you commit to changing as part of a group. Belief is essential, and it grows out of a communal experience, even if that community is only as large as two people.
+#+END_QUOTE
 ** Part Two: The Habits of Successful Organizations
 *** 4. Keystone Habits, or The Ballad of Paul O’Neill: Which Habits Matter Most
 **** Page 100 · Location 1606
+:PROPERTIES:
+:AUTHOR: Charles Duhigg
+:CHAPTER: 4. Keystone Habits, or The Ballad of Paul O’Neill: Which Habits Matter Most
+:SOURCE: The Power of Habit
+:PAGE: 100
+:KINDLE_LOCATION: 1606
+:END:
+#+BEGIN_QUOTE
 “ But you can’t order people to change. That’s not how the brain works . So I decided I was going to start by focusing on one thing . If I could start disrupting the habits around one thing, it would spread throughout the entire company . ”
+#+END_QUOTE
 **** Page 103 · Location 1649
-“ Individuals have habits ; groups have routines, ”
+:PROPERTIES:
+:AUTHOR: Charles Duhigg
+:CHAPTER: 4. Keystone Habits, or The Ballad of Paul O’Neill: Which Habits Matter Most
+:SOURCE: The Power of Habit
+:PAGE: 103
+:KINDLE_LOCATION: 1649
+:END:
+#+BEGIN_QUOTE
+"Individuals have habits; groups have routines,"
+#+END_QUOTE
 **** Page 109 · Location 1736
+:PROPERTIES:
+:AUTHOR: Charles Duhigg
+:CHAPTER: 4. Keystone Habits, or The Ballad of Paul O’Neill: Which Habits Matter Most
+:SOURCE: The Power of Habit
+:PAGE: 109
+:KINDLE_LOCATION: 1736
+:END:
+#+BEGIN_QUOTE
 If you focus on changing or cultivating keystone habits, you can cause widespread shifts. However, identifying keystone habits is tricky. To find them, you have to know where to look. Detecting keystone habits means searching out certain characteristics. Keystone habits offer what is known within academic literature as “ small wins. ” They help other habits to flourish by creating new structures, and they establish cultures where change becomes contagious.
+#+END_QUOTE
 **** Page 112 · Location 1784
+:PROPERTIES:
+:AUTHOR: Charles Duhigg
+:CHAPTER: 4. Keystone Habits, or The Ballad of Paul O’Neill: Which Habits Matter Most
+:SOURCE: The Power of Habit
+:PAGE: 112
+:KINDLE_LOCATION: 1784
+:END:
+#+BEGIN_QUOTE
 Small wins fuel transformative changes by leveraging tiny advantages into patterns that convince people that bigger achievements are within reach.
+#+END_QUOTE
 *** 5. Starbucks and the Habit of Success: When Willpower Becomes Automatic
 **** Page 137 · Location 2149
+:PROPERTIES:
+:AUTHOR: Charles Duhigg
+:CHAPTER: 5. Starbucks and the Habit of Success: When Willpower Becomes Automatic
+:SOURCE: The Power of Habit
+:PAGE: 137
+:KINDLE_LOCATION: 2149
+:END:
+#+BEGIN_QUOTE
 “ Willpower isn’t just a skill. It’s a muscle, like the muscles in your arms or legs, and it gets tired as it works harder, so there’s less power left over for other things. ”
+#+END_QUOTE
 **** Page 139 · Location 2181
+:PROPERTIES:
+:AUTHOR: Charles Duhigg
+:CHAPTER: 5. Starbucks and the Habit of Success: When Willpower Becomes Automatic
+:SOURCE: The Power of Habit
+:PAGE: 139
+:KINDLE_LOCATION: 2181
+:END:
+#+BEGIN_QUOTE
 “ When you learn to force yourself to go to the gym or start your homework or eat a salad instead of a hamburger, part of what’s happening is that you’re changing how you think, ” said Todd Heatherton, a researcher at Dartmouth who has worked on willpower studies. “ People get better at regulating their impulses. They learn how to distract themselves from temptations. And once you’ve gotten into that willpower groove, your brain is practiced at helping you focus on a goal. ”
+#+END_QUOTE
 **** Page 146 · Location 2289
-This is how willpower becomes a habit : by choosing a certain behavior ahead of time, and then following that routine when an inflection point arrives.
+:PROPERTIES:
+:AUTHOR: Charles Duhigg
+:CHAPTER: 5. Starbucks and the Habit of Success: When Willpower Becomes Automatic
+:SOURCE: The Power of Habit
+:PAGE: 146
+:KINDLE_LOCATION: 2289
+:END:
+#+BEGIN_QUOTE
+This is how willpower becomes a habit: by choosing a certain behavior ahead of time, and then following that routine when an inflection point arrives.
+#+END_QUOTE
 *** 6. The Power of a Crisis: How Leaders Create Habits Through Accident and Design
 **** Page 160 · Location 2485
+:PROPERTIES:
+:AUTHOR: Charles Duhigg
+:CHAPTER: 6. The Power of a Crisis: How Leaders Create Habits Through Accident and Design
+:SOURCE: The Power of Habit
+:PAGE: 160
+:KINDLE_LOCATION: 2485
+:END:
+#+BEGIN_QUOTE
 There are no organizations without institutional habits. There are only places where they are deliberately designed, and places where they are created without forethought, so they often grow from rivalries or fear.
+#+END_QUOTE
 **** Page 162 · Location 2527
+:PROPERTIES:
+:AUTHOR: Charles Duhigg
+:CHAPTER: 6. The Power of a Crisis: How Leaders Create Habits Through Accident and Design
+:SOURCE: The Power of Habit
+:PAGE: 162
+:KINDLE_LOCATION: 2527
+:END:
+#+BEGIN_QUOTE
 Companies aren’t families. They’re battlefields in a civil war.
+#+END_QUOTE
 **** Page 175 · Location 2718
+:PROPERTIES:
+:AUTHOR: Charles Duhigg
+:CHAPTER: 6. The Power of a Crisis: How Leaders Create Habits Through Accident and Design
+:SOURCE: The Power of Habit
+:PAGE: 175
+:KINDLE_LOCATION: 2718
+:END:
+#+BEGIN_QUOTE
 During turmoil, organizational habits become malleable enough to both assign responsibility and create a more equitable balance of power. Crises are so valuable, in fact, that sometimes it’s worth stirring up a sense of looming catastrophe rather than letting it die down.
+#+END_QUOTE
 ** Part Three: The Habits of Societies
 *** 8. Saddleback Church and the Montgomery Bus Boycott: How Movements Happen
 **** Page 222 · Location 3403
+:PROPERTIES:
+:AUTHOR: Charles Duhigg
+:CHAPTER: 8. Saddleback Church and the Montgomery Bus Boycott: How Movements Happen
+:SOURCE: The Power of Habit
+:PAGE: 222
+:KINDLE_LOCATION: 3408
+:END:
+#+BEGIN_QUOTE
 Studies show that people have no problem ignoring strangers ’ injuries, but when a friend is insulted, our sense of outrage is enough to overcome the inertia that usually makes protests hard to organize.
+#+END_QUOTE
 Afterword
 ** Afterword
 **** Page 281 · Location 4308
-When we reframe a trauma as a lesson, when we forgive ourselves for a momentary lapse or awkwardness, when we choose to apply empathy to someone else’s suffering — at those moments we receive the most profound kind of reward : the self - esteem that comes from being our best self.
+:PROPERTIES:
+:AUTHOR: Charles Duhigg
+:CHAPTER: Afterword
+:SOURCE: The Power of Habit
+:PAGE: 281
+:KINDLE_LOCATION: 4308
+:END:
+#+BEGIN_QUOTE
+When we reframe a trauma as a lesson, when we forgive ourselves for a momentary lapse or awkwardness, when we choose to apply empathy to someone else’s suffering — at those moments we receive the most profound kind of reward: the self - esteem that comes from being our best self.
+#+END_QUOTE
 ** Appendix
 *** Page 284 · Location 4344
-THE FRAMEWORK : Identify the routine Experiment with rewards Isolate the cue Have a plan
+THE FRAMEWORK:
+- Identify the routine
+- Experiment with rewards
+- Isolate the cue
+- Have a plan
 *** Page 291 · Location 4435
-Experiments have shown that almost all habitual cues fit into one of five categories : Location Time Emotional state Other people Immediately preceding action
+Experiments have shown that almost all habitual cues fit into one of five categories:
+- Location
+- Time
+- Emotional state
+- Other people
+- Immediately preceding action
