@@ -1,0 +1,92 @@
+:PROPERTIES:
+:ID:       a0305637-9aa1-403a-bf60-a091cf0224e5
+:END:
+#+title: The Power of Habit
+#+description: Notes on Charles Duhigg's book "The Power of Habit"
+#+filetags: :Books:
+
+* Highlights
+** Prologue: The Habit Cure
+*** Page xvi · Location 157
+Most of the choices we make each day may feel like the products of well - considered decision making, but they’re not. They’re habits. And though each habit means relatively little on its own, over time, the meals we order, what we say to our kids each night, whether we save or spend, how often we exercise, the empathy we automatically show others, and the way we organize our thoughts and work routines have enormous impacts on our health, productivity, financial security, and happiness.
+*** Page xvi · Location 160
+One paper published by a Duke University researcher in 2006 found that more than 40 percent of the actions people performed each day weren’t actual decisions, but habits.
+** Part One: The Habits of Individuals
+*** 1. The Habit Loop: How Habits Work
+**** Page 17 · Location 446
+#+BEGIN_QUOTE
+Habits, scientists say, emerge because the brain is constantly looking for ways to save effort.
+#+END_QUOTE
+**** Page 19 · Location 462
+This process within our brains is a three - step loop. First, there is a cue, a trigger that tells your brain to go into automatic mode and which habit to use. Then there is the routine, which can be physical or mental or emotional. Finally, there is a reward, which helps your brain figure out if this particular loop is worth remembering for the future :
+**** Page 20 · Location 471
+When a habit emerges, the brain stops fully participating in decision making. It stops working so hard, or diverts focus to other tasks. So unless you deliberately fight a habit — unless you find new routines — the pattern will unfold automatically.
+*** 2. The Craving Brain: How to Create New Habits
+**** Page 33 · Location 668
+He created a craving. And that craving, it turns out, is what makes cues and rewards work. That craving is what powers the habit loop.
+**** Page 36 · Location 703
+First, find a simple and obvious cue. Second, clearly define the rewards.
+**** Page 47 · Location 873
+This explains why habits are so powerful : They create neurological cravings.
+**** Page 49 · Location 891
+This is how new habits are created : by putting together a cue, a routine, and a reward, and then cultivating a craving that drives the loop.
+**** Page 49 · Location 893
+When a smoker sees a cue — say, a pack of Marlboros — her brain starts anticipating a hit of nicotine. Just the sight of cigarettes is enough for the brain to crave a nicotine rush. If it doesn’t arrive, the craving grows until the smoker reaches, unthinkingly, for a Marlboro.
+**** Page 58 · Location 1019
+Want to craft a new eating habit ? When researchers affiliated with the National Weight Control Registry — a project involving more than six thousand people who have lost more than thirty pounds — looked at the habits of successful dieters, they found that 78 percent of them ate breakfast every morning, a meal cued by a time of day. But most of the successful dieters also envisioned a specific reward for sticking with their diet — a bikini they wanted to wear or the sense of pride they felt when they stepped on the scale each day — something they chose carefully and really wanted . They focused on the craving for that reward when temptations arose, cultivated the craving into a mild obsession . And their cravings for that reward, researchers found, crowded out the temptation to drop the diet . The craving drove the habit loop.
+**** Page 59 · Location 1036
+Cravings are what drive habits. And figuring out how to spark a craving makes creating a new habit easier.
+*** 3. The Golden Rule of Habit Change: Why Transformation Occurs
+**** Page 62 · Location 1075
+Rather, to change a habit, you must keep the old cue, and deliver the old reward, but insert a new routine. That’s the rule : If you use the same cue, and provide the same reward, you can shift the routine and change the habit . Almost any behavior can be transformed if the cue and reward stay the same.
+**** Page 74 · Location 1254
+Asking patients to describe what triggers their habitual behavior is called awareness training, and like AA’s insistence on forcing alcoholics to recognize their cues, it’s the first step in habit reversal training.
+**** Page 77 · Location 1283
+Often, we don’t really understand the cravings driving our behaviors until we look for them.
+**** Page 78 · Location 1294
+If you identify the cues and rewards, you can change the routine. At least, most of the time . For some habits, however, there’s one other ingredient that’s necessary : belief.
+**** Page 85 · Location 1395
+Once people learned how to believe in something, that skill started spilling over to other parts of their lives, until they started believing they could change. Belief was the ingredient that made a reworked habit loop into a permanent behavior.
+**** Page 85 · Location 1398
+You don’t have to believe in God, but you do need the capacity to believe that things will get better.
+**** Page 92 · Location 1508
+We know that a habit cannot be eradicated — it must, instead, be replaced. And we know that habits are most malleable when the Golden Rule of habit change is applied : If we keep the same cue and the same reward, a new routine can be inserted . But that’s not enough . For a habit to stay changed, people must believe change is possible . And most often, that belief only emerges with the help of a group.
+**** Page 92 · Location 1517
+The evidence is clear : If you want to change a habit, you must find an alternative routine, and your odds of success go up dramatically when you commit to changing as part of a group. Belief is essential, and it grows out of a communal experience, even if that community is only as large as two people.
+** Part Two: The Habits of Successful Organizations
+*** 4. Keystone Habits, or The Ballad of Paul O’Neill: Which Habits Matter Most
+**** Page 100 · Location 1606
+“ But you can’t order people to change. That’s not how the brain works . So I decided I was going to start by focusing on one thing . If I could start disrupting the habits around one thing, it would spread throughout the entire company . ”
+**** Page 103 · Location 1649
+“ Individuals have habits ; groups have routines, ”
+**** Page 109 · Location 1736
+If you focus on changing or cultivating keystone habits, you can cause widespread shifts. However, identifying keystone habits is tricky. To find them, you have to know where to look. Detecting keystone habits means searching out certain characteristics. Keystone habits offer what is known within academic literature as “ small wins. ” They help other habits to flourish by creating new structures, and they establish cultures where change becomes contagious.
+**** Page 112 · Location 1784
+Small wins fuel transformative changes by leveraging tiny advantages into patterns that convince people that bigger achievements are within reach.
+*** 5. Starbucks and the Habit of Success: When Willpower Becomes Automatic
+**** Page 137 · Location 2149
+“ Willpower isn’t just a skill. It’s a muscle, like the muscles in your arms or legs, and it gets tired as it works harder, so there’s less power left over for other things. ”
+**** Page 139 · Location 2181
+“ When you learn to force yourself to go to the gym or start your homework or eat a salad instead of a hamburger, part of what’s happening is that you’re changing how you think, ” said Todd Heatherton, a researcher at Dartmouth who has worked on willpower studies. “ People get better at regulating their impulses. They learn how to distract themselves from temptations. And once you’ve gotten into that willpower groove, your brain is practiced at helping you focus on a goal. ”
+**** Page 146 · Location 2289
+This is how willpower becomes a habit : by choosing a certain behavior ahead of time, and then following that routine when an inflection point arrives.
+*** 6. The Power of a Crisis: How Leaders Create Habits Through Accident and Design
+**** Page 160 · Location 2485
+There are no organizations without institutional habits. There are only places where they are deliberately designed, and places where they are created without forethought, so they often grow from rivalries or fear.
+**** Page 162 · Location 2527
+Companies aren’t families. They’re battlefields in a civil war.
+**** Page 175 · Location 2718
+During turmoil, organizational habits become malleable enough to both assign responsibility and create a more equitable balance of power. Crises are so valuable, in fact, that sometimes it’s worth stirring up a sense of looming catastrophe rather than letting it die down.
+** Part Three: The Habits of Societies
+*** 8. Saddleback Church and the Montgomery Bus Boycott: How Movements Happen
+**** Page 222 · Location 3403
+Studies show that people have no problem ignoring strangers ’ injuries, but when a friend is insulted, our sense of outrage is enough to overcome the inertia that usually makes protests hard to organize.
+Afterword
+** Afterword
+**** Page 281 · Location 4308
+When we reframe a trauma as a lesson, when we forgive ourselves for a momentary lapse or awkwardness, when we choose to apply empathy to someone else’s suffering — at those moments we receive the most profound kind of reward : the self - esteem that comes from being our best self.
+** Appendix
+*** Page 284 · Location 4344
+THE FRAMEWORK : Identify the routine Experiment with rewards Isolate the cue Have a plan
+*** Page 291 · Location 4435
+Experiments have shown that almost all habitual cues fit into one of five categories : Location Time Emotional state Other people Immediately preceding action
