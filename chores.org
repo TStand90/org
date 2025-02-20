@@ -4,10 +4,11 @@
 * Cats
 ** De-shedding
 *** [ ] De-shed Andromeda
-SCHEDULED: <2025-02-05 Wed .+1w>
+SCHEDULED: <2025-02-26 Wed .+1w>
 :PROPERTIES:
-:LAST_REPEAT: [2025-01-29 Wed 12:26]
+:LAST_REPEAT: [2025-02-19 Wed 18:09]
 :END:
+- State "[X]"        from "[ ]"        [2025-02-19 Wed 18:09]
 - State "[X]"        from "[ ]"        [2025-01-29 Wed 12:26]
 - State "[X]"        from "[ ]"        [2025-01-11 Sat 23:59]
 *** [ ] De-shed Orion
