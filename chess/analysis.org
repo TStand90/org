@@ -1,0 +1,8 @@
+#+title: Analysis
+#+description: An analysis list of past games
+
+|      Game ID | Date                | Win/Loss | Biggest mistake   |
+|--------------+---------------------+----------+-------------------|
+| 123247715066 | February 24th, 2025 | Win      | Left rook hanging |
+|              |                     |          |                   |
+|              |                     |          |                   |
