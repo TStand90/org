@@ -1,8 +1,9 @@
 #+title: Analysis
 #+description: An analysis list of past games
 
-|      Game ID | Date                | Win/Loss | Biggest mistake   |
-|--------------+---------------------+----------+-------------------|
-| 123247715066 | February 24th, 2025 | Win      | Left rook hanging |
-|              |                     |          |                   |
-|              |                     |          |                   |
+|      Game ID | Date                | Win/Loss | Biggest mistake                     |
+|--------------+---------------------+----------+-------------------------------------|
+| 123247715066 | February 24th, 2025 | Win      | Left rook hanging                   |
+| 123325125742 | February 26th, 2025 | Loss     | Opened myself to a fork by a knight |
+|              |                     |          |                                     |
+|              |                     |          |                                     |
