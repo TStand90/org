@@ -1,6 +1,9 @@
 #+title: Notes
 #+description: Notes regarding the Flask 3 upgrade project
 
+flask-script still in project in Pipfile, not used, pulled in by dependendies.
+Should drop.
+
 * Steps taken so far
 ** pip install --upgrade Flask
 #+BEGIN_QUOTE
