@@ -1,0 +1,29 @@
+#+title: Todo
+#+description: Things to do for the Flask 3 Project
+
+* [?] [[https://hellowisp.atlassian.net/browse/WISPENG-1253][WISPENG-1253]]: Change all instances of Markup class to come from markupsafe instead of Flask
+* [-] [[https://hellowisp.atlassian.net/browse/WISPENG-1255][WISPENG-1255]]: Remove *args from all calls to dispatch_request
+:PROPERTIES:
+:DESCRIPTION: I'm not going to break this down into subtasks here. It's already in Jira and I'm not a psychopath (/I think/).
+:END:
+
+* Upgrade Flask!
+Un-pinning upgraded to Flask 2.1.3 rather than 3.1.0, certain libraries must be holding it back.
+
+* [ ] Investigate upgrading Alembic to the latest version
+* [ ] Investigate upgrading SQLAlchemy to the latest version
+* [-] Investigate upgrading flask-login to the latest version
+- Note taken on [2025-03-03 Mon 16:08] \\
+  Asked dev-private if anyone knows why it's pinned, waiting for response.
+Un-pinning flask-login bumped it to 0.6.3, the latest version
+
+- flask-login 0.6.3 should support as low as Flask 1.0.4 and Werkzeug 1.0.1, so that should not be holding us back.
+  (We are on Flask 1.1.4 and Werkzeug 1.0.1)
+  - Tried installing 0.6.3 and it seems to work fine?
+
+* [ ] Investigate upgrading graphene to the latest version
+* [ ] Investigate upgrading wtforms to the latest version
+* [ ] Investigate upgrading markupsafe to the latest version
+
+* [ ] Remove flask-script from pipfile
+No longer used
