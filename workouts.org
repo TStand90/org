@@ -3,10 +3,11 @@
 
 * Workouts
 ** [ ] Work out core - Ring Fit
-SCHEDULED: <2025-02-22 Sat .+4d/7d>
+SCHEDULED: <2025-03-09 Sun .+4d/7d>
 :PROPERTIES:
-:LAST_REPEAT: [2025-02-18 Tue 11:17]
+:LAST_REPEAT: [2025-03-05 Wed 13:27]
 :END:
+- State "[X]"        from "[ ]"        [2025-03-05 Wed 13:27]
 - State "[X]"        from "[ ]"        [2025-02-18 Tue 11:17]
 - State "[X]"        from "[ ]"        [2025-02-04 Tue 15:26]
 - State "[X]"        from "[ ]"        [2025-01-27 Mon 16:20]
