@@ -10,4 +10,5 @@
 | 123541141178 | March 4th, 2025     | Loss     | Played too fast, didn't see knight was trapped           |
 | 136012899122 | March 7th, 2025     | Loss     | Overlooked tactic that allowed opponent to win material  |
 | 136013648140 | March 7th, 2025     | Win      | Did not trade equal material when it made sense to do so |
+| 136113691490 | March 10th, 2025    | Loss     | Did not realize pawn was pinned, lost a knight           |
 |              |                     |          |                                                          |
