@@ -39,7 +39,7 @@ CLOCK: [2024-12-13 Fri 11:35]--[2024-12-13 Fri 11:58] =>  0:23
 *** [X] Test that the cancellation feature does *not* activate during the approval of a proposed cart.
 ** [X] [[https://github.com/hellowisp/secure.hellowisp.com/pull/5307][WISPENG-1025]]: Formats provider custom messages for editable meds
 ** [X] [[https://hellowisp.atlassian.net/browse/WISPENG-1066][WISPENG-1066]]: Update Provider Message On Editable Meds
-** [?] WISPENG-973: Void carts
+** [X] WISPENG-973: Void carts
 *** [X] Create an admin task when carts are expired
 *** [X] Create an Order Activity Log entry when carts are expired
 ** NO [[https://hellowisp.atlassian.net/browse/WISPENG-972][WISPENG-972]]: Pending Cart - Daily Email Notification
@@ -55,9 +55,15 @@ CLOCK: [2025-02-10 Mon 12:39]--[2025-02-10 Mon 13:29] =>  0:50
 - Note taken on [2025-02-19 Wed 17:05] \\
   Put this in review tomorrow (Feb 20) morning.
 *** [X] ProposedCartsController is sending the SKUs down to the service method, causing SKUs to be displayed to the end user. Need to swap the SKUs for the actual product names.
-** [?] [[https://hellowisp.atlassian.net/browse/WISPENG-1204][WISPENG-1204]]: Show the list of medications in the Consultation message
+** [X] [[https://hellowisp.atlassian.net/browse/WISPENG-1204][WISPENG-1204]]: Show the list of medications in the Consultation message
 - Note taken on [2025-02-26 Wed 10:41] \\
   Waiting on one more review.
+** [-] [[https://hellowisp.atlassian.net/browse/WISPENG-1342][WISPENG-1342]]: Remove cart authorization match check
+:LOGBOOK:
+CLOCK: [2025-03-24 Mon 11:27]--[2025-03-24 Mon 12:00] =>  0:33
+CLOCK: [2025-03-24 Mon 10:27]--[2025-03-24 Mon 11:17] =>  0:50
+:END:
+
 * Other
 Create a ticket for sanitizing provider inputs, see [[https://github.com/hellowisp/secure.hellowisp.com/pull/5307#discussion_r1915795938][this discussion]].
 

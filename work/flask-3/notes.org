@@ -166,16 +166,59 @@ Current version: 3.0.2
 
 (May be because of WTForms?)
 
+**** Looks like Jinja2 needs to be upgraded before this can be (or maybe at the same time).
+
 *** wtforms
 Currently held back at "<3.*"
 Installed: 2.3.3
 Current version: 3.2.1
+
+**** WTForms 3.1 has a dependency on MarkupSafe. Not sure which version.
 
 *** graphene
 Currently held back at "<3.*"
 Installed: 2.1.9
 Current version: 3.4.3
 
+** Flask 2.1 upgrade considerations
+*** ~jsonfiy~ now throws an error for non-dict objects. Find all uses of ~jsonify~ and ensure they are taking dicts.
+- Note: Do Pydantic objects work? Because apparently we are doing that a fair bit with some DoseSpot stuff.
+
+** Pinned packages:
+*** alembic
+==1.3.3
+*** flask
+==1.1.4
+*** flask-login
+<0.6.0
+*** flask-mail
+==0.9.1
+*** flask-migrate
+==2.7.0
+*** markupsafe
+<=2.0.1
+*** redis
+==3.5.3
+*** rq
+==1.7.0
+*** graphene
+<3.*
+*** pytest
+<8
+*** cffi
+==1.15.0
+*** flask-marshmallow
+==0.14.0
+*** jsonschema
+==4.17.3
+*** ruff
+==0.4.4
+*** stripe
+<6
+*** ddtrace
+==2.14.4
+*** klayvio-api
+==4.0.0
 
 * Library versions
 ** alembic
