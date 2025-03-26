@@ -1,0 +1,12 @@
+:PROPERTIES:
+:ID:       48be409d-b595-438e-ba94-c5dc2d853943
+:END:
+#+title: Architecture Patterns with Python (Cosmic Python)
+#+filetags: :Books:Python:Programming Books:
+
+* Chapter 1 - Domain Modeling
+A /domain model/, or /business layer logic/, is the /model/ (mental map) of how a business works.
+
+#+BEGIN_QUOTE
+The _domain_ is a fancy way of saying _the problem you're trying to solve_.
+#+END_QUOTE
