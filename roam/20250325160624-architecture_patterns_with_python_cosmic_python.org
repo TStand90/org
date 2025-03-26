@@ -10,3 +10,49 @@ A /domain model/, or /business layer logic/, is the /model/ (mental map) of how 
 #+BEGIN_QUOTE
 The _domain_ is a fancy way of saying _the problem you're trying to solve_.
 #+END_QUOTE
+
+** Value Objects
+A [[id:044dd9f6-4661-4e0e-b2da-9ed596668a1e][Value Object]] can be used for business concepts that have data, but no identity.
+
+#+BEGIN_SRC python
+from dataclasses import dataclass
+from typing import NamedTuple
+from collections import namedtuple
+
+@dataclass(frozen=True)
+class Name:
+    first_name: str
+    surname: str
+
+class Money(NamedTuple):
+    currency: str
+    value: int
+
+Line = namedtuple('Line', ['sku', 'qty'])
+
+def test_equality():
+    assert Money('gbp', 10) == Money('gbp', 10)
+    assert Name('Harry', 'Percival') != Name('Bob', 'Gregory')
+    assert Line('RED-CHAIR', 5) == Line('RED-CHAIR', 5)
+#+END_SRC
+
+Dataclasses work well for things like money, because $10 always equals $10.
+
+** Entities
+An _Entity_, on the other hand, is a domain object that has long-lived identity. For example, a /person/ may change their name, marital status, gender, etc., but they are still the same person.
+
+** Just a function
+#+BEGIN_QUOTE
+Sometimes, it just isn't a thing.
+- Eric Evans, Domain-Driven Design
+#+END_QUOTE
+
+Not everything fits neatly into the "entity" or "value object" idea. Sometimes, just a function is what you need.
+
+** Recap
+*** Domain modeling
+The code that is closest to the business. It is the most likely to change, and is the place where you deliver the most value. Make it easy to understand and modify.
+*** Distinguish entities from value objects
+*** Not everything has to be an object
+*** This is the time to apply your best OO design principles
+*** You'll also want to think about consistency boundaries and aggreates

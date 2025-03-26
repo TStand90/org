@@ -1,0 +1,20 @@
+:PROPERTIES:
+:ID:       044dd9f6-4661-4e0e-b2da-9ed596668a1e
+:ROAM_REFS: https://en.wikipedia.org/wiki/Value_object
+:END:
+#+title: Value Object
+
+A Value Object is an object that is uniquely identified by the data it holds. They are usually immutable.
+
+For example, in [[id:3a948b50-dedc-4fdf-a86c-05c1c3a9f230][Python]], dataclasses are Value Objects. They can be made immutable with the ~frozen~ parameter.
+
+#+BEGIN_SRC python
+from dataclasses import dataclass
+
+@dataclass(frozen=True)
+class StreetAddress:
+    """Represents a street address."""
+
+    street: str
+    city: str
+#+END_SRC
