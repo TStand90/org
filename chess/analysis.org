@@ -1,17 +1,18 @@
 #+title: Analysis
 #+description: An analysis list of past games
 
-|      Game ID | Date                | Win/Loss | Biggest mistake                                             |
-|--------------+---------------------+----------+-------------------------------------------------------------|
-| 123247715066 | February 24th, 2025 | Win      | Left rook hanging                                           |
-| 123325125742 | February 26th, 2025 | Loss     | Opened myself to a fork by a knight                         |
-| 123359302644 | February 27th, 2025 | Win      | Missed opportunity to win a Bishop with a pin               |
-| 123502041456 | March 3rd, 2025     | Win      | Left bishop hanging, catpured by knight                     |
-| 123541141178 | March 4th, 2025     | Loss     | Played too fast, didn't see knight was trapped              |
-| 136012899122 | March 7th, 2025     | Loss     | Overlooked tactic that allowed opponent to win material     |
-| 136013648140 | March 7th, 2025     | Win      | Did not trade equal material when it made sense to do so    |
-| 136113691490 | March 10th, 2025    | Loss     | Did not realize pawn was pinned, lost a knight              |
-| 136151493310 | March 11th, 2025    | Win      | Left a bishop hanging                                       |
-| 136198399310 | March 12th, 2025    | Win      | Played too fast, Missed a tactic that left me down material |
-| 136222970816 | March 13th, 2025    | Win      | Missed a tactic that would have led to checkmate            |
-|              |                     |          |                                                             |
+|      Game ID | Date                | Win/Loss | Biggest mistake                                              |
+|--------------+---------------------+----------+--------------------------------------------------------------|
+| 123247715066 | February 24th, 2025 | Win      | Left rook hanging                                            |
+| 123325125742 | February 26th, 2025 | Loss     | Opened myself to a fork by a knight                          |
+| 123359302644 | February 27th, 2025 | Win      | Missed opportunity to win a Bishop with a pin                |
+| 123502041456 | March 3rd, 2025     | Win      | Left bishop hanging, catpured by knight                      |
+| 123541141178 | March 4th, 2025     | Loss     | Played too fast, didn't see knight was trapped               |
+| 136012899122 | March 7th, 2025     | Loss     | Overlooked tactic that allowed opponent to win material      |
+| 136013648140 | March 7th, 2025     | Win      | Did not trade equal material when it made sense to do so     |
+| 136113691490 | March 10th, 2025    | Loss     | Did not realize pawn was pinned, lost a knight               |
+| 136151493310 | March 11th, 2025    | Win      | Left a bishop hanging                                        |
+| 136198399310 | March 12th, 2025    | Win      | Played too fast, Missed a tactic that left me down material  |
+| 136222970816 | March 13th, 2025    | Win      | Missed a tactic that would have led to checkmate             |
+| 136733944768 | March 27th, 2025    | Win      | Played a weaker move to catpure a bishop (no major mistakes) |
+|              |                     |          |                                                              |
