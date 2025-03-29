@@ -316,3 +316,20 @@ Please see https://hellowisp.atlassian.net/browse/WISPENG-1255 for a description
 
 ## Related Tickets and/or Pull Requests
 https://hellowisp.atlassian.net/browse/WISPENG-1255
+
+* Tasks
+** [ ] Make a PR for the "token" tests.
+I moved/updated tests as part of [[https://github.com/hellowisp/secure.hellowisp.com/pull/5607][WISPENG-1377]], but the tests could be updated independently.
+
+That PR is huge as-is, so moving it might make sense.
+
+Then again, the way expirations were handled has changed, so not all the changes can be made independently. Maybe it's not worth it?
+** [ ] Add the new env vars from WISPENG-1377 to the PR
+I'm not adding them to the config file now, because that could make rebasing a pain in the ass. But I should do it before merging.
+
+
+
+- Click 7.1.2 -> 8.1.8 (latest version)
+- itsdangerous 1.1.0 -> 2.2.0 (latest version)
+- jinja2 2.11.3 -> 3.1.6 (latest version)
+- werkzeug 1.0.1 -> 2.1.2
