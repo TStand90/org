@@ -17,7 +17,6 @@ SCHEDULED: <2025-03-12 Wed .+1w>
 :PROPERTIES:
 :LAST_REPEAT: [2025-03-05 Wed 13:27]
 :END:
-
 - State "[X]"        from "[ ]"        [2025-03-05 Wed 13:27]
 - State "[X]"        from "[ ]"        [2025-03-04 Tue 11:42]
 - State "[X]"        from "[ ]"        [2025-02-18 Tue 11:16]
@@ -49,17 +48,19 @@ SCHEDULED: <2025-02-20 Thu .+2d>
 
 ** Water fountain
 *** [ ] Change filters
-SCHEDULED: <2025-02-27 Thu .+1m>
+SCHEDULED: <2025-05-01 Thu .+1m>
 :PROPERTIES:
-:LAST_REPEAT: [2025-01-27 Mon 19:08]
+:LAST_REPEAT: [2025-03-31 Mon 09:43]
 :END:
+- State "[X]"        from "[ ]"        [2025-03-02 Sun 09:43]
 - State "[X]"        from "[ ]"        [2025-01-27 Mon 19:08]
 - State "[X]"        from "[ ]"        [2024-12-28 Sat 17:42]
 
 ** Auto-feeder
 *** [ ] Change desiccant bag
-SCHEDULED: <2025-03-01 Sat .+1m>
+SCHEDULED: <2025-05-01 Thu .+1m>
 :PROPERTIES:
-:LAST_REPEAT: [2025-01-29 Wed 12:39]
+:LAST_REPEAT: [2025-03-31 Mon 09:42]
 :END:
+- State "[X]"        from "[ ]"        [2025-03-02 Sun 09:42]
 - State "[X]"        from "[ ]"        [2025-01-29 Wed 12:39]
