@@ -21,6 +21,3 @@ CLOCK: [2024-10-16 Wed 09:00]--[2024-10-16 Wed 10:17] =>  1:17
 ** [X] Call EECU about the strange wire transfer to my account
 DEADLINE: <2024-10-16 Wed>
 ** [X] Call EECU about a new wire transfer form
-
-** [ ] Write a message to Seiji on LinkedIn
-DEADLINE: <2024-12-24 Tue>
