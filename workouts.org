@@ -59,20 +59,22 @@ SCHEDULED: <2025-03-14 Fri .+5d/7d>
 - State "[X]"        from "[ ]"        [2024-11-13 Wed 17:19]
 :STYLE: habit
 ** [ ] Work out arms - Ring Fit
-SCHEDULED: <2025-01-19 Sun .+5d/7d>
+SCHEDULED: <2025-04-03 Thu .+5d/7d>
 :PROPERTIES:
-:LAST_REPEAT: [2025-01-14 Tue 20:24]
+:LAST_REPEAT: [2025-03-30 Sun 23:59]
 :END:
+- State "[X]"        from "[ ]"        [2025-03-30 Sun 23:59]
 - State "[X]"        from "[ ]"        [2025-01-14 Tue 20:24]
 - State "[X]"        from "[ ]"        [2024-12-19 Thu 23:59]
 - State "[X]"        from "[ ]"        [2024-12-08 Sun 11:40]
 - State "[X]"        from "[ ]"        [2024-11-17 Sun 18:03]
 :STYLE: habit
 ** [ ] Fitness Boxing
-SCHEDULED: <2025-01-09 Thu .+6d/7d>
+SCHEDULED: <2025-04-05 Sat .+6d/7d>
 :PROPERTIES:
-:LAST_REPEAT: [2025-01-03 Fri 11:29]
+:LAST_REPEAT: [2025-03-30 Sun 23:59]
 :END:
+- State "[X]"        from "[ ]"        [2025-03-30 Sun 23:59]
 - State "[X]"        from "[ ]"        [2025-01-03 Fri 11:29]
 - State "[X]"        from "[ ]"        [2024-12-13 Fri 14:31]
 - State "[X]"        from "[ ]"        [2024-11-24 Sun 10:55]
