@@ -1,0 +1,22 @@
+* Separating DoseSpot from the Rx model
+Joey has proposed that we add columns and gradually remove the ~dosespot_rx~ field.
+
+We could introduce fields to store data from Canvas, such as ~refills~, ~prescription_id~, and ~prescriber_id~. We could have the ORM wrap these fields in properties, similar to how ~dosespot_rx~ wraps the field ~_dosespot_rx~, to control reads and writes.
+
+That would allow us to "read" something like ~refills~ like this:
+1. Check if the ~refills~ column has data. If so, return that.
+2. If we are using Canvas, return nothing, as we don't have data. (Or maybe fetch from Canvas if that's possible)
+3. If we are using DoseSpot, and if ~refills~ is empty, check ~dosespot_rx~.
+4. If that is empty, get the metadata (this happens automatically as part of reading ~dosespot_rx~).
+
+
+* Things to do
+** [ ] Create database migration for each column we need
+*** [ ] erx_pharmacy_id
+- Note taken on [2025-04-04 Fri 14:57] \\
+  This one doesn't appear to be used either.
+*** [ ] erx_prescriber_id
+- Note taken on [2025-04-04 Fri 14:13] \\
+  No need to do this one, we can remove it since it's not used.
+*** [ ] erx_prescription_id
+*** [ ] erx_refills

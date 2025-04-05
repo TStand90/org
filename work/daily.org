@@ -1,0 +1,35 @@
+#+title: Daily
+#+description: This is a test file to try time-blocking in Org Mode
+
+* <2025-03-31 Mon>
+** [X] Call: Eng Team Quick Update! - Exciting things!
+SCHEDULED: <2025-03-31 Mon 11:30-11:45>
+** [X] Look into separating DoseSpot from the Rx model
+SCHEDULED: <2025-03-31 Mon 13:00-15:00>
+** [X] Study
+SCHEDULED: <2025-03-31 Mon 15:00-16:00>
+** [ ] Test the Flask 2.1 branch (possibly with Kian and Amanda)
+
+* <2025-04-01 Tue>
+** [X] Figure out the flask-login thing
+** [X] Discuss the business logic "workflows" concept
+SCHEDULED: <2025-04-01 Tue 11:30-12:00>
+** [X] Study
+SCHEDULED: <2025-04-01 Tue 15:20-16:20>
+** [X] Start work on the columns to get us decoupled from DoseSpot (also write the Jira tickets)
+SCHEDULED: <2025-04-01 Tue 16:30-18:30>
+
+* <2025-04-02 Wed>
+** [X] Canvas Eng Sync
+SCHEDULED: <2025-04-02 Wed 09:30-10:20>
+** [X] Try to get one failing test in ~flask-login~ branch working
+SCHEDULED: <2025-04-02 Wed 10:30-11:20>
+- Note taken on [2025-04-02 Wed 09:38] \\
+  Might need to delete the test if it just doesn't work.
+** [X] Work on DoseSpot decoupling
+SCHEDULED: <2025-04-02 Wed 11:30-17:00>
+
+* <2025-04-03 Thu>
+** [X] Canvas Eng Sync
+SCHEDULED: <2025-04-03 Thu 09:00-10:30>
+** [ ] Continue work on DoseSpot decoupling
