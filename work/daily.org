@@ -35,5 +35,5 @@ SCHEDULED: <2025-04-03 Thu 09:00-10:30>
 ** [X] Continue work on DoseSpot decoupling
 
 * <2025-04-07 Mon>
-** [-] Heads down Canvas time
+** [X] Heads down Canvas time
 SCHEDULED: <2025-04-07 Mon 08:00-13:00>
