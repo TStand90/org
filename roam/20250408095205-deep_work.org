@@ -1,0 +1,35 @@
+:PROPERTIES:
+:ID:       c6df2948-3da4-4a7d-a066-9a7a940a8f36
+:END:
+#+title: Deep Work
+#+description: Notes on Cal Newport's book "Deep Work"
+#+filetags: :Books:
+
+* Introduction
+** Highlights
+#+BEGIN_QUOTE
+Deep Work: Professional activities performed in a state of distraction-free concentration that push your cognitive capabilities to their limit. These efforts create new value, improve your skill, and are hard to replicate.
+#+END_QUOTE
+
+#+BEGIN_QUOTE
+Shallow Work: Noncognitively demanding, logistical-style tasks, often performed while distracted. These efforts tend to not create much new value in the world and are easy to replicate.
+#+END_QUOTE
+
+#+BEGIN_QUOTE
+The Deep Work Hypothesis: The ability to perform deep work is becoming increasingly rare at exactly the same time it is becoming increasingly valuable in our economy. As a consequence, the few who cultivate this skill, and then make it the core of their working life, will thrive.
+#+END_QUOTE
+
+#+BEGIN_QUOTE
+Three to four hours a day, five days a week, of uninterrupted and carefully directed concentration, it turns out, can produce a lot of valuable output.
+#+END_QUOTE
+* Part 1: The Idea
+** Chapter 1: Deep Work is Valuable
+*** Highlights
+
+** Chapter 2: Deep Work is Rare
+** Chapter 3: Deep Work is Meaningful
+* Part 2: The Rules
+** Rule #1: Work Deeply
+** Rule #2: Embrace Boredom
+** Rule #3: Quit Social Media
+** Rule #4: Drain the Shallows
