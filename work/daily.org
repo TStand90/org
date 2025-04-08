@@ -37,3 +37,14 @@ SCHEDULED: <2025-04-03 Thu 09:00-10:30>
 * <2025-04-07 Mon>
 ** [X] Heads down Canvas time
 SCHEDULED: <2025-04-07 Mon 08:00-13:00>
+** [X] Work on removing unused DoseSpot vars
+- Note taken on [2025-04-07 Mon 17:47] \\
+  Prescriptions table: last entry was in February of 2023.
+
+* <2025-04-08 Tue>
+** [ ] Heads down Canvas time
+SCHEDULED: <2025-04-08 Tue 08:00-13:00>
+** [ ] Work on DoseSpot decoupling
+SCHEDULED: <2025-04-08 Tue 13:30-15:30>
+** [ ] Read "Cosmic Python": Chapter 2
+SCHEDULED: <2025-04-08 Tue 15:45-17:00>
