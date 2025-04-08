@@ -25,8 +25,43 @@ Three to four hours a day, five days a week, of uninterrupted and carefully dire
 * Part 1: The Idea
 ** Chapter 1: Deep Work is Valuable
 *** Highlights
+**** Page 28
+#+BEGIN_QUOTE
+In this new economy, three groups will have a particular advantage: those who can work well and creatively with intelligent machines, those who are the best at what they do, and those with access to capital.
+#+END_QUOTE
 
+**** Page 29
+#+BEGIN_QUOTE
+Two Core Abilities for Thriving in the New Economy:
+1. The ability to quickly master hard things.
+2. The ability to produce at an elite level, in terms of both quality and speed.
+#+END_QUOTE
+
+**** Page 32
+#+BEGIN_QUOTE
+If you don't produce, you won't thrive - no matter how skilled or talented you are.
+#+END_QUOTE
+
+**** Page 37
+#+BEGIN_QUOTE
+To learn hard things quickly, you must focus intensely without distraction.
+#+END_QUOTE
 ** Chapter 2: Deep Work is Rare
+*** Highlights
+**** Page 58
+#+BEGIN_QUOTE
+The Principle of Least Resistance: In a business setting, without clear feedback on the impact of various behaviors to the bottom line, we will tend toward behaviors that are easiest in the moment.
+#+END_QUOTE
+
+**** Page 64
+#+BEGIN_QUOTE
+Busyness as a Proxy for Productivity: In the abscence of clear indicators of what it means to be productive and valuable in their jobs, many knowledge workers turn back toward an industrial indicator of productivity: doing lots of stuff in a visible manner.
+#+END_QUOTE
+
+**** Page 69
+#+BEGIN_QUOTE
+Deep work is at a severe disadvantage in a technopoly because it builds on values like quality, craftsmanship, and mastery that are decidedly old-fashioned and nontechnological. Even worse, to support deep work often requires the rejection of much of what is new and high-tech.
+#+END_QUOTE
 ** Chapter 3: Deep Work is Meaningful
 * Part 2: The Rules
 ** Rule #1: Work Deeply
