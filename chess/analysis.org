@@ -16,4 +16,4 @@
 | 136222970816 | March 13th, 2025    | Win      | Missed a tactic that would have led to checkmate                       |
 | 136733944768 | March 27th, 2025    | Win      | Played a weaker move to catpure a bishop (no major mistakes)           |
 | 136770187590 | March 28th, 2025    | Draw     | Accepted a draw offer, but I had a tactic that would have won the game |
-|              |                     |          |                                                                        |
+| 137209974400 | April 9th, 2025     | Win      | Missed a tactic with the knight to force the enemy bishop back         |
