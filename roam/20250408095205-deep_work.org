@@ -63,6 +63,7 @@ Busyness as a Proxy for Productivity: In the abscence of clear indicators of wha
 Deep work is at a severe disadvantage in a technopoly because it builds on values like quality, craftsmanship, and mastery that are decidedly old-fashioned and nontechnological. Even worse, to support deep work often requires the rejection of much of what is new and high-tech.
 #+END_QUOTE
 ** Chapter 3: Deep Work is Meaningful
+*** Highlights
 * Part 2: The Rules
 ** Rule #1: Work Deeply
 ** Rule #2: Embrace Boredom

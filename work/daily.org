@@ -42,9 +42,21 @@ SCHEDULED: <2025-04-07 Mon 08:00-13:00>
   Prescriptions table: last entry was in February of 2023.
 
 * <2025-04-08 Tue>
-** [ ] Heads down Canvas time
+** [X] Heads down Canvas time
 SCHEDULED: <2025-04-08 Tue 08:00-13:00>
-** [ ] Work on DoseSpot decoupling
+** [X] Work on DoseSpot decoupling
 SCHEDULED: <2025-04-08 Tue 13:30-15:30>
-** [ ] Read "Cosmic Python": Chapter 2
+** [X] Read "Cosmic Python": Chapter 2
 SCHEDULED: <2025-04-08 Tue 15:45-17:00>
+
+* <2025-04-09 Wed>
+** [X] Canvas meeting
+SCHEDULED: <2025-04-09 Wed 08:00-09:00>
+** [X] Book club
+SCHEDULED: <2025-04-09 Wed 11:00-12:00>
+** [X] Canvas meeting
+SCHEDULED: <2025-04-09 Wed 12:00-13:00>
+** [ ] DoseSpot decoupling
+SCHEDULED: <2025-04-09 Wed 13:30-16:00>
+** [-] Study
+SCHEDULED: <2025-04-09 Wed 16:00-17:00>
