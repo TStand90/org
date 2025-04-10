@@ -56,7 +56,7 @@ SCHEDULED: <2025-04-09 Wed 08:00-09:00>
 SCHEDULED: <2025-04-09 Wed 11:00-12:00>
 ** [X] Canvas meeting
 SCHEDULED: <2025-04-09 Wed 12:00-13:00>
-** [ ] DoseSpot decoupling
+** [X] DoseSpot decoupling
 SCHEDULED: <2025-04-09 Wed 13:30-16:00>
-** [-] Study
+** [X] Study
 SCHEDULED: <2025-04-09 Wed 16:00-17:00>
