@@ -64,6 +64,20 @@ Deep work is at a severe disadvantage in a technopoly because it builds on value
 #+END_QUOTE
 ** Chapter 3: Deep Work is Meaningful
 *** Highlights
+**** Page 82
+#+BEGIN_QUOTE
+A workday driven by the shallow, from a neurological perspective, is likely to be a draining and upsetting day, even if most of the shallow things that capture your attention seem harmless or fun.
+#+END_QUOTE
+
+**** Page 84
+#+BEGIN_QUOTE
+Human beings, it seems, are at their best when immersed deeply in something challenging.
+#+END_QUOTE
+
+**** Page 86
+#+BEGIN_QUOTE
+To build your working life around the experience of flow produced by deep work is a proven path to deep satisfaction.
+#+END_QUOTE
 * Part 2: The Rules
 ** Rule #1: Work Deeply
 ** Rule #2: Embrace Boredom
