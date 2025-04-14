@@ -78,8 +78,37 @@ Human beings, it seems, are at their best when immersed deeply in something chal
 #+BEGIN_QUOTE
 To build your working life around the experience of flow produced by deep work is a proven path to deep satisfaction.
 #+END_QUOTE
+
+**** Page 89
+#+BEGIN_QUOTE
+"We who cut mere stones must always be envisioning cathedrals."
+- Medieval Quarry Worker's Creed
+#+END_QUOTE
+
+**** Page 92
+#+BEGIN_QUOTE
+A deep life is a good life, any way you look at it.
+#+END_QUOTE
 * Part 2: The Rules
 ** Rule #1: Work Deeply
+Don't wait for inspiration to strike!
+
+*** Highlights
+**** Page 99
+#+BEGIN_QUOTE
+People fight desires all day long. As Baumeister summarized in his subsequent book, Willpower (co-authored with the science writer John Tierney): "Desire turned out to be the norm, not the exception."
+#+END_QUOTE
+
+**** Page 100
+#+BEGIN_QUOTE
+You have a finite amount of willpower that becomes depleted as you use it.
+#+END_QUOTE
+
+**** Page 119
+#+BEGIN_QUOTE
+[Great creative minds] think like artists but work like accountants.
+#+END_QUOTE
+
 ** Rule #2: Embrace Boredom
 ** Rule #3: Quit Social Media
 ** Rule #4: Drain the Shallows
