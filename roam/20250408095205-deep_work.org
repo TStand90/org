@@ -91,7 +91,19 @@ A deep life is a good life, any way you look at it.
 #+END_QUOTE
 * Part 2: The Rules
 ** Rule #1: Work Deeply
-Don't wait for inspiration to strike!
+*** Don't wait for inspiration to strike!
+Rituals minimize friction, and friction prevents us from entering a deep work state. Waiting for inspiration in order to get into a deep work state won't work.
+
+*** Rules for rituals
+There is no one /correct/ deep work ritual. It depends on the person and the project. But here are some general questions that any effective ritual must address:
+1. Where you'll work and for how long.
+   Can be as simple as "office room with the door shut and desk cleaned off". Even better - a location /only/ for deep work.
+   Be sure to give yourself a time frame and specific task, to avoid the work feeling like a slog.
+2. How you'll work once you start to work.
+   You need rules and processes once the work starts. Maybe ban internet use, or have some metric you measure. Have a system to decide if you're being productive or not.
+3. How you'll support your work.
+   Ensure your brain gets the support it needs. Maybe start with some coffee, or have some food on hand. Perhaps integrate some light exercise. This may include keeping your desk tidy to avoid distraction.
+   To maximize success, support your efforts to go deep. Systematize this support, so you don't waste mental energy figuring out what you need every time.
 
 *** Highlights
 **** Page 99
