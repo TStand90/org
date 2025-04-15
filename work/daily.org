@@ -78,3 +78,10 @@ SCHEDULED: <2025-04-14 Mon 15:00-17:00>
 - Note taken on [2025-04-14 Mon 09:04] \\
   I may need to do this with or without Kian. I can't wait much longer.
 ** [X] Take the Primary On-Call shift for the night
+
+* [0/3] <2025-04-15 Tue>
+** [ ] See if we can fix the ~flask-login~ issues
+** [ ] [[https://github.com/hellowisp/secure.hellowisp.com/pull/5732][WISPENG-1476]]: Removes authorizations validator in AddProposedCartRequest
+- Note taken on [2025-04-14 Mon 09:03] \\
+  Need to manually test this to make sure I didn't break the whole damn feature.
+** [ ] Study
