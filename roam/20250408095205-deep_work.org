@@ -127,8 +127,25 @@ There is no one /correct/ deep work ritual. It depends on the person and the pro
    The relevant lead measure for deep work is: /time spent in a state of deep work dedicated toward your wildly important goal./
 
 3. Keep a Compelling Scoreboard
+   Keep score of how many hours of deep work you do each day. This is a personal scoreboard of your lead measure (hours of deep work).
+   #+BEGIN_QUOTE
+"People play differently when they're keeping score."
+- 4DX
+   #+END_QUOTE
 
 4. Create a Cadence of Accountability
+   Review your "scoreboard", celebrate good weeks, and try to understand what happened during bad weeks. Adjust as necessary to get even more deep work done each week.
+
+*** Be lazy
+You need freedom from professional responsibility each day in order to be at your best. Try not to think about or engage in work during off hours. That way, you can focus more during actual work time.
+   #+BEGIN_QUOTE
+At the end of the workday, shut down your consideration of work issues until the next morning - no after-dinner e-mail check, no mental replays of conversations, and no scheming about how you'll handle an upcoming challenge; shut down work thinking completely. If you need more time, then extend your workday, but once you shut down, your mind must be left free to encounter Kreider's buttercups, skink bugs, and stars.
+   #+END_QUOTE
+
+Here are some reasons for the value of downtime.
+
+1. Downtime Aids Insights
+2.
 
 *** Highlights
 **** Page 99
