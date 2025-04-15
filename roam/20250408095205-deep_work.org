@@ -105,6 +105,31 @@ There is no one /correct/ deep work ritual. It depends on the person and the pro
    Ensure your brain gets the support it needs. Maybe start with some coffee, or have some food on hand. Perhaps integrate some light exercise. This may include keeping your desk tidy to avoid distraction.
    To maximize success, support your efforts to go deep. Systematize this support, so you don't waste mental energy figuring out what you need every time.
 
+*** The four disciplines framework (4DX)
+1. Focus on the Wildly Important
+   Execution should be aimed at a small number of "wildly important goals."
+
+   #+BEGIN_QUOTE
+"The more you try to do, the less you actually accomplish."
+- The 4 Disciplines of Execution
+   #+END_QUOTE
+
+   #+BEGIN_QUOTE
+"If you want to win the war for attention, don't try to say 'no' to the trivial distractions you find on the information smorgasbord; try to say 'yes' to the subject that arouses a terrifying longing, and let the terrifying longing crowd out everything else."
+- David Brooks, The Art of Focus (2014)
+   #+END_QUOTE
+
+2. Act on the Lead Measures
+   There are two types of metrics when measuring success: _lag_ measures and _lead_ measures.
+   - Lag Measures: Describe the thing you're ultimately trying to improve. Example: customer satisfaction scores.
+   - Lead Measures: Measure the new behaviors that will drive success on the lag measures. Example: Number of free samples given to customers.
+
+   The relevant lead measure for deep work is: /time spent in a state of deep work dedicated toward your wildly important goal./
+
+3. Keep a Compelling Scoreboard
+
+4. Create a Cadence of Accountability
+
 *** Highlights
 **** Page 99
 #+BEGIN_QUOTE
@@ -120,6 +145,22 @@ You have a finite amount of willpower that becomes depleted as you use it.
 #+BEGIN_QUOTE
 [Great creative minds] think like artists but work like accountants.
 #+END_QUOTE
+
+**** Page 122
+#+BEGIN_QUOTE
+... the grand gesture. The concept is simple: By leveraging a radical change to your normal environment, coupled perhaps with a significant investment of effort or money, all dedicated toward supporting a deep work task, you increase the perceived importance of the task.
+#+END_QUOTE
+
+**** Page 132
+#+BEGIN_QUOTE
+We can, therefore, still dismiss the depth-destroying open office concept without dismissing the innovation-producing theory of serendipitous creativity. The key is to maintain both in a hub-and-spoke-style arrangement: Expose yourself to ideas in hubs on a regular basis, but maintain a spoke in which to work deeply on what you encounter.
+#+END_QUOTE
+
+**** Page 133
+#+BEGIN_QUOTE
+This back-and-forth represents a collaborative form of deep work (common in academic circles) that leverages what I call the whiteboard effect. For some types of problems, working with someone else at the proverbial shared whiteboard can push you deeper than if you were working alone. The presence of the other party waiting for your next insight - be it someone physically in the same room or collaborating with you virtually - can short-circuit the natual instinct to avoid depth.
+#+END_QUOTE
+
 
 ** Rule #2: Embrace Boredom
 ** Rule #3: Quit Social Media
