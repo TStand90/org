@@ -61,20 +61,20 @@ SCHEDULED: <2025-04-09 Wed 13:30-16:00>
 ** [X] Study
 SCHEDULED: <2025-04-09 Wed 16:00-17:00>
 
-* <2025-04-14 Mon>
-** [-] Test token expiration for Flask 2.1 PR
+* [100%]<2025-04-14 Mon>
+** [X] Test token expiration for Flask 2.1 PR
 SCHEDULED: <2025-04-14 Mon 10:00-10:30>
-** [ ] [[https://hellowisp.atlassian.net/browse/WISPENG-1480][WISPENG-1480]]: Backfill 'erx_refills' data from the 'dosespot_rx' data
+** [X] [[https://hellowisp.atlassian.net/browse/WISPENG-1480][WISPENG-1480]]: Backfill 'erx_refills' data from the 'dosespot_rx' data
 SCHEDULED: <2025-04-14 Mon 10:45-12:00>
-** [ ] [[https://github.com/hellowisp/secure.hellowisp.com/pull/5732][WISPENG-1476]]: Removes authorizations validator in AddProposedCartRequest
+** NO [[https://github.com/hellowisp/secure.hellowisp.com/pull/5732][WISPENG-1476]]: Removes authorizations validator in AddProposedCartRequest
 - Note taken on [2025-04-14 Mon 09:03] \\
   Need to manually test this to make sure I didn't break the whole damn feature.
-** [ ] Study
+** NO Study
 SCHEDULED: <2025-04-14 Mon 13:30-14:45>
-** [ ] Deploy [[https://github.com/hellowisp/secure.hellowisp.com/pull/5607][Flask 2.1 PR]]
+** [X] Deploy [[https://github.com/hellowisp/secure.hellowisp.com/pull/5607][Flask 2.1 PR]]
 SCHEDULED: <2025-04-14 Mon 15:00-17:00>
 - Note taken on [2025-04-14 Mon 09:07] \\
   Might want to take the primary on-call shift as well, just in case.
 - Note taken on [2025-04-14 Mon 09:04] \\
   I may need to do this with or without Kian. I can't wait much longer.
-** [ ] Take the Primary On-Call shift for the night
+** [X] Take the Primary On-Call shift for the night
