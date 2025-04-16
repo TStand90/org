@@ -79,9 +79,18 @@ SCHEDULED: <2025-04-14 Mon 15:00-17:00>
   I may need to do this with or without Kian. I can't wait much longer.
 ** [X] Take the Primary On-Call shift for the night
 
-* [0/3] <2025-04-15 Tue>
-** [ ] See if we can fix the ~flask-login~ issues
-** [ ] [[https://github.com/hellowisp/secure.hellowisp.com/pull/5732][WISPENG-1476]]: Removes authorizations validator in AddProposedCartRequest
+* [4/4] <2025-04-15 Tue>
+** [X] See if we can fix the ~flask-login~ issues
+** NO [[https://github.com/hellowisp/secure.hellowisp.com/pull/5732][WISPENG-1476]]: Removes authorizations validator in AddProposedCartRequest
 - Note taken on [2025-04-14 Mon 09:03] \\
   Need to manually test this to make sure I didn't break the whole damn feature.
+** NO Study
+** [X] WISPENG-1490: Add 'erx_prescription_id' column
+
+* <2025-04-16 Wed>
+** [ ] Eng working group meeting
+SCHEDULED: <2025-04-16 Wed 11:00-11:50>
 ** [ ] Study
+SCHEDULED: <2025-04-16 Wed 14:00-15:30>
+** [ ] Talk to Kian about the ~flask-login~ issues
+SCHEDULED: <2025-04-16 Wed 15:30-15:45>
