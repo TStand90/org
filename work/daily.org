@@ -88,13 +88,17 @@ SCHEDULED: <2025-04-14 Mon 15:00-17:00>
 ** [X] WISPENG-1490: Add 'erx_prescription_id' column
 
 * <2025-04-16 Wed>
-** [ ] DoseSpot decoupling work
+** [X] DoseSpot decoupling work
 SCHEDULED: <2025-04-16 Wed 09:00-10:50>
-** [ ] Eng working group meeting
+** NO Eng working group meeting
 SCHEDULED: <2025-04-16 Wed 11:00-11:50>
-** [ ] Dosespot decoupling work part 2
+- Note taken on [2025-04-16 Wed 11:36] \\
+  Cancelled
+** [-] Dosespot decoupling work part 2
 SCHEDULED: <2025-04-16 Wed 12:30-13:50>
 ** [ ] Study
 SCHEDULED: <2025-04-16 Wed 14:00-15:30>
 ** [ ] Talk to Kian about the ~flask-login~ issues
 SCHEDULED: <2025-04-16 Wed 15:30-15:45>
+** [ ] DoseSpot decoupling work part 3
+SCHEDULED: <2025-04-16 Wed 16:00-17:30>

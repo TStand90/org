@@ -20,3 +20,9 @@ That would allow us to "read" something like ~refills~ like this:
   No need to do this one, we can remove it since it's not used.
 *** [ ] erx_prescription_id
 *** [ ] erx_refills
+
+* Notes
+- ~prescription.html~ uses a lot of the DoseSpot specific JSON data. The ~rx~ in that file is indeed of the ~models.Rx~ variety. Account for everything in that file!
+  To see ~prescription.html~, visit http://localhost:5000/admin/patient/1077181/prescription/
+  The class is ~PatientPrescriptionsView~
+  Pay attention to the ~v2~ section.
