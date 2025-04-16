@@ -145,7 +145,17 @@ At the end of the workday, shut down your consideration of work issues until the
 Here are some reasons for the value of downtime.
 
 1. Downtime Aids Insights
-2.
+2. Downtime Helps Recharge the Energy Needed to Work Deeply
+3. The Work That Evening Downtime Replaces Is Usually Not That Important
+
+*** Have a "shutdown" ritual
+Review every incomplete item, make a list, and trust that you can pick it back up tomorrow.
+
+A ritual can help you transition from "working" to "not working". Even saying something out loud at the end, while sounding silly, can help.
+
+Simply stopping your work right at 5 PM isn't enough to take your mind off things. Make sure you take note of everything and ritualize the process.
+
+Doing this will take extra time at the end of each day, but it's worth it to ensure you will not be thinking about work during off hours.
 
 *** Highlights
 **** Page 99
@@ -178,6 +188,10 @@ We can, therefore, still dismiss the depth-destroying open office concept withou
 This back-and-forth represents a collaborative form of deep work (common in academic circles) that leverages what I call the whiteboard effect. For some types of problems, working with someone else at the proverbial shared whiteboard can push you deeper than if you were working alone. The presence of the other party waiting for your next insight - be it someone physically in the same room or collaborating with you virtually - can short-circuit the natual instinct to avoid depth.
 #+END_QUOTE
 
+**** Page 154
+#+BEGIN_QUOTE
+When you work, work hard. When you're done, be done.
+#+END_QUOTE
 
 ** Rule #2: Embrace Boredom
 ** Rule #3: Quit Social Media
