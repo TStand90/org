@@ -94,11 +94,32 @@ SCHEDULED: <2025-04-16 Wed 09:00-10:50>
 SCHEDULED: <2025-04-16 Wed 11:00-11:50>
 - Note taken on [2025-04-16 Wed 11:36] \\
   Cancelled
-** [-] Dosespot decoupling work part 2
+** [X] Dosespot decoupling work part 2
 SCHEDULED: <2025-04-16 Wed 12:30-13:50>
 ** [ ] Study
 SCHEDULED: <2025-04-16 Wed 14:00-15:30>
-** [ ] Talk to Kian about the ~flask-login~ issues
+** [X] Talk to Kian about the ~flask-login~ issues
 SCHEDULED: <2025-04-16 Wed 15:30-15:45>
 ** [ ] DoseSpot decoupling work part 3
 SCHEDULED: <2025-04-16 Wed 16:00-17:30>
+
+* <2025-04-17 Thu>
+** [X] Talk to Tim about tests for the Flask session
+- Note taken on [2025-04-16 Wed 16:19] \\
+  The tests no longer work in our ~pytest~ test suite due to changes in ~flask-login~. Can we do some sort of end-to-end test to test the same functionality?
+** [X] DoseSpot decoupling work
+** NO Study
+** NO Try to merge the markupsafe PR
+
+* <2025-04-18 Fri>
+** [ ] DoseSpot decoupling work
+** [ ] Study
+
+* <2025-04-21 Mon>
+** [ ] Study
+** [ ] Merge [[https://github.com/hellowisp/secure.hellowisp.com/pull/5545][markupsafe PR]]
+** [ ] DoseSpot decoupling work
+** [ ] Canvas kickoff meeting
+SCHEDULED: <2025-04-21 Mon 12:30-13:30>
+- Note taken on [2025-04-18 Fri 09:19] \\
+  This is on Zoom. I probably need to download a Zoom update. Remember to try opening the meeting early!
