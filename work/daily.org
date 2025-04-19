@@ -112,12 +112,14 @@ SCHEDULED: <2025-04-16 Wed 16:00-17:30>
 ** NO Try to merge the markupsafe PR
 
 * <2025-04-18 Fri>
-** [ ] DoseSpot decoupling work
-** [ ] Study
+** [X] DoseSpot decoupling work
+** NO Study
 
 * <2025-04-21 Mon>
 ** [ ] Study
 ** [ ] Merge [[https://github.com/hellowisp/secure.hellowisp.com/pull/5545][markupsafe PR]]
+** [ ] Merge [[https://github.com/hellowisp/secure.hellowisp.com/pull/5715][WISPENG-1438]]: Adds erx_source column to Rx model
+** [ ] Write tests for [[https://github.com/hellowisp/secure.hellowisp.com/pull/5768][WISPENG-1480]]
 ** [ ] DoseSpot decoupling work
 ** [ ] Canvas kickoff meeting
 SCHEDULED: <2025-04-21 Mon 12:30-13:30>
