@@ -116,12 +116,33 @@ SCHEDULED: <2025-04-16 Wed 16:00-17:30>
 ** NO Study
 
 * <2025-04-21 Mon>
-** [ ] Study
-** [ ] Merge [[https://github.com/hellowisp/secure.hellowisp.com/pull/5545][markupsafe PR]]
-** [ ] Merge [[https://github.com/hellowisp/secure.hellowisp.com/pull/5715][WISPENG-1438]]: Adds erx_source column to Rx model
-** [ ] Write tests for [[https://github.com/hellowisp/secure.hellowisp.com/pull/5768][WISPENG-1480]]
-** [ ] DoseSpot decoupling work
-** [ ] Canvas kickoff meeting
+** [X] Study
+** [X] Merge [[https://github.com/hellowisp/secure.hellowisp.com/pull/5545][markupsafe PR]]
+** [X] Merge [[https://github.com/hellowisp/secure.hellowisp.com/pull/5715][WISPENG-1438]]: Adds erx_source column to Rx model
+** [X] Write tests for [[https://github.com/hellowisp/secure.hellowisp.com/pull/5768][WISPENG-1480]]
+** [X] DoseSpot decoupling work
+** [X] Canvas kickoff meeting
 SCHEDULED: <2025-04-21 Mon 12:30-13:30>
 - Note taken on [2025-04-18 Fri 09:19] \\
   This is on Zoom. I probably need to download a Zoom update. Remember to try opening the meeting early!
+
+* <2025-04-22 Tue>
+** [X] Study
+** [X] Merge [[https://github.com/hellowisp/secure.hellowisp.com/pull/5763][WISPENG-1507]]: Adds erx_refills when Rx model is created
+** [X] DoseSpot V1 test cases for [[https://github.com/hellowisp/secure.hellowisp.com/pull/5768][WISPENG-1480]]
+** [X] Try to use partition in [[https://github.com/hellowisp/secure.hellowisp.com/pull/5768][WISPENG-1480]]
+** NO Merge [[https://github.com/hellowisp/secure.hellowisp.com/pull/5768][WISPENG-1480]]
+** [X] DoseSpot decoupling work
+** NO Create PR to pin Werkzeug
+- Note taken on [2025-04-22 Tue 15:09] \\
+  This may not be necessary. I'm trying to determine if it is with a ~pipenv update~ but I can't get it to run.
+
+* <2025-04-23 Wed>
+** [ ] Study
+** [ ] Merge [[https://github.com/hellowisp/secure.hellowisp.com/pull/5768][WISPENG-1480]]
+** [ ] DoseSpot decoupling work
+** [?] Merge PR to set timezone to UTC in test suite
+** [ ] Read book for book club
+SCHEDULED: <2025-04-23 Wed 09:10-11:00>
+** [ ] Book club
+SCHEDULED: <2025-04-23 Wed 11:00-12:00>
