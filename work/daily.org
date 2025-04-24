@@ -138,11 +138,30 @@ SCHEDULED: <2025-04-21 Mon 12:30-13:30>
   This may not be necessary. I'm trying to determine if it is with a ~pipenv update~ but I can't get it to run.
 
 * <2025-04-23 Wed>
-** [ ] Study
-** [ ] Merge [[https://github.com/hellowisp/secure.hellowisp.com/pull/5768][WISPENG-1480]]
-** [ ] DoseSpot decoupling work
-** [?] Merge PR to set timezone to UTC in test suite
-** [ ] Read book for book club
+** [X] Merge PR to set timezone to UTC in test suite
+** [X] Merge [[https://github.com/hellowisp/secure.hellowisp.com/pull/5732][WISPENG-1476]]
+** [X] Read book for book club
 SCHEDULED: <2025-04-23 Wed 09:10-11:00>
-** [ ] Book club
+** [X] Book club
 SCHEDULED: <2025-04-23 Wed 11:00-12:00>
+** [X] Lunch
+SCHEDULED: <2025-04-23 Wed 12:00-12:30>
+** NO Study
+** [4/4] DoseSpot decoupling work
+*** [X] Merge [[https://github.com/hellowisp/secure.hellowisp.com/pull/5768][WISPENG-1480]]
+*** NO Run [[https://github.com/hellowisp/secure.hellowisp.com/pull/5768][WISPENG-1480]] in production
+*** [X] [[https://hellowisp.atlassian.net/browse/WISPENG-1527][WISPENG-1527]]: Backfill for erx_prescription_id
+*** NO [[https://github.com/hellowisp/secure.hellowisp.com/pull/5766][WISPENG-1509]]: Fills in erx_prescription_id when creating Rxs
+
+* <2025-04-24 Thu>
+** [ ] Study
+** [ ] Eng happy 3/4 hour
+SCHEDULED: <2025-04-24 Thu 12:00-12:45>
+** [ ] Lunch
+SCHEDULED: <2025-04-24 Thu 12:00-12:30>
+** [0/3] DoseSpot decoupling work
+*** [ ] Run [[https://github.com/hellowisp/secure.hellowisp.com/pull/5768][WISPENG-1480]] in production
+*** [ ] [[https://hellowisp.atlassian.net/browse/WISPENG-1527][WISPENG-1527]]: Backfill for erx_prescription_id
+- Note taken on [2025-04-23 Wed 17:48] \\
+  Open this up for reviews
+*** [ ] [[https://github.com/hellowisp/secure.hellowisp.com/pull/5766][WISPENG-1509]]: Fills in erx_prescription_id when creating Rxs

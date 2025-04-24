@@ -56,3 +56,12 @@ The code that is closest to the business. It is the most likely to change, and i
 *** Not everything has to be an object
 *** This is the time to apply your best OO design principles
 *** You'll also want to think about consistency boundaries and aggreates
+
+* Chapter 3 - A Brief Interlude: On Coupling and Abstractions
+** Edge to Edge testing
+These are sort of like end-to-end tests, but they fake things like file I/O
+*** Test induced design damage
+*** Why not just patch it out?
+1. Mocking it out does not improve the design
+2. Mocking it out couples you to the implementation
+3. Overuse of mocks leads to complicated test suites that do not explain the code
