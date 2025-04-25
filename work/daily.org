@@ -154,14 +154,47 @@ SCHEDULED: <2025-04-23 Wed 12:00-12:30>
 *** NO [[https://github.com/hellowisp/secure.hellowisp.com/pull/5766][WISPENG-1509]]: Fills in erx_prescription_id when creating Rxs
 
 * <2025-04-24 Thu>
-** [ ] Study
-** [ ] Eng happy 3/4 hour
+** NO Study
+** NO Eng happy 3/4 hour
 SCHEDULED: <2025-04-24 Thu 12:00-12:45>
-** [ ] Lunch
+- Note taken on [2025-04-24 Thu 12:42] \\
+  Cancelled
+** [X] Lunch
 SCHEDULED: <2025-04-24 Thu 12:00-12:30>
-** [0/3] DoseSpot decoupling work
-*** [ ] Run [[https://github.com/hellowisp/secure.hellowisp.com/pull/5768][WISPENG-1480]] in production
-*** [ ] [[https://hellowisp.atlassian.net/browse/WISPENG-1527][WISPENG-1527]]: Backfill for erx_prescription_id
-- Note taken on [2025-04-23 Wed 17:48] \\
-  Open this up for reviews
-*** [ ] [[https://github.com/hellowisp/secure.hellowisp.com/pull/5766][WISPENG-1509]]: Fills in erx_prescription_id when creating Rxs
+** [7/7] DoseSpot decoupling work
+*** NO Run [[https://github.com/hellowisp/secure.hellowisp.com/pull/5768][WISPENG-1480]] in production
+- Note taken on [2025-04-24 Thu 13:06] \\
+  Not going to run this today, as it's Thursday afternoon. Don't want to risk locking up the DB or something.
+*** [X] [[https://hellowisp.atlassian.net/browse/WISPENG-1527][WISPENG-1527]]: Backfill for erx_prescription_id
+*** [X] [[https://github.com/hellowisp/secure.hellowisp.com/pull/5766][WISPENG-1509]]: Fills in erx_prescription_id when creating Rxs
+- Note taken on [2025-04-24 Thu 16:22] \\
+  In review.
+*** [X] [[https://hellowisp.atlassian.net/browse/WISPENG-1496][WISPENG-1496]]: Add column 'erx_display_name'
+*** [X] [[https://hellowisp.atlassian.net/browse/WISPENG-1497][WISPENG-1497]]: Add column 'erx_written_date'
+*** [X] [[https://hellowisp.atlassian.net/browse/WISPENG-1533][WISPENG-1533]]: Backfill 'erx_display_name' data from 'dosespot_rx'
+*** [X] [[https://hellowisp.atlassian.net/browse/WISPENG-1534][WISPENG-1534]]: Backfill 'erx_written_date' data from 'dosespot_rx'
+- Note taken on [2025-04-24 Thu 15:02] \\
+  Up for review.
+
+* <2025-04-25 Fri>
+** [ ] Study (extra?)
+** [X] Lunch
+SCHEDULED: <2025-04-25 Fri 12:00-12:30>
+** [X] DoseSpot decoupling work
+*** [X] [[https://hellowisp.atlassian.net/browse/WISPENG-1510][WISPENG-1510]]: Write data to 'erx_display_name'
+- Note taken on [2025-04-25 Fri 11:06] \\
+  Branched off of WISPENG-1509, will open up for reviews once 1509 is merged.
+*** [X] [[https://hellowisp.atlassian.net/browse/WISPENG-1511][WISPENG-1511]]: Write data to 'erx_written_datetime'
+- Note taken on [2025-04-25 Fri 14:36] \\
+  In review
+
+* <2025-04-28 Mon>
+** [ ] Figure out how the revert of Seva's PR affected my work.
+** [ ] Product & Engineering Team Retro
+SCHEDULED: <2025-04-28 Mon 11:00-11:50>
+Monday, April 28 · 11:00 – 11:50am
+Time zone: America/Los_Angeles
+Google Meet joining info
+Video call link: https://meet.google.com/sqt-dnfn-xey
+Or dial: ‪(US) +1 806-410-2580‬ PIN: ‪352 573 158‬#
+More phone numbers: https://tel.meet/sqt-dnfn-xey?pin=5312584535494
