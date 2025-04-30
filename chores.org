@@ -4,19 +4,21 @@
 * Cats
 ** De-shedding
 *** [ ] De-shed Andromeda
-SCHEDULED: <2025-03-11 Tue .+1w>
+SCHEDULED: <2025-05-07 Wed .+1w>
 :PROPERTIES:
-:LAST_REPEAT: [2025-03-04 Tue 11:42]
+:LAST_REPEAT: [2025-04-30 Wed 11:57]
 :END:
+- State "[X]"        from "[ ]"        [2025-04-30 Wed 11:57]
 - State "[X]"        from "[ ]"        [2025-03-04 Tue 11:42]
 - State "[X]"        from "[ ]"        [2025-02-19 Wed 18:09]
 - State "[X]"        from "[ ]"        [2025-01-29 Wed 12:26]
 - State "[X]"        from "[ ]"        [2025-01-11 Sat 23:59]
 *** [ ] De-shed Orion
-SCHEDULED: <2025-03-12 Wed .+1w>
+SCHEDULED: <2025-05-07 Wed .+1w>
 :PROPERTIES:
-:LAST_REPEAT: [2025-03-05 Wed 13:27]
+:LAST_REPEAT: [2025-04-30 Wed 11:57]
 :END:
+- State "[X]"        from "[ ]"        [2025-04-30 Wed 11:57]
 - State "[X]"        from "[ ]"        [2025-03-05 Wed 13:27]
 - State "[X]"        from "[ ]"        [2025-03-04 Tue 11:42]
 - State "[X]"        from "[ ]"        [2025-02-18 Tue 11:16]
@@ -29,10 +31,11 @@ SCHEDULED: <2025-03-12 Wed .+1w>
 - State "[X]"        from "[ ]"        [2024-12-18 Wed 14:44]
 ** Brushing
 *** [ ] Brush Andromeda
-SCHEDULED: <2025-02-12 Wed .+1w>
+SCHEDULED: <2025-05-07 Wed .+1w>
 :PROPERTIES:
-:LAST_REPEAT: [2025-02-05 Wed 14:20]
+:LAST_REPEAT: [2025-04-30 Wed 11:57]
 :END:
+- State "[X]"        from "[ ]"        [2025-04-30 Wed 11:57]
 - State "[X]"        from "[ ]"        [2025-02-05 Wed 14:20]
 *** [ ] Brush Orion
 SCHEDULED: <2025-02-20 Thu .+2d>
