@@ -211,3 +211,9 @@ SCHEDULED: <2025-04-29 Tue 12:30-14:00>
 ** NO Study
 SCHEDULED: <2025-04-29 Tue 14:00-15:30>
 ** [X] Add pharmacy_notes column to Rx table
+
+* <2025-04-30 Wed>
+** [ ] Merge WISPENG-1510
+** [ ] Get WISPENG-1554, 1555, and 1556 reviewed and merged
+*** [ ] Maybe run 1556 too since it sounds like Avi needs it
+** [ ] Continue work on WISPENG-1550: Service to look up by NCPDP ID
