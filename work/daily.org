@@ -189,8 +189,10 @@ SCHEDULED: <2025-04-25 Fri 12:00-12:30>
   In review
 
 * <2025-04-28 Mon>
-** [ ] Figure out how the revert of Seva's PR affected my work.
-** [ ] Product & Engineering Team Retro
+** [X] Figure out how the revert of Seva's PR affected my work.
+- Note taken on [2025-04-28 Mon 12:01] \\
+  Looks like he's putting his work back in. Once he has, I should be able to proceed.
+** [X] Product & Engineering Team Retro
 SCHEDULED: <2025-04-28 Mon 11:00-11:50>
 Monday, April 28 · 11:00 – 11:50am
 Time zone: America/Los_Angeles
@@ -198,3 +200,14 @@ Google Meet joining info
 Video call link: https://meet.google.com/sqt-dnfn-xey
 Or dial: ‪(US) +1 806-410-2580‬ PIN: ‪352 573 158‬#
 More phone numbers: https://tel.meet/sqt-dnfn-xey?pin=5312584535494
+
+** [X] Look into decoupling Pharmacies from DoseSpot
+
+* <2025-04-29 Tue>
+** [X] Continue writing a service method to find a Pharmacy by NCPDP ID
+SCHEDULED: <2025-04-29 Tue 10:30-12:00>
+** [X] Continue work on backfills for Canvas
+SCHEDULED: <2025-04-29 Tue 12:30-14:00>
+** NO Study
+SCHEDULED: <2025-04-29 Tue 14:00-15:30>
+** [X] Add pharmacy_notes column to Rx table
