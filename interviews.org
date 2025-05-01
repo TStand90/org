@@ -5,11 +5,15 @@
 - [[https://recruiterflow.com/candidate/suggested-jobs/cdb220c3][Worth Search dashboard]]
 
 * Ongoing
-** [[https://trunk.io/][Trunk.io]]
-Status: Application Submitted <2025-01-07 Tue>
-Job title: Senior Software Engineer (Platform)
 
 * Archived
+** Freshpaint
+Status: Rejected at resume submission
+Application Submitted: <2025-04-26 Sat>
+** [[https://trunk.io/][Trunk.io]]
+Status: Ghosted
+Application Submitted <2025-01-07 Tue>
+Job title: Senior Software Engineer (Platform)
 ** [[https://www.faynutrition.com/][Fay Nutrition]]
 - Note taken on [2025-01-07 Tue 17:32] \\
   Rejected at the resume submission, via recruiter

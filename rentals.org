@@ -2,36 +2,7 @@
 #+description: List and status of rental properties we are looking into
 
 * Not contacted
-** Dublin
-*** [[https://www.zillow.com/homedetails/4849-Mangrove-Dr-Dublin-CA-94568/2093057097_zpid/][4849 Mangrove Dr]]
-
-** Pleasanton
-*** [[https://www.zillow.com/homedetails/7201-Tulipwood-Cir-Pleasanton-CA-94588/25066908_zpid/?][7201 Tulipwood Cir]]
 
 * Pending
-** Danville
-*** [[https://www.zillow.com/homedetails/756-Old-Creek-Rd-Danville-CA-94526/18454032_zpid/][756 Old Creek Rd]]
-Not available Monday. Offered a showing on the afternoon of the 11th or 12th.
-
-** Pleasanton
-*** [[https://www.zillow.com/homedetails/3408-Whitehall-Ct-Pleasanton-CA-94588/25075087_zpid/][3408 Whitehall Ct]]
-Open house Sunday 2-3.
 
 * Scheduled
-** Dublin
-*** [[https://www.zillow.com/homedetails/5429-Melissa-Ln-Dublin-CA-94568/438558722_zpid/][5429 Melissa Ln]]
-Scheduled Monday from 9 to 9:30 AM
-
-*** [[https://www.zillow.com/homedetails/5659-Melodia-Cir-Dublin-CA-94568/241573549_zpid/][5659 Melodia Cir]]
-10:00 AM Monday
-
-** San Ramon
-*** [[https://www.zillow.com/homedetails/980-Springview-Cir-San-Ramon-CA-94583/18450579_zpid/][980 Springview Cir]]
-12:45 PM Monday
-
-*** [[https://www.zillow.com/homedetails/405-Ryan-Ter-San-Ramon-CA-94583/241642167_zpid/][405 Ryan Ter]]
-Scheduled 3:30 PM Monday
-
-** Pleasanton
-*** [[https://www.zillow.com/homedetails/5242-Ridgevale-Way-Pleasanton-CA-94566/25079389_zpid/][5242 Ridgevale Way]]
-10:00 AM to 12:00 PM Monday

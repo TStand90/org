@@ -213,7 +213,16 @@ SCHEDULED: <2025-04-29 Tue 14:00-15:30>
 ** [X] Add pharmacy_notes column to Rx table
 
 * <2025-04-30 Wed>
-** [ ] Merge WISPENG-1510
-** [ ] Get WISPENG-1554, 1555, and 1556 reviewed and merged
-*** [ ] Maybe run 1556 too since it sounds like Avi needs it
+** NO Merge WISPENG-1510
+- Note taken on [2025-04-30 Wed 15:16] \\
+  Waiting for reviews
+** [X] Get WISPENG-1554, 1555, and 1556 reviewed and merged
+*** [X] Maybe run 1556 too since it sounds like Avi needs it
+** NO Continue work on WISPENG-1550: Service to look up by NCPDP ID
+
+* <2025-05-01 Thu>
+** [ ] Proof of concept sync
+SCHEDULED: <2025-05-01 Thu 09:30-10:00>
 ** [ ] Continue work on WISPENG-1550: Service to look up by NCPDP ID
+** [ ] Merge WISPENG-1510
+** [ ] Merge WISPENG-1563: Remove erx_pharmacy_notes backfill script
