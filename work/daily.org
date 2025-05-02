@@ -221,8 +221,11 @@ SCHEDULED: <2025-04-29 Tue 14:00-15:30>
 ** NO Continue work on WISPENG-1550: Service to look up by NCPDP ID
 
 * <2025-05-01 Thu>
-** [ ] Proof of concept sync
+** [X] Proof of concept sync
 SCHEDULED: <2025-05-01 Thu 09:30-10:00>
-** [ ] Continue work on WISPENG-1550: Service to look up by NCPDP ID
-** [ ] Merge WISPENG-1510
-** [ ] Merge WISPENG-1563: Remove erx_pharmacy_notes backfill script
+** NO Continue work on WISPENG-1550: Service to look up by NCPDP ID
+** [X] Merge WISPENG-1510
+** [X] Merge WISPENG-1563: Remove erx_pharmacy_notes backfill script
+** [X] Combine all the e-Rx backfill scripts into one
+** [X] WISPENG-1566: Columns that the data team wants
+** [X] Work on script to get patients into a CSV file.
