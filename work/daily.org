@@ -229,3 +229,10 @@ SCHEDULED: <2025-05-01 Thu 09:30-10:00>
 ** [X] Combine all the e-Rx backfill scripts into one
 ** [X] WISPENG-1566: Columns that the data team wants
 ** [X] Work on script to get patients into a CSV file.
+
+* <2025-05-05 Mon>
+** [ ] Check with Canvas is we can exclude fields in the CSV that we don't fill out
+** [ ] Write tests for the Canvas CSV export
+** [ ] Maybe work on the NCPDP Pharmacy service method?
+** [ ] Work on the combined backfill scripts (write tests, validate it)
+** [ ] Merge PR for all the remaining fields that the data team wants
