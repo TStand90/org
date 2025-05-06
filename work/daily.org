@@ -231,8 +231,23 @@ SCHEDULED: <2025-05-01 Thu 09:30-10:00>
 ** [X] Work on script to get patients into a CSV file.
 
 * <2025-05-05 Mon>
-** [ ] Check with Canvas is we can exclude fields in the CSV that we don't fill out
-** [ ] Write tests for the Canvas CSV export
-** [ ] Maybe work on the NCPDP Pharmacy service method?
-** [ ] Work on the combined backfill scripts (write tests, validate it)
-** [ ] Merge PR for all the remaining fields that the data team wants
+** [X] Check with Canvas is we can exclude fields in the CSV that we don't fill out
+- Note taken on [2025-05-05 Mon 09:19] \\
+  Slack conversation: https://hellowisp.slack.com/archives/C08Q0KH0U9G/p1746456076269389
+** NO Write tests for the Canvas CSV export
+** NO Maybe work on the NCPDP Pharmacy service method?
+- Note taken on [2025-05-05 Mon 17:42] \\
+  I might hold off on this one until we have a clear use case.
+** [X] Work on the combined backfill scripts (write tests, validate it)
+SCHEDULED: <2025-05-05 Mon 10:00-14:00>
+** [X] Merge PR for all the remaining fields that the data team wants
+** [X] [[https://hellowisp.atlassian.net/browse/WISPENG-1574][WISPENG-1574]]: Write data to 'erx_' fields that were added
+- Note taken on [2025-05-05 Mon 16:25] \\
+  Branched off of WISPENG-1511
+
+* <2025-05-06 Tue>
+** [ ] Write tests for the Canvas CSV script
+** [ ] Study
+** [ ] 1-1 with Monica
+SCHEDULED: <2025-05-05 Mon 10:30-11:00>
+** [ ] PR to read data from the new e-Rx columns instead of ~dosespot_rx~
