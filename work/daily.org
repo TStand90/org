@@ -246,8 +246,19 @@ SCHEDULED: <2025-05-05 Mon 10:00-14:00>
   Branched off of WISPENG-1511
 
 * <2025-05-06 Tue>
+** NO Write tests for the Canvas CSV script
+** NO Study
+** [X] Read Chapter 4 of /Cosmic Python/ for book club
+** NO 1-1 with Monica
+SCHEDULED: <2025-05-05 Mon 10:30-11:00>
+- Note taken on [2025-05-06 Tue 09:43] \\
+  Cancelled
+** [X] WISPENG-1575: read data from the new e-Rx columns instead of ~dosespot_rx~
+** [X] Merge WISPENG-1511 (erx_written_datetime write)
+** [X] Merge WISPENG-1574 (the rest of the ~erx_~ fields)
+** [X] Merge WISPENG-1567: backfill_erx_columns script
+
+* <2025-05-07 Wed>
 ** [ ] Write tests for the Canvas CSV script
 ** [ ] Study
-** [ ] 1-1 with Monica
-SCHEDULED: <2025-05-05 Mon 10:30-11:00>
-** [ ] PR to read data from the new e-Rx columns instead of ~dosespot_rx~
+** [ ] WISPENG-1575: read data from the new e-Rx columns instead of ~dosespot_rx~
