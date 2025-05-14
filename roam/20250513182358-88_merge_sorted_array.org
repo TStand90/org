@@ -1,0 +1,36 @@
+:PROPERTIES:
+:ID:       ecccf3fc-c870-4198-95fa-eac41870f8b9
+:END:
+#+title: 88. Merge Sorted Array
+#+filetags: :Leetcode:
+
+* Solution
+#+BEGIN_SRC python
+class Solution:
+    def merge(self, nums1: List[int], m: int, nums2: List[int], n: int) -> None:
+        """
+        Do not return anything, modify nums1 in-place instead.
+        """
+        sorted_arr = []
+
+        nums1_index = 0
+        nums2_index = 0
+
+        while nums1_index < m and nums2_index < n:
+            if nums1[nums1_index] <= nums2[nums2_index]:
+                sorted_arr.append(nums1[nums1_index])
+                nums1_index += 1
+            else:
+                sorted_arr.append(nums2[nums2_index])
+                nums2_index += 1
+
+        while (nums1_index < m):
+            sorted_arr.append(nums1[nums1_index])
+            nums1_index += 1
+        while (nums2_index < n):
+            sorted_arr.append(nums2[nums2_index])
+            nums2_index += 1
+
+        for i in range(len(nums1)):
+            nums1[i] = sorted_arr[i]
+#+END_SRC

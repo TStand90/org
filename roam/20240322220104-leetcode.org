@@ -10,6 +10,7 @@
 | [[id:fcf08021-5cc7-46a1-a1ac-5b892bcfb440][9. Palindrome Number]]                 | Easy       | [[id:721cecef-36a5-4fe7-9cf0-b885d92dc690][Array]]       |        |        | DONE |            |
 | [[id:e55e0a75-958e-4bcc-a3d1-79f2b41e0a2c][13. Roman Integer]]                    | Easy       | Iteration   | DONE   | DONE   |      |            |
 | [[id:ca5fcfc1-6803-4e3c-a87e-19591f0c9d5a][49. Group Anagrams]]                   | Medium     | [[id:26fcbf3c-dee7-40a8-92e3-2fa7079c97e4][HashMap]]     | DONE   | DONE   |      |            |
+| [[id:ecccf3fc-c870-4198-95fa-eac41870f8b9][88. Merge Sorted Array]]               | Easy       | [[id:c4afc7cd-66e2-46de-8499-fbffd3db543a][Merge Sort]]  | DONE   | DONE   |      |            |
 | [[id:8b026d83-ef9e-4a18-ad4a-bd263b8863b3][143. Reorder List]]                    | Medium     | [[id:d0b02bbc-6d2e-4905-aba3-a3cbe3e97b20][Linked List]] | DONE   | DONE   |      |            |
 | [[id:e0184029-0c62-46b4-9e28-8666268df8fb][146. LRU Cache]]                       | Medium     | [[id:26fcbf3c-dee7-40a8-92e3-2fa7079c97e4][HashMap]]     |        |        |      |            |
 | [[id:ffbf62bc-7687-46d7-ab16-49818005fdfe][169. Majority Element]]                | Easy       | [[id:721cecef-36a5-4fe7-9cf0-b885d92dc690][Array]]       | DONE   | DONE   |      |            |
