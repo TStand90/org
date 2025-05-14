@@ -1,0 +1,10 @@
+:PROPERTIES:
+:ID:       eacf8647-2816-47d1-a560-d881fe11f9b2
+:END:
+#+title: 182. Duplicate Emails
+#+filetags: :Leetcode:
+
+* Solution
+#+BEGIN_SRC sql
+SELECT email As Email from Person GROUP BY email HAVING COUNT(email) > 1;
+#+END_SRC
