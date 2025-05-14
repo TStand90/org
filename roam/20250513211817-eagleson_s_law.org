@@ -1,0 +1,8 @@
+:PROPERTIES:
+:ID:       a447749f-5d34-4d00-91b6-819a7b9a63af
+:END:
+#+title: Eagleson's Law
+
+#+BEGIN_QUOTE
+Any code of your own that you haven't looked at for six or more months might as well have been written by someone else.
+#+END_QUOTE
