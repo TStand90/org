@@ -90,10 +90,11 @@ SCHEDULED: <2025-05-18 Sun .+5d/7d>
 - State "[X]"        from "[ ]"        [2024-11-17 Sun 18:03]
 :STYLE: habit
 ** [ ] Fitness Boxing
-SCHEDULED: <2025-04-23 Wed .+6d/7d>
+SCHEDULED: <2025-05-20 Tue .+6d/7d>
 :PROPERTIES:
-:LAST_REPEAT: [2025-04-17 Thu 23:59]
+:LAST_REPEAT: [2025-05-14 Wed 14:54]
 :END:
+- State "[X]"        from "[ ]"        [2025-05-14 Wed 14:54]
 - State "[X]"        from "[ ]"        [2025-04-17 Thu 23:59]
 - State "[X]"        from "[ ]"        [2025-03-30 Sun 23:59]
 - State "[X]"        from "[ ]"        [2025-01-03 Fri 11:29]
