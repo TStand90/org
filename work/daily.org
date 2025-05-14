@@ -302,7 +302,7 @@ SCHEDULED: <2025-05-05 Mon 10:30-11:00>
 ** [X] Finish work on PR to get Pharmacies by NCPDPID (WISPENG-1550)
 SCHEDULED: <2025-05-13 Tue 10:45-12:00>
 ** [X] Check WISPENG-1550 one last time, then put up for review.
-** [-] Study
+** [X] Study
 SCHEDULED: <2025-05-13 Tue 14:30-15:30>
 
 * <2025-05-14 Wed>
