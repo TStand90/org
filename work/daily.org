@@ -279,10 +279,32 @@ SCHEDULED: <2025-05-05 Mon 10:30-11:00>
 ** [X] Look into breaking up WISPENG-1575
 
 * <2025-05-09 Fri>
-** [ ] Continue breaking up WISPENG-1575
-** [ ] Set WISPENG-1491 as ready for review
+** [X] Continue breaking up WISPENG-1575
+** [X] Set WISPENG-1491 as ready for review
 ** [X] Inform data team that the migration ran, looks like it succeeded
 ** [X] Address Canvas notes on the Excel sheet
 ** [X] Set True/False for mobile phone consents in the Canvas CSV export
-** [ ] Write tests for the Canvas CSV script
-** [ ] Open up Canvas CSV export PR (WISPENG-1564) for review
+** [X] Write tests for the Canvas CSV script
+** [X] Open up Canvas CSV export PR (WISPENG-1564) for review
+
+* <2025-05-13 Tue>
+** [X] Manually test WISPENG-1491
+- Note taken on [2025-05-13 Tue 10:19] \\
+  If manual testing goes well, we can merge this one.
+** [X] Review any comments left on WISPENG-1564, if any
+- Note taken on [2025-05-13 Tue 16:21] \\
+  A few comments, addressed
+- Note taken on [2025-05-13 Tue 10:20] \\
+  I just opened this for review this morning.
+** NO Follow up with Amanda about email consents
+- Note taken on [2025-05-13 Tue 16:21] \\
+  Need to do this tomorrow
+** [X] Finish work on PR to get Pharmacies by NCPDPID (WISPENG-1550)
+SCHEDULED: <2025-05-13 Tue 10:45-12:00>
+** [X] Check WISPENG-1550 one last time, then put up for review.
+** [-] Study
+SCHEDULED: <2025-05-13 Tue 14:30-15:30>
+
+* <2025-05-14 Wed>
+** [ ] Follow up with Amanda about email consents
+** [ ] Study
