@@ -45,6 +45,30 @@ While iterating, check if the ~target~ minus the current number is in the constr
 
 This satisfies the "Follow-up" as well, as the time complexity is ~O(n)~.
 
+** Go
+#+BEGIN_SRC go
+func twoSum(nums []int, target int) []int {
+    indices := make([]int, 2)
+
+    indicesByValues := make(map[int]int)
+
+    for index, value := range nums {
+        otherIndex, ok := indicesByValues[target - value]
+
+        if ok {
+            indices[0] = index
+            indices[1] = otherIndex
+
+            return indices
+        }
+
+        indicesByValues[value] = index
+    }
+
+    return indices
+}
+#+END_SRC
+
 ** Python
 #+BEGIN_SRC python
 class Solution:
@@ -58,3 +82,4 @@ class Solution:
             if num not in number_indices:
                 number_indices[num] = index
 #+END_SRC
+
