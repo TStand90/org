@@ -328,10 +328,21 @@ SCHEDULED: <2025-05-13 Tue 14:30-15:30>
   Need to figure out how to test the view.
 
 * <2025-05-19 Mon>
-** [?] Deploy [[https://hellowisp.atlassian.net/browse/WISPENG-1620][WISPENG-1620]]: Set email consent in Patient migration CSV
+** [X] Deploy [[https://hellowisp.atlassian.net/browse/WISPENG-1620][WISPENG-1620]]: Set email consent in Patient migration CSV
 - Note taken on [2025-05-19 Mon 09:21] \\
   Waiting for the deploy queue to calm down a bit.
-** [ ] [[https://hellowisp.atlassian.net/browse/WISPENG-1561][WISPENG-1561]]: Provider CSV export
-** [ ] [[https://hellowisp.atlassian.net/browse/WISPENG-1612][WISPENG-1612]]: Use UpdatePatient service method in Patient DetailsUpdateView
+** NO [[https://hellowisp.atlassian.net/browse/WISPENG-1561][WISPENG-1561]]: Provider CSV export
+** [X] [[https://hellowisp.atlassian.net/browse/WISPENG-1612][WISPENG-1612]]: Use UpdatePatient service method in Patient DetailsUpdateView
+- Note taken on [2025-05-19 Mon 16:48] \\
+  Almost ready for review, but I'm going to do WISPENG-1626 first.
 - Note taken on [2025-05-19 Mon 09:14] \\
   Now I know what was wrong with the tests, so time to fix it.
+** [X] Study
+** NO Read for book club
+
+
+* <2025-05-20 Tue>
+** [X] WISPENG-1626: Raise exceptions from UpdatePatient service method
+** [X] [[https://hellowisp.atlassian.net/browse/WISPENG-1612][WISPENG-1612]]: Use UpdatePatient service method in Patient DetailsUpdateView
+** NO Study
+** [X] Read for book club
