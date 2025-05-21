@@ -344,7 +344,7 @@ SCHEDULED: <2025-05-13 Tue 14:30-15:30>
 * <2025-05-20 Tue>
 ** [X] WISPENG-1626: Raise exceptions from UpdatePatient service method
 ** [X] [[https://hellowisp.atlassian.net/browse/WISPENG-1612][WISPENG-1612]]: Use UpdatePatient service method in Patient DetailsUpdateView
-** NO Study
+** [X] Study
 ** [X] Read for book club
 
 * <2025-05-21 Wed>
