@@ -346,3 +346,13 @@ SCHEDULED: <2025-05-13 Tue 14:30-15:30>
 ** [X] [[https://hellowisp.atlassian.net/browse/WISPENG-1612][WISPENG-1612]]: Use UpdatePatient service method in Patient DetailsUpdateView
 ** NO Study
 ** [X] Read for book club
+
+* <2025-05-21 Wed>
+** [ ] WISPENG-1626: Raise exceptions from UpdatePatient service method
+- Note taken on [2025-05-20 Tue 17:19] \\
+  Address any PR comments.
+** [ ] [[https://hellowisp.atlassian.net/browse/WISPENG-1612][WISPENG-1612]]: Use UpdatePatient service method in Patient DetailsUpdateView
+- Note taken on [2025-05-20 Tue 17:19] \\
+  Open up for review once WISPENG-1626 is merged.
+** [ ] Study
+** [ ] WISPENG-1613: UpdatePatient service method in Admin PatientUpdateView
