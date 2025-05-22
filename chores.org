@@ -14,10 +14,11 @@ SCHEDULED: <2025-05-07 Wed .+1w>
 - State "[X]"        from "[ ]"        [2025-01-29 Wed 12:26]
 - State "[X]"        from "[ ]"        [2025-01-11 Sat 23:59]
 *** [ ] De-shed Orion
-SCHEDULED: <2025-05-07 Wed .+1w>
+SCHEDULED: <2025-05-28 Wed .+1w>
 :PROPERTIES:
-:LAST_REPEAT: [2025-04-30 Wed 11:57]
+:LAST_REPEAT: [2025-05-21 Wed 17:43]
 :END:
+- State "[X]"        from "[ ]"        [2025-05-21 Wed 17:43]
 - State "[X]"        from "[ ]"        [2025-04-30 Wed 11:57]
 - State "[X]"        from "[ ]"        [2025-03-05 Wed 13:27]
 - State "[X]"        from "[ ]"        [2025-03-04 Tue 11:42]
@@ -31,10 +32,11 @@ SCHEDULED: <2025-05-07 Wed .+1w>
 - State "[X]"        from "[ ]"        [2024-12-18 Wed 14:44]
 ** Brushing
 *** [ ] Brush Andromeda
-SCHEDULED: <2025-05-07 Wed .+1w>
+SCHEDULED: <2025-05-22 Thu .+1w>
 :PROPERTIES:
-:LAST_REPEAT: [2025-04-30 Wed 11:57]
+:LAST_REPEAT: [2025-05-15 Thu 07:47]
 :END:
+- State "[X]"        from "[ ]"        [2025-05-15 Thu 07:47]
 - State "[X]"        from "[ ]"        [2025-04-30 Wed 11:57]
 - State "[X]"        from "[ ]"        [2025-02-05 Wed 14:20]
 *** [ ] Brush Orion
