@@ -362,19 +362,23 @@ SCHEDULED: <2025-05-13 Tue 14:30-15:30>
 ** [X] WISPENG-1561: provider CSV export.
 
 * <2025-05-22 Thu>
-** [ ] Catch up on code reviews
-** [ ] Study
-** [ ] WISPENG-1626: Raise exceptions from UpdatePatient service method
+** [X] Morning code reviews
+** [X] Study
+** [X] WISPENG-1626: Raise exceptions from UpdatePatient service method
+- Note taken on [2025-05-22 Thu 10:19] \\
+  Waiting to merge.
+- Note taken on [2025-05-22 Thu 09:41] \\
+  Kian is taking a look.
 - Note taken on [2025-05-21 Wed 16:24] \\
   Ping Reece and Kian for a review, if they have not already.
-** [ ] [[https://hellowisp.atlassian.net/browse/WISPENG-1612][WISPENG-1612]]: Use UpdatePatient service method in Patient DetailsUpdateView
+** [X] [[https://hellowisp.atlassian.net/browse/WISPENG-1612][WISPENG-1612]]: Use UpdatePatient service method in Patient DetailsUpdateView
 - Note taken on [2025-05-21 Wed 16:23] \\
   Try opening up for review, if WISPENG-1626 gets merged
-** [ ] WISPENG-1613: UpdatePatient service method in Admin PatientUpdateView
+** [X] WISPENG-1613: UpdatePatient service method in Admin PatientUpdateView
 - Note taken on [2025-05-21 Wed 16:24] \\
   _Maybe_ open for review, if 1612 gets merged (but probably not). Nothing else needs to be done here, it's ready for review.
-** [ ] WISPENG-1614:
-** [ ] WISPENG-1561: provider CSV export.
+** NO WISPENG-1614:
+** [X] WISPENG-1561: provider CSV export.
 - Note taken on [2025-05-21 Wed 16:47] \\
   We cannot rely on the ~roles~ table to tell us if a provider is a ~Provider~ or a ~Nurse Practitioner~. They are all listed as role ~provider~ in the database.
 - Note taken on [2025-05-21 Wed 16:26] \\
