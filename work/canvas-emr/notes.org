@@ -11,15 +11,15 @@ That would allow us to "read" something like ~refills~ like this:
 
 
 * Things to do
-** [ ] Create database migration for each column we need
-*** [ ] erx_pharmacy_id
+** [X] Create database migration for each column we need
+*** [X] erx_pharmacy_id
 - Note taken on [2025-04-04 Fri 14:57] \\
   This one doesn't appear to be used either.
-*** [ ] erx_prescriber_id
+*** [X] erx_prescriber_id
 - Note taken on [2025-04-04 Fri 14:13] \\
   No need to do this one, we can remove it since it's not used.
-*** [ ] erx_prescription_id
-*** [ ] erx_refills
+*** [X] erx_prescription_id
+*** [X] erx_refills
 
 * Notes
 - ~prescription.html~ uses a lot of the DoseSpot specific JSON data. The ~rx~ in that file is indeed of the ~models.Rx~ variety. Account for everything in that file!
