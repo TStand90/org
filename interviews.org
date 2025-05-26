@@ -2,9 +2,16 @@
 #+description: A log of interviews I have done
 
 * Resources
-- [[https://recruiterflow.com/candidate/suggested-jobs/cdb220c3][Worth Search dashboard]]
+** [[https://recruiterflow.com/candidate/suggested-jobs/cdb220c3][Worth Search dashboard]]
+- Note taken on [2025-05-26 Mon 06:34] \\
+  Link expired
 
 * Ongoing
+** Capital Rx
+Status: Need to reschedule initial call
+Recruiter call:
+Job title: Senior Sofware Engineer (backend or full-stack)
+Notes: Not really a job I want, the Glassdoor reviews are pretty bad.
 
 * Archived
 ** Freshpaint
