@@ -383,3 +383,44 @@ SCHEDULED: <2025-05-13 Tue 14:30-15:30>
   We cannot rely on the ~roles~ table to tell us if a provider is a ~Provider~ or a ~Nurse Practitioner~. They are all listed as role ~provider~ in the database.
 - Note taken on [2025-05-21 Wed 16:26] \\
   Really need to start this, I've kicked the can down the road here for far too long.
+
+* <2025-05-28 Wed>
+** NO Merge WISPENG-1612
+- Note taken on [2025-05-28 Wed 17:20] \\
+  Was ready to deploy, but was interrupted by an investigation.
+- Note taken on [2025-05-28 Wed 10:43] \\
+  Need to test in the precision sandbox that the changes actually work.
+** [X] Merge WISPENG-1575
+** NO WISPENG-1613: Use UpdatePatient service method in Admin PatientUpdateView
+- Note taken on [2025-05-28 Wed 09:45] \\
+  Make sure there are enough tests, and validate with a manual test.
+** NO WISPENG-1614: Use UpdatePatient service method in provider's Update Patient view
+- Note taken on [2025-05-28 Wed 09:46] \\
+  Write more tests, and do manual validation.
+
+* <2025-05-29 Thu>
+** [X] Investigate issue with admin patient template passing ~Undefined~ to the ~get_pharmacy_or_none~ function.
+- Note taken on [2025-05-29 Thu 15:44] \\
+  Cannot reproduce (without hacks), and it has not happened again today. Not sure what to do about this one.
+:LOGBOOK:
+CLOCK: [2025-05-29 Thu 10:03]--[2025-05-29 Thu 10:25] =>  0:22
+:END:
+** [X] Merge WISPENG-1612
+** [X] WISPENG-1613: Use UpdatePatient service method in Admin PatientUpdateView
+- Note taken on [2025-05-29 Thu 15:01] \\
+  Up for review.
+- Note taken on [2025-05-28 Wed 09:45] \\
+  Make sure there are enough tests, and validate with a manual test.
+** [X] WISPENG-1614: Use UpdatePatient service method in provider's Update Patient view
+- Note taken on [2025-05-28 Wed 17:21] \\
+  Manually verify.
+
+* <2025-05-30 Fri>
+** [ ] Investigate issue with admin patient template passing ~Undefined~ to the ~get_pharmacy_or_none~ function.
+- Note taken on [2025-05-29 Thu 15:45] \\
+  May not want to continue, may not be anything I can do.
+
+* <2025-06-01 Sun>
+** [ ] Ask data Mike if we can remove the BackfillErx script
+- Note taken on [2025-05-29 Thu 09:49] \\
+  Verify that there aren't any other columns they want. If not, remove the script.
