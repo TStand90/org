@@ -416,11 +416,17 @@ CLOCK: [2025-05-29 Thu 10:03]--[2025-05-29 Thu 10:25] =>  0:22
   Manually verify.
 
 * <2025-05-30 Fri>
-** [ ] Investigate issue with admin patient template passing ~Undefined~ to the ~get_pharmacy_or_none~ function.
+** NO Investigate issue with admin patient template passing ~Undefined~ to the ~get_pharmacy_or_none~ function.
 - Note taken on [2025-05-29 Thu 15:45] \\
   May not want to continue, may not be anything I can do.
 
-* <2025-06-01 Sun>
+* <2025-06-02 Mon>
 ** [ ] Ask data Mike if we can remove the BackfillErx script
 - Note taken on [2025-05-29 Thu 09:49] \\
   Verify that there aren't any other columns they want. If not, remove the script.
+** [ ] [[https://github.com/hellowisp/secure.hellowisp.com/pull/5987][WISPENG-1663]]: Removes AdminUpdatePharmacyView
+- Note taken on [2025-05-30 Fri 16:19] \\
+  I should write tests for the Create view. It looks like we need to update it in another ticket, so having tests already written would be great.
+** [ ] [[https://hellowisp.atlassian.net/browse/WISPENG-1661][WISPENG-1661]]: Expand the Patient CSV export to include preferred pharmacies
+- Note taken on [2025-05-30 Fri 16:20] \\
+  Technically blocked on this until pharmacies have NCPDP IDs. But I can write the query to grab the ID and then easily change to NCPDP ID later.
