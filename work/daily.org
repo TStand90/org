@@ -421,12 +421,37 @@ CLOCK: [2025-05-29 Thu 10:03]--[2025-05-29 Thu 10:25] =>  0:22
   May not want to continue, may not be anything I can do.
 
 * <2025-06-02 Mon>
-** [ ] Ask data Mike if we can remove the BackfillErx script
+** [X] Ask data Mike if we can remove the BackfillErx script
 - Note taken on [2025-05-29 Thu 09:49] \\
   Verify that there aren't any other columns they want. If not, remove the script.
-** [ ] [[https://github.com/hellowisp/secure.hellowisp.com/pull/5987][WISPENG-1663]]: Removes AdminUpdatePharmacyView
+** [X] [[https://github.com/hellowisp/secure.hellowisp.com/pull/5987][WISPENG-1663]]: Removes AdminUpdatePharmacyView
 - Note taken on [2025-05-30 Fri 16:19] \\
   I should write tests for the Create view. It looks like we need to update it in another ticket, so having tests already written would be great.
-** [ ] [[https://hellowisp.atlassian.net/browse/WISPENG-1661][WISPENG-1661]]: Expand the Patient CSV export to include preferred pharmacies
+** NO [[https://hellowisp.atlassian.net/browse/WISPENG-1661][WISPENG-1661]]: Expand the Patient CSV export to include preferred pharmacies
+- Note taken on [2025-06-02 Mon 14:53] \\
+  Task cancelled, we are not uploading this data to Canvas anymore.
 - Note taken on [2025-05-30 Fri 16:20] \\
   Technically blocked on this until pharmacies have NCPDP IDs. But I can write the query to grab the ID and then easily change to NCPDP ID later.
+** [X] WISPENG-1697: Remove clinical support ability to edit pharmacie
+- Note taken on [2025-06-02 Mon 16:09] \\
+  Actually has two approvals, but I'd like to wait for one from the core Canvas team specifically.
+- Note taken on [2025-06-02 Mon 14:54] \\
+  In review.
+** [X] WISPENG-1552: Backfill NCPDP ID on Pharmacies table
+- Note taken on [2025-06-02 Mon 16:09] \\
+  In review.
+** [X] Investigate hiding the fields in the 'create pharmacy' forms.
+- Note taken on [2025-06-02 Mon 18:56] \\
+  We can use jQuery to make the fields readonly without hiding them. That's the best I could come up with in a short time frame.
+- Note taken on [2025-06-02 Mon 16:10] \\
+  Need to timebox this to about 30 minutes, as it is not a priority.
+- Note taken on [2025-06-02 Mon 16:10] \\
+  The fields are editable after the user selects a pharmacy from the drop-down. Ideally, this would not be the case.
+
+* <2025-06-03 Tue>
+** [ ] WISPENG-1552: Backfill NCPDP ID on Pharmacies table
+- Note taken on [2025-06-02 Mon 18:57] \\
+  Try to get this merged.
+** [ ] WISPENG-1697: Remove clinical support ability to edit pharmacie
+- Note taken on [2025-06-02 Mon 18:57] \\
+  Want one more approval from the core Canvas team.
