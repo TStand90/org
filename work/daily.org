@@ -449,9 +449,42 @@ CLOCK: [2025-05-29 Thu 10:03]--[2025-05-29 Thu 10:25] =>  0:22
   The fields are editable after the user selects a pharmacy from the drop-down. Ideally, this would not be the case.
 
 * <2025-06-03 Tue>
-** [ ] WISPENG-1552: Backfill NCPDP ID on Pharmacies table
+** [X] WISPENG-1552: Backfill NCPDP ID on Pharmacies table
 - Note taken on [2025-06-02 Mon 18:57] \\
   Try to get this merged.
-** [ ] WISPENG-1697: Remove clinical support ability to edit pharmacie
+** NO WISPENG-1697: Remove clinical support ability to edit pharmacies
 - Note taken on [2025-06-02 Mon 18:57] \\
   Want one more approval from the core Canvas team.
+** [X] WISPENG-1713: Investigate allowing admins to edit a patient's default pharmacy, without editing the pharmacy itself.
+** NO Delete BackfillErxColumns script
+
+* <2025-06-04 Wed>
+** [X] WISPENG-1719: Delete BackfillErxColumns script
+- Note taken on [2025-06-04 Wed 15:00] \\
+  Deployed
+- Note taken on [2025-06-04 Wed 14:34] \\
+  Waiting to deploy.
+- Note taken on [2025-06-04 Wed 13:13] \\
+  In review.
+** NO WISPENG-1552: Backfill NCPDP ID on Pharmacies table
+- Note taken on [2025-06-05 Thu 08:25] \\
+  Not running, as we have not covered all cases of creating the Pharmacy.
+- Note taken on [2025-06-04 Wed 08:52] \\
+  Maybe run this today? Or tomorrow.
+** [X] WISPENG-1713: Investigate allowing admins to edit a patient's default pharmacy, without editing the pharmacy itself.
+- Note taken on [2025-06-04 Wed 14:34] \\
+  Deployed
+- Note taken on [2025-06-04 Wed 10:57] \\
+  In review.
+** [X] WISPENG-1718: Allow clinical support to edit a patient's default pharmacy.
+- Note taken on [2025-06-04 Wed 15:04] \\
+  Waiting on one more review, that might not come until tomorrow.
+- Note taken on [2025-06-04 Wed 14:34] \\
+  In review.
+** [X] [[https://hellowisp.atlassian.net/browse/WISPENG-1711][WISPENG-1711]]: Save NCPDP ID on new pharmacy rows
+
+* <2025-06-05 Thu>
+This is my last day before a week long vacation. I need to get everything done/deployed, or handed off!
+** [X] [[https://hellowisp.atlassian.net/browse/WISPENG-1711][WISPENG-1711]]: Save NCPDP ID on new pharmacy rows
+** [X] WISPENG-1718: Allow clinical support to edit a patient's default pharmacy.
+** [X] Merge WISPENG-1697
